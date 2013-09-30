@@ -68,13 +68,13 @@ ENGINE = InnoDB;
 CREATE  TABLE IF NOT EXISTS `mydb`.`BandsIn` (
   `band_id` INT NULL ,
   `user_id` INT NULL ,
-  `instrument` INT NULL ,
+  `instrument` VARCHAR(45) NULL ,
   `part_id` INT NULL ,
   `directorFlag` TINYINT(1) NULL ,
   INDEX `band_id` (`band_id` ASC) ,
   INDEX `user_id` (`user_id` ASC) ,
   INDEX `part_id` (`part_id` ASC) ,
-  CONSTRAINT `band_id`
+  CONSTRAINT `bandid`
     FOREIGN KEY (`band_id` )
     REFERENCES `mydb`.`Band` (`band_id` )
     ON DELETE NO ACTION
