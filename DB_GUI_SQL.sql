@@ -50,6 +50,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `mydb`.`Part` (
   `part_id` INT NOT NULL ,
+  'instrument' VARCHAR(45) NULL,
   `location` VARCHAR(45) NULL ,
   `song_id` INT NULL ,
   PRIMARY KEY (`part_id`) ,
