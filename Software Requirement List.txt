@@ -1,0 +1,40 @@
+Software Requirement List
+-------------------------
+
+The software will have independent users.
+The software will have a unique login with with vertification for each user.
+The software will have two tiers of users.
+The software will store .pdfs of sheet music.
+The software will allow dynamic munipluation of user access to .pdfs.
+The software will have 
+The software will have 
+The software will have 
+The software will have 
+The software will have 
+The software will have 
+The software will have 
+The software will have 
+The software will have 
+The software will have 
+The software will have 
+The software will have 
+The software will have 
+The software will have 
+The software will have 
+The software will have 
+The software will have 
+The software will have 
+The software will have 
+The software will have 
+The software will have 
+The software will have 
+The software will have 
+The software will have 
+The software will have 
+The software will have 
+The software will have 
+The software will have 
+The software will have 
+The software will have 
+The software will have 
+The software will have 
