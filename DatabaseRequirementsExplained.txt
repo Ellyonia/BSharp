@@ -22,9 +22,3 @@ file in the Part table, along with the the indentifiers of who will
 perform that part.  The Part table also tracks a song identifier that is 
 linked to the Song table.  The Song table is where it is stored as to 
 which bands own which songs, as well as the name of the song.
-
-By having the Customize table, band directos will be able to store 
-elements that they have customized for their home page for their band.  
-By using the band identifier, this information is linked back to the 
-band's account.
-
