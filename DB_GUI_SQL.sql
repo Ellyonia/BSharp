@@ -50,10 +50,10 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `mydb`.`Part` (
   `part_id` INT NOT NULL ,
-  'instrument' VARCHAR(45) NULL,
   `location` VARCHAR(45) NULL ,
-  `song_id` INT NULL ,
-  PRIMARY KEY (`part_id`) ,
+  `song_id` INT NOT NULL ,
+  `instrument` VARCHAR(45) NOT NULL ,
+  PRIMARY KEY (`part_id`, `song_id`, `instrument`) ,
   INDEX `song_id` (`song_id` ASC) ,
   CONSTRAINT `song_id`
     FOREIGN KEY (`song_id` )
