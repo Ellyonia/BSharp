@@ -2,13 +2,13 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL';
 
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci ;
-USE `mydb` ;
+CREATE SCHEMA IF NOT EXISTS `BSharp` DEFAULT CHARACTER SET latin1 COLLATE latin$
+USE `Bsharp` ;
 
 -- -----------------------------------------------------
--- Table `mydb`.`Users`
+-- Table `BSharp`.`Users`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `mydb`.`Users` (
+CREATE  TABLE IF NOT EXISTS `BSharp`.`Users` (
   `fname` VARCHAR(20) NULL ,
   `lname` VARCHAR(20) NULL ,
   `user_id` INT NOT NULL ,
@@ -19,9 +19,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Band`
+-- Table `BSharp`.`Band`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `mydb`.`Band` (
+CREATE  TABLE IF NOT EXISTS `BSharp`.`Band` (
   `band_id` INT NOT NULL ,
   `band_name` VARCHAR(45) NULL ,
   PRIMARY KEY (`band_id`) )
@@ -29,44 +29,44 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Song`
+-- Table `BSharp`.`Pieces`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `mydb`.`Song` (
-  `song_id` INT NOT NULL ,
-  `song_name` VARCHAR(45) NULL ,
+CREATE  TABLE IF NOT EXISTS `BSharp`.`Pieces` (
+  `piece_id` INT NOT NULL ,
+  `piece_name` VARCHAR(45) NULL ,
   `band_id` INT NULL ,
-  PRIMARY KEY (`song_id`) ,
+  PRIMARY KEY (`piece_id`) ,
   INDEX `band_id` (`band_id` ASC) ,
   CONSTRAINT `band_id`
     FOREIGN KEY (`band_id` )
-    REFERENCES `mydb`.`Band` (`band_id` )
+    REFERENCES `BSharp`.`Band` (`band_id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Part`
+-- Table `BSharp`.`Part`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `mydb`.`Part` (
+CREATE  TABLE IF NOT EXISTS `BSharp`.`Part` (
   `part_id` INT NOT NULL ,
   `location` VARCHAR(45) NULL ,
-  `song_id` INT NOT NULL ,
+  `piece_id` INT NOT NULL ,
   `instrument` VARCHAR(45) NOT NULL ,
-  PRIMARY KEY (`part_id`, `song_id`, `instrument`) ,
+  PRIMARY KEY (`part_id`, `piece_id`, `instrument`) ,
   INDEX `song_id` (`song_id` ASC) ,
-  CONSTRAINT `song_id`
-    FOREIGN KEY (`song_id` )
-    REFERENCES `mydb`.`Song` (`song_id` )
+  CONSTRAINT `piece_id`
+    FOREIGN KEY (`piece_id` )
+    REFERENCES `BSharp`.`Pieces` (`piece_id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`BandsIn`
+-- Table `BSharp`.`BandsIn`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `mydb`.`BandsIn` (
+CREATE  TABLE IF NOT EXISTS `BSharp`.`BandsIn` (
   `band_id` INT NULL ,
   `user_id` INT NULL ,
   `instrument` VARCHAR(45) NULL ,
@@ -77,17 +77,17 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`BandsIn` (
   INDEX `part_id` (`part_id` ASC) ,
   CONSTRAINT `bandid`
     FOREIGN KEY (`band_id` )
-    REFERENCES `mydb`.`Band` (`band_id` )
+    REFERENCES `BSharp`.`Band` (`band_id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `user_id`
     FOREIGN KEY (`user_id` )
-    REFERENCES `mydb`.`Users` (`user_id` )
+    REFERENCES `BSharp`.`Users` (`user_id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `part_id`
     FOREIGN KEY (`part_id` )
-    REFERENCES `mydb`.`Part` (`part_id` )
+    REFERENCES `BSharp`.`Part` (`part_id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -97,3 +97,4 @@ ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
