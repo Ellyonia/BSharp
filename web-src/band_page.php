@@ -7,26 +7,26 @@
 
   <body>
   	<h1>Welcome to the band front page</h1>
-  	<img src="img/logo.PNG" id = "logo" alt = "Custom Cupcake Logo">
+  	<img src="img/logo.png" id = "logo" alt = "Custom Cupcake Logo">
   	<span id="navbar">
   		<ul>
   			<li>
-  				<a href="about">About Band</a>
+  				<a href="#about">About Band</a>
   			</li>
   			<li>
-  				<a href="Pieces">Songs</a>
+  				<a href="#Pieces">Pieces</a>
   			</li>
   			<li>
-  				<a href="management">Band Management</a>
+  				<a href="#management">Band Management</a>
   			</li>
   			<li>
-  				<a href="events">Upcoming Events</a>
+  				<a href="#events">Upcoming Events</a>
   			</li>
   			<li>
-  				<a href="members">Band Members</a>
+  				<a href="#members">Band Members</a>
   			</li>
   			<li>
-  				<a href="contact">Contact Information</a>
+  				<a href="#contact">Contact Information</a>
   			</li>
   		</ul>
   	</span>
@@ -36,5 +36,17 @@
   			<li>
   			</li>
   		</ul>
+  	</div>
+  	<div id="about">
+  	</div>
+  	<div id="pieces">
+  	</div>
+  	<div id="management">
+  	</div>
+  	<div id="events">
+  	</div>
+  	<div id="members">
+  	</div>
+  	<div id="contact">
   	</div>
   </body>
