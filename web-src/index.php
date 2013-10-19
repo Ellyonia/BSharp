@@ -56,6 +56,7 @@ Chris Linstromberg
         <ul>
             <li>
                 <input type="radio" name="mailingList" value="1"> Yes
+                <input type="radio" name="mailingList" value="1"> No
             </li>
             <li>
                 <input type="text" placeholder="First Name" id="firstName" name = "firstName"required/>
