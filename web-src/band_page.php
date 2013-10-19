@@ -7,8 +7,9 @@
 
   <body>
   	<h1>Welcome to the band front page</h1>
-  	<img src="img/logo.png" id = "logo" alt = "Custom Cupcake Logo">
+  	
   	<span id="navbar">
+  		<img src="img/logo.png" id = "logo" alt = "Custom Cupcake Logo">
   		<ul>
   			<li>
   				<a href="#about">About Band</a>
@@ -30,7 +31,7 @@
   			</li>
   		</ul>
   	</span>
-  	<div id="band management">
+  	<div class="band pages">
   		<h2>My Bands</h2>
   		<ul>
   			<li>
