@@ -2,8 +2,8 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL';
 
-CREATE SCHEMA IF NOT EXISTS `BSharp` DEFAULT CHARACTER SET latin1 COLLATE latin$
-USE `Bsharp` ;
+CREATE SCHEMA IF NOT EXISTS `BSharp` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci ;
+USE `BSharp` ;
 
 -- -----------------------------------------------------
 -- Table `BSharp`.`Users`
@@ -54,7 +54,7 @@ CREATE  TABLE IF NOT EXISTS `BSharp`.`Part` (
   `piece_id` INT NOT NULL ,
   `instrument` VARCHAR(45) NOT NULL ,
   PRIMARY KEY (`part_id`, `piece_id`, `instrument`) ,
-  INDEX `song_id` (`song_id` ASC) ,
+  INDEX `piece_id` (`piece_id` ASC) ,
   CONSTRAINT `piece_id`
     FOREIGN KEY (`piece_id` )
     REFERENCES `BSharp`.`Pieces` (`piece_id` )
