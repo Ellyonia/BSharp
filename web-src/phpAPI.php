@@ -51,6 +51,8 @@ class phpAPI
 
         if(mysql_num_rows($result) > 0)
             header('Location: band_page.php');
+        else
+            header('Location: index.php');
         /*
 
         while($row = mysql_fetch_assoc($result))
