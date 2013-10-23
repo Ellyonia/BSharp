@@ -40,7 +40,7 @@ class phpAPI
     }
 
 
-    public function verifyUser()
+    public function validateUser()
     {
 
 
