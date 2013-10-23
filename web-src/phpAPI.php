@@ -56,7 +56,7 @@ class phpAPI
                     if ( $password == $cvalue)
                         $valid = 1;
 
-              if ($cname == "user_ID")
+              if ($cname == "user_id")
                 $_SESSION['uID'] = $cvalue;
             }
         }
