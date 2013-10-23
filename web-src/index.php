@@ -13,11 +13,11 @@ Chris Linstromberg
     session_start();
 
     if(isset($_POST['signIn'])){
-         $_SESSION['ID'] = $_POST['email'];
-         $_SESSION['PW'] = $_POST['password'];
+         $_SESSION['email'] = $_POST['email'];
+         $_SESSION['pw'] = $_POST['password'];
 
-         echo "email = ". $_SESSION['ID'];
-         echo "\n password = ". $_SESSION['PW'];
+         echo "email = ". $_SESSION['email'];
+         echo "\n password = ". $_SESSION['pw'];
          header("Location: band_page.php");
 
     }

@@ -57,7 +57,7 @@ class phpAPI
                         $valid = 1;
 
               if ($cname == "user_id")
-                $_SESSION['uID'] = $cvalue;
+                $_SESSION['cID'] = $cvalue;
             }
         }
         if ($valid == 1)
