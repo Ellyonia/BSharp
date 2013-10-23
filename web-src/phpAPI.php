@@ -48,6 +48,11 @@ class phpAPI
         $sql = "SELECT password, user_id FROM Users WHERE username = '$email'";
 
         $result = mysql_query($sql) or die(mysql_error());
+
+        if(mysql_num_rows($result) > 0)
+            header('Location: band_page.php');
+        /*
+
         while($row = mysql_fetch_assoc($result))
         {
             foreach($row as $cname => $cvalue)
@@ -66,7 +71,7 @@ class phpAPI
             header("Location: band_page.php");
         else
             header("Location: index.php");
-        
+        */
     }
 
 
