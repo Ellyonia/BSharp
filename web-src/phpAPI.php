@@ -72,7 +72,7 @@ class phpAPI
             */
 
             if(mysql_num_rows(($result) == 0)
-                header('Location: index.php?login=false');
+                header('Location: index.php');
             else{
                 header('Location: band_page.php');
             }
