@@ -45,13 +45,13 @@ class phpAPI
 
 
 
-        $sql = "SELECT password, user_id FROM Users WHERE username = '" . $_POST['email'] . "' and password = '" . $POST['password'] "'";
+        $sql = "SELECT * FROM Users WHERE username = '" . $_POST['email'] . "' and password = '" . $POST['password'] "'";
 
         $result = mysql_query($sql) or die(mysql_error());
-        /*
+        
         while($row = mysql_fetch_assoc($result))
         {
-            /*
+            
             foreach($row as $cname => $cvalue)
             {
                 if ($cname == "password"){
@@ -69,13 +69,13 @@ class phpAPI
             header("Location: band_page.php");
         else
             header("Location: index.php");
-            */
-
+            
+/*
             if(mysql_num_rows(($result) == 0)
                 header('Location: index.php');
             else{
                 header('Location: band_page.php');
-            }
+            }*/
         
     }
 
