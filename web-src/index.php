@@ -22,6 +22,18 @@ Chris Linstromberg
 
     }
 
+    if(isset($_POST['signUp'])){
+         $_SESSION['email'] = $_POST['email'];
+         $_SESSION['password'] = $_POST['password'];
+         $_SESSION['fname'] = $_POST['firstName'];
+         $_SESSION['lname'] = $_POST['laststName'];
+
+         echo "email = ". $_SESSION['email'];
+         echo "\n password = ". $_SESSION['password'];
+         header("Location: band_page.php");
+
+    }
+
 
 
 ?>
@@ -54,23 +66,21 @@ Chris Linstromberg
             <header>Create a B# Account</header>
             <div class="hr"><hr /></div>
         <ul>
-            <li>
-                <input type="radio" name="mailingList" value="1"> Yes
-                <input type="radio" name="mailingList" value="1"> No
-            </li>
+
             <li>
                 <input type="text" placeholder="First Name" id="firstName" name = "firstName"required/>
                 <input type="text" placeholder="Last Name" id="lastName" name = "lastName"required/>
             </li>
 
             <li>
-                <input type="email" placeholder="Email" id="email" name = "email"oninvalid="setCustomValidity('Please eneter a valid email address')" onchange="try{setCustomValidity('')}catch(e){}" required/>
+                <input type="email" placeholder="Email" id="newEmail" name = "newEmail"oninvalid="setCustomValidity('Please eneter a valid email address')" onchange="try{setCustomValidity('')}catch(e){}" required/>
             </li>
 
             <li>
-                <input type="password" id="password" name = "password" pattern = "[a-zA-Z0-9:.,?!@]{8,}" placeholder = "Password" oninvalid="setCustomValidity('Password must be greater than 8 characters')" onchange="try{setCustomValidity('')}catch(e){}" required/>
+                <input type="password" id="password" name = "newPassword" pattern = "[a-zA-Z0-9:.,?!@]{8,}" placeholder = "Password" oninvalid="setCustomValidity('Password must be greater than 8 characters')" onchange="try{setCustomValidity('')}catch(e){}" required/>
             </li>
 
+<!--
             <li>
                 <input type="text" placeholder="Telephone Number" id="phone" name = "phone" pattern = "[0-9]{10}" oninvalid="setCustomValidity('Phone number must be 10 characters, only numbers')" onchange="try{setCustomValidity('')}catch(e){}" required/>
             </li>
@@ -139,8 +149,9 @@ Chris Linstromberg
             <li>
                 <input type="text" placeholder="Zipcode" id="zip"  name = "zip" pattern = "[0-9]{5}" required/>
             </li>
+        -->
         </ul>
-                <input type="submit" value="Sign Up" id="signUp" />
+                <input type="submit" value="Sign Up" id="signUp" name = "signUp" />
       </form>
 </div>
  
