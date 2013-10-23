@@ -43,16 +43,11 @@ class phpAPI
     public function validateUser()
     {
 
-        session_start();
+        
+        
+        $valid = 0;
 
-        $con = mysql_connect("localhost", "root", "narwhal");
-        if(!$con)
-            die('Could not connect: ' . mysql_error());
-
-        mysql_select_db("BSharp", $con)
-        or die("Unable to select database: " . mysql_error());
-
-        $sql = "SELECT password, user_id FROM Users WHERE username = '$email'";
+        $sql = "SELECT password, user_id FROM Users WHERE username = '"$_POST['email'] . "'";
 
         $result = mysql_query($sql) or die(mysql_error());
 
