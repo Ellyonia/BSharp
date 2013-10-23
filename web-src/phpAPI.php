@@ -45,7 +45,7 @@ class phpAPI
 
 
 
-        $sql = "SELECT password, customer_ID FROM Customers WHERE email = '$email'";
+        $sql = "SELECT password, user_id FROM Users WHERE email = '$email'";
 
         $result = mysql_query($sql) or die(mysql_error());
         while($row = mysql_fetch_assoc($result))
