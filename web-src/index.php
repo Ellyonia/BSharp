@@ -18,7 +18,7 @@ Chris Linstromberg
 
          echo "email = ". $_SESSION['ID'];
          echo "\n password = ". $_SESSION['PW'];
-         header("Location: order.php");
+         header("Location: band_page.php");
 
     }
 
