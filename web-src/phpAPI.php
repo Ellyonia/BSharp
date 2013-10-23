@@ -35,7 +35,6 @@ class phpAPI
         }
         else
         {
-            header('Location: index.php');
             return; 
         }
     
