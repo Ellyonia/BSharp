@@ -45,7 +45,7 @@ class phpAPI
 
 
 
-        $sql = "SELECT password, user_id FROM Users WHERE username = '$email' and password = '$password'";
+        $sql = "SELECT password, user_id FROM Users WHERE username = '" . $_POST['email'] . "' and password = '" . $POST['password'] "'";
 
         $result = mysql_query($sql) or die(mysql_error());
         /*
