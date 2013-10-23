@@ -46,10 +46,10 @@ class phpAPI
         
         
         $valid = 0;
-/*
-        $sql = "SELECT password, user_id FROM Users WHERE username = '$email'";
-*/
-        $sql = "SELECT * from Users";
+
+       // $sql = "SELECT password, user_id FROM Users WHERE username = '$email'";
+        $sql = "SELECT * FROM Users where username = '" . $_POST['email'] . "'";
+
         $result = mysql_query($sql); /* or die(mysql_error());*/
 
         if(mysql_num_rows($result) > 0)
