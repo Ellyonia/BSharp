@@ -8,7 +8,7 @@ class phpAPI
     {
         session_start();
 
-        $con = mysql_connect("localhost", "root", "narwhal");
+        $con = mysql_connect("localhost", "DBandGUI", "narwhal");
         if(!$con)
             die('Could not connect: ' . mysql_error());
 
@@ -46,10 +46,11 @@ class phpAPI
         
         
         $valid = 0;
-
-        $sql = "SELECT password, user_id FROM Users WHERE username = '"$_POST['email'] . "'";
-
-        $result = mysql_query($sql) or die(mysql_error());
+/*
+        $sql = "SELECT password, user_id FROM Users WHERE username = '$email'";
+*/
+        $sql = "SELECT * from Users";
+        $result = mysql_query($sql); /* or die(mysql_error());*/
 
         if(mysql_num_rows($result) > 0)
             header('Location: band_page.php');
