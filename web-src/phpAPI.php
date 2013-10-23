@@ -27,7 +27,7 @@ class phpAPI
         $password = $_POST['password'];
 
         $query = "INSERT INTO Users(fname, lname, user_id, username,password) VALUES 
-            ('$fname','$lname','$user_id','$username','$password)";
+            ('$fname','$lname','$user_id','$email','$password)";
         if(!mysql_query($query))
         {
             header('Location: index.php');
