@@ -20,7 +20,7 @@ class phpAPI
     public function addUser()
     {   
         //add a user to the system
-        $user_id = $_POST['user_id'];
+        $user_id = 444; //$_POST['user_id'];
         $fname = $_POST['fname'];
         $lname = $_POST['lname'];
         $email = $_POST['email'];
