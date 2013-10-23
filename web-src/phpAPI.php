@@ -23,8 +23,8 @@ class phpAPI
         $user_id = $_POST['user_id'];
         $fname = $_POST['fname'];
         $lname = $_POST['lname'];
-        $username = $_POST['email'];
-        $password = $_POST['pw'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
 
         $query = "INSERT INTO Users(fname, lname, user_id, username,password) VALUES 
             ('$fname','$lname','$user_id','$username','$password)";
@@ -45,7 +45,7 @@ class phpAPI
 
 
 
-        $sql = "SELECT password, user_id FROM Users WHERE username = '$username'";
+        $sql = "SELECT password, user_id FROM Users WHERE username = '$email'";
 
         $result = mysql_query($sql) or die(mysql_error());
         while($row = mysql_fetch_assoc($result))

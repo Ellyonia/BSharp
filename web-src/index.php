@@ -14,10 +14,10 @@ Chris Linstromberg
 
     if(isset($_POST['signIn'])){
          $_SESSION['email'] = $_POST['email'];
-         $_SESSION['pw'] = $_POST['password'];
+         $_SESSION['password'] = $_POST['password'];
 
          echo "email = ". $_SESSION['email'];
-         echo "\n password = ". $_SESSION['pw'];
+         echo "\n password = ". $_SESSION['password'];
          header("Location: band_page.php");
 
     }
