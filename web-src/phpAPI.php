@@ -20,7 +20,7 @@ class phpAPI
     public function addUser()
     {   
         //add a user to the system
-        $user_id = 444; //$_POST['user_id'];
+        $user_id = 444; //$_POST['user_id'];    // manually added just for a test
         $fname = $_POST['fname'];
         $lname = $_POST['lname'];
         $email = $_POST['email'];
@@ -30,10 +30,12 @@ class phpAPI
             ('$fname','$lname','$user_id','$username','$password)";
         if(!mysql_query($query))
         {
+            header('Location: index.php');
             return false;
         }
         else
         {
+            header('Location: index.php');
             return; 
         }
     

@@ -28,8 +28,6 @@ Chris Linstromberg
          $_SESSION['fname'] = $_POST['firstName'];
          $_SESSION['lname'] = $_POST['laststName'];
 
-         echo "email = ". $_SESSION['email'];
-         echo "\n password = ". $_SESSION['password'];
          header("Location: band_page.php");
 
     }
