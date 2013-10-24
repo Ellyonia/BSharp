@@ -22,7 +22,7 @@ ENGINE = InnoDB;
 -- Table `BSharp`.`Band`
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `BSharp`.`Band` (
-  `band_id` INT NOT NULL ,
+  `band_id` INT NOT NULL AUTO_INCREMENT,
   `band_name` VARCHAR(45) NULL ,
   PRIMARY KEY (`band_id`) )
 ENGINE = InnoDB;
@@ -32,7 +32,7 @@ ENGINE = InnoDB;
 -- Table `BSharp`.`Pieces`
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `BSharp`.`Pieces` (
-  `piece_id` INT NOT NULL ,
+  `piece_id` INT NOT NULL AUTO_INCREMENT,
   `piece_name` VARCHAR(45) NULL ,
   `band_id` INT NULL ,
   PRIMARY KEY (`piece_id`) ,
@@ -49,7 +49,7 @@ ENGINE = InnoDB;
 -- Table `BSharp`.`Part`
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `BSharp`.`Part` (
-  `part_id` INT NOT NULL ,
+  `part_id` INT NOT NULL AUTO_INCREMENT,
   `location` VARCHAR(45) NULL ,
   `piece_id` INT NOT NULL ,
   `instrument` VARCHAR(45) NOT NULL ,
