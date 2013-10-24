@@ -3,8 +3,10 @@ $(document).ready(function(){
 
 	$('#createBand').click(function(){
 
-		window.confirm("Make a new Band?");
-	})
+		newwindow=window.open("http://ec2-54-200-98-78.us-west-2.compute.amazonaws.com/DB-GUI/web-src/BandCreation.php",'name','height=200,width=150');
+		if (window.focus) {newwindow.focus()}
+			return false;
+	}
 
 
 
