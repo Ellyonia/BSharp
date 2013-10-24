@@ -26,19 +26,27 @@ class phpAPI
         $password = $_POST['newPassword'];
 
 
-        $query = "INSERT INTO Users(fname, lname, username,password) VALUES 
-            ('$fname', '$lname','$email','$password')";
+        $count = "SELECT COUNT(*) from Users WHERE(username = '$email')";
+        settype($count, "int");
 
-/*
-        $query = "INSERT INTO Users(fname, lname, user_id, username,password) VALUES 
-            ('" . $_POST['firstName'] . "', '" . $_POST['lastName'] . "',444,'" . $_POST['newEmail'] . "','" . $_POST['newPassword'] . "')";*/
-        if(!mysql_query($query))
-        {
-            header('Location: error.php');
+        if($count > 0){
+            header('Location: EmailTaken.php');
         }
-        else
-        {
-            header('Location: band_page.php');
+        else{
+
+            $query = "INSERT INTO Users(fname, lname, username,password) VALUES 
+                ('$fname', '$lname','$email','$password')";
+    /*
+            $query = "INSERT INTO Users(fname, lname, user_id, username,password) VALUES 
+                ('" . $_POST['firstName'] . "', '" . $_POST['lastName'] . "',444,'" . $_POST['newEmail'] . "','" . $_POST['newPassword'] . "')";*/
+            if(!mysql_query($query))
+            {
+                header('Location: error.php');
+            }
+            else
+            {
+                header('Location: band_page.php');
+            }
         }
     
     }
