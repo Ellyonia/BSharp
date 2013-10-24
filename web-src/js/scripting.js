@@ -9,10 +9,10 @@ $(document).ready(function(){
 
 function checkMe()
 {
-  if (document.register.newPassword.value == document.register.reTypePass.value)
+  if ($('register #newPassword').val() == $('register #reTypePassword').val())
   {
-    document.register.setPassword.value=document.register.newPassword.value;
-    document.register.submit();
+    $('register #setPassword').val()=$('register #newPassword').val();
+    $('register').submit();
   }
   else
     alert("Passwords do not match!");
