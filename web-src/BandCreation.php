@@ -17,6 +17,10 @@
   				About Band
   				<textArea rows="4" cols="50" placeholder="Enter Information about your Band" id="aboutBand" name = "aboutBand"  required/></textarea>
   			</li>
+  			<li>
+  				Band Contact Info
+  				<input
+  			</li>
   		</ol>
 
 
