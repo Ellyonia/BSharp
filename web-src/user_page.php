@@ -12,7 +12,7 @@
   		<h2>My Bands</h2>
   		<ul>
   			<li>
-          <form type="button" id="createBand" name="createBand">
+          <input type="button" id="createBand" name="createBand">
   			</li>
   		</ul>
   </body>
