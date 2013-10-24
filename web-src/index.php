@@ -83,7 +83,7 @@ Chris Linstromberg
                 <input type="password" id="reTypePass" name = "reTypePass" pattern = "[a-zA-Z0-9:.,?!@]{8,}" placeholder = "Re-Type Password" oninvalid="setCustomValidity('Password must be the same as above and be greater than 8 characters')" onchange="try{setCustomValidity('')}catch(e){}" required/>
             </li>
         </ul>
-                <input type="submit" value="Sign Up" id="signUp" name = "signUp" />
+                <input type="button" value="Sign Up" id="signUp" name = "signUp" />
       </form>
 </div>
  
