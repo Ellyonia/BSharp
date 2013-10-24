@@ -13,7 +13,7 @@ function checkMe()
 	{
 		var pass = $('#newPassword').text();
 	 	$('#setPassword').val(pass);
-		console.log('#setPassword');
+		console.log(pass);
 		$('register').submit();
 	}
 	else
