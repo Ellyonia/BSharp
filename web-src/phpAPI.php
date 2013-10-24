@@ -35,9 +35,8 @@ class phpAPI
         }
         else
         {
-            $num_rows = mysql_num_rows($count);
-            
-            return $num_rows;
+            $result = mysql_query($count);
+            $num_rows = mysql_num_rows($result);
 
             if($num_rows > 0)
             {
@@ -52,11 +51,11 @@ class phpAPI
                     ('" . $_POST['firstName'] . "', '" . $_POST['lastName'] . "',444,'" . $_POST['newEmail'] . "','" . $_POST['newPassword'] . "')";*/
                 if(!mysql_query($query))
                 {
-                    //header('Location: error.php');
+                    header('Location: error.php');
                 }
                 else
                 {
-                    //header('Location: band_page.php');
+                    header('Location: band_page.php');
                 }
             }
         }
