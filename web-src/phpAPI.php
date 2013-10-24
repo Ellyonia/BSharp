@@ -60,6 +60,7 @@ class phpAPI
             }
         }
         
+        mysql_close($con);
     
     }
 
@@ -80,6 +81,8 @@ class phpAPI
             header('Location: band_page.php');
         else
             header('Location: index.php');
+        
+        mysql_close($con);
         /*
 
         while($row = mysql_fetch_assoc($result))
@@ -103,6 +106,27 @@ class phpAPI
         */
     }
 
+	public function makeBand()
+	{
+		//Update post names...
+		$about = $_POST['aboutBand'];
+		$name = $_POST['bandName'];
+		$phone = $_POST['bandPhone'];
+		
+		$query = "INSERT INTO Band(band_name, band_phone)
+			VALUES ('$name', '$phone');";
+		
+		if(!mysql_query($query))
+		{
+			header('Location: error.php');
+		}
+		else
+		{
+			header('Location: band_page.php');
+		}
+		
+		mysql_close($con);
+	}
 
 }
 ?>
