@@ -26,10 +26,10 @@ class phpAPI
         $password = $_POST['newPassword'];
 
 
-        $count = "SELECT COUNT(*) from Users WHERE(username = '$email')";
-        settype($count, "int");
+        $count = "SELECT * from Users WHERE(username = '$email')";
+        $num_rows = mysql_num_rows($count);
 
-        if($count > 0){
+        if($num_rows > 0){
             header('Location: EmailTaken.php');
         }
         else{
