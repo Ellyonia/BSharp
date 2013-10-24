@@ -49,7 +49,7 @@ ENGINE = InnoDB;
 -- Table `BSharp`.`Part`
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `BSharp`.`Part` (
-  `part_id` INT NOT NULL AUTO_INCREMENT,
+  `part_id` INT NOT NULL,
   `location` VARCHAR(45) NULL ,
   `piece_id` INT NOT NULL ,
   `instrument` VARCHAR(45) NOT NULL ,
