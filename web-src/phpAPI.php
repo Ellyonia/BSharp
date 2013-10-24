@@ -111,7 +111,7 @@ class phpAPI
 		//Update post names...
 		$about = $_POST['aboutBand'];
 		$name = $_POST['bandName'];
-		$phone = $_POST['bandPhone'];
+		$phone = $_POST['phone'];
 		
 		$query = "INSERT INTO Band(band_name, band_phone)
 			VALUES ('$name', '$phone');";
