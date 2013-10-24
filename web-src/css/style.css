@@ -5,19 +5,23 @@ CSS FOR index.php
 /**********************************************
 CSS FOR band_page.php
 **********************************************/
+/*body {
+  height: 1000px;
+}*/
+
+h1 {
+  position: fixed;
+  left: 2%;
+}
 
 #navbar {
   position: fixed;
   width: 96%;
   left: 2%;
   right: 2%;
-  /*top: 15%;*/
-  /*width: 80%;*/
+  top: 12%;
   margin-left: auto;
   margin-right: auto;
-  /*text-align: center;*/
-  /*width: 100%;*/
-  /*border-bottom: 2px solid #ccc;*/
   background: #dddddd;
 }
 
@@ -25,29 +29,50 @@ CSS FOR band_page.php
   color: #2C2C2C;
   list-style: none;
   margin: 0px;
-  padding: .3em;
+  padding: 1em;
+  font-size: 20px;
 }
 
 #navbar li {
   float: left;
-  margin-right: 5px;
+  margin-right: 15px;
+  left: 200px;
 }
 
 #navbar li a:hover {
   background-color: #2C2C2C;
   color: #DD3124;
   text-decoration: none;
+  font-size: 32px;
 }
 
 img {
 	float: left;
+  height: 80px;
+  width: auto;
 }
 
-.band {
+.band_pages {
 	position: fixed;
 	left: 2%;
 	color: orange;
 	background-color: #dddddd;
 	top: 30%;
+  width: 170px;
+  /*float: left;*/
+}
+
+#management {
+  position: fixed;
+  /*top: 19.5%;*/
+  top: 30%;
+  left: 15%;
+  /*margin-right: 11.25%;*/
+  width: 83%;
+  font-size: 30px;
+  height: 460px;
+  /*clear: both;*/
+  overflow: auto;
+  background-color: #DDDDDD;
 }
 
