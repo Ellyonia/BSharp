@@ -9,7 +9,7 @@ $(document).ready(function(){
 
 function checkMe()
 {
-	if ($('#newPassword').val() == $('#reTypePassword').val())
+	if ($('#newPassword').val() == $('#reTypePass').val())
 	{
 	  $('#setPassword').val($('#newPassword').val());
 	  $('register').submit();
