@@ -26,8 +26,13 @@ class phpAPI
         $email = $_POST['newEmail'];
         $password = $_POST['newPassword'];
 
+
         $query = "INSERT INTO Users(fname, lname, user_id, username,password) VALUES 
-            ('" . $_POST['firstName'] . "', '" . $_POST['lastName'] . "',444,'" . $_POST['newEmail'] . "','" . $_POST['newPassword'] . "')";
+            ('$fname', '$lname',444,'$email','$password')";
+
+/*
+        $query = "INSERT INTO Users(fname, lname, user_id, username,password) VALUES 
+            ('" . $_POST['firstName'] . "', '" . $_POST['lastName'] . "',444,'" . $_POST['newEmail'] . "','" . $_POST['newPassword'] . "')";*/
         if(!mysql_query($query))
         {
             return false;
