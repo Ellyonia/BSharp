@@ -27,14 +27,15 @@ class phpAPI
 
 
         $count = "SELECT * from Users WHERE(username = '$email')";
-        $num_rows = mysql_num_rows($count);
+        
 
-        if(!mysql_query($query))
+        if(!mysql_query($count))
         {
             header('Location: error.php');
         }
         else
         {
+            $num_rows = mysql_num_rows($count);
             if($num_rows > 0)
             {
                 header('Location: EmailTaken.php');
