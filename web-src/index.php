@@ -38,7 +38,7 @@ Chris Linstromberg
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title></title>
+    <title>Welcome to B#</title>
     <link rel="stylesheet" type="text/css" href="css/style.css"> 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src='js/scripting.js'></script>
