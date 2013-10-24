@@ -15,7 +15,7 @@
   		<ol>
   			<li>
   				About Band
-  				<input type='textArea' placeholder="Enter Information about your Band" id="aboutBand" name = "aboutBand" required/>
+  				<input type='textArea' placeholder="Enter Information about your Band" id="aboutBand" name = "aboutBand" rows="50" cols="50" required/>
   			</li>
   		</ol>
 
