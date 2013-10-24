@@ -23,11 +23,11 @@ class phpAPI
         $user_id = 444; //$_POST['user_id'];    // manually added just for a test
         $fname = $_POST['firstName'];
         $lname = $_POST['lastName'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
+        $email = $_POST['newEmail'];
+        $password = $_POST['newPassword'];
 
         $query = "INSERT INTO Users(fname, lname, user_id, username,password) VALUES 
-            ('" . $_POST['firstName'] . "', '" . $_POST['lastName'] . "',444,'" . $_POST['email'] . "','" . $_POST['password'] . "')";
+            ('" . $_POST['firstName'] . "', '" . $_POST['lastName'] . "',444,'" . $_POST['newEmail'] . "','" . $_POST['newPassword'] . "')";
         if(!mysql_query($query))
         {
             return false;

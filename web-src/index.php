@@ -23,8 +23,8 @@ Chris Linstromberg
     }
 
     if(isset($_POST['signUp'])){
-         $_SESSION['email'] = $_POST['email'];
-         $_SESSION['password'] = $_POST['password'];
+         $_SESSION['email'] = $_POST['newEmail'];
+         $_SESSION['password'] = $_POST['newPassword'];
          $_SESSION['fname'] = $_POST['firstName'];
          $_SESSION['lname'] = $_POST['laststName'];
 
@@ -75,7 +75,7 @@ Chris Linstromberg
             </li>
 
             <li>
-                <input type="password" id="password" name = "newPassword" pattern = "[a-zA-Z0-9:.,?!@]{8,}" placeholder = "Password" oninvalid="setCustomValidity('Password must be greater than 8 characters')" onchange="try{setCustomValidity('')}catch(e){}" required/>
+                <input type="password" id="newPassword" name = "newPassword" pattern = "[a-zA-Z0-9:.,?!@]{8,}" placeholder = "Password" oninvalid="setCustomValidity('Password must be greater than 8 characters')" onchange="try{setCustomValidity('')}catch(e){}" required/>
             </li>
 
 <!--
