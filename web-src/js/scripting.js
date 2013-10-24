@@ -11,7 +11,7 @@ function checkMe()
 {
 	if ($('#newPassword').val() == $('#reTypePass').val())
 	{
-		var pass = $('#newPassword').val();
+		var pass = $('#newPassword').text();
 	 	$('#setPassword').val(pass);
 		console.log('#setPassword');
 		$('register').submit();
