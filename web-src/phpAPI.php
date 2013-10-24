@@ -40,7 +40,7 @@ class phpAPI
         }
         else
         {
-
+            header('Location: band_page.php');
             return; 
         }
     
