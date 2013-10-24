@@ -36,27 +36,29 @@ class phpAPI
         else
         {
             $num_rows = mysql_num_rows($count);
+
             if($num_rows > 0)
             {
                 header('Location: EmailTaken.php');
             }
-        }
-        else{
-
-            $query = "INSERT INTO Users(fname, lname, username,password) VALUES 
-                ('$fname', '$lname','$email','$password')";
-    /*
-            $query = "INSERT INTO Users(fname, lname, user_id, username,password) VALUES 
-                ('" . $_POST['firstName'] . "', '" . $_POST['lastName'] . "',444,'" . $_POST['newEmail'] . "','" . $_POST['newPassword'] . "')";*/
-            if(!mysql_query($query))
-            {
-                header('Location: error.php');
-            }
             else
             {
-                header('Location: band_page.php');
+                $query = "INSERT INTO Users(fname, lname, username,password) VALUES 
+                    ('$fname', '$lname','$email','$password')";
+        /*
+                $query = "INSERT INTO Users(fname, lname, user_id, username,password) VALUES 
+                    ('" . $_POST['firstName'] . "', '" . $_POST['lastName'] . "',444,'" . $_POST['newEmail'] . "','" . $_POST['newPassword'] . "')";*/
+                if(!mysql_query($query))
+                {
+                    header('Location: error.php');
+                }
+                else
+                {
+                    header('Location: band_page.php');
+                }
             }
         }
+        
     
     }
 
