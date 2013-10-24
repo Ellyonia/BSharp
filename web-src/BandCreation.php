@@ -11,7 +11,16 @@
   </head>
 
   <body>
+  	<form id="makeBand" action = "makeBand.php" method = "post">
+  		<ol>
+  			<li>
+  				About Band
+  				<input type='textArea' placeholder="Enter Information about your Band" id="aboutBand" name = "aboutBand" required/>
+  			</li>
+  		</ol>
 
+
+  	</form>
 
 
 
