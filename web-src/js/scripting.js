@@ -1,5 +1,10 @@
 $(document).ready(function(){
-	$('#signUp').click(checkMe);
+	$('#signUp').click(checkPass);
+
+	$('#createBand').click(function(){
+
+		window.prompt("Make a new Band?");
+	})
 
 
 
@@ -7,7 +12,7 @@ $(document).ready(function(){
 
 
 
-function checkMe()
+function checkPass()
 {
 	if ($('#newPassword').val() == $('#reTypePass').val())
 	{
