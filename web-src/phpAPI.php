@@ -36,7 +36,8 @@ class phpAPI
         else
         {
             $num_rows = mysql_num_rows($count);
-            echo $num_rows;
+            
+            return $num_rows;
 
             if($num_rows > 0)
             {
