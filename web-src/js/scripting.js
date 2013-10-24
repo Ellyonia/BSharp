@@ -3,7 +3,7 @@ $(document).ready(function(){
 
 	$('#createBand').click(function(){
 
-		window.prompt("Make a new Band?");
+		window.confirm("Make a new Band?");
 	})
 
 
