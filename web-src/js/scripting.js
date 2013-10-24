@@ -9,12 +9,15 @@ $(document).ready(function(){
 
 function checkMe()
 {
-  if ($('register #newPassword').val() == $('register #reTypePassword').val())
-  {
-    $('register #setPassword').val($('register #newPassword').val());
-    $('register').submit();
-  }
-  else
-    alert("Passwords do not match!");
+	if ($('#newPassword').val() == $('#reTypePassword').val())
+	{
+	  $('#setPassword').val($('#newPassword').val());
+	  $('register').submit();
+	}
+	else
+	{
+		console.log("not matching");
+	  	alert("Passwords do not match!");
+	}
 }
 
