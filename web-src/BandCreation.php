@@ -12,11 +12,10 @@
 
   <body>
   	<form id="makeBand" action = "makeBand.php" method = "post">
-  		<textArea rows="4" cols="50" placeholder="Enter Information about your Band" id="aboutBand" name = "aboutBand"  required/>
   		<ol>
   			<li>
   				About Band
-  				<textArea rows="4" cols="50" placeholder="Enter Information about your Band" id="aboutBand" name = "aboutBand"  required/>
+  				<textArea rows="4" cols="50" placeholder="Enter Information about your Band" id="aboutBand" name = "aboutBand"  required/></textarea>
   			</li>
   		</ol>
 
