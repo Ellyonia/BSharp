@@ -27,7 +27,7 @@ class phpAPI
         $password = $_POST['password'];
 
         $query = "INSERT INTO Users(fname, lname, user_id, username,password) VALUES 
-            ('"$_POST['firstName']"',444,'"$_POST['email']"','"$_POST['password']"')";
+            ('"$_POST['firstName']"', '"$_POST['lastName']"',444,'"$_POST['email']"','"$_POST['password']"')";
         if(!mysql_query($query))
         {
             return false;
