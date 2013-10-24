@@ -20,15 +20,14 @@ class phpAPI
     public function addUser()
     {   
         //add a user to the system
-        $user_id = 444; //$_POST['user_id'];    // manually added just for a test
         $fname = $_POST['firstName'];
         $lname = $_POST['lastName'];
         $email = $_POST['newEmail'];
         $password = $_POST['newPassword'];
 
 
-        $query = "INSERT INTO Users(fname, lname, user_id, username,password) VALUES 
-            ('$fname', '$lname',555,'$email','$password')";
+        $query = "INSERT INTO Users(fname, lname, username,password) VALUES 
+            ('$fname', '$lname','$email','$password')";
 
 /*
         $query = "INSERT INTO Users(fname, lname, user_id, username,password) VALUES 
