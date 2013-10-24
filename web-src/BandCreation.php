@@ -19,7 +19,7 @@
   			</li>
   			<li>
   				Band Contact Info
-  				<input
+  				<input type='text' name = 'phone' id='phone' placeholder="Phone Number" required/>
   			</li>
   		</ol>
 
