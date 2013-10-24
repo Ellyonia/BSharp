@@ -35,13 +35,13 @@ class phpAPI
             ('" . $_POST['firstName'] . "', '" . $_POST['lastName'] . "',444,'" . $_POST['newEmail'] . "','" . $_POST['newPassword'] . "')";*/
         if(!mysql_query($query))
         {
-            
-            return false;
+            header('Location: band_page.php');
+            //return false;
         }
         else
         {
-            header('Location: band_page.php');
-            return; 
+            header('Location: error.php');
+            //return; 
         }
     
     }
