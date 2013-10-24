@@ -36,13 +36,10 @@ class phpAPI
         if(!mysql_query($query))
         {
             header('Location: error.php');
-            
-            //return false;
         }
         else
         {
             header('Location: band_page.php');
-            //return; 
         }
     
     }

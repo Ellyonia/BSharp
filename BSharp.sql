@@ -11,7 +11,7 @@ USE `BSharp` ;
 CREATE  TABLE IF NOT EXISTS `BSharp`.`Users` (
   `fname` VARCHAR(20) NULL ,
   `lname` VARCHAR(20) NULL ,
-  `user_id` INT NOT NULL ,
+  `user_id` INT NOT NULL AUTO_INCREMENT ,
   `username` VARCHAR(45) NULL ,
   `password` VARCHAR(45) NULL ,
   PRIMARY KEY (`user_id`) )
