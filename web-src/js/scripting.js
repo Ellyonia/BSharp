@@ -14,7 +14,7 @@ function checkMe()
 		var pass = $('#newPassword').val();
 	 	$('#setPassword').val(pass);
 		console.log(pass);
-		$('register').submit();
+		$('.register').submit();
 	}
 	else
 	{
