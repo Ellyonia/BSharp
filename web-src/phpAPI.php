@@ -28,7 +28,7 @@ class phpAPI
 
 
         $query = "INSERT INTO Users(fname, lname, user_id, username,password) VALUES 
-            ('$fname', '$lname',444,'$email','$password')";
+            ('$fname', '$lname',555,'$email','$password')";
 
 /*
         $query = "INSERT INTO Users(fname, lname, user_id, username,password) VALUES 
