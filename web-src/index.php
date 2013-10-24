@@ -16,8 +16,6 @@ Chris Linstromberg
          $_SESSION['email'] = $_POST['email'];
          $_SESSION['password'] = $_POST['password'];
 
-         echo "email = ". $_SESSION['email'];
-         echo "\n password = ". $_SESSION['password'];
          header("Location: band_page.php");
 
     }
@@ -43,7 +41,7 @@ Chris Linstromberg
     <title></title>
     <link rel="stylesheet" type="text/css" href="css/style.css"> 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script type="text/javascript" src='js/menu.js'></script>
+    <script type="text/javascript" src='js/scripting.js'></script>
   </head>
 
   <body>
