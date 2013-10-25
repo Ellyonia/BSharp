@@ -41,8 +41,8 @@ CREATE  TABLE IF NOT EXISTS `BSharp`.`Pieces` (
   CONSTRAINT `band_id`
     FOREIGN KEY (`band_id` )
     REFERENCES `BSharp`.`Band` (`band_id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE 
+    ON UPDATE CASCADE
 ENGINE = InnoDB;
 
 
@@ -59,8 +59,8 @@ CREATE  TABLE IF NOT EXISTS `BSharp`.`Part` (
   CONSTRAINT `piece_id`
     FOREIGN KEY (`piece_id` )
     REFERENCES `BSharp`.`Pieces` (`piece_id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
 ENGINE = InnoDB;
 
 
@@ -79,18 +79,18 @@ CREATE  TABLE IF NOT EXISTS `BSharp`.`BandsIn` (
   CONSTRAINT `bandid`
     FOREIGN KEY (`band_id` )
     REFERENCES `BSharp`.`Band` (`band_id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `user_id`
     FOREIGN KEY (`user_id` )
     REFERENCES `BSharp`.`Users` (`user_id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `part_id`
     FOREIGN KEY (`part_id` )
     REFERENCES `BSharp`.`Part` (`part_id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
 ENGINE = InnoDB;
 
 
