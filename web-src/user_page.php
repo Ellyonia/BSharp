@@ -13,12 +13,9 @@
   	<div class="band_pages">
   		<h2>My Bands</h2>
   		<ul>
-        <li>
-          <a href="http://ec2-54-200-98-78.us-west-2.compute.amazonaws.com/DB-GUI/web-src/BandCreation.php"> Test </a>
-        </li>
   			<li>
           <FORM METHOD="LINK" ACTION="BandCreation.php">
-          <INPUT TYPE="submit" VALUE="Create Band">
+            <INPUT TYPE="submit" VALUE="Create Band">
           </FORM>
           <!--
           <input type="button" id="createBand" name="createBand" value="Create Band"/>-->
