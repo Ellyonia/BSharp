@@ -24,6 +24,7 @@
   			</li>
   		</ol>
 
+      <input type="submit" name="createBand" id="createBand" value="Create Band"/>
 
   	</form>
 
