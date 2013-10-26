@@ -55,7 +55,7 @@ class phpAPI
                 }
                 else
                 {
-                    header('Location: band_page.php');
+                    header('Location: user_page.php');
                 }
             }
         }
@@ -122,7 +122,7 @@ class phpAPI
 		}
 		else
 		{
-			header('Location: band_page.php');
+			header('Location: user_page.php');
 		}
 		
 		mysql_close($con);
