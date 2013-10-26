@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,7 +12,7 @@
   		<ol>
         <li>
           Band Name
-          <input type='text' name = 'bName' id='bName' placeholder="Band Name" required/>
+          <input type='text' name = 'bandName' id='bandName' placeholder="Band Name" required/>
         </li>
   			<li>
   				About Band
