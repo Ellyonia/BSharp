@@ -14,7 +14,7 @@
   		<h2>My Bands</h2>
   		<ul>
         <li>
-          <a href="http://ec2-54-200-98-78.us-west-2.compute.amazonaws.com/DB-GUI/web-src/BandCreation.php" value="test"/>
+          <a href="http://ec2-54-200-98-78.us-west-2.compute.amazonaws.com/DB-GUI/web-src/BandCreation.php"> Test </a>
         </li>
   			<li>
           <input type="button" id="createBand" name="createBand" value="Create Band"/>
