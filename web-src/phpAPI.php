@@ -128,5 +128,20 @@ class phpAPI
 		mysql_close($con);
 	}
 
+
+    public function logout()
+    {
+        
+    }
+
+
+
+
+
+
 }
+
+
+
+
 ?>

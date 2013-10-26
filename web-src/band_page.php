@@ -7,6 +7,8 @@
 
   <body>
   	<h1>Welcome to the band front page</h1>
+
+    <a href="logout.php">Log Out</a>
   	
   	<span id="navbar">
   		<img src="img/logo.png" id = "logo" alt = "Custom Cupcake Logo">
