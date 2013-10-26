@@ -13,6 +13,10 @@
   <body>
   	<form id="makeBand" action = "makeBand.php" method = "post">
   		<ol>
+        <li>
+          Band Name
+          <input type='text' name = 'bName' id='bName' placeholder="Band Name" required/>
+        </li>
   			<li>
   				About Band
   				<textArea rows="4" cols="50" placeholder="Enter Information about your Band" id="aboutBand" name = "aboutBand"  required/></textarea>
