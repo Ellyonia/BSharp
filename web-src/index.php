@@ -16,7 +16,7 @@ Chris Linstromberg
          $_SESSION['email'] = $_POST['email'];
          $_SESSION['password'] = $_POST['password'];
 
-         header("Location: band_page.php");
+         header("Location: user_page.php");
 
     }
 
@@ -26,7 +26,7 @@ Chris Linstromberg
          $_SESSION['fname'] = $_POST['firstName'];
          $_SESSION['lname'] = $_POST['laststName'];
 
-         header("Location: band_page.php");
+         header("Location: user_page.php");
 
     }
 
