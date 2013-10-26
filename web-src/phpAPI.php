@@ -78,7 +78,7 @@ class phpAPI
         $result = mysql_query($sql); /* or die(mysql_error());*/
 
         if(mysql_num_rows($result) > 0)
-            header('Location: band_page.php');
+            header('Location: user_page.php');
         else
             header('Location: index.php');
         
@@ -122,7 +122,7 @@ class phpAPI
 		}
 		else
 		{
-			header('Location: user_page.php');
+			header('Location: band_page.php');
 		}
 		
 		mysql_close($con);
