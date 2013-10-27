@@ -143,8 +143,8 @@ class phpAPI
 		else
 		{
 
-
-            $id = mysql_query("SELECT LAST_INSERT_ID()");
+            $id = mysql_insert_id();
+            //$id = mysql_query("SELECT LAST_INSERT_ID()");
             echo $id;
             $temp = mysql_fetch_assoc($id);
             echo $temp;
