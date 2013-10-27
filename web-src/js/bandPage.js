@@ -4,7 +4,7 @@ $(document).ready(function(){
 		//e.prevenDefault();
 		var makeVis = $(e.target).children('a').eq(0).attr('href');
 		//var makeVis = $(e.target + ' a').attr('href');
-		console.log(1);
+		console.log(makeVis);
 		$('.visible').addClass('hidden');
 		console.log(2);
 		$('.visible').removeClass('visible');
