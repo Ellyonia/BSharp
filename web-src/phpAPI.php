@@ -89,11 +89,10 @@ class phpAPI
             $getID = mysql_query("SELECT user_id from Users where username = '" . $_POST['email'] . "' and password = '" . $_POST['password'] ."'");
 
             $temp = mysql_fetch_assoc($getID);
-            echo $temp['user_id'];
             $_SESSION['uid'] = $temp['user_id'];
 
 
-            //header('Location: user_page.php');
+            header('Location: user_page.php');
         }
         else
             header('Location: index.php');
