@@ -3,7 +3,9 @@ $(document).ready(function(){
 		//console.log(e.target);
 		//e.prevenDefault();
 		var makeVis = $(e.target).first().attr('href');
-		console.log(makeVis);
+		if(typeof makeVis === 'undefined'){
+			makeVis = $(e.target + ' a').first().attr('href');
+		}
 		$('.visible').addClass('hidden');
 		$('.visible').removeClass('visible');
 		//$('.selected').css({"background-color": "#181818"});
