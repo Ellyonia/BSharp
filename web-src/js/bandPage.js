@@ -1,8 +1,8 @@
 $(document).ready(function(){
 	$('#navbar li').click(function(e){
-		console.log(0);
+		console.log(e.target);
 		//e.prevenDefault();
-		var makeVis = $(e.target).children('a').eq(0).attr('href');
+		var makeVis = $(e.target).first().attr('href');
 		//var makeVis = $(e.target + ' a').attr('href');
 		console.log(makeVis);
 		$('.visible').addClass('hidden');
