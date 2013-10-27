@@ -52,18 +52,19 @@ h1 {
 }
 
 #navbar li a:link {
-  background-color: #303030;
+  background-color: #181818;
   color: #484860;
   text-decoration: none;
+  margin-top: -5px;
+  padding: .15em;
   font-size: 22px;
 }
 
-
 #navbar li a:hover {
-  background-color: #484860;
-  color: #303030;
+  background-color: #303030;
+  color: white;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 24px;
 }
 
 img {
@@ -75,22 +76,28 @@ img {
 .band_pages {
   position: fixed;
   left: 2%;
-  color: orange;
+  color: #b78727;
   background-color: #181818;
   top: 30%;
-  width: 170px;
+  width: 160px;
+  padding-left: 1%;
   height: 300px;
   height: 67%;
   overflow: auto;
-  /*float: left;*/
+
+}
+
+.band_pages ul {
+  list-style: none;
 }
 
 #about {
   position: fixed;
   top: 30%;
   left: 15%;
-  width: 83%;
+  width: 82%;
   height: 67%;
+  padding-left: 1%;
   font-size: 30px;
   overflow: auto;
   background-color: #181818;
@@ -101,62 +108,69 @@ img {
   position: fixed;
   top: 30%;
   left: 15%;
-  width: 83%;
+  width: 82%;
   height: 67%;
+  padding-left: 1%;
   font-size: 30px;
   overflow: auto;
   background-color: #181818;
+  display: none;
  }
 
 #management {
   position: fixed;
   top: 30%;
   left: 15%;
-  width: 83%;
+  width: 82%;
   height: 67%;
+  padding-left: 1%;
   font-size: 30px;
   overflow: auto;
   background-color: #181818;
+  display: none;
 }
 
 #events {
   position: fixed;
   top: 30%;
   left: 15%;
-  width: 83%;
+  width: 82%;
   height: 67%;
+  padding-left: 1%;
   font-size: 30px;
   overflow: auto;
   background-color: #181818;
+  display: none;
 }
 
 #members {
   position: fixed;
   top: 30%;
   left: 15%;
-  width: 83%;
+  width: 82%;
   height: 67%;
+  padding-left: 1%;
   font-size: 30px;
   overflow: auto;
-
   background-color: #181818;
-  
+  display: none;
 }
 
 #contact {
   position: fixed;
   top: 30%;
   left: 15%;
-  width: 83%;
+  width: 82%;
   height: 67%;
+  padding-left: 1%;
   font-size: 30px;
   overflow: auto;
   background-color: #181818;
-  
+  display: none;
 }
-
+/*
 .hidden {
   display: none !important;
 }
 
-.visible {}
+.visible {}*/
