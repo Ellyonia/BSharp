@@ -2,6 +2,25 @@
 CSS FOR index.php
 **********************************************/
 
+#login {
+  float: right;
+  display: inline;
+  border: dashed;
+}
+
+.logEmail {
+  display: inline;
+}
+
+.logPass {
+  display: inline;
+}
+
+.page {
+  position: relative;
+  top: 200px;
+}
+
 /**********************************************
 CSS FOR band_page.php
 **********************************************/
@@ -21,7 +40,7 @@ h1 {
   position: fixed;
   left: 10%;
   top: 5%;
-  /*font-size: 48px;*/
+  font-size: 32px;
 }
 
 div {
@@ -149,6 +168,7 @@ img {
   font-size: 30px;
   overflow: auto;
   background-color: #181818;
+  box-shadow: 7px 7px 10px 2px #181860;
   /*display: none;*/
 }
 
@@ -162,6 +182,7 @@ img {
   font-size: 30px;
   overflow: auto;
   background-color: #181818;
+  box-shadow: 7px 7px 10px 2px #181860;
   /*display: none;*/
 }
 
@@ -175,6 +196,7 @@ img {
   font-size: 30px;
   overflow: auto;
   background-color: #181818;
+  box-shadow: 7px 7px 10px 2px #181860;
   /*display: none;*/
 }
 

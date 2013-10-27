@@ -51,22 +51,19 @@ Chris Linstromberg
             <input type="email" name = "email" id="email" required placeholder="email@example.com" oninvalid="setCustomValidity('Please eneter a valid email address')" onchange="try{setCustomValidity('')}catch(e){}"/>
         </div>
         <div class="logPass"> 
-            <label>Password: </label>
+            <label>Password:</label>
             <input type="password" id="logPass" name = "password" pattern = "[a-zA-Z0-9:.,?!@]{8,}" placeholder = "Password" oninvalid="setCustomValidity('Password must be greater than 8 characters')" onchange="try{setCustomValidity('')}catch(e){}" required/>
             <input type="submit" value="Login" name="signIn" id="signIn" /> 
         </div>
     </form>
 
     <div class="page">
-
-
         <form id="register" class = "register" method = "post" action = "addUser.php">
 
             <header>Create a B# Account</header>
             <div class="hr"><hr /></div>
             <input type="hidden" name="setPassword">
         <ul>
-
             <li>
                 <input type="text" placeholder="First Name" id="firstName" name = "firstName"required/>
                 <input type="text" placeholder="Last Name" id="lastName" name = "lastName"required/>
