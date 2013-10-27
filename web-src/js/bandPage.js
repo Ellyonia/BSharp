@@ -12,6 +12,12 @@ $(document).ready(function(){
 		$.when($('.selected').removeClass('selected')).done(function(){
 		$(makeVis).addClass('visible');
 		$(e.target).addClass('selected');
+		if ($(e.target).children().length > 0 ) {
+			$(e.target).children().addClass('selected');
+		}
+		else {
+			$(e.target).parent().addClass('selected');
+		}
 	});
 
 });
