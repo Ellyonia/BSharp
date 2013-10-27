@@ -10,7 +10,13 @@
 ?>-->
 
 
+<?
+  include 'phpAPI.php';
+  $phpInit = new phpAPI();
+  $phpInit->setBID();
 
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -58,7 +64,7 @@
       <h2>About Band</h2>
       <?
         include 'phpAPI.php';
-        $phpInit = new phpAPI();
+        //$phpInit = new phpAPI();
 
         echo "<p>";
 
@@ -82,7 +88,7 @@
           <textArea rows="4" cols="50" id="aboutBand" name = "aboutBand"/> 
             <?
               include 'phpAPI.php';
-              $phpInit = new phpAPI();
+              //$phpInit = new phpAPI();
               $phpInit->getBandInfo();
 
 
