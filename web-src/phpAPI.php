@@ -150,8 +150,8 @@ class phpAPI
             echo $temp;
             $bid = $temp['band_id'];
             echo $bid;
-            $_SESSION['currBand'] = $bid;
-            $bandIn = "INSERT Into BandsIn(band_id, user_id, directorFlag) values ($bid, $uid, 1)";
+            $_SESSION['currBand'] = $temp;
+            $bandIn = "INSERT Into BandsIn(band_id, user_id, directorFlag) values ($temp, $uid, 1)";
 
             mysql_query($bandIn);
 			//header('Location: band_page.php');
