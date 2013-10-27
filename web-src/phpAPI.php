@@ -183,7 +183,7 @@ class phpAPI
 
         $bID = $_SESSION['bID'];
 
-        $query = "SELECT band_info from Band where band_id = "
+        //$query = "SELECT band_info from Band where band_id = "
     }
 
     public function setBID(){
