@@ -142,7 +142,7 @@ class phpAPI
 
 
         while ($temp = mysql_fetch_assoc($query)) {
-            echo "<a href='band_page.php'>" . $temp['band_name'] . $temp['band_id'] . "</a>";
+            echo "<a href='band_page.php'>" . $temp['band_name'] . $temp['band_id'] . "</a>"
 
         }
 
