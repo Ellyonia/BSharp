@@ -43,7 +43,7 @@ CREATE  TABLE IF NOT EXISTS `BSharp`.`Pieces` (
     FOREIGN KEY (`band_id` )
     REFERENCES `BSharp`.`Band` (`band_id` )
     ON DELETE CASCADE 
-    ON UPDATE CASCADE
+    ON UPDATE CASCADE )
 ENGINE = InnoDB;
 
 
@@ -52,7 +52,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `BSharp`.`Part` (
   `part_id` INT NOT NULL,
-  `location` VARCHAR(45) NULL ,
+  `location` VARCHAR(80) NULL ,
   `piece_id` INT NOT NULL ,
   `instrument` VARCHAR(45) NOT NULL ,
   PRIMARY KEY (`part_id`, `piece_id`, `instrument`) ,
@@ -61,7 +61,7 @@ CREATE  TABLE IF NOT EXISTS `BSharp`.`Part` (
     FOREIGN KEY (`piece_id` )
     REFERENCES `BSharp`.`Pieces` (`piece_id` )
     ON DELETE CASCADE
-    ON UPDATE CASCADE
+    ON UPDATE CASCADE )
 ENGINE = InnoDB;
 
 
@@ -74,7 +74,7 @@ CREATE  TABLE IF NOT EXISTS `BSharp`.`BandsIn` (
   `instrument` VARCHAR(45) NULL ,
   `part_id` INT NULL ,
   `directorFlag` TINYINT(1) NULL ,
-  PRIMARY KEY (`band_id`, `user_id`)
+  PRIMARY KEY (`band_id`, `user_id`) ,
   INDEX `band_id` (`band_id` ASC) ,
   INDEX `user_id` (`user_id` ASC) ,
   INDEX `part_id` (`part_id` ASC) ,
@@ -87,7 +87,7 @@ CREATE  TABLE IF NOT EXISTS `BSharp`.`BandsIn` (
     FOREIGN KEY (`user_id` )
     REFERENCES `BSharp`.`Users` (`user_id` )
     ON DELETE CASCADE
-    ON UPDATE CASCADE,
+    ON UPDATE CASCADE )
 ENGINE = InnoDB;
 
 
