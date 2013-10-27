@@ -63,7 +63,7 @@
   	<div id="about" class="hidden">
       <h2>About Band</h2>
       <?
-        include 'phpAPI.php';
+        //include 'phpAPI.php';
         //$phpInit = new phpAPI();
 
         echo "<p>";
@@ -87,7 +87,7 @@
         <div class="editInfo">
           <textArea rows="4" cols="50" id="aboutBand" name = "aboutBand"/> 
             <?
-              include 'phpAPI.php';
+              //include 'phpAPI.php';
               //$phpInit = new phpAPI();
               $phpInit->getBandInfo();
 
