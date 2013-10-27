@@ -44,7 +44,7 @@ h1 {
 #navbar li {
   float: left;
   margin-right: 50px;
-  height: 120%;
+  height: 10%;
   background-color: pink;
   /*left: 200px;*/
 }
