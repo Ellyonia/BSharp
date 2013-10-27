@@ -6,7 +6,7 @@ class phpAPI
      
     function phpAPI()
     {
-        //session_start();
+        session_start();
 
         $con = mysql_connect("localhost", "DBandGUI", "narwhal");
         if(!$con)
@@ -60,7 +60,7 @@ class phpAPI
 
                     $temp = mysql_fetch_assoc($getID);
                     $_SESSION['uid'] = $temp['user_id'];
-                    
+
                     header('Location: user_page.php');
                 }
             }
