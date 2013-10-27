@@ -77,8 +77,10 @@ class phpAPI
 
         $result = mysql_query($sql); /* or die(mysql_error());*/
 
-        if(mysql_num_rows($result) > 0)
+        if(mysql_num_rows($result) > 0){
+            $SESSION['uid'] = mysql_query("SELECT user_id from Users where username = '" . $_POST['email'] . "' and password = '" . $_POST['password'] ."'");
             header('Location: user_page.php');
+        }
         else
             header('Location: index.php');
         
@@ -136,7 +138,8 @@ class phpAPI
 
     public function getBands()
     {
-        $query = mysql_query("SELECT Band.band_name, Band.band_id from BandsIn INNER JOIN Band ON BandsIn.band_id=Band.band_id where BandsIn.user_id = 1");
+        $uid = $SESSION['uid'];
+        $query = mysql_query("SELECT Band.band_name, Band.band_id from BandsIn INNER JOIN Band ON BandsIn.band_id=Band.band_id where BandsIn.user_id = $uid");
 
         
 
