@@ -89,7 +89,7 @@ class phpAPI
             $getID = mysql_query("SELECT user_id from Users where username = '" . $_POST['email'] . "' and password = '" . $_POST['password'] ."'");
 
             $temp = mysql_fetch_assoc($getID);
-            echo $temp;
+            echo $temp['uid'];
             $_SESSION['uid'] = $temp['user_id'];
 
 
