@@ -171,7 +171,7 @@ class phpAPI
 
 
         while ($temp = mysql_fetch_assoc($query)) {
-            echo "<li><a href='band_page.php?a='" . $temp['band_id'] . ">" . $temp['band_name'] . $temp['band_id'] . "</a></li>";
+            echo "<li><a href='band_page.php?a='" . $temp['band_id'] . "'>" . $temp['band_name'] . $temp['band_id'] . "</a></li>";
 
         }
 
@@ -183,7 +183,7 @@ class phpAPI
 
         $bID = $_SESSION['bID'];
 
-        //$query = "SELECT band_info from Band where band_id = "
+        $query = "SELECT band_info from Band where band_id = "
     }
 
     public function setBID(){
