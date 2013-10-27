@@ -146,6 +146,8 @@ class phpAPI
 
     public function logout()
     {
+        echo "Log Out Successful";
+        session_destroy();
 
     }
 
