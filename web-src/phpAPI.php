@@ -56,7 +56,11 @@ class phpAPI
                 }
                 else
                 {
-                    $_SESSION['uid'] = mysql_query("SELECT user_id from Users where username = '" . $_POST['email'] . "' and password = '" . $_POST['password'] ."'");
+                    $getID = mysql_query("SELECT user_id from Users where username = '" . $_POST['email'] . "' and password = '" . $_POST['password'] ."'");
+
+                    $temp = mysql_fetch_assoc($getID);
+                    $_SESSION['uid'] = $temp['user_id'];
+                    
                     header('Location: user_page.php');
                 }
             }
@@ -80,7 +84,14 @@ class phpAPI
         $result = mysql_query($sql); /* or die(mysql_error());*/
 
         if(mysql_num_rows($result) > 0){
-            $_SESSION['uid'] = mysql_query("SELECT user_id from Users where username = '" . $_POST['email'] . "' and password = '" . $_POST['password'] ."'");
+            
+
+            $getID = mysql_query("SELECT user_id from Users where username = '" . $_POST['email'] . "' and password = '" . $_POST['password'] ."'");
+
+            $temp = mysql_fetch_assoc($getID);
+            $_SESSION['uid'] = $temp['user_id'];
+
+
             header('Location: user_page.php');
         }
         else
@@ -140,7 +151,7 @@ class phpAPI
 
     public function getBands()
     {
-        $uid = $SESSION['uid'];
+        $uid = $_SESSION['uid'];
         $query = mysql_query("SELECT Band.band_name, Band.band_id from BandsIn INNER JOIN Band ON BandsIn.band_id=Band.band_id where BandsIn.user_id = " . $_SESSION['uid']);
 
         
