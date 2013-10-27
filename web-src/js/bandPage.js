@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	$('#navbar li').click(function(e){
-		//console.log(e.target);
+		console.log(e.target);
 		//e.prevenDefault();
 		var makeVis = $(e.target).first().attr('href');
 		if(typeof makeVis === 'undefined'){
