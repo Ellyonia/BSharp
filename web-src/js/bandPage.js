@@ -7,8 +7,8 @@ $(document).ready(function(){
 		console.log(makeVis);
 		$('.visible').addClass('hidden');
 		$('.visible').removeClass('visible');
-		$('.selected').css({"background-color": "#181818"});
-		$('.selected').removeClass('selected');
+		//$('.selected').css({"background-color": "#181818"});
+		$.when($('.selected').removeClass('selected')).then(function(){
 		$(makeVis).addClass('visible');
 		$(e.target).addClass('selected');
 	});
