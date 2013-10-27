@@ -1,3 +1,18 @@
+<?php
+
+    session_start();
+
+    $phpInit = new phpAPI();
+    $phpInit->getBands();
+
+
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
