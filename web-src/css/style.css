@@ -5,13 +5,20 @@ CSS FOR index.php
 /**********************************************
 CSS FOR band_page.php
 **********************************************/
-/*body {
-  height: 1000px;
-}*/
+body {
+  color: white;
+  background-color: #181818;
+  background-image: url('C:/Users/Guy/Documents/GitHub/DB-GUI/web-src/img/gwbi.jpg');
+}
+
+body a {
+  float: right;
+}
 
 h1 {
   position: fixed;
-  left: 2%;
+  left: 10%;
+  top: 5%;
 }
 
 #navbar {
@@ -19,14 +26,15 @@ h1 {
   width: 96%;
   left: 2%;
   right: 2%;
-  top: 12%;
+  top: 15%;
   margin-left: auto;
   margin-right: auto;
-  background: #dddddd;
+  height: 10%;
+  background: #b78727;
 }
 
 #navbar ul {
-  color: #2C2C2C;
+  color: #787890;
   list-style: none;
   margin: 0px;
   padding: 1em;
@@ -35,12 +43,14 @@ h1 {
 
 #navbar li {
   float: left;
-  margin-right: 15px;
-  left: 200px;
+  margin-right: 50px;
+  height: 120%;
+  background-color: pink;
+  /*left: 200px;*/
 }
 
 #navbar li a:hover {
-  background-color: #2C2C2C;
+  background-color: #484860;
   color: #DD3124;
   text-decoration: none;
   font-size: 32px;
@@ -56,7 +66,7 @@ img {
 	position: fixed;
 	left: 2%;
 	color: orange;
-	background-color: #dddddd;
+	background-color: #b78727;
 	top: 30%;
   width: 170px;
   height: 300px;
@@ -71,7 +81,7 @@ img {
   height: 67%;
   font-size: 30px;
   overflow: auto;
-  background-color: #DDDDDD;
+  background-color: #b78727;
   display: none;
 }
 
@@ -83,7 +93,7 @@ img {
   height: 67%;
   font-size: 30px;
   overflow: auto;
-  background-color: #DDDDDD;
+  background-color: #b78727;
   display: none;
 }
 
@@ -95,7 +105,7 @@ img {
   height: 67%;
   font-size: 30px;
   overflow: auto;
-  background-color: #DDDDDD;
+  background-color: #b78727;
   /*display: none;*/
 }
 
@@ -107,7 +117,7 @@ img {
   height: 67%;
   font-size: 30px;
   overflow: auto;
-  background-color: #DDDDDD;
+  background-color: #b78727;
   display: none;
 }
 
@@ -119,7 +129,19 @@ img {
   height: 67%;
   font-size: 30px;
   overflow: auto;
-  background-color: #DDDDDD;
+  background-color: #b78727;
+  display: none;
+}
+
+#contact {
+  position: fixed;
+  top: 30%;
+  left: 15%;
+  width: 83%;
+  height: 67%;
+  font-size: 30px;
+  overflow: auto;
+  background-color: #b78727;
   display: none;
 }
 
