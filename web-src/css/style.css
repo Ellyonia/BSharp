@@ -186,9 +186,9 @@ box-shadow: 10px 10px 5px #888888;
 }
 
 .selected {
-  background-color: purple;
+  background-color: purple !important;
 }
 
 .notselected{
-  background-color: #181818 !important;
+  background-color: #181818;
 }
