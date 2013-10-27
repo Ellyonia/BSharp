@@ -37,7 +37,7 @@
   				<a href="#about">About Band</a>
   			</li>
   			<li>
-  				<a href="#Pieces">Pieces</a>
+  				<a href="#pieces">Pieces</a>
   			</li>
   			<li>
   				<a href="#management">Band Management</a>
