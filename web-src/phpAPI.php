@@ -6,7 +6,7 @@ class phpAPI
      
     function phpAPI()
     {
-        //session_start();
+        session_start();
 
         $con = mysql_connect("localhost", "DBandGUI", "narwhal");
         if(!$con)
