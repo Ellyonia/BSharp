@@ -66,7 +66,7 @@ class phpAPI
             }
         }
         
-        mysql_close($con);
+        //mysql_close($con);
     
     }
 
@@ -97,7 +97,7 @@ class phpAPI
         else
             header('Location: index.php');
         
-        mysql_close($con);
+        //mysql_close($con);
         /*
 
         while($row = mysql_fetch_assoc($result))
@@ -140,7 +140,7 @@ class phpAPI
 			header('Location: band_page.php');
 		}
 		
-		mysql_close($con);
+		//mysql_close($con);
 	}
 
 
