@@ -53,7 +53,18 @@
   	</div>
   	<div id="about" class="hidden">
       <h2>About Band</h2>
+      <?
+        include 'phpAPI.php';
+        $phpInit = new phpAPI();
 
+        echo "<p>";
+
+        $phpInit->getBandInfo();
+
+        echo "</p>";
+
+
+      ?>
 
 
      <!-- <p>This is the greatest and best band in the world. All other bands are shit.</p>-->
