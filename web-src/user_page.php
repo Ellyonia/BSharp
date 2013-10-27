@@ -1,30 +1,4 @@
 
-<!--
-<?php
-  /*
-    session_start();
-
-    $phpInit = new phpAPI();
-    $phpInit->getBands();
-*/
-
-
-?>
-
-
-
-            <?php
-            /*
-              session_start();
-              $query = mysql_query("SELECT Band.band_name, Band.band_id from BandsIn INNER JOIN Band ON BandsIn.band_id=Band.band_id where BandsIn.user_id = 1");
-              echo "test";
-              while ($temp = mysql_fetch_assoc($query)) {
-                  echo "<li><a href='band_page.php'>" . $temp['band_name'] . $temp['band_id'] . "</a></li>";
-*/
-              }
-
-            ?>-->
-
 
 
 <!DOCTYPE html>
