@@ -41,7 +41,14 @@
   	<div class="band_pages">
   		<h2>My Bands</h2>
   		<ul>
+                    <?php
+              session_start();
+              echo "test";
+
+            ?>
   			<li>
+
+
           <FORM METHOD="LINK" ACTION="BandCreation.php">
 
             <INPUT TYPE="submit" VALUE="Create Band">
