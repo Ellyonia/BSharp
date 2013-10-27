@@ -144,12 +144,10 @@ class phpAPI
 		{
 
             $id = mysql_insert_id();
-            //$id = mysql_query("SELECT LAST_INSERT_ID()");
-            echo $id;
             $bandIn = "INSERT Into BandsIn(band_id, user_id, directorFlag) values ($id, $uid, 1)";
 
             mysql_query($bandIn);
-			//header('Location: band_page.php');
+			header('Location: band_page.php');
 		}
 		
 		//mysql_close($con);
