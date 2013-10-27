@@ -73,6 +73,7 @@ CREATE  TABLE IF NOT EXISTS `BSharp`.`BandsIn` (
   `instrument` VARCHAR(45) NULL ,
   `part_id` INT NULL ,
   `directorFlag` TINYINT(1) NULL ,
+  PRIMARY KEY (`band_id`, `user_id`)
   INDEX `band_id` (`band_id` ASC) ,
   INDEX `user_id` (`user_id` ASC) ,
   INDEX `part_id` (`part_id` ASC) ,
@@ -86,11 +87,6 @@ CREATE  TABLE IF NOT EXISTS `BSharp`.`BandsIn` (
     REFERENCES `BSharp`.`Users` (`user_id` )
     ON DELETE CASCADE
     ON UPDATE CASCADE,
-  CONSTRAINT `part_id`
-    FOREIGN KEY (`part_id` )
-    REFERENCES `BSharp`.`Part` (`part_id` )
-    ON DELETE CASCADE
-    ON UPDATE CASCADE
 ENGINE = InnoDB;
 
 
