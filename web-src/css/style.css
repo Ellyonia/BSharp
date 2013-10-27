@@ -23,6 +23,10 @@ h1 {
   top: 5%;
 }
 
+div {
+
+}
+
 #navbar {
   position: fixed;
   width: 96%;
@@ -33,6 +37,7 @@ h1 {
   margin-right: auto;
   height: 10%;
   background: #181818;
+  box-shadow: 10px 10px 5px #888888;
 }
 
 #navbar ul {
@@ -45,7 +50,7 @@ h1 {
 
 #navbar li {
   float: left;
-  margin-right: 50px;
+  margin-right: 52px;
   height: 35px;
 }
 
@@ -55,15 +60,17 @@ h1 {
   text-decoration: none;
   margin-top: -5px;
   padding: .15em;
-  /*font-size: 22px;*/
-  height: 105%;
+  font-size: 22px;
+  
 }
 
 #navbar li a:hover {
   background-color: #303030;
   color: white;
   text-decoration: none;
-  font-size: 24px;
+  padding: 1%;
+  /*font-size: 24px;*/
+  /*height: 105%;*/
 }
 
 img {
@@ -83,7 +90,7 @@ img {
   height: 300px;
   height: 67%;
   overflow: auto;
-
+box-shadow: 10px 10px 5px #888888;
 }
 
 .band_pages ul {
@@ -100,6 +107,7 @@ img {
   font-size: 30px;
   overflow: auto;
   background-color: #181818;
+  box-shadow: 10px 10px 5px #888888;
   /*display: none;*/
 }
 
@@ -126,6 +134,7 @@ img {
   font-size: 30px;
   overflow: auto;
   background-color: #181818;
+  box-shadow: 10px 10px 5px #888888;
   /*display: none;*/
 }
 
