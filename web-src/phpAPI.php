@@ -144,6 +144,7 @@ class phpAPI
 		{
 
             $id = mysql_insert_id();
+            $_SESSION['bID'] = $id;
             $bandIn = "INSERT Into BandsIn(band_id, user_id, directorFlag) values ($id, $uid, 1)";
 
             mysql_query($bandIn);
@@ -170,11 +171,22 @@ class phpAPI
 
 
         while ($temp = mysql_fetch_assoc($query)) {
-            echo "<li><a href='band_page.php'>" . $temp['band_name'] . $temp['band_id'] . "</a></li>";
+            echo "<li><a href='band_page.php?a='" . $temp['band_id'] . ">" . $temp['band_name'] . $temp['band_id'] . "</a></li>";
 
         }
 
 
+
+    }
+
+    public function getBandInfo(){
+
+        $bID = $_SESSION['bID'];
+
+        $query = "SELECT band_info from Band where band_id = "
+    }
+
+    public function setBID(){
 
     }
 
