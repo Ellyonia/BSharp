@@ -75,6 +75,18 @@ img {
   display: none;
 }
 
+#pieces {
+  position: fixed;
+  top: 30%;
+  left: 15%;
+  width: 83%;
+  height: 67%;
+  font-size: 30px;
+  overflow: auto;
+  background-color: #DDDDDD;
+  display: none;
+}
+
 #management {
   position: fixed;
   top: 30%;
@@ -86,4 +98,30 @@ img {
   background-color: #DDDDDD;
   /*display: none;*/
 }
+
+#events {
+  position: fixed;
+  top: 30%;
+  left: 15%;
+  width: 83%;
+  height: 67%;
+  font-size: 30px;
+  overflow: auto;
+  background-color: #DDDDDD;
+  display: none;
+}
+
+#members {
+  position: fixed;
+  top: 30%;
+  left: 15%;
+  width: 83%;
+  height: 67%;
+  font-size: 30px;
+  overflow: auto;
+  background-color: #DDDDDD;
+  display: none;
+}
+
+
 
