@@ -51,7 +51,7 @@
   			</li>
   		</ul>
   	</div>
-  	<div id="about" class="hidden">
+  	<div id="about" class="visible">
       <h2>About Band</h2>
 
       <?
@@ -72,7 +72,7 @@
   	<div id="pieces" class="hidden">
       <h2>View Band Pieces</h2>
   	</div>
-  	<div id="management" class="visible">
+  	<div id="management" class="hidden">
       <h2>Manage Band</h2>
       <form id="band_info" action = "editInfo.php" method = "post">
         <div class="editInfo">
