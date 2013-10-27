@@ -82,7 +82,7 @@ img {
   font-size: 30px;
   overflow: auto;
   background-color: #b78727;
-  display: none;
+  /*display: none;*/
 }
 
 #pieces {
@@ -94,7 +94,7 @@ img {
   font-size: 30px;
   overflow: auto;
   background-color: #b78727;
-  display: none;
+  /*display: none;*/
 }
 
 #management {
@@ -106,7 +106,7 @@ img {
   font-size: 30px;
   overflow: auto;
   background-color: #b78727;
-  /*display: none;*/
+  display: none;
 }
 
 #events {
@@ -118,7 +118,7 @@ img {
   font-size: 30px;
   overflow: auto;
   background-color: #b78727;
-  display: none;
+  /*display: none;*/
 }
 
 #members {
@@ -130,7 +130,7 @@ img {
   font-size: 30px;
   overflow: auto;
   background-color: #b78727;
-  display: none;
+  /*display: none;*/
 }
 
 #contact {
@@ -142,8 +142,10 @@ img {
   font-size: 30px;
   overflow: auto;
   background-color: #b78727;
-  display: none;
+  /*display: none;*/
 }
 
-
+.hidden {
+  display: none !important;
+}
 
