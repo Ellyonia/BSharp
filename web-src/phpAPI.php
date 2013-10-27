@@ -181,7 +181,7 @@ class phpAPI
 
     public function getBandInfo(){
 
-        $_SESSION['bID'] = $_GET['id'];
+        
         $bID = $_SESSION['bID'];
 
 
@@ -190,6 +190,11 @@ class phpAPI
         $temp = mysql_fetch_assoc($result);
         echo $temp['band_info'];
 
+    }
+
+    public function setBID(){
+        $_SESSION['bID'] = $_GET['id'];
+        
     }
 
 

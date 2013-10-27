@@ -9,6 +9,15 @@
   */
 ?>-->
 
+
+<?
+  include 'phpAPI.php';
+  $phpInit = new phpAPI();
+  $phpInit->setBID();
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -78,9 +87,9 @@
         <div class="editInfo">
           <textArea rows="4" cols="50" id="aboutBand" name = "aboutBand"/> 
             <?
-            include 'phpAPI.php';
-            $phpInit = new phpAPI();
-            $phpInit->getBandInfo();
+              include 'phpAPI.php';
+              $phpInit = new phpAPI();
+              $phpInit->getBandInfo();
 
 
             ?>
