@@ -9,7 +9,7 @@ $(document).ready(function(){
 		console.log(2);
 		$('.visible').removeClass('visible');
 		console.log(3);
-		$('#'+makeVis).addClass('visible');
+		$(makeVis).addClass('visible');
 		console.log(4);
 	});
 
