@@ -14,7 +14,8 @@
   <head>
     <title>Welcome!</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src='js/BandPage.js'></script> 
   </head>
 
   <body>
