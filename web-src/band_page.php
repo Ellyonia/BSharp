@@ -41,6 +41,8 @@
   		</ul>
   	</div>
   	<div id="about">
+      <h2>About</h2>
+      <p>This is the greatest and best band in the world. All other bands are shit.</p>
   	</div>
   	<div id="pieces">
   	</div>

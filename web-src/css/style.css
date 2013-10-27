@@ -63,17 +63,27 @@ img {
   /*float: left;*/
 }
 
-#management {
+#about {
   position: fixed;
-  /*top: 19.5%;*/
   top: 30%;
   left: 15%;
-  /*margin-right: 11.25%;*/
   width: 83%;
-  font-size: 30px;
   height: 67%;
-  /*clear: both;*/
+  font-size: 30px;
   overflow: auto;
   background-color: #DDDDDD;
+  display: none;
+}
+
+#management {
+  position: fixed;
+  top: 30%;
+  left: 15%;
+  width: 83%;
+  height: 67%;
+  font-size: 30px;
+  overflow: auto;
+  background-color: #DDDDDD;
+  /*display: none;*/
 }
 
