@@ -47,8 +47,6 @@ h1 {
   float: left;
   margin-right: 50px;
   height: 35px;
-  /*background-color: #484848;*/
-  /*left: 200px;*/
 }
 
 #navbar li a:link {
@@ -57,7 +55,8 @@ h1 {
   text-decoration: none;
   margin-top: -5px;
   padding: .15em;
-  font-size: 22px;
+  /*font-size: 22px;*/
+  height: 105%;
 }
 
 #navbar li a:hover {
@@ -114,7 +113,7 @@ img {
   font-size: 30px;
   overflow: auto;
   background-color: #181818;
-  display: none;
+  /*display: none;*/
  }
 
 #management {
@@ -127,7 +126,7 @@ img {
   font-size: 30px;
   overflow: auto;
   background-color: #181818;
-  display: none;
+  /*display: none;*/
 }
 
 #events {
@@ -140,7 +139,7 @@ img {
   font-size: 30px;
   overflow: auto;
   background-color: #181818;
-  display: none;
+  /*display: none;*/
 }
 
 #members {
@@ -153,7 +152,7 @@ img {
   font-size: 30px;
   overflow: auto;
   background-color: #181818;
-  display: none;
+  /*display: none;*/
 }
 
 #contact {
@@ -166,11 +165,11 @@ img {
   font-size: 30px;
   overflow: auto;
   background-color: #181818;
-  display: none;
+  /*display: none;*/
 }
-/*
+
 .hidden {
   display: none !important;
 }
 
-.visible {}*/
+.visible {}
