@@ -127,9 +127,14 @@ class phpAPI
 		$about = $_POST['aboutBand'];
 		$name = $_POST['bandName'];
 		$phone = $_POST['phone'];
+
+        $uid = $_SESSION['uid'];
 		
 		$query = "INSERT INTO Band(band_name, band_phone)
 			VALUES ('$name', '$phone');";
+
+
+        
 		
 		if(!mysql_query($query))
 		{
@@ -137,6 +142,15 @@ class phpAPI
 		}
 		else
 		{
+
+
+            $id = mysql_query("SELECT LAST_INSERT_ID()");
+            $temp = mysql_fetch_assoc($id);
+            $bid = $temp['band_id'];
+            $_SESSION['currBand'] = $bid;
+            $bandIn = "INSERT Into BandsIn(band_id, user_id, directorFlag) values ($bid, $uid, 1)";
+
+            mysql_query($bandIn);
 			header('Location: band_page.php');
 		}
 		
