@@ -7,6 +7,7 @@ $(document).ready(function(){
 		console.log(makeVis);
 		$('.visible').addClass('hidden');
 		$('.visible').removeClass('visible');
+		$('.selected').css({"background-color": "#181818"});
 		$('.selected').removeClass('selected');
 		$(makeVis).addClass('visible');
 		$(e.target).addClass('selected');
