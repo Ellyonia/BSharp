@@ -21,6 +21,7 @@ h1 {
   position: fixed;
   left: 10%;
   top: 5%;
+  /*font-size: 48px;*/
 }
 
 div {
@@ -37,7 +38,7 @@ div {
   margin-right: auto;
   height: 10%;
   background: #181818;
-  box-shadow: 10px 10px 5px #888888;
+  box-shadow: 7px 7px 10px 2px #181860;
 }
 
 #navbar ul {
@@ -90,7 +91,7 @@ img {
   height: 300px;
   height: 67%;
   overflow: auto;
-box-shadow: 10px 10px 5px #888888;
+  box-shadow: 7px 7px 10px 2px #181860;
 }
 
 .band_pages ul {
@@ -107,7 +108,7 @@ box-shadow: 10px 10px 5px #888888;
   font-size: 30px;
   overflow: auto;
   background-color: #181818;
-  box-shadow: 10px 10px 5px #888888;
+  box-shadow: 7px 7px 10px 2px #181860;
   /*display: none;*/
 }
 
@@ -134,7 +135,7 @@ box-shadow: 10px 10px 5px #888888;
   font-size: 30px;
   overflow: auto;
   background-color: #181818;
-  box-shadow: 10px 10px 5px #888888;
+  box-shadow: 7px 7px 10px 2px #181860;
   /*display: none;*/
 }
 
@@ -186,7 +187,7 @@ box-shadow: 10px 10px 5px #888888;
 }
 
 .selected {
-  background-color: purple !important;
+  background-color: #181860 !important;
 }
 
 .notselected{
