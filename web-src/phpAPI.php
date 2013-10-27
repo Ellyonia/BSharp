@@ -181,14 +181,17 @@ class phpAPI
 
     public function getBandInfo(){
 
+        $_SESSION['bID'] = $_GET['id'];
         $bID = $_SESSION['bID'];
 
-        //$query = "SELECT band_info from Band where band_id = "
+
+        $query = "SELECT band_info from Band where band_id = $bID";
+        $result = mysql_query($query);
+
+        echo $result;
+
     }
 
-    public function setBID(){
-
-    }
 
 
 
