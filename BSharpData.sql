@@ -1,4 +1,4 @@
-Use Database BSharp;
+Use BSharp;
 
 -- -----------------------------------------------------
 -- Inserting Dummy Users into Database
