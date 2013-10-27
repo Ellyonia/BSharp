@@ -7,12 +7,14 @@ CSS FOR band_page.php
 **********************************************/
 body {
   color: white;
-  background-color: #181818;
+  background-color: #484848;
   /*background-image: url('C:/Users/Guy/Documents/GitHub/DB-GUI/web-src/img/gwbi.jpg');*/
 }
 
 body a {
+  position: relative;
   float: right;
+  color: #b78727;
 }
 
 h1 {
@@ -30,11 +32,11 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   height: 10%;
-  background: #b78727;
+  background: #181818;
 }
 
 #navbar ul {
-  color: #787890;
+  color: #181818;
   list-style: none;
   margin: 0px;
   padding: 1em;
@@ -44,32 +46,42 @@ h1 {
 #navbar li {
   float: left;
   margin-right: 50px;
-  height: 10%;
-  background-color: pink;
+  height: 35px;
+  /*background-color: #484848;*/
   /*left: 200px;*/
 }
 
+#navbar li a:link {
+  background-color: #303030;
+  color: #484860;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+
 #navbar li a:hover {
   background-color: #484860;
-  color: #DD3124;
+  color: #303030;
   text-decoration: none;
-  font-size: 32px;
+  font-size: 22px;
 }
 
 img {
-	float: left;
+  float: left;
   height: 80px;
   width: auto;
 }
 
 .band_pages {
-	position: fixed;
-	left: 2%;
-	color: orange;
-	background-color: #b78727;
-	top: 30%;
+  position: fixed;
+  left: 2%;
+  color: orange;
+  background-color: #181818;
+  top: 30%;
   width: 170px;
   height: 300px;
+  height: 67%;
+  overflow: auto;
   /*float: left;*/
 }
 
@@ -81,7 +93,7 @@ img {
   height: 67%;
   font-size: 30px;
   overflow: auto;
-  background-color: #b78727;
+  background-color: #181818;
   /*display: none;*/
 }
 
@@ -93,9 +105,8 @@ img {
   height: 67%;
   font-size: 30px;
   overflow: auto;
-  background-color: #b78727;
-  /*display: none;*/
-}
+  background-color: #181818;
+ }
 
 #management {
   position: fixed;
@@ -105,8 +116,7 @@ img {
   height: 67%;
   font-size: 30px;
   overflow: auto;
-  background-color: #b78727;
- /* display: none;*/
+  background-color: #181818;
 }
 
 #events {
@@ -117,8 +127,7 @@ img {
   height: 67%;
   font-size: 30px;
   overflow: auto;
-  background-color: #b78727;
-  /*display: none;*/
+  background-color: #181818;
 }
 
 #members {
@@ -129,8 +138,9 @@ img {
   height: 67%;
   font-size: 30px;
   overflow: auto;
-  background-color: #b78727;
-  /*display: none;*/
+
+  background-color: #181818;
+  
 }
 
 #contact {
@@ -141,8 +151,8 @@ img {
   height: 67%;
   font-size: 30px;
   overflow: auto;
-  background-color: #b78727;
-  /*display: none;*/
+  background-color: #181818;
+  
 }
 
 .hidden {
