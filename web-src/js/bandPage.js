@@ -13,5 +13,5 @@ $(document).ready(function(){
 		$(e.target).addClass('selected');
 	});
 
-
+});
 });
