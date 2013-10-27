@@ -184,3 +184,7 @@ box-shadow: 10px 10px 5px #888888;
 .visible {
   display: block !important;
 }
+
+.selected {
+  background-color: purple;
+}

@@ -6,11 +6,10 @@ $(document).ready(function(){
 		//var makeVis = $(e.target + ' a').attr('href');
 		console.log(makeVis);
 		$('.visible').addClass('hidden');
-		console.log(2);
 		$('.visible').removeClass('visible');
-		console.log(3);
+		$('.selected').removeClass('selected');
 		$(makeVis).addClass('visible');
-		console.log(4);
+		$(e.target).addClass('selected');
 	});
 
 
