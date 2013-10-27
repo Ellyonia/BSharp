@@ -1,15 +1,16 @@
 $(document).ready(function(){
 	$('#navbar li').click(function(e){
-		log(0);
+		console.log(0);
 		e.prevenDefault();
-		var makeVis = $(e.target + ' a').attr('href');
-		log(1);
+		var makeVis = $(e.target).children('a').eq(0).attr('href');
+		//var makeVis = $(e.target + ' a').attr('href');
+		console.log(1);
 		$('visible').addClass('hidden');
-		log(2);
+		console.log(2);
 		$('visible').removeClass('visible');
-		log(3);
+		console.log(3);
 		$('#'+makeVis).addClass('visible');
-		log(4);
+		console.log(4);
 	});
 
 
