@@ -1,3 +1,14 @@
+<!--
+<?
+/*
+  session_start();
+  if (!$_SESSION['uid'])
+  {
+    header("Location: index.php");
+  }
+  */
+?>-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
