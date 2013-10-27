@@ -139,7 +139,7 @@ class phpAPI
     public function getBands()
     {
         $uid = $SESSION['uid'];
-        $query = mysql_query("SELECT Band.band_name, Band.band_id from BandsIn INNER JOIN Band ON BandsIn.band_id=Band.band_id where BandsIn.user_id = $uid");
+        $query = mysql_query("SELECT Band.band_name, Band.band_id from BandsIn INNER JOIN Band ON BandsIn.band_id=Band.band_id where BandsIn.user_id = " . $SESSION['uid']);
 
         
 
