@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$('#navbar li').click(function(e){
 		console.log(0);
-		e.prevenDefault();
+		//e.prevenDefault();
 		var makeVis = $(e.target).children('a').eq(0).attr('href');
 		//var makeVis = $(e.target + ' a').attr('href');
 		console.log(1);
