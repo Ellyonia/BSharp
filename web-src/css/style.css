@@ -8,7 +8,7 @@ CSS FOR band_page.php
 body {
   color: white;
   background-color: #181818;
-  background-image: url('C:/Users/Guy/Documents/GitHub/DB-GUI/web-src/img/gwbi.jpg');
+  /*background-image: url('C:/Users/Guy/Documents/GitHub/DB-GUI/web-src/img/gwbi.jpg');*/
 }
 
 body a {

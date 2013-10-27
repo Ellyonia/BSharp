@@ -2,17 +2,14 @@
 <html lang="en">
   <head>
     <title>Welcome!</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script type="text/javascript" src='js/bandPage.js'></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css"> 
   </head>
 
   <body>
-    <img src="img/logo.png" id = "logo" alt = "Custom Cupcake Logo">
   	<h1>Welcome to the band front page</h1>
+    <img src="img/logo.png" id = "logo" alt = "Custom Cupcake Logo">
     <a href="logout.php">Log Out</a>
-  	
   	<span id="navbar">
-  		
   		<ul>
   			<li>
   				<a href="#about">About Band</a>
