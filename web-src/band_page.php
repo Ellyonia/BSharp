@@ -51,14 +51,28 @@
   			</li>
   		</ul>
   	</div>
-  	<div id="about" class="hidden">
+  	<div id="about" class="visible">
       <h2>About Band</h2>
-      <p>This is the greatest and best band in the world. All other bands are shit.</p>
+
+      <?
+        include 'phpAPI.php';
+        $phpInit = new phpAPI();
+
+        echo "<p>";
+
+        $phpInit->getBandInfo();
+
+        echo "</p>";
+
+
+      ?>
+
+     <!-- <p>This is the greatest and best band in the world. All other bands are shit.</p>-->
   	</div>
   	<div id="pieces" class="hidden">
       <h2>View Band Pieces</h2>
   	</div>
-  	<div id="management" class="visible">
+  	<div id="management" class="hidden">
       <h2>Manage Band</h2>
       <form id="band_info" action = "editInfo.php" method = "post">
         <div class="editInfo">
