@@ -10,7 +10,7 @@ Chris Linstromberg
 
 <?php
 
-    //session_start();
+    session_start();
 
     if(isset($_POST['signIn'])){
          $_SESSION['email'] = $_POST['email'];
