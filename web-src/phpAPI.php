@@ -145,13 +145,14 @@ class phpAPI
 
 
             $id = mysql_query("SELECT LAST_INSERT_ID()");
+            echo $id;
             $temp = mysql_fetch_assoc($id);
             $bid = $temp['band_id'];
             $_SESSION['currBand'] = $bid;
             $bandIn = "INSERT Into BandsIn(band_id, user_id, directorFlag) values ($bid, $uid, 1)";
 
             mysql_query($bandIn);
-			header('Location: band_page.php');
+			//header('Location: band_page.php');
 		}
 		
 		//mysql_close($con);
