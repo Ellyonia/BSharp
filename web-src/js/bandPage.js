@@ -5,9 +5,9 @@ $(document).ready(function(){
 		var makeVis = $(e.target).children('a').eq(0).attr('href');
 		//var makeVis = $(e.target + ' a').attr('href');
 		console.log(1);
-		$('visible').addClass('hidden');
+		$('.visible').addClass('hidden');
 		console.log(2);
-		$('visible').removeClass('visible');
+		$('.visible').removeClass('visible');
 		console.log(3);
 		$('#'+makeVis).addClass('visible');
 		console.log(4);
