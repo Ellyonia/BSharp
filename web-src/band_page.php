@@ -10,13 +10,7 @@
 ?>-->
 
 
-<?
-  include 'phpAPI.php';
-  $phpInit = new phpAPI();
-  $phpInit->setBID();
 
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
