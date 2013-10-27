@@ -34,22 +34,22 @@
   	<span id="navbar">
   		<ul>
   			<li>
-  				<a href="#about">About Band</a>
+  				<a href="#about" class="selected notselected">About Band</a>
   			</li>
   			<li>
-  				<a href="#pieces">Pieces</a>
+  				<a href="#pieces" class="notselected">Pieces</a>
   			</li>
   			<li>
-  				<a href="#management">Band Management</a>
+  				<a href="#management" class="notselected">Band Management</a>
   			</li>
   			<li>
-  				<a href="#events">Upcoming Events</a>
+  				<a href="#events" class="notselected">Upcoming Events</a>
   			</li>
   			<li>
-  				<a href="#members">Band Members</a>
+  				<a href="#members" class="notselected">Band Members</a>
   			</li>
   			<li>
-  				<a href="#contact">Contact Information</a>
+  				<a href="#contact" class="notselected">Contact Information</a>
   			</li>
   		</ul>
   	</span>
