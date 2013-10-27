@@ -188,7 +188,8 @@ class phpAPI
         $query = "SELECT band_info from Band where band_id = $bID";
         $result = mysql_query($query);
         echo $bID;
-        echo $result['band_info'];
+        $temp = mysql_fetch_assoc($result)
+        echo $temp['band_info'];
 
     }
 
