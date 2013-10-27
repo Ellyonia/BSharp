@@ -12,6 +12,8 @@
   <body>
   	<h1>User Home</h1>
 
+    <a href="logout.php">Log Out</a>
+
   	<div class="band_pages">
   		<h2>My Bands</h2>
   		<ul>
