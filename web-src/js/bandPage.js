@@ -1,5 +1,7 @@
 $(document).ready(function(){
 	$('#navbar li').click(function(e){
+		log(0);
+		e.prevenDefault();
 		var makeVis = $(e.target + ' a').attr('href');
 		log(1);
 		$('visible').addClass('hidden');
