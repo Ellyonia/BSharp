@@ -51,7 +51,7 @@
   			</li>
   		</ul>
   	</div>
-  	<div id="about">
+  	<div id="about" class="visible">
       <h2>About Band</h2>
       <p>This is the greatest and best band in the world. All other bands are shit.</p>
   	</div>
