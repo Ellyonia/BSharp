@@ -76,7 +76,7 @@
       <h2>Manage Band</h2>
       <form id="band_info" action = "editInfo.php" method = "post">
         <div class="editInfo">
-          <textArea rows="4" cols="50" id="aboutBand" name = "aboutBand" /> 
+          <textArea rows="4" cols="50" id="aboutBand" name = "aboutBand"/> 
             <?
             include 'phpAPI.php';
             $phpInit = new phpAPI();
