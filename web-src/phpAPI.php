@@ -128,10 +128,12 @@ class phpAPI
 		$name = $_POST['bandName'];
 		$phone = $_POST['phone'];
 
+        $about = $_POST['aboutBand'];
+
         $uid = $_SESSION['uid'];
 		
-		$query = "INSERT INTO Band(band_name, band_phone)
-			VALUES ('$name', '$phone');";
+		$query = "INSERT INTO Band(band_name, band_phone, band_info)
+			VALUES ('$name', '$phone', '$about');";
 
 
         
