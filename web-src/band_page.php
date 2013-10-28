@@ -63,6 +63,9 @@
             $phpInit->getBands();
           ?>
   			<li>
+          <FORM METHOD="LINK" ACTION="BandCreation.php">
+            <INPUT TYPE="submit" VALUE="Create Band">
+          </FORM>
   			</li>
   		</ul>
   	</div>
