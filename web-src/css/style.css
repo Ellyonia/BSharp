@@ -89,6 +89,7 @@ h1 {
   height: 10%;
   background: #181818;
   box-shadow: 7px 7px 10px 2px #181860;
+  border-radius: 5px 5px;
 }
 
 #navbar ul {
