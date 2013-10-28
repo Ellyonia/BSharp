@@ -145,8 +145,8 @@ img {
 #about {
   position: fixed;
   top: 30%;
-  left: 15%;
-  width: 82%;
+  left: 16%;
+  width: 81%;
   height: 67%;
   padding-left: 1%;
   font-size: 30px;
@@ -240,4 +240,43 @@ img {
 
 .notselected{
   background-color: #181818;
+}
+
+/**********************************************
+CSS FOR BandCreation.php
+**********************************************/
+body a {
+  position: relative;
+}
+
+#makeBand ol{
+  list-style: none;
+  padding-top: 1%;
+}
+
+#makeBand ol li p {
+  position: relative;
+  display: inline;
+  /*width: 300px;*/
+}
+
+#makeBand ol li textArea {
+  position: relative;
+  display: inline-block;
+  left: 100px;
+}
+
+#makeBand ol li input {
+  position: relative;
+  display: inline-block;
+  left: 100px;
+}
+
+#makeBand ol li:last-child input {
+  left: 62px;
+}
+
+#createBand {
+  position: relative;
+  left: 30px;
 }

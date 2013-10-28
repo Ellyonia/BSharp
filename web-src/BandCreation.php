@@ -25,15 +25,15 @@
   	<form id="makeBand" action = "makeBand.php" method = "post">
   		<ol>
         <li>
-          Band Name
+          <p>Band Name</p>
           <input type='text' name = 'bandName' id='bandName' placeholder="Band Name" required/>
         </li>
   			<li>
-  				About Band
+  				<p>About Band</p>
   				<textArea rows="4" cols="50" placeholder="Enter Information about your Band" id="aboutBand" name = "aboutBand"  required/></textarea>
   			</li>
   			<li>
-  				Band Contact Info
+  				<p>Band Contact Info</p>
   				<input type='text' name = 'phone' id='phone' placeholder="Phone Number" required/>
   			</li>
   		</ol>
