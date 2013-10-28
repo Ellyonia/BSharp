@@ -4,11 +4,10 @@ CSS FOR index.php
 
 #ilogo {
   position: absolute;
+  display: inline-block;
   top: 110px;
-  left: 740px;
+  /*left: 740px;*/
   width: 150px;
-  /*height: 15%;*/
-
 }
 
 #login {
