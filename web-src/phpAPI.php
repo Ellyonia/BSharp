@@ -148,7 +148,7 @@ class phpAPI
             $bandIn = "INSERT Into BandsIn(band_id, user_id, directorFlag) values ($id, $uid, 1)";
 
             mysql_query($bandIn);
-			header("Location: band_page.php?id=" . $temp['band_id'] . ")";
+			header("Location: band_page.php?id=" . $temp['band_id'] );
 		}
 		
 		//mysql_close($con);
