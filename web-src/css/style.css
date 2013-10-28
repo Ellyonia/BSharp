@@ -6,15 +6,12 @@ CSS FOR index.php
   position: absolute;
   display: inline-block;
   top: 110px;
-  /*left: 740px;*/
   width: 150px;
 }
 
 #login {
   float: right;
-  /*display: relative;*/
   font-size: 24px;
-  /*border: dashed;*/
   width: 42%;
   padding-top: .5%;
 }
@@ -40,13 +37,10 @@ CSS FOR index.php
 }
 
 .page {
-  /*position: relative;*/
   display: inline-block;
   position: relative;
-  /*clear:  both;*/
   top: 100px;
   width: 45%;
-  /*left: 60%;*/
   font-size: 32px;
   color: #b78727;
 }
@@ -65,10 +59,10 @@ CSS FOR index.php
 /**********************************************
 CSS FOR band_page.php
 **********************************************/
+
 body {
   color: white;
   background-color: #484848;
-  /*background-image: url('C:/Users/Guy/Documents/GitHub/DB-GUI/web-src/img/gwbi.jpg');*/
 }
 
 body a {
@@ -82,10 +76,6 @@ h1 {
   left: 10%;
   top: 5%;
   font-size: 32px;
-}
-
-div {
-
 }
 
 #navbar {
@@ -130,8 +120,6 @@ div {
   color: white;
   text-decoration: none;
   padding: 1%;
-  /*font-size: 24px;*/
-  /*height: 105%;*/
 }
 
 img {
