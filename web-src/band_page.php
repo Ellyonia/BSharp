@@ -57,9 +57,6 @@
   		<h2>My Bands</h2>
   		<ul>
           <?php
-            include 'phpAPI.php';   
-
-            $phpInit = new phpAPI();
             $phpInit->getBands();
           ?>
   			<li>
