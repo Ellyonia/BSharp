@@ -2,12 +2,22 @@
 CSS FOR index.php
 **********************************************/
 
+#ilogo {
+  position: absolute;
+  top: 110px;
+  left: 740px;
+  width: 150px;
+  /*height: 15%;*/
+
+}
+
 #login {
   float: right;
   /*display: relative;*/
   font-size: 24px;
   /*border: dashed;*/
-  width: 40%;
+  width: 42%;
+  padding-top: .5%;
 }
 
 .logEmail {
@@ -21,13 +31,13 @@ CSS FOR index.php
 
 .info {
   display: inline-block;
-  width: 50%;
-  padding-right: 2%;
+  width: 48%;
+  padding-right: 5%;
   padding-left: 2%;
   float: left;
   position: relative;
-  font-size: 15px;
-  top: 170px;
+  font-size: 18px;
+  top: 185px;
 }
 
 .page {
@@ -40,6 +50,13 @@ CSS FOR index.php
   /*left: 60%;*/
   font-size: 32px;
   color: #b78727;
+}
+
+#register header {
+  position: relative;
+  left: 170px;
+  top: 15px;
+  width: 300px;
 }
 
 .page ul {
