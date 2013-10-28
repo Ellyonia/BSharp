@@ -19,12 +19,10 @@ function checkPass()
 
 	 	if($('#newPassword').val().search(reg) == -1){
 	 		alert("Please make sure your password contains at least: 1 Capital Letter, 1 Lowercase Letter, and 1 Number");
-	 		break;
 	 	}
-
-
-
-		$('.register').submit();
+	 	else{
+			$('.register').submit();
+		}
 
 
 	}
