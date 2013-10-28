@@ -199,6 +199,18 @@ class phpAPI
         
     }
 
+    public function getBandMembers(){
+
+
+
+        $query = mysql_query("SELECT Users.fname, Users.lname from BandsIn INNER JOIN Users on BandsIn.user_id=Users.user_id where BandsIn.band_id = " . $_SESSION['bID']);
+
+        while($temp = mysql_fetch_assoc($query)){
+            echo "<li>" . $temp['lname'] . ", " . $temp['fname'] . "</li>";
+        }
+
+    }
+
 
 
 

@@ -53,6 +53,7 @@
   			</li>
   		</ul>
   	</span>
+
   	<div class="band_pages">
   		<h2>My Bands</h2>
   		<ul>
@@ -66,6 +67,7 @@
   			</li>
   		</ul>
   	</div>
+
   	<div id="about" class="visible">
       <h2>About Band</h2>
       <?
@@ -74,9 +76,11 @@
         echo "</p>";
       ?>
   	</div>
+
   	<div id="pieces" class="hidden">
       <h2>View Band Pieces</h2>
   	</div>
+
   	<div id="management" class="hidden">
       <h2>Manage Band</h2>
       <form id="band_info" action = "editInfo.php" method = "post">
@@ -90,13 +94,23 @@
         </div>
       </form>
     </div>
+
   	<div id="events" class="hidden">
       <h2>View Upcoming Events</h2>
   	</div>
+
   	<div id="members" class="hidden">
       <h2>View/Edit Band Members</h2>
+
+      <ul>
+        <?
+          $phpInit->getBandMembers();
+        ?>
+      </ul>
   	</div>
+
   	<div id="contact" class="hidden">
       <h2>Contact Information</h2>
   	</div>
+
   </body>
