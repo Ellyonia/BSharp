@@ -241,6 +241,7 @@ img {
 
 .selected {
   background-color: #181860 !important;
+  height: 10% !important;
 }
 
 .notselected{
