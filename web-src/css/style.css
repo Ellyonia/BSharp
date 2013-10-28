@@ -4,21 +4,46 @@ CSS FOR index.php
 
 #login {
   float: right;
-  display: inline;
+  /*display: relative;*/
+  font-size: 24px;
   border: dashed;
+  width: 40%;
 }
 
 .logEmail {
   display: inline;
+  padding-left: 1%;
 }
 
 .logPass {
   display: inline;
 }
 
-.page {
+.about {
+  display: inline-block;
+  width: 50%;
+  padding-right: 2%;
+  padding-left: 2%;
+  float: left;
   position: relative;
-  top: 200px;
+  font-size: 15px;
+  top: 170px;
+}
+
+.page {
+  /*position: relative;*/
+  display: inline-block;
+  position: relative;
+  /*clear:  both;*/
+  top: 100px;
+  width: 45%;
+  /*left: 60%;*/
+  font-size: 32px;
+  color: #b78727;
+}
+
+.page ul {
+  list-style: none;
 }
 
 /**********************************************
