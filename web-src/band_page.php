@@ -33,7 +33,7 @@
     <a href="logout.php">Log Out</a>
   	<span id="navbar">
   		<ul>
-  			<li>
+  			<li class="selected">
   				<a href="#about" class="selected notselected">About Band</a>
   			</li>
   			<li>
