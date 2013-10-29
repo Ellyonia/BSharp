@@ -91,6 +91,8 @@
             ?>
           </textarea>
 
+          <input type="submit" name="changeAbout" id="changeAbout" value="Submit Changes"/>
+
         </div>
       </form>
     </div>
