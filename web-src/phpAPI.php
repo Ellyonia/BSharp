@@ -214,7 +214,7 @@ class phpAPI
     public function changeAbout(){
 
         $bID = $_SESSION['bID'];
-        $newInfo = $_POST['changeAbout'];
+        $newInfo = $_POST['aboutBand'];
 
         mysql_query("UPDATE Band SET band_info=$newInfo where band_id = $bID");
 
