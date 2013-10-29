@@ -211,7 +211,7 @@ class phpAPI
 
     }
 
-    public functino changeAbout(){
+    public function changeAbout(){
 
         $bID = $_SESSION['bID'];
         $newInfo = $_POST['newInfo'];
