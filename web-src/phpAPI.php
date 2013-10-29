@@ -215,12 +215,11 @@ class phpAPI
 
         $bID = $_SESSION['bID'];
         $newInfo = $_POST['newInfo'];
-        echo $newInfo;
 
-        //mysql_query("UPDATE Band SET band_info=$newInfo where band_id = $bID");
+        mysql_query("UPDATE Band SET band_info=$newInfo where band_id = $bID");
 
 
-        //header("Location: band_page.php?id=" . $_SESSION['bID'] );
+        header("Location: band_page.php?id=" . $_SESSION['bID'] );
 
     }
 
