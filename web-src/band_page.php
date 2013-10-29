@@ -83,7 +83,7 @@
 
   	<div id="management" class="hidden">
       <h2>Manage Band</h2>
-      <form id="band_info" action = "editInfo.php" method = "post">
+      <form id="newInfo" action = "editInfo.php" method = "post">
         <div class="editInfo">
           <textArea rows="4" cols="50" id="aboutBand" name = "aboutBand"/> 
             <?
