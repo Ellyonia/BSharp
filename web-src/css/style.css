@@ -108,7 +108,7 @@ h1 {
 
 #navbar li a:link {
   background-color: #181818;
-  color: #484860 !important;
+  color: #484860;
   text-decoration: none;
   margin-top: -5px;
   padding: .15em;
