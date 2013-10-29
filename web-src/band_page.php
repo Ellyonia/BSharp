@@ -84,8 +84,7 @@
   	<div id="management" class="hidden">
       <h2>Manage Band</h2>
       <form id="changeInfo" action = "changeAbout.php" method = "post">
-        <div class="editInfo">
-          <textArea rows="4" cols="50" id="newInfo" name = "newInfo"/> 
+          <textArea rows="4" cols="50" id="newInfo" name = "newInfo"/>
             <?
               $phpInit->getBandInfo();
             ?>
@@ -93,7 +92,6 @@
 
           <input type="submit" name="changeAbout" id="changeAbout" value="Submit Changes"/>
 
-        </div>
       </form>
     </div>
 
