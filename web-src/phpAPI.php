@@ -246,6 +246,10 @@ class phpAPI
             echo "</br>";
 
             if(isset($_POST['new' . strval($i+1)])){
+                echo $_POST['new' . strval($i+1)];
+                echo "</br>";
+                echo "</br>";
+
                 array_push($members, $_POST['new' . strval($i+1)]);
                 array_push($dirFlags, $_POST['dir' . strval($i+1)]);
                 array_push($instruments, $_POST['Instrument' . strval($i+1)]);
