@@ -243,6 +243,7 @@ class phpAPI
         $parts = array();
 
         for($i = 0; $i <=9; $i++){
+            echo "test" . $i+1;
 
             if(isset($_POST['new' . $i+1])){
                 array_push($members, $_POST['new' . $i+1]);
