@@ -15,9 +15,9 @@
   $phpInit = new phpAPI();
   $phpInit->setBID();
 
-
+/*
   if(isset($_POST['addButton'])){
-    $members = array($_POST['newOne'], $_POST['newTwo'], $_POST['newThree'], $_POST['newFour'], $_POST['newFive'], $_POST['newSix'], $_POST['newSeven'], $_POST['newEight'], $_POST['newNine'], $_POST['newTen']);
+    $members = array($_POST['new1'], $_POST['new2'], $_POST['new3'], $_POST['new4'], $_POST['new5'], $_POST['new6'], $_POST['new7'], $_POST['new8'], $_POST['new9'], $_POST['new10']);
     $dirFlags = array($_POST['dir1'], $_POST['dir2'], $_POST['dir3'], $_POST['dir4'], $_POST['dir5'], $_POST['dir6'], $_POST['dir7'], $_POST['dir8'], $_POST['dir9'], $_POST['dir10']);
     $instruments = array($_POST['Instrument1'], $_POST['Instrument2'], $_POST['Instrument3'], $_POST['Instrument4'], $_POST['Instrument5'], $_POST['Instrument6'], $_POST['Instrument7'], $_POST['Instrument8'], $_POST['Instrument9'], $_POST['Instrument10']);
     $parts = array($_POST['part1'], $_POST['part2'], $_POST['part3'], $_POST['part4'], $_POST['part5'], $_POST['part6'], $_POST['part7'], $_POST['part8'], $_POST['part9'], $_POST['part10']);
@@ -26,7 +26,7 @@
     $_SESSION['dirFlags'] = $dirFlags;
     $_SESSION['instruments'] = $instruments;
     $_SESSION['parts'] = $parts;
-
+*/
   }
 
 
@@ -112,7 +112,7 @@
 
         <ul class = "NewMembers">
           <li>
-            <input type='text' name = 'newOne' id='newOne' placeholder="Enter Email address here" required/>
+            <input type='text' name = 'new1' id='new1' placeholder="Enter Email address here" required/>
             <select id="Instrument1">
               <option value="">Select an Instrument</option>
               <optgroup label = "Woodwinds">
@@ -184,7 +184,7 @@
           </li>
 
           <li>
-            <input type='text' name = 'newTwo' id='newTwo' placeholder="Enter Email address here" />
+            <input type='text' name = 'new2' id='new2' placeholder="Enter Email address here" />
             <select id="Instrument2">
               <option value="">Select an Instrument</option>
               <optgroup label = "Woodwinds">
@@ -256,7 +256,7 @@
           </li>
 
           <li>
-            <input type='text' name = 'newThree' id='newThree' placeholder="Enter Email address here" />
+            <input type='text' name = 'new3' id='new3' placeholder="Enter Email address here" />
             <select id="Instrument3">
               <option value="">Select an Instrument</option>
               <optgroup label = "Woodwinds">
@@ -327,7 +327,7 @@
           </li>
 
           <li>
-            <input type='text' name = 'newFour' id='newFour' placeholder="Enter Email address here" />
+            <input type='text' name = 'new4' id='new4' placeholder="Enter Email address here" />
             <select id="Instrument4">
               <option value="">Select an Instrument</option>
               <optgroup label = "Woodwinds">
@@ -398,7 +398,7 @@
           </li>
 
           <li>
-            <input type='text' name = 'newFive' id='newFive' placeholder="Enter Email address here" />
+            <input type='text' name = 'new5' id='new5' placeholder="Enter Email address here" />
             <select id="Instrument5">
               <option value="">Select an Instrument</option>
               <optgroup label = "Woodwinds">
@@ -469,7 +469,7 @@
           </li>
 
           <li>
-            <input type='text' name = 'newSix' id='newSix' placeholder="Enter Email address here" />
+            <input type='text' name = 'new6' id='new6' placeholder="Enter Email address here" />
             <select id="Instrument6">
               <option value="">Select an Instrument</option>
               <optgroup label = "Woodwinds">
@@ -540,7 +540,7 @@
           </li>
 
           <li>
-            <input type='text' name = 'newSeven' id='newSeven' placeholder="Enter Email address here" />
+            <input type='text' name = 'new7' id='new7' placeholder="Enter Email address here" />
             <select id="Instrument7">
               <option value="">Select an Instrument</option>
               <optgroup label = "Woodwinds">
@@ -611,7 +611,7 @@
           </li>
 
           <li>
-            <input type='text' name = 'newEight' id='newEight' placeholder="Enter Email address here" />
+            <input type='text' name = 'new8' id='new8' placeholder="Enter Email address here" />
             <select id="Instrument8">
               <option value="">Select an Instrument</option>
               <optgroup label = "Woodwinds">
@@ -682,7 +682,7 @@
           </li>
 
           <li>
-            <input type='text' name = 'newNine' id='newNine' placeholder="Enter Email address here" />
+            <input type='text' name = 'new9' id='new9' placeholder="Enter Email address here" />
             <select id="Instrument9">
               <option value="">Select an Instrument</option>
               <optgroup label = "Woodwinds">
@@ -753,7 +753,7 @@
           </li>
 
           <li>
-            <input type='text' name = 'newTen' id='newTen' placeholder="Enter Email address here" />
+            <input type='text' name = 'new10' id='new10' placeholder="Enter Email address here" />
             <select id="Instrument10">
               <option value="">Select an Instrument</option>
               <optgroup label = "Woodwinds">

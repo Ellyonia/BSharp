@@ -228,12 +228,37 @@ class phpAPI
 
         $bID = $_SESSION['bID'];
 
+/*
         $members = $_SESSION['newMembers'];
         $dirFlags = $_SESSION['dirFlags'];
         $instruments = $_SESSION['instruments'];
         $parts = $_SESSION['parts'];
+*/
+
+        $members = array();
+        $dirFlags = array();
+        $instruments = array();
+        $parts = array();
+
+        for($i = 0; $i <=9; $i++){
+
+            if(isset($_POST['new' . $i+1]})){
+                array_push($members, $_POST['new' . $i+1]);
+                array_push($dirFlags, $_POST['dir' . $i+1]);
+                array_push($instruments, $_POST['Instrument' . $i+1]);
+                array_push($parts, $_POST['part' . $i+1]);
+            }
 
 
+
+        }
+
+/*
+        $members = array($_POST['new1'], $_POST['new2'], $_POST['new3'], $_POST['new4'], $_POST['new5'], $_POST['new6'], $_POST['new7'], $_POST['new8'], $_POST['new9'], $_POST['new10']);
+        $dirFlags = array($_POST['dir1'], $_POST['dir2'], $_POST['dir3'], $_POST['dir4'], $_POST['dir5'], $_POST['dir6'], $_POST['dir7'], $_POST['dir8'], $_POST['dir9'], $_POST['dir10']);
+        $instruments = array($_POST['Instrument1'], $_POST['Instrument2'], $_POST['Instrument3'], $_POST['Instrument4'], $_POST['Instrument5'], $_POST['Instrument6'], $_POST['Instrument7'], $_POST['Instrument8'], $_POST['Instrument9'], $_POST['Instrument10']);
+        $parts = array($_POST['part1'], $_POST['part2'], $_POST['part3'], $_POST['part4'], $_POST['part5'], $_POST['part6'], $_POST['part7'], $_POST['part8'], $_POST['part9'], $_POST['part10']);
+*/
 
 
 
