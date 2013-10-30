@@ -57,6 +57,32 @@ CSS FOR index.php
 }
 
 /**********************************************
+CSS FOR user_page.php
+**********************************************/
+
+.bands {
+  position: absolute;
+  color: #b78727;
+  background-color: #181818;
+  width: 600px;
+  height: 70%;
+  top: 20%;
+  left: 25%;
+  margin-left: 1%;
+  overflow: auto;
+  box-shadow: 7px 7px 10px 2px #181860;
+}
+
+.bands h2 {
+  padding-left: 3%;
+  padding-top: 2%;
+}
+
+.bands li {
+  list-style: none;
+}
+
+/**********************************************
 CSS FOR band_page.php
 **********************************************/
 

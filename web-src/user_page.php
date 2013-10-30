@@ -17,28 +17,19 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src='js/Users.js'></script>
   </head>
-
   <body>
   	<h1>User Home</h1>
-
     <a href="logout.php">Log Out</a>
-
-  	<div class="band_pages">
+  	<div class="bands">
   		<h2>My Bands</h2>
   		<ul>
             <?php
                 include 'phpAPI.php';   
-
                 $phpInit = new phpAPI();
                 $phpInit->getBands();
-
-
             ?>
   			<li>
-
-
           <FORM METHOD="LINK" ACTION="BandCreation.php">
-
             <INPUT TYPE="submit" VALUE="Create Band">
           </FORM>
           <!--
