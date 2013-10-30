@@ -81,6 +81,7 @@ CSS FOR user_page.php
 .bands a {
   color: green;
   display: block;
+  vertical-align: middle;
 }
 
 .bands li {
