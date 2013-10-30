@@ -272,6 +272,7 @@ class phpAPI
             else
                 $isDir = 0;
 
+            $instrument = $instruments[$key];
             $pID = $parts[$key];
 
 
