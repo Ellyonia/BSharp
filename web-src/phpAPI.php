@@ -245,7 +245,7 @@ class phpAPI
             echo "test" . strval($i+1);
             echo "</br>";
 
-            if(isset($_POST['new' . strval($i+1)])){
+            if($_POST['new' . strval($i+1)] != ""){
                 echo $_POST['new' . strval($i+1)];
                 echo "</br>";
                 echo "</br>";
