@@ -235,6 +235,8 @@ class phpAPI
         $parts = $_SESSION['parts'];
 */
 
+        echo "test1";
+
         $members = array();
         $dirFlags = array();
         $instruments = array();
@@ -248,11 +250,12 @@ class phpAPI
                 array_push($instruments, $_POST['Instrument' . $i+1]);
                 array_push($parts, $_POST['part' . $i+1]);
             }
+            echo "test0";
 
 
 
         }
-
+        echo "test10000000000";
 /*
         $members = array($_POST['new1'], $_POST['new2'], $_POST['new3'], $_POST['new4'], $_POST['new5'], $_POST['new6'], $_POST['new7'], $_POST['new8'], $_POST['new9'], $_POST['new10']);
         $dirFlags = array($_POST['dir1'], $_POST['dir2'], $_POST['dir3'], $_POST['dir4'], $_POST['dir5'], $_POST['dir6'], $_POST['dir7'], $_POST['dir8'], $_POST['dir9'], $_POST['dir10']);
@@ -265,6 +268,7 @@ class phpAPI
 
 
         foreach ($members as $key => $value) {
+            echo "test2";
             $uID = mysql_query("SELECT user_id from Users where username = '$value'");
 
             if($dirFlags[$key] == 1)
