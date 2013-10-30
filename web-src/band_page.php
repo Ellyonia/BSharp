@@ -689,27 +689,6 @@
                 <option>Tuba</option>
               </optgroup>
 
-              <optgroup label="Percussion"> 
-                <option>Snare Drum</option>
-                <option>Bass Drum</option>
-                <option>Cymbals</option>
-                <option>Tam-Tam</option>
-                <option>Triangle</option>
-                <option>Tambourine</option>
-                <option>Wood Blocks/Temple Blocks</option>
-                <option>Tom-Tom</option>
-                <option>Bongos</option>
-                <option>Congas</option>
-                <option>Claves</option>
-                <option>Drum Kit</option>
-                <option>Timpani</option>
-                <option>Glockenspiel</option>
-                <option>Xylophone</option>
-                <option>Marimba</option>
-                <option>Crotales</option>
-                <option>Vibraphone</option>
-                <option>Chimes</option>
-              </optgroup>
 
               <optgroup label = "Keyboards">
                 <option>Piano</option>
