@@ -80,8 +80,9 @@ CSS FOR user_page.php
 
 .bands a {
   color: green;
-  display: block;
-  vertical-align: middle;
+  float: left;
+  text-decoration: none;
+  clear: both;
 }
 
 .bands li {
