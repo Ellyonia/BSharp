@@ -242,8 +242,6 @@ class phpAPI
         $parts = array();
 
         for($i = 0; $i <=9; $i++){
-            echo "test" . strval($i+1);
-            echo "</br>";
 
             if($_POST['new' . strval($i+1)] != ""){
                 echo $_POST['new' . strval($i+1)];
@@ -251,9 +249,19 @@ class phpAPI
                 echo "</br>";
 
                 array_push($members, $_POST['new' . strval($i+1)]);
-                array_push($dirFlags, $_POST['dir' . strval($i+1)]);
+                if(isset($_POST['dir' . strval($i+1)]))
+                    array_push($dirFlags, 1);
+                else
+                    array_push($dirFlags, 0);
+
                 array_push($instruments, $_POST['Instrument' . strval($i+1)]);
+                echo $_POST['Instrument' . strval($i+1)];
+                echo "</br>";
+
                 array_push($parts, $_POST['part' . strval($i+1)]);
+                echo $_POST['part' . strval($i+1)];
+                echo "</br>";
+
                 echo "test inside the if thingy";
                 echo "</br>";
             }
