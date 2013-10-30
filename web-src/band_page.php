@@ -96,16 +96,38 @@
 
       <form id = "addMembers" action = "addMembers.php" method = "post">
 
-        <input type='text' name = 'newOne' id='newOne' placeholder="Enter Email address here" required/>
-        <input type='text' name = 'newTwo' id='newTwo' placeholder="Enter Email address here" />
-        <input type='text' name = 'newThree' id='newThree' placeholder="Enter Email address here" />
-        <input type='text' name = 'newFour' id='newFour' placeholder="Enter Email address here" />
-        <input type='text' name = 'newFive' id='newFive' placeholder="Enter Email address here" />
-        <input type='text' name = 'newSix' id='newSix' placeholder="Enter Email address here" />
-        <input type='text' name = 'newSeven' id='newSeven' placeholder="Enter Email address here" />
-        <input type='text' name = 'newEight' id='newEight' placeholder="Enter Email address here" />
-        <input type='text' name = 'newNine' id='newNine' placeholder="Enter Email address here" />
-        <input type='text' name = 'newTen' id='newTen' placeholder="Enter Email address here" />
+        <ul class = "NewMembers">
+          <li>
+            <input type='text' name = 'newOne' id='newOne' placeholder="Enter Email address here" required/>
+          </li>
+          <li>
+            <input type='text' name = 'newTwo' id='newTwo' placeholder="Enter Email address here" />
+          </li>
+          <li>
+            <input type='text' name = 'newThree' id='newThree' placeholder="Enter Email address here" />
+          </li>
+          <li>
+            <input type='text' name = 'newFour' id='newFour' placeholder="Enter Email address here" />
+          </li>
+          <li>
+            <input type='text' name = 'newFive' id='newFive' placeholder="Enter Email address here" />
+          </li>
+          <li>
+            <input type='text' name = 'newSix' id='newSix' placeholder="Enter Email address here" />
+          </li>
+          <li>
+            <input type='text' name = 'newSeven' id='newSeven' placeholder="Enter Email address here" />
+          </li>
+          <li>
+            <input type='text' name = 'newEight' id='newEight' placeholder="Enter Email address here" />
+          </li>
+          <li>
+            <input type='text' name = 'newNine' id='newNine' placeholder="Enter Email address here" />
+          </li>
+          <li>
+            <input type='text' name = 'newTen' id='newTen' placeholder="Enter Email address here" />
+          </li>
+      </ul>
 
         <input type="submit" name="addButton" id="addButton" value="Add Members"/>
       </form>
