@@ -99,43 +99,43 @@
         <ul class = "NewMembers">
           <li>
             <input type='text' name = 'newOne' id='newOne' placeholder="Enter Email address here" required/>
-            <input type="checkbox" name="dir1" value="Is this member a Director?" />
+            <label><input type="checkbox" name="dir1" value="1" /> Is this member a Director?</label>
           </li>
           <li>
             <input type='text' name = 'newTwo' id='newTwo' placeholder="Enter Email address here" />
-            <input type="checkbox" name="dir2" value="Is this member a Director?" />
+            <label><input type="checkbox" name="dir2" value="1" /> Is this member a Director?</label>
           </li>
           <li>
             <input type='text' name = 'newThree' id='newThree' placeholder="Enter Email address here" />
-            <input type="checkbox" name="dir3" value="Is this member a Director?" />
+            <label><input type="checkbox" name="dir3" value="1" /> Is this member a Director?</label>
           </li>
           <li>
             <input type='text' name = 'newFour' id='newFour' placeholder="Enter Email address here" />
-            <input type="checkbox" name="dir4" value="Is this member a Director?" />
+            <label><input type="checkbox" name="dir4" value="1" /> Is this member a Director?</label>
           </li>
           <li>
             <input type='text' name = 'newFive' id='newFive' placeholder="Enter Email address here" />
-            <input type="checkbox" name="dir5" value="Is this member a Director?" />
+            <label><input type="checkbox" name="dir5" value="1" /> Is this member a Director?</label>
           </li>
           <li>
             <input type='text' name = 'newSix' id='newSix' placeholder="Enter Email address here" />
-            <input type="checkbox" name="dir6" value="Is this member a Director?" />
+            <label><input type="checkbox" name="dir6" value="1" /> Is this member a Director?</label>
           </li>
           <li>
             <input type='text' name = 'newSeven' id='newSeven' placeholder="Enter Email address here" />
-            <input type="checkbox" name="dir7" value="Is this member a Director?" />
+            <label><input type="checkbox" name="dir7" value="1" /> Is this member a Director?</label>
           </li>
           <li>
             <input type='text' name = 'newEight' id='newEight' placeholder="Enter Email address here" />
-            <input type="checkbox" name="dir8" value="Is this member a Director?" />
+            <label><input type="checkbox" name="dir8" value="1" /> Is this member a Director?</label>
           </li>
           <li>
             <input type='text' name = 'newNine' id='newNine' placeholder="Enter Email address here" />
-            <input type="checkbox" name="dir9" value="Is this member a Director?" />
+            <label><input type="checkbox" name="dir9" value="1" /> Is this member a Director?</label>
           </li>
           <li>
             <input type='text' name = 'newTen' id='newTen' placeholder="Enter Email address here" />
-            <input type="checkbox" name="dir10" value="Is this member a Director?" />
+            <label><input type="checkbox" name="dir10" value="1" /> Is this member a Director?</label>
           </li>
       </ul>
 
