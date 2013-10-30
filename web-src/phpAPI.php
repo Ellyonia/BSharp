@@ -224,6 +224,29 @@ class phpAPI
     }
 
 
+    public function addBandMembers() {
+
+        $bID = $_SESSION['bID'];
+
+        $members = $_SESSION['newMembers'];
+        $dirFlags = $_SESSION['dirFlags'];
+
+
+
+
+        $query = "INSERT into BandsIn ";
+
+
+        foreach ($members as $key => $value) {
+            $uID = mysql_query("SELECT user_id from Users where username = '$value'");
+            $isDir = $dirFlags[$key];
+
+        }
+
+
+    }
+
+
 
 
 }

@@ -16,6 +16,16 @@
   $phpInit->setBID();
 
 
+  if(isset($_POST['addButton'])){
+    $members = array($_POST['newOne'], $_POST['newTwo'], $_POST['newThree'], $_POST['newFour'], $_POST['newFive'], $_POST['newSix'], $_POST['newSeven'], $_POST['newEight'], $_POST['newNine'], $_POST['newTen']);
+    $dirFlags = array($_POST['dir1'], $_POST['dir2'], $_POST['dir3'], $_POST['dir4'], $_POST['dir5'], $_POST['dir6'], $_POST['dir7'], $_POST['dir8'], $_POST['dir9'], $_POST['dir10']);
+
+    $_SESSION['newMembers'] = $members;
+    $_SESSION['dirFlags'] = $dirFlags;
+
+  }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -99,44 +109,624 @@
         <ul class = "NewMembers">
           <li>
             <input type='text' name = 'newOne' id='newOne' placeholder="Enter Email address here" required/>
+            <select>
+              <optgroup label = "Woodwinds">
+                <option>Piccolo</option>
+                <option>Flute</option>
+                <option>Oboe</option>
+                <option>Bassoon</option>
+                <option>Clarinet</option>
+                <option>Bass Clarinet</option>
+                <option>Alto Saxophone</option>
+                <option>Tenor Saxaphone</option>
+                <option>Baritone Saxophone</option>
+              </optgroup>
+
+              <optgroup label="Brass">
+                <option>Trumpet</option>
+                <option>Horns</option>
+                <option>Tenor Trombones</option>
+                <option>Bass Trombone</option>
+                <option>Baritone Horn/Euphonium</option>
+                <option>Tuba</option>
+              </optgroup>
+
+              <optgroup labe;l="Percussion">
+                <option>Snare Drum</option>
+                <option>Bass Drum</option>
+                <option>Cymbals</option>
+                <option>Tam-Tam</option>
+                <option>Triangle</option>
+                <option>Tambourine</option>
+                <option>Wood Blocks/Temple Blocks</option>
+                <option>Tom-Tom</option>
+                <option>Bongos</option>
+                <option>Congas</option>
+                <option>Claves</option>
+                <option>Drum Kit</option>
+                <option>Timpani</option>
+                <option>Glockenspiel</option>
+                <option>Xylophone</option>
+                <option>Marimba</option>
+                <option>Crotales</option>
+                <option>Vibraphone</option>
+                <option>Chimes</option>
+              </optgroup>
+
+              <optgroup label = "Keyboards">
+                <option>Piano</option>
+                <option>Celesta</option>
+                <option>Organ</option>
+              </optgroup>
+
+              <optgroup label = "Strings">
+                <option>Harp</option>
+                <option>Violoncello</option>
+                <option>Double Bass</option>
+              </optgroup>
+              
+            </select>
             <label><input type="checkbox" name="dir1" value="1" /> Is this member a Director?</label>
           </li>
+
           <li>
             <input type='text' name = 'newTwo' id='newTwo' placeholder="Enter Email address here" />
+                        <select>
+              <optgroup label = "Woodwinds">
+                <option>Piccolo</option>
+                <option>Flute</option>
+                <option>Oboe</option>
+                <option>Bassoon</option>
+                <option>Clarinet</option>
+                <option>Bass Clarinet</option>
+                <option>Alto Saxophone</option>
+                <option>Tenor Saxaphone</option>
+                <option>Baritone Saxophone</option>
+              </optgroup>
+
+              <optgroup label="Brass">
+                <option>Trumpet</option>
+                <option>Horns</option>
+                <option>Tenor Trombones</option>
+                <option>Bass Trombone</option>
+                <option>Baritone Horn/Euphonium</option>
+                <option>Tuba</option>
+              </optgroup>
+
+              <optgroup labe;l="Percussion">
+                <option>Snare Drum</option>
+                <option>Bass Drum</option>
+                <option>Cymbals</option>
+                <option>Tam-Tam</option>
+                <option>Triangle</option>
+                <option>Tambourine</option>
+                <option>Wood Blocks/Temple Blocks</option>
+                <option>Tom-Tom</option>
+                <option>Bongos</option>
+                <option>Congas</option>
+                <option>Claves</option>
+                <option>Drum Kit</option>
+                <option>Timpani</option>
+                <option>Glockenspiel</option>
+                <option>Xylophone</option>
+                <option>Marimba</option>
+                <option>Crotales</option>
+                <option>Vibraphone</option>
+                <option>Chimes</option>
+              </optgroup>
+
+              <optgroup label = "Keyboards">
+                <option>Piano</option>
+                <option>Celesta</option>
+                <option>Organ</option>
+              </optgroup>
+
+              <optgroup label = "Strings">
+                <option>Harp</option>
+                <option>Violoncello</option>
+                <option>Double Bass</option>
+              </optgroup>
+              
+            </select>
             <label><input type="checkbox" name="dir2" value="1" /> Is this member a Director?</label>
           </li>
+
           <li>
             <input type='text' name = 'newThree' id='newThree' placeholder="Enter Email address here" />
+                        <select>
+              <optgroup label = "Woodwinds">
+                <option>Piccolo</option>
+                <option>Flute</option>
+                <option>Oboe</option>
+                <option>Bassoon</option>
+                <option>Clarinet</option>
+                <option>Bass Clarinet</option>
+                <option>Alto Saxophone</option>
+                <option>Tenor Saxaphone</option>
+                <option>Baritone Saxophone</option>
+              </optgroup>
+
+              <optgroup label="Brass">
+                <option>Trumpet</option>
+                <option>Horns</option>
+                <option>Tenor Trombones</option>
+                <option>Bass Trombone</option>
+                <option>Baritone Horn/Euphonium</option>
+                <option>Tuba</option>
+              </optgroup>
+
+              <optgroup labe;l="Percussion">
+                <option>Snare Drum</option>
+                <option>Bass Drum</option>
+                <option>Cymbals</option>
+                <option>Tam-Tam</option>
+                <option>Triangle</option>
+                <option>Tambourine</option>
+                <option>Wood Blocks/Temple Blocks</option>
+                <option>Tom-Tom</option>
+                <option>Bongos</option>
+                <option>Congas</option>
+                <option>Claves</option>
+                <option>Drum Kit</option>
+                <option>Timpani</option>
+                <option>Glockenspiel</option>
+                <option>Xylophone</option>
+                <option>Marimba</option>
+                <option>Crotales</option>
+                <option>Vibraphone</option>
+                <option>Chimes</option>
+              </optgroup>
+
+              <optgroup label = "Keyboards">
+                <option>Piano</option>
+                <option>Celesta</option>
+                <option>Organ</option>
+              </optgroup>
+
+              <optgroup label = "Strings">
+                <option>Harp</option>
+                <option>Violoncello</option>
+                <option>Double Bass</option>
+              </optgroup>
+              
+            </select>
             <label><input type="checkbox" name="dir3" value="1" /> Is this member a Director?</label>
           </li>
+
           <li>
             <input type='text' name = 'newFour' id='newFour' placeholder="Enter Email address here" />
+                        <select>
+              <optgroup label = "Woodwinds">
+                <option>Piccolo</option>
+                <option>Flute</option>
+                <option>Oboe</option>
+                <option>Bassoon</option>
+                <option>Clarinet</option>
+                <option>Bass Clarinet</option>
+                <option>Alto Saxophone</option>
+                <option>Tenor Saxaphone</option>
+                <option>Baritone Saxophone</option>
+              </optgroup>
+
+              <optgroup label="Brass">
+                <option>Trumpet</option>
+                <option>Horns</option>
+                <option>Tenor Trombones</option>
+                <option>Bass Trombone</option>
+                <option>Baritone Horn/Euphonium</option>
+                <option>Tuba</option>
+              </optgroup>
+
+              <optgroup labe;l="Percussion">
+                <option>Snare Drum</option>
+                <option>Bass Drum</option>
+                <option>Cymbals</option>
+                <option>Tam-Tam</option>
+                <option>Triangle</option>
+                <option>Tambourine</option>
+                <option>Wood Blocks/Temple Blocks</option>
+                <option>Tom-Tom</option>
+                <option>Bongos</option>
+                <option>Congas</option>
+                <option>Claves</option>
+                <option>Drum Kit</option>
+                <option>Timpani</option>
+                <option>Glockenspiel</option>
+                <option>Xylophone</option>
+                <option>Marimba</option>
+                <option>Crotales</option>
+                <option>Vibraphone</option>
+                <option>Chimes</option>
+              </optgroup>
+
+              <optgroup label = "Keyboards">
+                <option>Piano</option>
+                <option>Celesta</option>
+                <option>Organ</option>
+              </optgroup>
+
+              <optgroup label = "Strings">
+                <option>Harp</option>
+                <option>Violoncello</option>
+                <option>Double Bass</option>
+              </optgroup>
+              
+            </select>
             <label><input type="checkbox" name="dir4" value="1" /> Is this member a Director?</label>
           </li>
+
           <li>
             <input type='text' name = 'newFive' id='newFive' placeholder="Enter Email address here" />
+                        <select>
+              <optgroup label = "Woodwinds">
+                <option>Piccolo</option>
+                <option>Flute</option>
+                <option>Oboe</option>
+                <option>Bassoon</option>
+                <option>Clarinet</option>
+                <option>Bass Clarinet</option>
+                <option>Alto Saxophone</option>
+                <option>Tenor Saxaphone</option>
+                <option>Baritone Saxophone</option>
+              </optgroup>
+
+              <optgroup label="Brass">
+                <option>Trumpet</option>
+                <option>Horns</option>
+                <option>Tenor Trombones</option>
+                <option>Bass Trombone</option>
+                <option>Baritone Horn/Euphonium</option>
+                <option>Tuba</option>
+              </optgroup>
+
+              <optgroup labe;l="Percussion">
+                <option>Snare Drum</option>
+                <option>Bass Drum</option>
+                <option>Cymbals</option>
+                <option>Tam-Tam</option>
+                <option>Triangle</option>
+                <option>Tambourine</option>
+                <option>Wood Blocks/Temple Blocks</option>
+                <option>Tom-Tom</option>
+                <option>Bongos</option>
+                <option>Congas</option>
+                <option>Claves</option>
+                <option>Drum Kit</option>
+                <option>Timpani</option>
+                <option>Glockenspiel</option>
+                <option>Xylophone</option>
+                <option>Marimba</option>
+                <option>Crotales</option>
+                <option>Vibraphone</option>
+                <option>Chimes</option>
+              </optgroup>
+
+              <optgroup label = "Keyboards">
+                <option>Piano</option>
+                <option>Celesta</option>
+                <option>Organ</option>
+              </optgroup>
+
+              <optgroup label = "Strings">
+                <option>Harp</option>
+                <option>Violoncello</option>
+                <option>Double Bass</option>
+              </optgroup>
+              
+            </select>
             <label><input type="checkbox" name="dir5" value="1" /> Is this member a Director?</label>
           </li>
+
           <li>
             <input type='text' name = 'newSix' id='newSix' placeholder="Enter Email address here" />
+                        <select>
+              <optgroup label = "Woodwinds">
+                <option>Piccolo</option>
+                <option>Flute</option>
+                <option>Oboe</option>
+                <option>Bassoon</option>
+                <option>Clarinet</option>
+                <option>Bass Clarinet</option>
+                <option>Alto Saxophone</option>
+                <option>Tenor Saxaphone</option>
+                <option>Baritone Saxophone</option>
+              </optgroup>
+
+              <optgroup label="Brass">
+                <option>Trumpet</option>
+                <option>Horns</option>
+                <option>Tenor Trombones</option>
+                <option>Bass Trombone</option>
+                <option>Baritone Horn/Euphonium</option>
+                <option>Tuba</option>
+              </optgroup>
+
+              <optgroup labe;l="Percussion">
+                <option>Snare Drum</option>
+                <option>Bass Drum</option>
+                <option>Cymbals</option>
+                <option>Tam-Tam</option>
+                <option>Triangle</option>
+                <option>Tambourine</option>
+                <option>Wood Blocks/Temple Blocks</option>
+                <option>Tom-Tom</option>
+                <option>Bongos</option>
+                <option>Congas</option>
+                <option>Claves</option>
+                <option>Drum Kit</option>
+                <option>Timpani</option>
+                <option>Glockenspiel</option>
+                <option>Xylophone</option>
+                <option>Marimba</option>
+                <option>Crotales</option>
+                <option>Vibraphone</option>
+                <option>Chimes</option>
+              </optgroup>
+
+              <optgroup label = "Keyboards">
+                <option>Piano</option>
+                <option>Celesta</option>
+                <option>Organ</option>
+              </optgroup>
+
+              <optgroup label = "Strings">
+                <option>Harp</option>
+                <option>Violoncello</option>
+                <option>Double Bass</option>
+              </optgroup>
+              
+            </select>
             <label><input type="checkbox" name="dir6" value="1" /> Is this member a Director?</label>
           </li>
+
           <li>
             <input type='text' name = 'newSeven' id='newSeven' placeholder="Enter Email address here" />
+                        <select>
+              <optgroup label = "Woodwinds">
+                <option>Piccolo</option>
+                <option>Flute</option>
+                <option>Oboe</option>
+                <option>Bassoon</option>
+                <option>Clarinet</option>
+                <option>Bass Clarinet</option>
+                <option>Alto Saxophone</option>
+                <option>Tenor Saxaphone</option>
+                <option>Baritone Saxophone</option>
+              </optgroup>
+
+              <optgroup label="Brass">
+                <option>Trumpet</option>
+                <option>Horns</option>
+                <option>Tenor Trombones</option>
+                <option>Bass Trombone</option>
+                <option>Baritone Horn/Euphonium</option>
+                <option>Tuba</option>
+              </optgroup>
+
+              <optgroup labe;l="Percussion">
+                <option>Snare Drum</option>
+                <option>Bass Drum</option>
+                <option>Cymbals</option>
+                <option>Tam-Tam</option>
+                <option>Triangle</option>
+                <option>Tambourine</option>
+                <option>Wood Blocks/Temple Blocks</option>
+                <option>Tom-Tom</option>
+                <option>Bongos</option>
+                <option>Congas</option>
+                <option>Claves</option>
+                <option>Drum Kit</option>
+                <option>Timpani</option>
+                <option>Glockenspiel</option>
+                <option>Xylophone</option>
+                <option>Marimba</option>
+                <option>Crotales</option>
+                <option>Vibraphone</option>
+                <option>Chimes</option>
+              </optgroup>
+
+              <optgroup label = "Keyboards">
+                <option>Piano</option>
+                <option>Celesta</option>
+                <option>Organ</option>
+              </optgroup>
+
+              <optgroup label = "Strings">
+                <option>Harp</option>
+                <option>Violoncello</option>
+                <option>Double Bass</option>
+              </optgroup>
+              
+            </select>
             <label><input type="checkbox" name="dir7" value="1" /> Is this member a Director?</label>
           </li>
+
           <li>
             <input type='text' name = 'newEight' id='newEight' placeholder="Enter Email address here" />
+                        <select>
+              <optgroup label = "Woodwinds">
+                <option>Piccolo</option>
+                <option>Flute</option>
+                <option>Oboe</option>
+                <option>Bassoon</option>
+                <option>Clarinet</option>
+                <option>Bass Clarinet</option>
+                <option>Alto Saxophone</option>
+                <option>Tenor Saxaphone</option>
+                <option>Baritone Saxophone</option>
+              </optgroup>
+
+              <optgroup label="Brass">
+                <option>Trumpet</option>
+                <option>Horns</option>
+                <option>Tenor Trombones</option>
+                <option>Bass Trombone</option>
+                <option>Baritone Horn/Euphonium</option>
+                <option>Tuba</option>
+              </optgroup>
+
+              <optgroup labe;l="Percussion">
+                <option>Snare Drum</option>
+                <option>Bass Drum</option>
+                <option>Cymbals</option>
+                <option>Tam-Tam</option>
+                <option>Triangle</option>
+                <option>Tambourine</option>
+                <option>Wood Blocks/Temple Blocks</option>
+                <option>Tom-Tom</option>
+                <option>Bongos</option>
+                <option>Congas</option>
+                <option>Claves</option>
+                <option>Drum Kit</option>
+                <option>Timpani</option>
+                <option>Glockenspiel</option>
+                <option>Xylophone</option>
+                <option>Marimba</option>
+                <option>Crotales</option>
+                <option>Vibraphone</option>
+                <option>Chimes</option>
+              </optgroup>
+
+              <optgroup label = "Keyboards">
+                <option>Piano</option>
+                <option>Celesta</option>
+                <option>Organ</option>
+              </optgroup>
+
+              <optgroup label = "Strings">
+                <option>Harp</option>
+                <option>Violoncello</option>
+                <option>Double Bass</option>
+              </optgroup>
+              
+            </select>
             <label><input type="checkbox" name="dir8" value="1" /> Is this member a Director?</label>
           </li>
+
           <li>
             <input type='text' name = 'newNine' id='newNine' placeholder="Enter Email address here" />
+                        <select>
+              <optgroup label = "Woodwinds">
+                <option>Piccolo</option>
+                <option>Flute</option>
+                <option>Oboe</option>
+                <option>Bassoon</option>
+                <option>Clarinet</option>
+                <option>Bass Clarinet</option>
+                <option>Alto Saxophone</option>
+                <option>Tenor Saxaphone</option>
+                <option>Baritone Saxophone</option>
+              </optgroup>
+
+              <optgroup label="Brass">
+                <option>Trumpet</option>
+                <option>Horns</option>
+                <option>Tenor Trombones</option>
+                <option>Bass Trombone</option>
+                <option>Baritone Horn/Euphonium</option>
+                <option>Tuba</option>
+              </optgroup>
+
+              <optgroup labe;l="Percussion">
+                <option>Snare Drum</option>
+                <option>Bass Drum</option>
+                <option>Cymbals</option>
+                <option>Tam-Tam</option>
+                <option>Triangle</option>
+                <option>Tambourine</option>
+                <option>Wood Blocks/Temple Blocks</option>
+                <option>Tom-Tom</option>
+                <option>Bongos</option>
+                <option>Congas</option>
+                <option>Claves</option>
+                <option>Drum Kit</option>
+                <option>Timpani</option>
+                <option>Glockenspiel</option>
+                <option>Xylophone</option>
+                <option>Marimba</option>
+                <option>Crotales</option>
+                <option>Vibraphone</option>
+                <option>Chimes</option>
+              </optgroup>
+
+              <optgroup label = "Keyboards">
+                <option>Piano</option>
+                <option>Celesta</option>
+                <option>Organ</option>
+              </optgroup>
+
+              <optgroup label = "Strings">
+                <option>Harp</option>
+                <option>Violoncello</option>
+                <option>Double Bass</option>
+              </optgroup>
+              
+            </select>
             <label><input type="checkbox" name="dir9" value="1" /> Is this member a Director?</label>
           </li>
+
           <li>
             <input type='text' name = 'newTen' id='newTen' placeholder="Enter Email address here" />
+                        <select>
+              <optgroup label = "Woodwinds">
+                <option>Piccolo</option>
+                <option>Flute</option>
+                <option>Oboe</option>
+                <option>Bassoon</option>
+                <option>Clarinet</option>
+                <option>Bass Clarinet</option>
+                <option>Alto Saxophone</option>
+                <option>Tenor Saxaphone</option>
+                <option>Baritone Saxophone</option>
+              </optgroup>
+
+              <optgroup label="Brass">
+                <option>Trumpet</option>
+                <option>Horns</option>
+                <option>Tenor Trombones</option>
+                <option>Bass Trombone</option>
+                <option>Baritone Horn/Euphonium</option>
+                <option>Tuba</option>
+              </optgroup>
+
+              <optgroup labe;l="Percussion">
+                <option>Snare Drum</option>
+                <option>Bass Drum</option>
+                <option>Cymbals</option>
+                <option>Tam-Tam</option>
+                <option>Triangle</option>
+                <option>Tambourine</option>
+                <option>Wood Blocks/Temple Blocks</option>
+                <option>Tom-Tom</option>
+                <option>Bongos</option>
+                <option>Congas</option>
+                <option>Claves</option>
+                <option>Drum Kit</option>
+                <option>Timpani</option>
+                <option>Glockenspiel</option>
+                <option>Xylophone</option>
+                <option>Marimba</option>
+                <option>Crotales</option>
+                <option>Vibraphone</option>
+                <option>Chimes</option>
+              </optgroup>
+
+              <optgroup label = "Keyboards">
+                <option>Piano</option>
+                <option>Celesta</option>
+                <option>Organ</option>
+              </optgroup>
+
+              <optgroup label = "Strings">
+                <option>Harp</option>
+                <option>Violoncello</option>
+                <option>Double Bass</option>
+              </optgroup>
+              
+            </select>
             <label><input type="checkbox" name="dir10" value="1" /> Is this member a Director?</label>
           </li>
+
       </ul>
 
         <input type="submit" name="addButton" id="addButton" value="Add Members"/>
