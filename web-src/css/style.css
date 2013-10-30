@@ -78,6 +78,10 @@ CSS FOR user_page.php
   padding-top: 2%;
 }
 
+.bands ul {
+  display: block;
+}
+
 .bands li {
   list-style: none;
 }
