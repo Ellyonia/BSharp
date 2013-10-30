@@ -26,8 +26,8 @@
     $_SESSION['dirFlags'] = $dirFlags;
     $_SESSION['instruments'] = $instruments;
     $_SESSION['parts'] = $parts;
-*/
-  }
+
+  }*/
 
 
 ?>
