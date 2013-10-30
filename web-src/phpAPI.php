@@ -235,7 +235,7 @@ class phpAPI
         $parts = $_SESSION['parts'];
 */
 
-        echo "test1";
+        echo "test1 \n";
 
         $members = array();
         $dirFlags = array();
@@ -243,21 +243,21 @@ class phpAPI
         $parts = array();
 
         for($i = 0; $i <=9; $i++){
-            echo "test" . $i+1;
+            echo "test" . strval($i+1) ."\n";
 
-            if(isset($_POST['new' . $i+1])){
-                array_push($members, $_POST['new' . $i+1]);
-                array_push($dirFlags, $_POST['dir' . $i+1]);
-                array_push($instruments, $_POST['Instrument' . $i+1]);
-                array_push($parts, $_POST['part' . $i+1]);
-                echo "test inside the if thingy";
+            if(isset($_POST['new' . strval($i+1)])){
+                array_push($members, $_POST['new' . strval($i+1)]);
+                array_push($dirFlags, $_POST['dir' . strval($i+1)]);
+                array_push($instruments, $_POST['Instrument' . strval($i+1)]);
+                array_push($parts, $_POST['part' . strval($i+1)]);
+                echo "test inside the if thingy \n";
             }
-            echo "test0";
+            echo "test0 \n";
 
 
 
         }
-        echo "test10000000000";
+        echo "test10000000000 \n";
 /*
         $members = array($_POST['new1'], $_POST['new2'], $_POST['new3'], $_POST['new4'], $_POST['new5'], $_POST['new6'], $_POST['new7'], $_POST['new8'], $_POST['new9'], $_POST['new10']);
         $dirFlags = array($_POST['dir1'], $_POST['dir2'], $_POST['dir3'], $_POST['dir4'], $_POST['dir5'], $_POST['dir6'], $_POST['dir7'], $_POST['dir8'], $_POST['dir9'], $_POST['dir10']);
@@ -270,7 +270,7 @@ class phpAPI
 
 
         foreach ($members as $key => $value) {
-            echo "test2";
+            echo "test2 \n";
             $uID = mysql_query("SELECT user_id from Users where username = '$value'");
 
             if($dirFlags[$key] == 1)
