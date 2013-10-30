@@ -78,7 +78,8 @@ CSS FOR user_page.php
   padding-top: 2%;
 }
 
-.bands ul {
+.bands ul li{
+  color: green;
   display: block;
 }
 
