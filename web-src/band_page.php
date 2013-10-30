@@ -113,7 +113,7 @@
         <ul class = "NewMembers">
           <li>
             <input type='text' name = 'new1' id='new1' placeholder="Enter Email address here" required/>
-            <select id="Instrument1">
+            <select id="Instrument1" name="Instrument1">
               <option value="">Select an Instrument</option>
               <optgroup label = "Woodwinds">
                 <option value="Piccolo">Piccolo</option>
@@ -172,7 +172,7 @@
               
             </select>
 
-            <select id="part1">
+            <select id="part1" name="part1">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -185,7 +185,7 @@
 
           <li>
             <input type='text' name = 'new2' id='new2' placeholder="Enter Email address here" />
-            <select id="Instrument2">
+            <select id="Instrument2" name="Instrument2">
               <option value="">Select an Instrument</option>
               <optgroup label = "Woodwinds">
                 <option value="Piccolo">Piccolo</option>
@@ -244,7 +244,7 @@
               
             </select>
 
-            <select id="part2">
+            <select id="part2" name="part2">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -257,7 +257,7 @@
 
           <li>
             <input type='text' name = 'new3' id='new3' placeholder="Enter Email address here" />
-            <select id="Instrument3">
+            <select id="Instrument3" name="Instrument3">
               <option value="">Select an Instrument</option>
               <optgroup label = "Woodwinds">
                 <option value="Piccolo">Piccolo</option>
@@ -316,7 +316,7 @@
               
             </select>
 
-            <select id="part3">
+            <select id="part3" name="part3">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -328,7 +328,7 @@
 
           <li>
             <input type='text' name = 'new4' id='new4' placeholder="Enter Email address here" />
-            <select id="Instrument4">
+            <select id="Instrument4" name="Instrument4">
               <option value="">Select an Instrument</option>
               <optgroup label = "Woodwinds">
                 <option value="Piccolo">Piccolo</option>
@@ -387,7 +387,7 @@
               
             </select>
 
-            <select id="part4">
+            <select id="part4" name="part4">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -399,7 +399,7 @@
 
           <li>
             <input type='text' name = 'new5' id='new5' placeholder="Enter Email address here" />
-            <select id="Instrument5">
+            <select id="Instrument5" name="Instrument5">
               <option value="">Select an Instrument</option>
               <optgroup label = "Woodwinds">
                 <option value="Piccolo">Piccolo</option>
@@ -458,7 +458,7 @@
               
             </select>
 
-            <select id="part5">
+            <select id="part5" name="part5">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -470,7 +470,7 @@
 
           <li>
             <input type='text' name = 'new6' id='new6' placeholder="Enter Email address here" />
-            <select id="Instrument6">
+            <select id="Instrument6" name="Instrument6">
               <option value="">Select an Instrument</option>
               <optgroup label = "Woodwinds">
                 <option value="Piccolo">Piccolo</option>
@@ -529,7 +529,7 @@
               
             </select>
 
-            <select id="part6">
+            <select id="part6" name="part6">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -541,7 +541,7 @@
 
           <li>
             <input type='text' name = 'new7' id='new7' placeholder="Enter Email address here" />
-            <select id="Instrument7">
+            <select id="Instrument7" name="Instrument7">
               <option value="">Select an Instrument</option>
               <optgroup label = "Woodwinds">
                 <option value="Piccolo">Piccolo</option>
@@ -600,7 +600,7 @@
               
             </select>
 
-            <select id="part7">
+            <select id="part7" name="part7">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -612,7 +612,7 @@
 
           <li>
             <input type='text' name = 'new8' id='new8' placeholder="Enter Email address here" />
-            <select id="Instrument8">
+            <select id="Instrument8" name="Instrument8">
               <option value="">Select an Instrument</option>
               <optgroup label = "Woodwinds">
                 <option value="Piccolo">Piccolo</option>
@@ -671,7 +671,7 @@
               
             </select>
 
-            <select id="part8">
+            <select id="part8" name="part8">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -683,7 +683,7 @@
 
           <li>
             <input type='text' name = 'new9' id='new9' placeholder="Enter Email address here" />
-            <select id="Instrument9">
+            <select id="Instrument9" name="Instrument9">
               <option value="">Select an Instrument</option>
               <optgroup label = "Woodwinds">
                 <option value="Piccolo">Piccolo</option>
@@ -742,7 +742,7 @@
               
             </select>
 
-            <select id="part9">
+            <select id="part9" name="part9">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -754,7 +754,7 @@
 
           <li>
             <input type='text' name = 'new10' id='new10' placeholder="Enter Email address here" />
-            <select id="Instrument10">
+            <select id="Instrument10" name="Instrument10">
               <option value="">Select an Instrument</option>
               <optgroup label = "Woodwinds">
                 <option value="Piccolo">Piccolo</option>
@@ -813,7 +813,7 @@
               
             </select>
 
-            <select id="part10">
+            <select id="part10" name="part10">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
