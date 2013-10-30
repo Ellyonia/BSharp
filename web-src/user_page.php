@@ -23,11 +23,13 @@
   	<div class="bands">
   		<h2>My Bands</h2>
   		<ul>
+        <li>
             <?php
                 include 'phpAPI.php';   
                 $phpInit = new phpAPI();
                 $phpInit->getBands();
             ?>
+        </li>
   			<li>
           <FORM METHOD="LINK" ACTION="BandCreation.php">
             <INPUT TYPE="submit" VALUE="Create Band">
