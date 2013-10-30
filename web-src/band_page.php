@@ -689,7 +689,7 @@
                 <option>Tuba</option>
               </optgroup>
 
-              <optgroup labe;l="Percussion">
+              <optgroup label="Percussion">
                 <option>Snare Drum</option>
                 <option>Bass Drum</option>
                 <option>Cymbals</option>
