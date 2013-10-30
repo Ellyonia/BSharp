@@ -93,6 +93,22 @@
           <input type="submit" name="changeAbout" id="changeAbout" value="Submit Changes"/>
 
       </form>
+
+      <form id = "addMembers" action = "addMembers.php" method = "post">
+
+        <input type='text' name = 'newOne' id='newOne' placeholder="Enter Email address here" required/>
+        <input type='text' name = 'newTwo' id='newTwo' placeholder="Enter Email address here" />
+        <input type='text' name = 'newThree' id='newThree' placeholder="Enter Email address here" />
+        <input type='text' name = 'newFour' id='newFour' placeholder="Enter Email address here" />
+        <input type='text' name = 'newFive' id='newFive' placeholder="Enter Email address here" />
+        <input type='text' name = 'newSix' id='newSix' placeholder="Enter Email address here" />
+        <input type='text' name = 'newSeven' id='newSeven' placeholder="Enter Email address here" />
+        <input type='text' name = 'newEight' id='newEight' placeholder="Enter Email address here" />
+        <input type='text' name = 'newNine' id='newNine' placeholder="Enter Email address here" />
+        <input type='text' name = 'newTen' id='newTen' placeholder="Enter Email address here" />
+
+        <input type="submit" name="addButton" id="addButton" value="Add Members"/>
+      </form>
     </div>
 
   	<div id="events" class="hidden">
