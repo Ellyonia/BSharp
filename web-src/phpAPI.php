@@ -249,6 +249,7 @@ class phpAPI
                 array_push($dirFlags, $_POST['dir' . $i+1]);
                 array_push($instruments, $_POST['Instrument' . $i+1]);
                 array_push($parts, $_POST['part' . $i+1]);
+                echo "test inside the if thingy \n";
             }
             echo "test0";
 
