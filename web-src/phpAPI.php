@@ -230,16 +230,28 @@ class phpAPI
 
         $members = $_SESSION['newMembers'];
         $dirFlags = $_SESSION['dirFlags'];
+        $instruments = $_SESSION['instruments'];
+        $parts = $_SESSION['parts'];
 
 
 
 
-        $query = "INSERT into BandsIn ";
+
 
 
         foreach ($members as $key => $value) {
             $uID = mysql_query("SELECT user_id from Users where username = '$value'");
-            $isDir = $dirFlags[$key];
+
+            if($dirFlags[$key] == 1)
+                $isDir = 1;
+            else
+                $isDir = 0;
+
+            $pID = $parts[$key];
+
+
+            $query = "INSERT into BandsIn values($bID, $uID, '$instrument', $pID, $isDir)";
+            mysql_query($query);
 
         }
 

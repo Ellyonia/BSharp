@@ -19,9 +19,13 @@
   if(isset($_POST['addButton'])){
     $members = array($_POST['newOne'], $_POST['newTwo'], $_POST['newThree'], $_POST['newFour'], $_POST['newFive'], $_POST['newSix'], $_POST['newSeven'], $_POST['newEight'], $_POST['newNine'], $_POST['newTen']);
     $dirFlags = array($_POST['dir1'], $_POST['dir2'], $_POST['dir3'], $_POST['dir4'], $_POST['dir5'], $_POST['dir6'], $_POST['dir7'], $_POST['dir8'], $_POST['dir9'], $_POST['dir10']);
+    $instruments = array($_POST['Instrument1'], $_POST['Instrument2'], $_POST['Instrument3'], $_POST['Instrument4'], $_POST['Instrument5'], $_POST['Instrument6'], $_POST['Instrument7'], $_POST['Instrument8'], $_POST['Instrument9'], $_POST['Instrument10']);
+    $parts = array($_POST['part1'], $_POST['part2'], $_POST['part3'], $_POST['part4'], $_POST['part5'], $_POST['part6'], $_POST['part7'], $_POST['part8'], $_POST['part9'], $_POST['part10']);
 
     $_SESSION['newMembers'] = $members;
     $_SESSION['dirFlags'] = $dirFlags;
+    $_SESSION['instruments'] = $instruments;
+    $_SESSION['parts'] = $parts;
 
   }
 
@@ -109,624 +113,715 @@
         <ul class = "NewMembers">
           <li>
             <input type='text' name = 'newOne' id='newOne' placeholder="Enter Email address here" required/>
-            <select>
+            <select id="Instrument1">
+              <option value="">Select an Instrument</option>
               <optgroup label = "Woodwinds">
-                <option>Piccolo</option>
-                <option>Flute</option>
-                <option>Oboe</option>
-                <option>Bassoon</option>
-                <option>Clarinet</option>
-                <option>Bass Clarinet</option>
-                <option>Alto Saxophone</option>
-                <option>Tenor Saxaphone</option>
-                <option>Baritone Saxophone</option>
+                <option value="Piccolo">Piccolo</option>
+                <option value="Flute">Flute</option>
+                <option value="Oboe">Oboe</option>
+                <option value="Bassoon">Bassoon</option>
+                <option value="Clarinet">Clarinet</option>
+                <option value = "Bass">Bass Clarinet</option>
+                <option value="Alto Saxophpone">Alto Saxophone</option>
+                <option value="Tenor Saxophone">Tenor Saxaphone</option>
+                <option value="Baritone Saxophone">Baritone Saxophone</option>
               </optgroup>
 
               <optgroup label="Brass">
-                <option>Trumpet</option>
-                <option>Horns</option>
-                <option>Tenor Trombones</option>
-                <option>Bass Trombone</option>
-                <option>Baritone Horn/Euphonium</option>
-                <option>Tuba</option>
+                <option value="Trumpet">Trumpet</option>
+                <option value="Horns">Horns</option>
+                <option value="Tenor Trombone">Tenor Trombones</option>
+                <option value="Bass Trombone">Bass Trombone</option>
+                <option value="Baritone Horn/Euphonium">Baritone Horn/Euphonium</option>
+                <option value="Tuba">Tuba</option>
               </optgroup>
 
               <optgroup label="Percussion">
-                <option>Snare Drum</option>
-                <option>Bass Drum</option>
-                <option>Cymbals</option>
-                <option>Tam-Tam</option>
-                <option>Triangle</option>
-                <option>Tambourine</option>
-                <option>Wood Blocks/Temple Blocks</option>
-                <option>Tom-Tom</option>
-                <option>Bongos</option>
-                <option>Congas</option>
-                <option>Claves</option>
-                <option>Drum Kit</option>
-                <option>Timpani</option>
-                <option>Glockenspiel</option>
-                <option>Xylophone</option>
-                <option>Marimba</option>
-                <option>Crotales</option>
-                <option>Vibraphone</option>
-                <option>Chimes</option>
+                <option value="Snare Drum">Snare Drum</option>
+                <option value="Bass Drum">Bass Drum</option>
+                <option value="Cymbals">Cymbals</option>
+                <option value="Tam-Tam">Tam-Tam</option>
+                <option value="Triangle">Triangle</option>
+                <option value="Tambourine">Tambourine</option>
+                <option value="Wood Blocks/Temple Blocks">Wood Blocks/Temple Blocks</option>
+                <option value="Tom-Tom">Tom-Tom</option>
+                <option value="Bongos">Bongos</option>
+                <option value="Congas">Congas</option>
+                <option value="Claves">Claves</option>
+                <option value="Drum Kit">Drum Kit</option>
+                <option value="Timpani">Timpani</option>
+                <option value="Glockenspiel">Glockenspiel</option>
+                <option value="Xylohpone">Xylophone</option>
+                <option value="Marimba">Marimba</option>
+                <option value="Crotales">Crotales</option>
+                <option value="Vibraphone">Vibraphone</option>
+                <option value="Chimes">Chimes</option>
               </optgroup>
 
               <optgroup label = "Keyboards">
-                <option>Piano</option>
-                <option>Celesta</option>
-                <option>Organ</option>
+                <option value="Piano">Piano</option>
+                <option value="Celesta">Celesta</option>
+                <option value="Organ">Organ</option>
               </optgroup>
 
               <optgroup label = "Strings">
-                <option>Harp</option>
-                <option>Violoncello</option>
-                <option>Double Bass</option>
+                <option value="Harp">Harp</option>
+                <option value="Violencello">Violoncello</option>
+                <option value="Double Bass">Double Bass</option>
               </optgroup>
               
             </select>
+
+            <select id="part1">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+
             <label><input type="checkbox" name="dir1" value="1" /> Is this member a Director?</label>
           </li>
 
           <li>
             <input type='text' name = 'newTwo' id='newTwo' placeholder="Enter Email address here" />
-                        <select>
+            <select id="Instrument2">
+              <option value="">Select an Instrument</option>
               <optgroup label = "Woodwinds">
-                <option>Piccolo</option>
-                <option>Flute</option>
-                <option>Oboe</option>
-                <option>Bassoon</option>
-                <option>Clarinet</option>
-                <option>Bass Clarinet</option>
-                <option>Alto Saxophone</option>
-                <option>Tenor Saxaphone</option>
-                <option>Baritone Saxophone</option>
+                <option value="Piccolo">Piccolo</option>
+                <option value="Flute">Flute</option>
+                <option value="Oboe">Oboe</option>
+                <option value="Bassoon">Bassoon</option>
+                <option value="Clarinet">Clarinet</option>
+                <option value = "Bass">Bass Clarinet</option>
+                <option value="Alto Saxophpone">Alto Saxophone</option>
+                <option value="Tenor Saxophone">Tenor Saxaphone</option>
+                <option value="Baritone Saxophone">Baritone Saxophone</option>
               </optgroup>
 
               <optgroup label="Brass">
-                <option>Trumpet</option>
-                <option>Horns</option>
-                <option>Tenor Trombones</option>
-                <option>Bass Trombone</option>
-                <option>Baritone Horn/Euphonium</option>
-                <option>Tuba</option>
+                <option value="Trumpet">Trumpet</option>
+                <option value="Horns">Horns</option>
+                <option value="Tenor Trombone">Tenor Trombones</option>
+                <option value="Bass Trombone">Bass Trombone</option>
+                <option value="Baritone Horn/Euphonium">Baritone Horn/Euphonium</option>
+                <option value="Tuba">Tuba</option>
               </optgroup>
 
               <optgroup label="Percussion">
-                <option>Snare Drum</option>
-                <option>Bass Drum</option>
-                <option>Cymbals</option>
-                <option>Tam-Tam</option>
-                <option>Triangle</option>
-                <option>Tambourine</option>
-                <option>Wood Blocks/Temple Blocks</option>
-                <option>Tom-Tom</option>
-                <option>Bongos</option>
-                <option>Congas</option>
-                <option>Claves</option>
-                <option>Drum Kit</option>
-                <option>Timpani</option>
-                <option>Glockenspiel</option>
-                <option>Xylophone</option>
-                <option>Marimba</option>
-                <option>Crotales</option>
-                <option>Vibraphone</option>
-                <option>Chimes</option>
+                <option value="Snare Drum">Snare Drum</option>
+                <option value="Bass Drum">Bass Drum</option>
+                <option value="Cymbals">Cymbals</option>
+                <option value="Tam-Tam">Tam-Tam</option>
+                <option value="Triangle">Triangle</option>
+                <option value="Tambourine">Tambourine</option>
+                <option value="Wood Blocks/Temple Blocks">Wood Blocks/Temple Blocks</option>
+                <option value="Tom-Tom">Tom-Tom</option>
+                <option value="Bongos">Bongos</option>
+                <option value="Congas">Congas</option>
+                <option value="Claves">Claves</option>
+                <option value="Drum Kit">Drum Kit</option>
+                <option value="Timpani">Timpani</option>
+                <option value="Glockenspiel">Glockenspiel</option>
+                <option value="Xylohpone">Xylophone</option>
+                <option value="Marimba">Marimba</option>
+                <option value="Crotales">Crotales</option>
+                <option value="Vibraphone">Vibraphone</option>
+                <option value="Chimes">Chimes</option>
               </optgroup>
 
               <optgroup label = "Keyboards">
-                <option>Piano</option>
-                <option>Celesta</option>
-                <option>Organ</option>
+                <option value="Piano">Piano</option>
+                <option value="Celesta">Celesta</option>
+                <option value="Organ">Organ</option>
               </optgroup>
 
               <optgroup label = "Strings">
-                <option>Harp</option>
-                <option>Violoncello</option>
-                <option>Double Bass</option>
+                <option value="Harp">Harp</option>
+                <option value="Violencello">Violoncello</option>
+                <option value="Double Bass">Double Bass</option>
               </optgroup>
               
             </select>
+
+            <select id="part2">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+
             <label><input type="checkbox" name="dir2" value="1" /> Is this member a Director?</label>
           </li>
 
           <li>
             <input type='text' name = 'newThree' id='newThree' placeholder="Enter Email address here" />
-                        <select>
+            <select id="Instrument3">
+              <option value="">Select an Instrument</option>
               <optgroup label = "Woodwinds">
-                <option>Piccolo</option>
-                <option>Flute</option>
-                <option>Oboe</option>
-                <option>Bassoon</option>
-                <option>Clarinet</option>
-                <option>Bass Clarinet</option>
-                <option>Alto Saxophone</option>
-                <option>Tenor Saxaphone</option>
-                <option>Baritone Saxophone</option>
+                <option value="Piccolo">Piccolo</option>
+                <option value="Flute">Flute</option>
+                <option value="Oboe">Oboe</option>
+                <option value="Bassoon">Bassoon</option>
+                <option value="Clarinet">Clarinet</option>
+                <option value = "Bass">Bass Clarinet</option>
+                <option value="Alto Saxophpone">Alto Saxophone</option>
+                <option value="Tenor Saxophone">Tenor Saxaphone</option>
+                <option value="Baritone Saxophone">Baritone Saxophone</option>
               </optgroup>
 
               <optgroup label="Brass">
-                <option>Trumpet</option>
-                <option>Horns</option>
-                <option>Tenor Trombones</option>
-                <option>Bass Trombone</option>
-                <option>Baritone Horn/Euphonium</option>
-                <option>Tuba</option>
+                <option value="Trumpet">Trumpet</option>
+                <option value="Horns">Horns</option>
+                <option value="Tenor Trombone">Tenor Trombones</option>
+                <option value="Bass Trombone">Bass Trombone</option>
+                <option value="Baritone Horn/Euphonium">Baritone Horn/Euphonium</option>
+                <option value="Tuba">Tuba</option>
               </optgroup>
 
               <optgroup label="Percussion">
-                <option>Snare Drum</option>
-                <option>Bass Drum</option>
-                <option>Cymbals</option>
-                <option>Tam-Tam</option>
-                <option>Triangle</option>
-                <option>Tambourine</option>
-                <option>Wood Blocks/Temple Blocks</option>
-                <option>Tom-Tom</option>
-                <option>Bongos</option>
-                <option>Congas</option>
-                <option>Claves</option>
-                <option>Drum Kit</option>
-                <option>Timpani</option>
-                <option>Glockenspiel</option>
-                <option>Xylophone</option>
-                <option>Marimba</option>
-                <option>Crotales</option>
-                <option>Vibraphone</option>
-                <option>Chimes</option>
+                <option value="Snare Drum">Snare Drum</option>
+                <option value="Bass Drum">Bass Drum</option>
+                <option value="Cymbals">Cymbals</option>
+                <option value="Tam-Tam">Tam-Tam</option>
+                <option value="Triangle">Triangle</option>
+                <option value="Tambourine">Tambourine</option>
+                <option value="Wood Blocks/Temple Blocks">Wood Blocks/Temple Blocks</option>
+                <option value="Tom-Tom">Tom-Tom</option>
+                <option value="Bongos">Bongos</option>
+                <option value="Congas">Congas</option>
+                <option value="Claves">Claves</option>
+                <option value="Drum Kit">Drum Kit</option>
+                <option value="Timpani">Timpani</option>
+                <option value="Glockenspiel">Glockenspiel</option>
+                <option value="Xylohpone">Xylophone</option>
+                <option value="Marimba">Marimba</option>
+                <option value="Crotales">Crotales</option>
+                <option value="Vibraphone">Vibraphone</option>
+                <option value="Chimes">Chimes</option>
               </optgroup>
 
               <optgroup label = "Keyboards">
-                <option>Piano</option>
-                <option>Celesta</option>
-                <option>Organ</option>
+                <option value="Piano">Piano</option>
+                <option value="Celesta">Celesta</option>
+                <option value="Organ">Organ</option>
               </optgroup>
 
               <optgroup label = "Strings">
-                <option>Harp</option>
-                <option>Violoncello</option>
-                <option>Double Bass</option>
+                <option value="Harp">Harp</option>
+                <option value="Violencello">Violoncello</option>
+                <option value="Double Bass">Double Bass</option>
               </optgroup>
               
+            </select>
+
+            <select id="part3">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
             </select>
             <label><input type="checkbox" name="dir3" value="1" /> Is this member a Director?</label>
           </li>
 
           <li>
             <input type='text' name = 'newFour' id='newFour' placeholder="Enter Email address here" />
-                        <select>
+            <select id="Instrument4">
+              <option value="">Select an Instrument</option>
               <optgroup label = "Woodwinds">
-                <option>Piccolo</option>
-                <option>Flute</option>
-                <option>Oboe</option>
-                <option>Bassoon</option>
-                <option>Clarinet</option>
-                <option>Bass Clarinet</option>
-                <option>Alto Saxophone</option>
-                <option>Tenor Saxaphone</option>
-                <option>Baritone Saxophone</option>
+                <option value="Piccolo">Piccolo</option>
+                <option value="Flute">Flute</option>
+                <option value="Oboe">Oboe</option>
+                <option value="Bassoon">Bassoon</option>
+                <option value="Clarinet">Clarinet</option>
+                <option value = "Bass">Bass Clarinet</option>
+                <option value="Alto Saxophpone">Alto Saxophone</option>
+                <option value="Tenor Saxophone">Tenor Saxaphone</option>
+                <option value="Baritone Saxophone">Baritone Saxophone</option>
               </optgroup>
 
               <optgroup label="Brass">
-                <option>Trumpet</option>
-                <option>Horns</option>
-                <option>Tenor Trombones</option>
-                <option>Bass Trombone</option>
-                <option>Baritone Horn/Euphonium</option>
-                <option>Tuba</option>
+                <option value="Trumpet">Trumpet</option>
+                <option value="Horns">Horns</option>
+                <option value="Tenor Trombone">Tenor Trombones</option>
+                <option value="Bass Trombone">Bass Trombone</option>
+                <option value="Baritone Horn/Euphonium">Baritone Horn/Euphonium</option>
+                <option value="Tuba">Tuba</option>
               </optgroup>
 
               <optgroup label="Percussion">
-                <option>Snare Drum</option>
-                <option>Bass Drum</option>
-                <option>Cymbals</option>
-                <option>Tam-Tam</option>
-                <option>Triangle</option>
-                <option>Tambourine</option>
-                <option>Wood Blocks/Temple Blocks</option>
-                <option>Tom-Tom</option>
-                <option>Bongos</option>
-                <option>Congas</option>
-                <option>Claves</option>
-                <option>Drum Kit</option>
-                <option>Timpani</option>
-                <option>Glockenspiel</option>
-                <option>Xylophone</option>
-                <option>Marimba</option>
-                <option>Crotales</option>
-                <option>Vibraphone</option>
-                <option>Chimes</option>
+                <option value="Snare Drum">Snare Drum</option>
+                <option value="Bass Drum">Bass Drum</option>
+                <option value="Cymbals">Cymbals</option>
+                <option value="Tam-Tam">Tam-Tam</option>
+                <option value="Triangle">Triangle</option>
+                <option value="Tambourine">Tambourine</option>
+                <option value="Wood Blocks/Temple Blocks">Wood Blocks/Temple Blocks</option>
+                <option value="Tom-Tom">Tom-Tom</option>
+                <option value="Bongos">Bongos</option>
+                <option value="Congas">Congas</option>
+                <option value="Claves">Claves</option>
+                <option value="Drum Kit">Drum Kit</option>
+                <option value="Timpani">Timpani</option>
+                <option value="Glockenspiel">Glockenspiel</option>
+                <option value="Xylohpone">Xylophone</option>
+                <option value="Marimba">Marimba</option>
+                <option value="Crotales">Crotales</option>
+                <option value="Vibraphone">Vibraphone</option>
+                <option value="Chimes">Chimes</option>
               </optgroup>
 
               <optgroup label = "Keyboards">
-                <option>Piano</option>
-                <option>Celesta</option>
-                <option>Organ</option>
+                <option value="Piano">Piano</option>
+                <option value="Celesta">Celesta</option>
+                <option value="Organ">Organ</option>
               </optgroup>
 
               <optgroup label = "Strings">
-                <option>Harp</option>
-                <option>Violoncello</option>
-                <option>Double Bass</option>
+                <option value="Harp">Harp</option>
+                <option value="Violencello">Violoncello</option>
+                <option value="Double Bass">Double Bass</option>
               </optgroup>
               
+            </select>
+
+            <select id="part4">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
             </select>
             <label><input type="checkbox" name="dir4" value="1" /> Is this member a Director?</label>
           </li>
 
           <li>
             <input type='text' name = 'newFive' id='newFive' placeholder="Enter Email address here" />
-                        <select>
+            <select id="Instrument5">
+              <option value="">Select an Instrument</option>
               <optgroup label = "Woodwinds">
-                <option>Piccolo</option>
-                <option>Flute</option>
-                <option>Oboe</option>
-                <option>Bassoon</option>
-                <option>Clarinet</option>
-                <option>Bass Clarinet</option>
-                <option>Alto Saxophone</option>
-                <option>Tenor Saxaphone</option>
-                <option>Baritone Saxophone</option>
+                <option value="Piccolo">Piccolo</option>
+                <option value="Flute">Flute</option>
+                <option value="Oboe">Oboe</option>
+                <option value="Bassoon">Bassoon</option>
+                <option value="Clarinet">Clarinet</option>
+                <option value = "Bass">Bass Clarinet</option>
+                <option value="Alto Saxophpone">Alto Saxophone</option>
+                <option value="Tenor Saxophone">Tenor Saxaphone</option>
+                <option value="Baritone Saxophone">Baritone Saxophone</option>
               </optgroup>
 
               <optgroup label="Brass">
-                <option>Trumpet</option>
-                <option>Horns</option>
-                <option>Tenor Trombones</option>
-                <option>Bass Trombone</option>
-                <option>Baritone Horn/Euphonium</option>
-                <option>Tuba</option>
+                <option value="Trumpet">Trumpet</option>
+                <option value="Horns">Horns</option>
+                <option value="Tenor Trombone">Tenor Trombones</option>
+                <option value="Bass Trombone">Bass Trombone</option>
+                <option value="Baritone Horn/Euphonium">Baritone Horn/Euphonium</option>
+                <option value="Tuba">Tuba</option>
               </optgroup>
 
               <optgroup label="Percussion">
-                <option>Snare Drum</option>
-                <option>Bass Drum</option>
-                <option>Cymbals</option>
-                <option>Tam-Tam</option>
-                <option>Triangle</option>
-                <option>Tambourine</option>
-                <option>Wood Blocks/Temple Blocks</option>
-                <option>Tom-Tom</option>
-                <option>Bongos</option>
-                <option>Congas</option>
-                <option>Claves</option>
-                <option>Drum Kit</option>
-                <option>Timpani</option>
-                <option>Glockenspiel</option>
-                <option>Xylophone</option>
-                <option>Marimba</option>
-                <option>Crotales</option>
-                <option>Vibraphone</option>
-                <option>Chimes</option>
+                <option value="Snare Drum">Snare Drum</option>
+                <option value="Bass Drum">Bass Drum</option>
+                <option value="Cymbals">Cymbals</option>
+                <option value="Tam-Tam">Tam-Tam</option>
+                <option value="Triangle">Triangle</option>
+                <option value="Tambourine">Tambourine</option>
+                <option value="Wood Blocks/Temple Blocks">Wood Blocks/Temple Blocks</option>
+                <option value="Tom-Tom">Tom-Tom</option>
+                <option value="Bongos">Bongos</option>
+                <option value="Congas">Congas</option>
+                <option value="Claves">Claves</option>
+                <option value="Drum Kit">Drum Kit</option>
+                <option value="Timpani">Timpani</option>
+                <option value="Glockenspiel">Glockenspiel</option>
+                <option value="Xylohpone">Xylophone</option>
+                <option value="Marimba">Marimba</option>
+                <option value="Crotales">Crotales</option>
+                <option value="Vibraphone">Vibraphone</option>
+                <option value="Chimes">Chimes</option>
               </optgroup>
 
               <optgroup label = "Keyboards">
-                <option>Piano</option>
-                <option>Celesta</option>
-                <option>Organ</option>
+                <option value="Piano">Piano</option>
+                <option value="Celesta">Celesta</option>
+                <option value="Organ">Organ</option>
               </optgroup>
 
               <optgroup label = "Strings">
-                <option>Harp</option>
-                <option>Violoncello</option>
-                <option>Double Bass</option>
+                <option value="Harp">Harp</option>
+                <option value="Violencello">Violoncello</option>
+                <option value="Double Bass">Double Bass</option>
               </optgroup>
               
+            </select>
+
+            <select id="part5">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
             </select>
             <label><input type="checkbox" name="dir5" value="1" /> Is this member a Director?</label>
           </li>
 
           <li>
             <input type='text' name = 'newSix' id='newSix' placeholder="Enter Email address here" />
-                        <select>
+            <select id="Instrument6">
+              <option value="">Select an Instrument</option>
               <optgroup label = "Woodwinds">
-                <option>Piccolo</option>
-                <option>Flute</option>
-                <option>Oboe</option>
-                <option>Bassoon</option>
-                <option>Clarinet</option>
-                <option>Bass Clarinet</option>
-                <option>Alto Saxophone</option>
-                <option>Tenor Saxaphone</option>
-                <option>Baritone Saxophone</option>
+                <option value="Piccolo">Piccolo</option>
+                <option value="Flute">Flute</option>
+                <option value="Oboe">Oboe</option>
+                <option value="Bassoon">Bassoon</option>
+                <option value="Clarinet">Clarinet</option>
+                <option value = "Bass">Bass Clarinet</option>
+                <option value="Alto Saxophpone">Alto Saxophone</option>
+                <option value="Tenor Saxophone">Tenor Saxaphone</option>
+                <option value="Baritone Saxophone">Baritone Saxophone</option>
               </optgroup>
 
               <optgroup label="Brass">
-                <option>Trumpet</option>
-                <option>Horns</option>
-                <option>Tenor Trombones</option>
-                <option>Bass Trombone</option>
-                <option>Baritone Horn/Euphonium</option>
-                <option>Tuba</option>
+                <option value="Trumpet">Trumpet</option>
+                <option value="Horns">Horns</option>
+                <option value="Tenor Trombone">Tenor Trombones</option>
+                <option value="Bass Trombone">Bass Trombone</option>
+                <option value="Baritone Horn/Euphonium">Baritone Horn/Euphonium</option>
+                <option value="Tuba">Tuba</option>
               </optgroup>
 
               <optgroup label="Percussion">
-                <option>Snare Drum</option>
-                <option>Bass Drum</option>
-                <option>Cymbals</option>
-                <option>Tam-Tam</option>
-                <option>Triangle</option>
-                <option>Tambourine</option>
-                <option>Wood Blocks/Temple Blocks</option>
-                <option>Tom-Tom</option>
-                <option>Bongos</option>
-                <option>Congas</option>
-                <option>Claves</option>
-                <option>Drum Kit</option>
-                <option>Timpani</option>
-                <option>Glockenspiel</option>
-                <option>Xylophone</option>
-                <option>Marimba</option>
-                <option>Crotales</option>
-                <option>Vibraphone</option>
-                <option>Chimes</option>
+                <option value="Snare Drum">Snare Drum</option>
+                <option value="Bass Drum">Bass Drum</option>
+                <option value="Cymbals">Cymbals</option>
+                <option value="Tam-Tam">Tam-Tam</option>
+                <option value="Triangle">Triangle</option>
+                <option value="Tambourine">Tambourine</option>
+                <option value="Wood Blocks/Temple Blocks">Wood Blocks/Temple Blocks</option>
+                <option value="Tom-Tom">Tom-Tom</option>
+                <option value="Bongos">Bongos</option>
+                <option value="Congas">Congas</option>
+                <option value="Claves">Claves</option>
+                <option value="Drum Kit">Drum Kit</option>
+                <option value="Timpani">Timpani</option>
+                <option value="Glockenspiel">Glockenspiel</option>
+                <option value="Xylohpone">Xylophone</option>
+                <option value="Marimba">Marimba</option>
+                <option value="Crotales">Crotales</option>
+                <option value="Vibraphone">Vibraphone</option>
+                <option value="Chimes">Chimes</option>
               </optgroup>
 
               <optgroup label = "Keyboards">
-                <option>Piano</option>
-                <option>Celesta</option>
-                <option>Organ</option>
+                <option value="Piano">Piano</option>
+                <option value="Celesta">Celesta</option>
+                <option value="Organ">Organ</option>
               </optgroup>
 
               <optgroup label = "Strings">
-                <option>Harp</option>
-                <option>Violoncello</option>
-                <option>Double Bass</option>
+                <option value="Harp">Harp</option>
+                <option value="Violencello">Violoncello</option>
+                <option value="Double Bass">Double Bass</option>
               </optgroup>
               
+            </select>
+
+            <select id="part6">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
             </select>
             <label><input type="checkbox" name="dir6" value="1" /> Is this member a Director?</label>
           </li>
 
           <li>
             <input type='text' name = 'newSeven' id='newSeven' placeholder="Enter Email address here" />
-                        <select>
+            <select id="Instrument7">
+              <option value="">Select an Instrument</option>
               <optgroup label = "Woodwinds">
-                <option>Piccolo</option>
-                <option>Flute</option>
-                <option>Oboe</option>
-                <option>Bassoon</option>
-                <option>Clarinet</option>
-                <option>Bass Clarinet</option>
-                <option>Alto Saxophone</option>
-                <option>Tenor Saxaphone</option>
-                <option>Baritone Saxophone</option>
+                <option value="Piccolo">Piccolo</option>
+                <option value="Flute">Flute</option>
+                <option value="Oboe">Oboe</option>
+                <option value="Bassoon">Bassoon</option>
+                <option value="Clarinet">Clarinet</option>
+                <option value = "Bass">Bass Clarinet</option>
+                <option value="Alto Saxophpone">Alto Saxophone</option>
+                <option value="Tenor Saxophone">Tenor Saxaphone</option>
+                <option value="Baritone Saxophone">Baritone Saxophone</option>
               </optgroup>
 
               <optgroup label="Brass">
-                <option>Trumpet</option>
-                <option>Horns</option>
-                <option>Tenor Trombones</option>
-                <option>Bass Trombone</option>
-                <option>Baritone Horn/Euphonium</option>
-                <option>Tuba</option>
+                <option value="Trumpet">Trumpet</option>
+                <option value="Horns">Horns</option>
+                <option value="Tenor Trombone">Tenor Trombones</option>
+                <option value="Bass Trombone">Bass Trombone</option>
+                <option value="Baritone Horn/Euphonium">Baritone Horn/Euphonium</option>
+                <option value="Tuba">Tuba</option>
               </optgroup>
 
               <optgroup label="Percussion">
-                <option>Snare Drum</option>
-                <option>Bass Drum</option>
-                <option>Cymbals</option>
-                <option>Tam-Tam</option>
-                <option>Triangle</option>
-                <option>Tambourine</option>
-                <option>Wood Blocks/Temple Blocks</option>
-                <option>Tom-Tom</option>
-                <option>Bongos</option>
-                <option>Congas</option>
-                <option>Claves</option>
-                <option>Drum Kit</option>
-                <option>Timpani</option>
-                <option>Glockenspiel</option>
-                <option>Xylophone</option>
-                <option>Marimba</option>
-                <option>Crotales</option>
-                <option>Vibraphone</option>
-                <option>Chimes</option>
+                <option value="Snare Drum">Snare Drum</option>
+                <option value="Bass Drum">Bass Drum</option>
+                <option value="Cymbals">Cymbals</option>
+                <option value="Tam-Tam">Tam-Tam</option>
+                <option value="Triangle">Triangle</option>
+                <option value="Tambourine">Tambourine</option>
+                <option value="Wood Blocks/Temple Blocks">Wood Blocks/Temple Blocks</option>
+                <option value="Tom-Tom">Tom-Tom</option>
+                <option value="Bongos">Bongos</option>
+                <option value="Congas">Congas</option>
+                <option value="Claves">Claves</option>
+                <option value="Drum Kit">Drum Kit</option>
+                <option value="Timpani">Timpani</option>
+                <option value="Glockenspiel">Glockenspiel</option>
+                <option value="Xylohpone">Xylophone</option>
+                <option value="Marimba">Marimba</option>
+                <option value="Crotales">Crotales</option>
+                <option value="Vibraphone">Vibraphone</option>
+                <option value="Chimes">Chimes</option>
               </optgroup>
 
               <optgroup label = "Keyboards">
-                <option>Piano</option>
-                <option>Celesta</option>
-                <option>Organ</option>
+                <option value="Piano">Piano</option>
+                <option value="Celesta">Celesta</option>
+                <option value="Organ">Organ</option>
               </optgroup>
 
               <optgroup label = "Strings">
-                <option>Harp</option>
-                <option>Violoncello</option>
-                <option>Double Bass</option>
+                <option value="Harp">Harp</option>
+                <option value="Violencello">Violoncello</option>
+                <option value="Double Bass">Double Bass</option>
               </optgroup>
               
+            </select>
+
+            <select id="part7">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
             </select>
             <label><input type="checkbox" name="dir7" value="1" /> Is this member a Director?</label>
           </li>
 
           <li>
             <input type='text' name = 'newEight' id='newEight' placeholder="Enter Email address here" />
-                        <select>
+            <select id="Instrument8">
+              <option value="">Select an Instrument</option>
               <optgroup label = "Woodwinds">
-                <option>Piccolo</option>
-                <option>Flute</option>
-                <option>Oboe</option>
-                <option>Bassoon</option>
-                <option>Clarinet</option>
-                <option>Bass Clarinet</option>
-                <option>Alto Saxophone</option>
-                <option>Tenor Saxaphone</option>
-                <option>Baritone Saxophone</option>
+                <option value="Piccolo">Piccolo</option>
+                <option value="Flute">Flute</option>
+                <option value="Oboe">Oboe</option>
+                <option value="Bassoon">Bassoon</option>
+                <option value="Clarinet">Clarinet</option>
+                <option value = "Bass">Bass Clarinet</option>
+                <option value="Alto Saxophpone">Alto Saxophone</option>
+                <option value="Tenor Saxophone">Tenor Saxaphone</option>
+                <option value="Baritone Saxophone">Baritone Saxophone</option>
               </optgroup>
 
               <optgroup label="Brass">
-                <option>Trumpet</option>
-                <option>Horns</option>
-                <option>Tenor Trombones</option>
-                <option>Bass Trombone</option>
-                <option>Baritone Horn/Euphonium</option>
-                <option>Tuba</option>
+                <option value="Trumpet">Trumpet</option>
+                <option value="Horns">Horns</option>
+                <option value="Tenor Trombone">Tenor Trombones</option>
+                <option value="Bass Trombone">Bass Trombone</option>
+                <option value="Baritone Horn/Euphonium">Baritone Horn/Euphonium</option>
+                <option value="Tuba">Tuba</option>
               </optgroup>
 
               <optgroup label="Percussion">
-                <option>Snare Drum</option>
-                <option>Bass Drum</option>
-                <option>Cymbals</option>
-                <option>Tam-Tam</option>
-                <option>Triangle</option>
-                <option>Tambourine</option>
-                <option>Wood Blocks/Temple Blocks</option>
-                <option>Tom-Tom</option>
-                <option>Bongos</option>
-                <option>Congas</option>
-                <option>Claves</option>
-                <option>Drum Kit</option>
-                <option>Timpani</option>
-                <option>Glockenspiel</option>
-                <option>Xylophone</option>
-                <option>Marimba</option>
-                <option>Crotales</option>
-                <option>Vibraphone</option>
-                <option>Chimes</option>
+                <option value="Snare Drum">Snare Drum</option>
+                <option value="Bass Drum">Bass Drum</option>
+                <option value="Cymbals">Cymbals</option>
+                <option value="Tam-Tam">Tam-Tam</option>
+                <option value="Triangle">Triangle</option>
+                <option value="Tambourine">Tambourine</option>
+                <option value="Wood Blocks/Temple Blocks">Wood Blocks/Temple Blocks</option>
+                <option value="Tom-Tom">Tom-Tom</option>
+                <option value="Bongos">Bongos</option>
+                <option value="Congas">Congas</option>
+                <option value="Claves">Claves</option>
+                <option value="Drum Kit">Drum Kit</option>
+                <option value="Timpani">Timpani</option>
+                <option value="Glockenspiel">Glockenspiel</option>
+                <option value="Xylohpone">Xylophone</option>
+                <option value="Marimba">Marimba</option>
+                <option value="Crotales">Crotales</option>
+                <option value="Vibraphone">Vibraphone</option>
+                <option value="Chimes">Chimes</option>
               </optgroup>
 
               <optgroup label = "Keyboards">
-                <option>Piano</option>
-                <option>Celesta</option>
-                <option>Organ</option>
+                <option value="Piano">Piano</option>
+                <option value="Celesta">Celesta</option>
+                <option value="Organ">Organ</option>
               </optgroup>
 
               <optgroup label = "Strings">
-                <option>Harp</option>
-                <option>Violoncello</option>
-                <option>Double Bass</option>
+                <option value="Harp">Harp</option>
+                <option value="Violencello">Violoncello</option>
+                <option value="Double Bass">Double Bass</option>
               </optgroup>
               
+            </select>
+
+            <select id="part8">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
             </select>
             <label><input type="checkbox" name="dir8" value="1" /> Is this member a Director?</label>
           </li>
 
           <li>
             <input type='text' name = 'newNine' id='newNine' placeholder="Enter Email address here" />
-                        <select>
+            <select id="Instrument9">
+              <option value="">Select an Instrument</option>
               <optgroup label = "Woodwinds">
-                <option>Piccolo</option>
-                <option>Flute</option>
-                <option>Oboe</option>
-                <option>Bassoon</option>
-                <option>Clarinet</option>
-                <option>Bass Clarinet</option>
-                <option>Alto Saxophone</option>
-                <option>Tenor Saxaphone</option>
-                <option>Baritone Saxophone</option>
+                <option value="Piccolo">Piccolo</option>
+                <option value="Flute">Flute</option>
+                <option value="Oboe">Oboe</option>
+                <option value="Bassoon">Bassoon</option>
+                <option value="Clarinet">Clarinet</option>
+                <option value = "Bass">Bass Clarinet</option>
+                <option value="Alto Saxophpone">Alto Saxophone</option>
+                <option value="Tenor Saxophone">Tenor Saxaphone</option>
+                <option value="Baritone Saxophone">Baritone Saxophone</option>
               </optgroup>
 
               <optgroup label="Brass">
-                <option>Trumpet</option>
-                <option>Horns</option>
-                <option>Tenor Trombones</option>
-                <option>Bass Trombone</option>
-                <option>Baritone Horn/Euphonium</option>
-                <option>Tuba</option>
+                <option value="Trumpet">Trumpet</option>
+                <option value="Horns">Horns</option>
+                <option value="Tenor Trombone">Tenor Trombones</option>
+                <option value="Bass Trombone">Bass Trombone</option>
+                <option value="Baritone Horn/Euphonium">Baritone Horn/Euphonium</option>
+                <option value="Tuba">Tuba</option>
               </optgroup>
 
               <optgroup label="Percussion">
-                <option>Snare Drum</option>
-                <option>Bass Drum</option>
-                <option>Cymbals</option>
-                <option>Tam-Tam</option>
-                <option>Triangle</option>
-                <option>Tambourine</option>
-                <option>Wood Blocks/Temple Blocks</option>
-                <option>Tom-Tom</option>
-                <option>Bongos</option>
-                <option>Congas</option>
-                <option>Claves</option>
-                <option>Drum Kit</option>
-                <option>Timpani</option>
-                <option>Glockenspiel</option>
-                <option>Xylophone</option>
-                <option>Marimba</option>
-                <option>Crotales</option>
-                <option>Vibraphone</option>
-                <option>Chimes</option>
+                <option value="Snare Drum">Snare Drum</option>
+                <option value="Bass Drum">Bass Drum</option>
+                <option value="Cymbals">Cymbals</option>
+                <option value="Tam-Tam">Tam-Tam</option>
+                <option value="Triangle">Triangle</option>
+                <option value="Tambourine">Tambourine</option>
+                <option value="Wood Blocks/Temple Blocks">Wood Blocks/Temple Blocks</option>
+                <option value="Tom-Tom">Tom-Tom</option>
+                <option value="Bongos">Bongos</option>
+                <option value="Congas">Congas</option>
+                <option value="Claves">Claves</option>
+                <option value="Drum Kit">Drum Kit</option>
+                <option value="Timpani">Timpani</option>
+                <option value="Glockenspiel">Glockenspiel</option>
+                <option value="Xylohpone">Xylophone</option>
+                <option value="Marimba">Marimba</option>
+                <option value="Crotales">Crotales</option>
+                <option value="Vibraphone">Vibraphone</option>
+                <option value="Chimes">Chimes</option>
               </optgroup>
 
               <optgroup label = "Keyboards">
-                <option>Piano</option>
-                <option>Celesta</option>
-                <option>Organ</option>
+                <option value="Piano">Piano</option>
+                <option value="Celesta">Celesta</option>
+                <option value="Organ">Organ</option>
               </optgroup>
 
               <optgroup label = "Strings">
-                <option>Harp</option>
-                <option>Violoncello</option>
-                <option>Double Bass</option>
+                <option value="Harp">Harp</option>
+                <option value="Violencello">Violoncello</option>
+                <option value="Double Bass">Double Bass</option>
               </optgroup>
               
+            </select>
+
+            <select id="part9">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
             </select>
             <label><input type="checkbox" name="dir9" value="1" /> Is this member a Director?</label>
           </li>
 
           <li>
             <input type='text' name = 'newTen' id='newTen' placeholder="Enter Email address here" />
-                        <select>
+            <select id="Instrument10">
+              <option value="">Select an Instrument</option>
               <optgroup label = "Woodwinds">
-                <option>Piccolo</option>
-                <option>Flute</option>
-                <option>Oboe</option>
-                <option>Bassoon</option>
-                <option>Clarinet</option>
-                <option>Bass Clarinet</option>
-                <option>Alto Saxophone</option>
-                <option>Tenor Saxaphone</option>
-                <option>Baritone Saxophone</option>
+                <option value="Piccolo">Piccolo</option>
+                <option value="Flute">Flute</option>
+                <option value="Oboe">Oboe</option>
+                <option value="Bassoon">Bassoon</option>
+                <option value="Clarinet">Clarinet</option>
+                <option value = "Bass">Bass Clarinet</option>
+                <option value="Alto Saxophpone">Alto Saxophone</option>
+                <option value="Tenor Saxophone">Tenor Saxaphone</option>
+                <option value="Baritone Saxophone">Baritone Saxophone</option>
               </optgroup>
 
               <optgroup label="Brass">
-                <option>Trumpet</option>
-                <option>Horns</option>
-                <option>Tenor Trombones</option>
-                <option>Bass Trombone</option>
-                <option>Baritone Horn/Euphonium</option>
-                <option>Tuba</option>
+                <option value="Trumpet">Trumpet</option>
+                <option value="Horns">Horns</option>
+                <option value="Tenor Trombone">Tenor Trombones</option>
+                <option value="Bass Trombone">Bass Trombone</option>
+                <option value="Baritone Horn/Euphonium">Baritone Horn/Euphonium</option>
+                <option value="Tuba">Tuba</option>
               </optgroup>
 
-              <optgroup label="Percussion"> 
-                <option>Snare Drum</option>
-                <option>Bass Drum</option>
-                <option>Cymbals</option>
-                <option>Tam-Tam</option>
-                <option>Triangle</option>
-                <option>Tambourine</option>
-                <option>Wood Blocks/Temple Blocks</option>
-                <option>Tom-Tom</option>
-                <option>Bongos</option>
-                <option>Congas</option>
-                <option>Claves</option>
-                <option>Drum Kit</option>
-                <option>Timpani</option>
-                <option>Glockenspiel</option>
-                <option>Xylophone</option>
-                <option>Marimba</option>
-                <option>Crotales</option>
-                <option>Vibraphone</option>
-                <option>Chimes</option>
+              <optgroup label="Percussion">
+                <option value="Snare Drum">Snare Drum</option>
+                <option value="Bass Drum">Bass Drum</option>
+                <option value="Cymbals">Cymbals</option>
+                <option value="Tam-Tam">Tam-Tam</option>
+                <option value="Triangle">Triangle</option>
+                <option value="Tambourine">Tambourine</option>
+                <option value="Wood Blocks/Temple Blocks">Wood Blocks/Temple Blocks</option>
+                <option value="Tom-Tom">Tom-Tom</option>
+                <option value="Bongos">Bongos</option>
+                <option value="Congas">Congas</option>
+                <option value="Claves">Claves</option>
+                <option value="Drum Kit">Drum Kit</option>
+                <option value="Timpani">Timpani</option>
+                <option value="Glockenspiel">Glockenspiel</option>
+                <option value="Xylohpone">Xylophone</option>
+                <option value="Marimba">Marimba</option>
+                <option value="Crotales">Crotales</option>
+                <option value="Vibraphone">Vibraphone</option>
+                <option value="Chimes">Chimes</option>
               </optgroup>
 
               <optgroup label = "Keyboards">
-                <option>Piano</option>
-                <option>Celesta</option>
-                <option>Organ</option>
+                <option value="Piano">Piano</option>
+                <option value="Celesta">Celesta</option>
+                <option value="Organ">Organ</option>
               </optgroup>
 
               <optgroup label = "Strings">
-                <option>Harp</option>
-                <option>Violoncello</option>
-                <option>Double Bass</option>
+                <option value="Harp">Harp</option>
+                <option value="Violencello">Violoncello</option>
+                <option value="Double Bass">Double Bass</option>
               </optgroup>
               
             </select>
+
+            <select id="part10">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
             <label><input type="checkbox" name="dir10" value="1" /> Is this member a Director?</label>
           </li>
-
       </ul>
 
         <input type="submit" name="addButton" id="addButton" value="Add Members"/>
