@@ -243,7 +243,7 @@ class phpAPI
 
         for($i = 0; $i <=9; $i++){
             echo "test" . strval($i+1);
-            echo "\r\n";
+            echo "</br>";
 
             if(isset($_POST['new' . strval($i+1)])){
                 array_push($members, $_POST['new' . strval($i+1)]);
@@ -251,7 +251,7 @@ class phpAPI
                 array_push($instruments, $_POST['Instrument' . strval($i+1)]);
                 array_push($parts, $_POST['part' . strval($i+1)]);
                 echo "test inside the if thingy";
-                echo "\r\n";
+                echo "</br>";
             }
 
 
@@ -270,7 +270,7 @@ class phpAPI
 
         foreach ($members as $key => $value) {
             echo "test2";
-            echo "\r\n";
+            echo "</br>";
             $uID = mysql_query("SELECT user_id from Users where username = '$value'");
 
             if($dirFlags[$key] == 1)
