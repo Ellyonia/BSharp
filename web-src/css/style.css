@@ -190,6 +190,10 @@ img {
   clear: both;
 }
 
+#createBand {
+
+}
+
 #about {
   position: fixed;
   top: 30%;
@@ -328,4 +332,5 @@ body a {
 #createBand {
   position: relative;
   left: 30px;
+  clear: both;
 }
