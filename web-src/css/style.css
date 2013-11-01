@@ -143,13 +143,13 @@ h1 {
   height: 35px;
 }
 
-#navbar li a {
+/*#navbar li a {
   color: pink;
-}
+}*/
 
 #navbar li a:link {
   background-color: #181818;
-  color: #484860;
+  color: #b78727;
   text-decoration: none;
   margin-top: -5px;
   padding: .15em;
