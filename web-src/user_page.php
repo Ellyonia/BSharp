@@ -31,7 +31,7 @@
             ?>
         </li>
   			<li>
-          <FORM METHOD="LINK" ACTION="BandCreation.php">
+          <FORM METHOD="LINK" ACTION="BandCreation.php" id="userCreateBand">
             <INPUT TYPE="submit" VALUE="Create Band">
           </FORM>
           <!--

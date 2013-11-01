@@ -89,6 +89,10 @@ CSS FOR user_page.php
   list-style: none;
 }
 
+#userCreateBand {
+  float: right;
+}
+
 /**********************************************
 CSS FOR band_page.php
 **********************************************/
@@ -178,6 +182,12 @@ img {
 
 .band_pages ul {
   list-style: none;
+}
+
+.band_pages a {
+  text-decoration: none;
+  float: left;
+  clear: both;
 }
 
 #about {
