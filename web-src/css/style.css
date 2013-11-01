@@ -83,6 +83,8 @@ CSS FOR user_page.php
   float: left;
   text-decoration: none;
   clear: both;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 
 .bands li {
@@ -192,6 +194,8 @@ img {
   text-decoration: none;
   float: left;
   clear: both;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 
 #createBand {
