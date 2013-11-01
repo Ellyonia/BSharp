@@ -38,7 +38,7 @@
   			</li>
   		</ol>
 
-      <input type="submit" name="createBand" id="createBand" value="Create Band"/>
+      <input type="submit" name="createBand" id="bandCreation" value="Create Band"/>
 
   	</form>
 
