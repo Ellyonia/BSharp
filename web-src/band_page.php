@@ -826,6 +826,10 @@
 
         <input type="submit" name="addButton" id="addButton" value="Add Members"/>
       </form>
+
+      <form>
+        
+      </form>
     </div>
 
   	<div id="events" class="hidden">
