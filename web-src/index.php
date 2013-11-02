@@ -45,7 +45,7 @@ Chris Linstromberg
   </head>
 
   <body>
-    <img src="img/logo.png" id = "ilogo" alt = "Custom Cupcake Logo">
+    <img src="img/logo.png" id = "ilogo" alt = "B Sharp Logo">
     <form id="login" action = "validateUserLogin.php" method = "post">
         <div class="logEmail">
             <label>Email: </label>

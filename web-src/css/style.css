@@ -184,6 +184,7 @@ img {
   height: 67%;
   overflow: auto;
   box-shadow: 7px 7px 10px 2px #181860;
+  border-radius: 5px 5px;
 }
 
 .band_pages ul {
@@ -214,6 +215,7 @@ img {
   overflow: auto;
   background-color: #181818;
   box-shadow: 7px 7px 10px 2px #181860;
+  border-radius: 5px 5px;
   /*display: none;*/
 }
 
@@ -228,6 +230,7 @@ img {
   overflow: auto;
   background-color: #181818;
   box-shadow: 7px 7px 10px 2px #181860;
+  border-radius: 5px 5px;
   /*display: none;*/
  }
 
@@ -242,6 +245,7 @@ img {
   overflow: auto;
   background-color: #181818;
   box-shadow: 7px 7px 10px 2px #181860;
+  border-radius: 5px 5px;
   /*display: none;*/
 }
 
@@ -256,6 +260,7 @@ img {
   overflow: auto;
   background-color: #181818;
   box-shadow: 7px 7px 10px 2px #181860;
+  border-radius: 5px 5px;
   /*display: none;*/
 }
 
@@ -270,6 +275,7 @@ img {
   overflow: auto;
   background-color: #181818;
   box-shadow: 7px 7px 10px 2px #181860;
+  border-radius: 5px 5px;
   /*display: none;*/
 }
 
@@ -284,6 +290,7 @@ img {
   overflow: auto;
   background-color: #181818;
   box-shadow: 7px 7px 10px 2px #181860;
+  border-radius: 5px 5px;
   /*display: none;*/
 }
 
