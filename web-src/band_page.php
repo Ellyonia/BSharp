@@ -43,7 +43,7 @@
 
   <body>
   	<h1>Welcome to the band front page</h1>
-    <img src="img/logo.png" id = "logo" alt = "Custom Cupcake Logo">
+    <img src="img/logo.png" id = "logo" alt = "B Sharp Logo" title="test">
     <a href="logout.php">Log Out</a>
   	<span id="navbar">
   		<ul>
