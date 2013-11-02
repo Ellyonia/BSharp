@@ -71,6 +71,7 @@ CSS FOR user_page.php
   margin-left: 1%;
   overflow: auto;
   box-shadow: 7px 7px 10px 2px #181860;
+  border-radius: 5px 5px;
 }
 
 .bands h2 {
