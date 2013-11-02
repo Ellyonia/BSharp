@@ -279,7 +279,8 @@ class phpAPI
             echo "test2";
             echo "</br>";
             $temp = mysql_query("SELECT user_id from Users where username = '$value'");
-            $uID = mysql_fetch_assoc($temp)['user_id'];
+            $uID = mysql_fetch_assoc($temp);
+            $uID = $uID['user_id'];
 
             echo $uID;
             echo "</br>";
