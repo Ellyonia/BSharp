@@ -848,6 +848,9 @@
 
   	<div id="contact" class="hidden">
       <h2>Contact Information</h2>
+      <?
+        $phpInit->getContactInfo();
+      ?>
   	</div>
 
   </body>
