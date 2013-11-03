@@ -324,7 +324,7 @@ class phpAPI
     public function setBandPhone() {
 
         $bID = $_SESSION['bID'];
-        $phone = $_POST['editPhone'];
+        $phone = $_POST['changePhone'];
 
         $query = "UPDATE Band set band_phone = $phone where band_id = $bID";
 

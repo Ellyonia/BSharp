@@ -828,8 +828,8 @@
       </form>
 
       <form id = "editPhone" name = "editPhone" action = "changePhone.php" method = "post">
-        <input type="text" placeholder="Telephone Number" id="phone" name = "phone" pattern = "[0-9]{10}" oninvalid="setCustomValidity('Phone number must be 10 characters, only numbers')" onchange="try{setCustomValidity('')}catch(e){}" required/>
-        <input type="submit" name="changePhone" id="changePhone" value="Change Phone Number"/>
+        <input type="text" placeholder="Telephone Number" id="changePhone" name = "changePhone" pattern = "[0-9]{10}" oninvalid="setCustomValidity('Phone number must be 10 characters, only numbers')" onchange="try{setCustomValidity('')}catch(e){}" required/>
+        <input type="submit" name="submitPhone" id="submitPhone" value="Change Phone Number"/>
       </form>
     </div>
 
