@@ -317,7 +317,7 @@ class phpAPI
             echo "<li>" . $temp['lname'] . ", " . $temp['fname'] . " - " . $temp['username'] . "</li>";
         }
 
-        echo "<li>" . $bPhone['band_phone'] . "</li>";
+        echo "<li>Band Phone Number - " . $bPhone['band_phone'] . "</li>";
 
     }
 
