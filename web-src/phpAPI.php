@@ -329,6 +329,8 @@ class phpAPI
         $query = "UPDATE Band set band_phone = $phone where band_id = $bID";
 
         mysql_query($query);
+
+        header("Location: band_page.php?id=" . $_SESSION['bID'] );
     }
 
 
