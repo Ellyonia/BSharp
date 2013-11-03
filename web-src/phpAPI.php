@@ -309,8 +309,6 @@ class phpAPI
 
         $members = array();
 
-        $query = mysql_query("SELECT username from Users where ")
-
         $query = mysql_query("SELECT Users.username, Users.lname, Users.fname from BandsIn INNER JOIN Users on BandsIn.user_id=Users.user_id where BandsIn.band_id = " . $_SESSION['bID'] AND BandsIn.directorFlag = 1);
 
         while($temp = mysql_fetch_assoc($query)){
