@@ -244,8 +244,6 @@ class phpAPI
         for($i = 0; $i <=9; $i++){
 
             if($_POST['new' . strval($i+1)] != ""){
-                echo $_POST['new' . strval($i+1)];
-                echo "</br>";
 
                 array_push($members, $_POST['new' . strval($i+1)]);
                 if(isset($_POST['dir' . strval($i+1)]))
@@ -256,9 +254,6 @@ class phpAPI
                 array_push($instruments, $_POST['Instrument' . strval($i+1)]);
 
                 array_push($parts, $_POST['part' . strval($i+1)]);
-
-                echo "test inside the if thingy";
-                echo "</br>";
             }
 
 
@@ -276,14 +271,10 @@ class phpAPI
 
 
         foreach ($members as $key => $value) {
-            echo "test2";
-            echo "</br>";
             $temp = mysql_query("SELECT user_id from Users where username = '$value'");
             $uID = mysql_fetch_assoc($temp);
             $uID = $uID['user_id'];
 
-            echo $uID;
-            echo "</br>";
 
             if($dirFlags[$key] == 1)
                 $isDir = 1;
@@ -298,6 +289,7 @@ class phpAPI
             mysql_query($query);
 
         }
+        header("Location: band_page.php?id=$bID");
 
 
     }
