@@ -79,19 +79,23 @@ class phpAPI
     public function validateUser()
     {
 
-        
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+        $email = mysql_real_escape_string($email);
+        $password = mysql_real_escape_string($password);
         
         $valid = 0;
 
        // $sql = "SELECT password, user_id FROM Users WHERE username = '$email'";
-        $sql = "SELECT * FROM Users where username = '" . $_POST['email'] . "' and password = '" . $_POST['password'] ."'";
+        $sql = "SELECT * FROM Users where username = '$email' and password = '$password'";
 
         $result = mysql_query($sql); /* or die(mysql_error());*/
 
         if(mysql_num_rows($result) > 0){
             
 
-            $getID = mysql_query("SELECT user_id from Users where username = '" . $_POST['email'] . "' and password = '" . $_POST['password'] ."'");
+            $getID = mysql_query("SELECT user_id from Users where username = '$email' and password = '$password'");
 
             $temp = mysql_fetch_assoc($getID);
             $_SESSION['uid'] = $temp['user_id'];
@@ -102,28 +106,6 @@ class phpAPI
         else
             header('Location: index.php');
         
-        //mysql_close($con);
-        /*
-
-        while($row = mysql_fetch_assoc($result))
-        {
-            foreach($row as $cname => $cvalue)
-            {
-                if ($cname == "password"){
-                    if ( $password == $cvalue){
-                        $valid = 1;
-                    }
-                }
-                if ($cname == "user_id"){
-                    $_SESSION['cID'] = $cvalue;
-                }
-            }
-        }
-        if ($valid == 1)
-            header("Location: band_page.php");
-        else
-            header("Location: index.php");
-        */
     }
 
 	public function makeBand()
@@ -133,7 +115,9 @@ class phpAPI
 		$name = $_POST['bandName'];
 		$phone = $_POST['phone'];
 
-        $about = $_POST['aboutBand'];
+        $about = mysql_real_escape_string($about);
+        $name = mysql_real_escape_string($name);
+        $phone = mysql_real_escape_string($phone);
 
         $uid = $_SESSION['uid'];
 		
@@ -178,7 +162,9 @@ class phpAPI
 
 
         while ($temp = mysql_fetch_assoc($query)) {
-            echo "<li><a href='band_page.php?id=" . $temp['band_id'] . "'>" . $temp['band_name'] . "</a></li>";
+            $bName = $temp['band_name'];
+            $bName = mysql_real_escape_string($bName);
+            echo "<li><a href='band_page.php?id=" . $temp['band_id'] . "'>$bName</a></li>";
 
         }
 
@@ -195,7 +181,8 @@ class phpAPI
         $query = "SELECT band_info from Band where band_id = $bID";
         $result = mysql_query($query);
         $temp = mysql_fetch_assoc($result);
-        echo $temp['band_info'];
+        $info = mysql_real_escape_string($temp['band_info']);
+        echo $info;
 
     }
 
@@ -211,7 +198,12 @@ class phpAPI
         $query = mysql_query("SELECT Users.fname, Users.lname from BandsIn INNER JOIN Users on BandsIn.user_id=Users.user_id where BandsIn.band_id = " . $_SESSION['bID']);
 
         while($temp = mysql_fetch_assoc($query)){
-            echo "<li>" . $temp['lname'] . ", " . $temp['fname'] . "</li>";
+            $fname = $temp['fname'];
+            $lname = $temp['lname'];
+
+            $fname = mysql_real_escape_string($fname);
+            $lname = mysql_real_escape_string($lname);
+            echo "<li>$lname, $fname</li>";
         }
 
     }
