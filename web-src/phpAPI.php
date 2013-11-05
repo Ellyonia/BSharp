@@ -25,8 +25,13 @@ class phpAPI
         $email = $_POST['newEmail'];
         $password = $_POST['newPassword'];
 
+        $fname = mysql_real_escape_string($fname);
+        $lname = mysql_real_escape_string($lname);
+        $email = mysql_real_escape_string($email);
+        $password = mysql_real_escape_string($password);
 
-        $count = "SELECT * from Users WHERE(username = '" . mysql_real_escape_string($email) . "')";
+
+        $count = "SELECT * from Users WHERE(username = '$email')";
         
 
         if(!mysql_query($count))
@@ -45,7 +50,7 @@ class phpAPI
             else
             {
                 $query = "INSERT INTO Users(fname, lname, username,password) VALUES 
-                    ('" . mysql_real_escape_string($fname) . "', '" . mysql_real_escape_string($lname) . "','" . mysql_real_escape_string($email) . "','" . mysql_real_escape_string($password) . "')";
+                    ('$fname', '$lname','$email','$password')";
         /*
                 $query = "INSERT INTO Users(fname, lname, user_id, username,password) VALUES 
                     ('" . $_POST['firstName'] . "', '" . $_POST['lastName'] . "',444,'" . $_POST['newEmail'] . "','" . $_POST['newPassword'] . "')";*/
@@ -56,7 +61,7 @@ class phpAPI
                 }
                 else
                 {
-                    $getID = mysql_query("SELECT user_id from Users where username = '" . mysql_real_escape_string($_POST['email']) . "' and password = '" . mysql_real_escape_string($_POST['password']) . "'");
+                    $getID = mysql_query("SELECT user_id from Users where username = '$email' and password = '$password'");
 
                     $temp = mysql_fetch_assoc($getID);
                     $_SESSION['uid'] = $temp['user_id'];
