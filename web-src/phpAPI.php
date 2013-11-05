@@ -181,7 +181,6 @@ class phpAPI
         $query = "SELECT band_info from Band where band_id = $bID";
         $result = mysql_query($query);
         $temp = mysql_fetch_assoc($result);
-        $info = mysql_real_escape_string($temp['band_info']);
         echo $info;
 
     }
@@ -211,6 +210,7 @@ class phpAPI
 
         $bID = $_SESSION['bID'];
         $newInfo = $_POST['newInfo'];
+        $newInfo = mysql_real_escape_string($newInfo);
 
         mysql_query("UPDATE Band SET band_info= '$newInfo' where band_id = $bID");
 
@@ -267,6 +267,7 @@ class phpAPI
 
 
         foreach ($members as $key => $value) {
+            $value = mysql_real_escape_string($value);
             $temp = mysql_query("SELECT user_id from Users where username = '$value'");
             $uID = mysql_fetch_assoc($temp);
             $uID = $uID['user_id'];
