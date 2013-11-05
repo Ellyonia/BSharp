@@ -201,8 +201,7 @@ class phpAPI
             $fname = $temp['fname'];
             $lname = $temp['lname'];
 
-            $fname = mysql_real_escape_string($fname);
-            $lname = mysql_real_escape_string($lname);
+
             echo "<li>$lname, $fname</li>";
         }
 
