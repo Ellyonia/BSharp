@@ -45,7 +45,7 @@ class phpAPI
             else
             {
                 $query = "INSERT INTO Users(fname, lname, username,password) VALUES 
-                    ('$fname', '$lname','$email','$password')";
+                    (" . $fname . ", " . $lname . "," . $email . "," . $password . ")";
         /*
                 $query = "INSERT INTO Users(fname, lname, user_id, username,password) VALUES 
                     ('" . $_POST['firstName'] . "', '" . $_POST['lastName'] . "',444,'" . $_POST['newEmail'] . "','" . $_POST['newPassword'] . "')";*/
@@ -133,7 +133,7 @@ class phpAPI
         $uid = $_SESSION['uid'];
 		
 		$query = "INSERT INTO Band(band_name, band_phone, band_info)
-			VALUES ('$name', '$phone', '$about');";
+			VALUES (" . $name . ", '$phone', " . $about . ");";
 
 
         
@@ -216,7 +216,7 @@ class phpAPI
         $bID = $_SESSION['bID'];
         $newInfo = $_POST['newInfo'];
 
-        mysql_query("UPDATE Band SET band_info= '$newInfo' where band_id = $bID");
+        mysql_query("UPDATE Band SET band_info= " . $newInfo . " where band_id = $bID");
 
 
         header("Location: band_page.php?id=" . $_SESSION['bID'] );
@@ -271,7 +271,7 @@ class phpAPI
 
 
         foreach ($members as $key => $value) {
-            $temp = mysql_query("SELECT user_id from Users where username = '$value'");
+            $temp = mysql_query("SELECT user_id from Users where username = " . $value . "");
             $uID = mysql_fetch_assoc($temp);
             $uID = $uID['user_id'];
 
@@ -285,7 +285,7 @@ class phpAPI
             $pID = $parts[$key];
 
 
-            $query = "INSERT into BandsIn values($bID, $uID, '$instrument', $pID, $isDir)";
+            $query = "INSERT into BandsIn values($bID, $uID, " . $instrument  . ", $pID, $isDir)";
             mysql_query($query);
 
         }
