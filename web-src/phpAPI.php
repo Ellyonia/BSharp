@@ -164,6 +164,7 @@ class phpAPI
     {
         echo "Log Out Successful";
         session_destroy();
+        header("Location: index.php");
 
     }
 
