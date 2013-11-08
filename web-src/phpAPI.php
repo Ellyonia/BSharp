@@ -57,7 +57,7 @@ class phpAPI
             }
             else
             {
-                if(preg_match("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).+$", $password) != 0)
+                if(preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).+$/", $password) != 0)
                 {
 
 
