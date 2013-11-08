@@ -24,6 +24,7 @@ class phpAPI
         $lname = $_POST['lastName'];
         $email = $_POST['newEmail'];
         $password = $_POST['newPassword'];
+        $repass = $_POST['reTypePass'];
 
         if(empty($fname) || empty($lname) || empty($email))
         {
@@ -35,6 +36,7 @@ class phpAPI
         $lname = mysql_real_escape_string($lname);
         $email = mysql_real_escape_string($email);
         $password = mysql_real_escape_string($password);
+        $repass = mysql_real_escape_string($repass);
 
 
         $count = "SELECT * from Users WHERE(username = '$email')";
@@ -44,7 +46,7 @@ class phpAPI
         {
             header('Location: error.php');
         }
-        else
+        else if($repass == $password)
         {
             $result = mysql_query($count);
             $num_rows = mysql_num_rows($result);
@@ -55,27 +57,36 @@ class phpAPI
             }
             else
             {
-                $query = "INSERT INTO Users(fname, lname, username,password) VALUES 
-                    ('$fname', '$lname','$email','$password')";
-        /*
-                $query = "INSERT INTO Users(fname, lname, user_id, username,password) VALUES 
-                    ('" . $_POST['firstName'] . "', '" . $_POST['lastName'] . "',444,'" . $_POST['newEmail'] . "','" . $_POST['newPassword'] . "')";*/
-                if(!mysql_query($query))
+                if(preg_match("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).+$", $password, $matches) == 1)
                 {
 
-                    header('Location: error.php');
+
+                    $query = "INSERT INTO Users(fname, lname, username,password) VALUES 
+                        ('$fname', '$lname','$email','$password')";
+            /*
+                    $query = "INSERT INTO Users(fname, lname, user_id, username,password) VALUES 
+                        ('" . $_POST['firstName'] . "', '" . $_POST['lastName'] . "',444,'" . $_POST['newEmail'] . "','" . $_POST['newPassword'] . "')";*/
+                    if(!mysql_query($query))
+                    {
+
+                        header('Location: error.php');
+                    }
+                    else
+                    {
+                        $getID = mysql_query("SELECT user_id from Users where username = '$email' and password = '$password'");
+
+                        $temp = mysql_fetch_assoc($getID);
+                        $_SESSION['uid'] = $temp['user_id'];
+
+                        header('Location: user_page.php');
+                    }
                 }
                 else
-                {
-                    $getID = mysql_query("SELECT user_id from Users where username = '$email' and password = '$password'");
-
-                    $temp = mysql_fetch_assoc($getID);
-                    $_SESSION['uid'] = $temp['user_id'];
-
-                    header('Location: user_page.php');
-                }
+                    header('Location: bappPass.php');
             }
         }
+        else
+            header('Location: error.php');
         
         //mysql_close($con);
     
