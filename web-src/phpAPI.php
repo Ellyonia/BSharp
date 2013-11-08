@@ -28,6 +28,7 @@ class phpAPI
         if(empty($fname) || empty($lname) || empty($email))
         {
         	header("Location: error.php");
+        	return;
         }
         
         $fname = mysql_real_escape_string($fname);
