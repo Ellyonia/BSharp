@@ -34,7 +34,7 @@
   			</li>
   			<li>
   				<p>Band Contact Info</p>
-  				<input type='text' name = 'phone' id='phone' pattern="[0-9-]{10,13}" placeholder="Phone Number" oninvalid="setCustomValidity('Please enter only numbers or dashes')" onchange="try{setCustomValidity('')}catch(e){}" required/>
+  				<input type='text' name = 'phone' id='phone' pattern="[0-9-]{10,13}" placeholder="Phone Number" oninvalid="setCustomValidity('Please enter only numbers or dashes with only 10 numbers')" onchange="try{setCustomValidity('')}catch(e){}" required/>
   			</li>
   		</ol>
 
