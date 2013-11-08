@@ -50,7 +50,7 @@ Chris Linstromberg
     <form id="login" action = "validateUserLogin.php" method = "post">
         <div class="logEmail">
             <label>Email: </label>
-            <input type="email" name = "email" id="email" required placeholder="email@example.com" oninvalid="setCustomValidity('Please eneter a valid email address')" onchange="try{setCustomValidity('')}catch(e){}"/>
+            <input type="email" name = "email" id="email" required placeholder="email@example.com" oninvalid="setCustomValidity('Please enter a valid email address')" onchange="try{setCustomValidity('')}catch(e){}"/>
         </div>
         <div class="logPass"> 
             <label>Password:</label>
