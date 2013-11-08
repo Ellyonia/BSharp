@@ -71,8 +71,8 @@ Chris Linstromberg
             <input type="hidden" name="setPassword">
         <ul>
             <li>
-                <input type="text" placeholder="First Name" pattern = "^[A-Za-z-']*$" id="firstName" name = "firstName" oninvalid="setCustomValidity('Please eneter only Letters or these symbols: - or &#39; ')" onchange="try{setCustomValidity('')}catch(e){}" required/>
-                <input type="text" placeholder="Last Name" pattern = "^[A-Za-z-']*$" id="lastName" name = "lastName" oninvalid="setCustomValidity('Please eneter only Letters or these symbols: &#39; or - ')" onchange="try{setCustomValidity('')}catch(e){}" required/>
+                <input type="text" placeholder="First Name" pattern = "^[A-Za-z-']*$" id="firstName" name = "firstName" oninvalid="setCustomValidity('Please eneter only Letters or these symbols: - or  ')" onchange="try{setCustomValidity('')}catch(e){}" required/>
+                <input type="text" placeholder="Last Name" pattern = "^[A-Za-z-']*$" id="lastName" name = "lastName" oninvalid="setCustomValidity('Please eneter only Letters or these symbols:  or - ')" onchange="try{setCustomValidity('')}catch(e){}" required/>
             </li>
 
             <li>
