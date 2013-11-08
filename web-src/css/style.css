@@ -114,7 +114,7 @@ body a {
 h1 {
   position: fixed;
   left: 10%;
-  top: 2%;
+  top: 1%;
   font-size: 28px;
 }
 
@@ -313,7 +313,7 @@ img {
 }
 
 #editPhone {
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 /**********************************************
