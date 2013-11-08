@@ -50,11 +50,11 @@ Chris Linstromberg
     <form id="login" action = "validateUserLogin.php" method = "post">
         <div class="logEmail">
             <label>Email: </label>
-            <input type="email" name = "email" id="email" required placeholder="email@example.com" oninvalid="setCustomValidity('Please enter a valid email address')" onchange="try{setCustomValidity('')}catch(e){}"/>
+            <input type="email" name = "email" id="email" required maxlength="45" placeholder="email@example.com" oninvalid="setCustomValidity('Please enter a valid email address')" onchange="try{setCustomValidity('')}catch(e){}"/>
         </div>
         <div class="logPass"> 
             <label>Password:</label>
-            <input type="password" id="logPass" name = "password" pattern = "[a-zA-Z0-9:.,?!@]{8,}" placeholder = "Password" oninvalid="setCustomValidity('Password must be greater than 8 characters')" onchange="try{setCustomValidity('')}catch(e){}" required/>
+            <input type="password" id="logPass" name = "password" maxlength="45" pattern = "[a-zA-Z0-9:.,?!@]{8,}" placeholder = "Password" oninvalid="setCustomValidity('Password must be greater than 8 characters')" onchange="try{setCustomValidity('')}catch(e){}" required/>
             <input type="submit" value="Login" name="signIn" id="signIn" /> 
         </div>
     </form>
@@ -71,19 +71,19 @@ Chris Linstromberg
             <input type="hidden" name="setPassword">
         <ul>
             <li>
-                <input type="text" placeholder="First Name" pattern = "^[A-Za-z-']*$" id="firstName" name = "firstName" oninvalid="setCustomValidity('Please enter only Letters or these symbols: - or a single quote')" onchange="try{setCustomValidity('')}catch(e){}" required/>
-                <input type="text" placeholder="Last Name" pattern = "^[A-Za-z-']*$" id="lastName" name = "lastName" oninvalid="setCustomValidity('Please enter only Letters or these symbols: - or a single quote')" onchange="try{setCustomValidity('')}catch(e){}" required/>
+                <input type="text" maxlength="20" placeholder="First Name" pattern = "^[A-Za-z-']*$" id="firstName" name = "firstName" oninvalid="setCustomValidity('Please enter only Letters or these symbols: - or a single quote')" onchange="try{setCustomValidity('')}catch(e){}" required/>
+                <input type="text" maxlength-"20" placeholder="Last Name" pattern = "^[A-Za-z-']*$" id="lastName" name = "lastName" oninvalid="setCustomValidity('Please enter only Letters or these symbols: - or a single quote')" onchange="try{setCustomValidity('')}catch(e){}" required/>
             </li>
 
             <li>
-                <input type="email" placeholder="Email" id="newEmail" name = "newEmail"oninvalid="setCustomValidity('Please eneter a valid email address')" onchange="try{setCustomValidity('')}catch(e){}" required/>
+                <input type="email" maxlength="45" placeholder="Email" id="newEmail" name = "newEmail"oninvalid="setCustomValidity('Please eneter a valid email address')" onchange="try{setCustomValidity('')}catch(e){}" required/>
             </li>
 
             <li>
-                <input type="password" id="newPassword" name = "newPassword" pattern = "[a-zA-Z0-9:.,?!@]{8,}" placeholder = "Password" oninvalid="setCustomValidity('Password must be greater than 8 characters')" onchange="try{setCustomValidity('')}catch(e){}" required/>
+                <input type="password" maxlength="45" id="newPassword" name = "newPassword" pattern = "[a-zA-Z0-9:.,?!@]{8,}" placeholder = "Password" oninvalid="setCustomValidity('Password must be greater than 8 characters')" onchange="try{setCustomValidity('')}catch(e){}" required/>
             </li>
             <li>
-                <input type="password" id="reTypePass" name = "reTypePass" pattern = "[a-zA-Z0-9:.,?!@]{8,}" placeholder = "Re-Type Password" oninvalid="setCustomValidity('Password must be the same as above and be greater than 8 characters')" onchange="try{setCustomValidity('')}catch(e){}" required/>
+                <input type="password" maxlength="45" id="reTypePass" name = "reTypePass" pattern = "[a-zA-Z0-9:.,?!@]{8,}" placeholder = "Re-Type Password" oninvalid="setCustomValidity('Password must be the same as above and be greater than 8 characters')" onchange="try{setCustomValidity('')}catch(e){}" required/>
             </li>
         </ul>
                 <input type="submit" value="Sign Up" id="signUp" name = "signUp" />

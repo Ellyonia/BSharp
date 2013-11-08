@@ -26,11 +26,11 @@
   		<ol>
         <li>
           <p>Band Name</p>
-          <input type='text' name = 'bandName' pattern="[A-Za-z0-9][A-Za-z0-9\s]*[A-Za-z0-9]|[A-Za-z0-9]" id='bandName' placeholder="Band Name" oninvalid="setCustomValidity('Sorry spaces are not allowed as the first or last character')" onchange="try{setCustomValidity('')}catch(e){}" required/>
+          <input type='text' name = 'bandName' maxlength="45" pattern="[A-Za-z0-9][A-Za-z0-9\s]*[A-Za-z0-9]|[A-Za-z0-9]" id='bandName' placeholder="Band Name" oninvalid="setCustomValidity('Sorry spaces are not allowed as the first or last character')" onchange="try{setCustomValidity('')}catch(e){}" required/>
         </li>
   			<li>
   				<p>About Band</p>
-  				<textArea rows="4" cols="50" placeholder="Enter Information about your Band" id="aboutBand" name = "aboutBand"  required/></textarea>
+  				<textArea rows="4" cols="50" maxlength="2000" placeholder="Enter Information about your Band" id="aboutBand" name = "aboutBand"  required/></textarea>
   			</li>
   			<li>
   				<p>Band Contact Info</p>
