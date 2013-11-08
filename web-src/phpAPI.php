@@ -25,6 +25,11 @@ class phpAPI
         $email = $_POST['newEmail'];
         $password = $_POST['newPassword'];
 
+        if(empty($fname) || empty($lname) || empty($email))
+        {
+        	header("Location: error.php");
+        }
+        
         $fname = mysql_real_escape_string($fname);
         $lname = mysql_real_escape_string($lname);
         $email = mysql_real_escape_string($email);
