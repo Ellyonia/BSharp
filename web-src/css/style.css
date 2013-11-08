@@ -114,7 +114,8 @@ body a {
 h1 {
   position: fixed;
   left: 12%;
-  top: 20px;
+  top: 5px;
+  margin-top: 13px;
   font-size: 32px;
 }
 
