@@ -34,7 +34,7 @@
   			</li>
   			<li>
   				<p>Band Contact Info</p>
-  				<input type='text' name = 'phone' id='phone' placeholder="Phone Number" required/>
+  				<input type='text' name = 'phone' id='phone' pattern="[0-9]{10,}" placeholder="Phone Number" required/>
   			</li>
   		</ol>
 
