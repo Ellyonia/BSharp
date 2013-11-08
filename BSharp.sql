@@ -9,11 +9,11 @@ USE `BSharp` ;
 -- Table `BSharp`.`Users`
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `BSharp`.`Users` (
-  `fname` VARCHAR(20) NULL ,
-  `lname` VARCHAR(20) NULL ,
+  `fname` VARCHAR(20) NOT NULL ,
+  `lname` VARCHAR(20) NOT NULL ,
   `user_id` INT NOT NULL AUTO_INCREMENT ,
-  `username` VARCHAR(45) NULL ,
-  `password` VARCHAR(45) NULL ,
+  `username` VARCHAR(45) NOT NULL ,
+  `password` VARCHAR(45) NOT NULL ,
   PRIMARY KEY (`user_id`) )
 ENGINE = InnoDB;
 
@@ -23,8 +23,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `BSharp`.`Band` (
   `band_id` INT NOT NULL AUTO_INCREMENT,
-  `band_name` VARCHAR(45) NULL ,
-  `band_phone` VARCHAR(15) NULL ,
+  `band_name` VARCHAR(45) NOT NULL ,
+  `band_phone` VARCHAR(15) NOT NULL ,
   `band_info` VARCHAR(2000) NULL ,
   PRIMARY KEY (`band_id`) )
 ENGINE = InnoDB;
@@ -35,8 +35,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `BSharp`.`Pieces` (
   `piece_id` INT NOT NULL AUTO_INCREMENT,
-  `piece_name` VARCHAR(45) NULL ,
-  `band_id` INT NULL ,
+  `piece_name` VARCHAR(45) NOT NULL ,
+  `band_id` INT NOT NULL ,
   PRIMARY KEY (`piece_id`) ,
   INDEX `band_id` (`band_id` ASC) ,
   CONSTRAINT `band_id`
@@ -52,7 +52,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `BSharp`.`Part` (
   `part_id` INT NOT NULL,
-  `location` VARCHAR(80) NULL ,
+  `location` VARCHAR(80) NOT NULL ,
   `piece_id` INT NOT NULL ,
   `instrument` VARCHAR(45) NOT NULL ,
   PRIMARY KEY (`part_id`, `piece_id`, `instrument`) ,
@@ -69,11 +69,11 @@ ENGINE = InnoDB;
 -- Table `BSharp`.`BandsIn`
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `BSharp`.`BandsIn` (
-  `band_id` INT NULL ,
-  `user_id` INT NULL ,
-  `instrument` VARCHAR(45) NULL ,
-  `part_id` INT NULL ,
-  `directorFlag` TINYINT(1) NULL ,
+  `band_id` INT NOT NULL ,
+  `user_id` INT NOT NULL ,
+  `instrument` VARCHAR(45) NOT NULL ,
+  `part_id` INT NOT NULL ,
+  `directorFlag` TINYINT(1) NOT NULL ,
   PRIMARY KEY (`band_id`, `user_id`) ,
   INDEX `band_id` (`band_id` ASC) ,
   INDEX `user_id` (`user_id` ASC) ,
