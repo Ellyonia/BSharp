@@ -26,7 +26,7 @@
   		<ol>
         <li>
           <p>Band Name</p>
-          <input type='text' name = 'bandName' pattern="^!\s*$" id='bandName' placeholder="Band Name" oninvalid="setCustomValidity('Please enter more than spaces')" onchange="try{setCustomValidity('')}catch(e){}" required/>
+          <input type='text' name = 'bandName' pattern="^\s*$" id='bandName' placeholder="Band Name" oninvalid="setCustomValidity('Please enter more than spaces')" onchange="try{setCustomValidity('')}catch(e){}" required/>
         </li>
   			<li>
   				<p>About Band</p>

@@ -195,6 +195,7 @@ class phpAPI
         $query = "SELECT band_info from Band where band_id = $bID";
         $result = mysql_query($query);
         $temp = mysql_fetch_assoc($result);
+        $info = mysql_real_escape_string($temp['band_info']);
         echo $info;
 
     }
