@@ -57,7 +57,7 @@ class phpAPI
             }
             else
             {
-                if(preg_match("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).+$", $password, $matches) == 1)
+                if(preg_match("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).+$", $password) != 0)
                 {
 
 
@@ -82,7 +82,7 @@ class phpAPI
                     }
                 }
                 else
-                    header('Location: bappPass.php');
+                    header('Location: badPass.php');
             }
         }
         else
