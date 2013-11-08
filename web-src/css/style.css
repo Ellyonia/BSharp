@@ -115,7 +115,7 @@ h1 {
   position: fixed;
   left: 10%;
   top: 5%;
-  font-size: 32px;
+  font-size: 28px;
 }
 
 #navbar {
@@ -310,6 +310,10 @@ img {
 
 .notselected{
   background-color: #181818;
+}
+
+#editPhone {
+  padding-bottom: 5px;
 }
 
 /**********************************************
