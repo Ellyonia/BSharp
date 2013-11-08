@@ -71,8 +71,8 @@ Chris Linstromberg
             <input type="hidden" name="setPassword">
         <ul>
             <li>
-                <input type="text" placeholder="First Name" id="firstName" name = "firstName"required/>
-                <input type="text" placeholder="Last Name" id="lastName" name = "lastName"required/>
+                <input type="text" placeholder="First Name" pattern = "^[A-Za-z0-9-_'.]*$" id="firstName" name = "firstName"required/>
+                <input type="text" placeholder="Last Name" pattern = "^[A-Za-z0-9-_'.]*$" id="lastName" name = "lastName"required/>
             </li>
 
             <li>
