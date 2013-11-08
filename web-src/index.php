@@ -22,7 +22,8 @@ Chris Linstromberg
 
     if(isset($_POST['signUp'])){
          $_SESSION['email'] = $_POST['newEmail'];
-         $_SESSION['password'] = $_POST['setPassword'];
+         $_SESSION['password'] = $_POST['newPassword'];
+         $_SESSION['repass'] = $_POST['reTypePass'];
          $_SESSION['fname'] = $_POST['firstName'];
          $_SESSION['lname'] = $_POST['laststName'];
 
@@ -85,7 +86,7 @@ Chris Linstromberg
                 <input type="password" id="reTypePass" name = "reTypePass" pattern = "[a-zA-Z0-9:.,?!@]{8,}" placeholder = "Re-Type Password" oninvalid="setCustomValidity('Password must be the same as above and be greater than 8 characters')" onchange="try{setCustomValidity('')}catch(e){}" required/>
             </li>
         </ul>
-                <input type="button" value="Sign Up" id="signUp" name = "signUp" />
+                <input type="submit" value="Sign Up" id="signUp" name = "signUp" />
       </form>
 </div>
  

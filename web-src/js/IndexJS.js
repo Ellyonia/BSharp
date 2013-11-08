@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('#signUp').click(checkPass);
+	$('#signUp2').click(checkPass);
 
 
 });
