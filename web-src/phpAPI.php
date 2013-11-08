@@ -322,7 +322,18 @@ class phpAPI
         header("Location: band_page.php?id=" . $_SESSION['bID'] );
     }
 
-
+    public function validateUserInBand() {
+    
+        $bandId = $_SESSION['bID'];
+        $userID = $_SESSION['uid'];
+        
+        $query = "SELECT * FROM BandsIn WHERE BandsIn.band_id='$bandID' AND BandsIn.user_id='$userID')";
+        
+        mysql_query($query);
+        
+        if(mysql_num_rows($result) == 0)
+        	header("Location: error.php");
+    }
 
 
 }
