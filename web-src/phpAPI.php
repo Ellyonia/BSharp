@@ -366,6 +366,7 @@ class phpAPI
 
         $uID = $_SESSION['uid'];
         $bandsAllowed= array();
+        array_push($bandsAllowed, 0);
 
         $query = "SELECT band_id from BandsIn where user_id = $uID";
         $result = mysql_query($query);
@@ -384,7 +385,7 @@ class phpAPI
     public function checkAllowed() {
         $bID = $_SESSION['bID'];
 
-        if((array_search($bID, $_SESSION['allowed'])) < 0){
+        if((array_search($bID, $_SESSION['allowed'])) < 1 || (array_search($bID, $_SESSION['allowed'])) == FALSE){
             $temp = array_search($bID, $_SESSION['allowed']);
             echo "<p>$temp</p>";
             echo "<p>fail</p>";
