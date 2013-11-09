@@ -120,7 +120,7 @@ h1 {
 }
 
 #navbar {
-  position: fixed;
+  position: absolute;
   width: 96%;
   left: 2%;
   right: 2%;
