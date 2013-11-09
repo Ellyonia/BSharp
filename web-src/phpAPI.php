@@ -389,6 +389,9 @@ class phpAPI
             echo "<p>$temp</p>";
             //header('Location: error.php');
         }
+
+        $temp = array_search($bID, $_SESSION['allowed']);
+        echo "<p>$temp</p>";
     }
 
 
