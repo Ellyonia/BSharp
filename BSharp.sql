@@ -26,6 +26,7 @@ CREATE  TABLE IF NOT EXISTS `BSharp`.`Band` (
   `band_name` VARCHAR(45) NOT NULL ,
   `band_phone` VARCHAR(15) NOT NULL ,
   `band_info` VARCHAR(2000) NULL ,
+  `events` VARCHAR(2000) NULL ,
   PRIMARY KEY (`band_id`) )
 ENGINE = InnoDB;
 
