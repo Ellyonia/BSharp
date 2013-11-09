@@ -19,9 +19,9 @@ INSERT INTO Users VALUES ("Guy","Cockrum", 9, "gcockrum@smu.edu", "cockrum");
 -- Inserting Dummy Bands into Band Table
 -- -----------------------------------------------------
 
-INSERT INTO Band VALUES (1, "Bagpipes Galore", "123-456-7890", "You must blow and squeeze the sack, and finger the chanter");
-INSERT INTO Band VALUES (2, "Mustang Band", "456-798-5198", "NOTHING STOPS THE MUSTANG BAND");
-INSERT INTO Band VALUES (3, "Mustang Strings", "789-785-5649", "hip hip Cheery HO");
+INSERT INTO Band VALUES (1, "Bagpipes Galore", "123-456-7890", "You must blow and squeeze the sack, and finger the chanter", " ");
+INSERT INTO Band VALUES (2, "Mustang Band", "456-798-5198", "NOTHING STOPS THE MUSTANG BAND", " ");
+INSERT INTO Band VALUES (3, "Mustang Strings", "789-785-5649", "hip hip Cheery HO", " ");
 
 
 -- -----------------------------------------------------
