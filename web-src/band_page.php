@@ -106,7 +106,7 @@
       <form id="changeEvents" action = "changeEvents.php" method = "post">
           <textArea rows="4" cols="50" id="changeEvents" name = "changeEvents"/>
             <?
-              $phpInit->getEvents();
+              $phpInit->getEventsForEdit();
             ?>
           </textarea>
 

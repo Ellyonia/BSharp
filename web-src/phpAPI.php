@@ -422,6 +422,19 @@ class phpAPI
 
     }
 
+    public function getEventsForEdit(){
+        
+        $bID = $_SESSION['bID'];
+
+
+        $query = "SELECT events from Band where band_id = $bID";
+        $result = mysql_query($query);
+        $temp = mysql_fetch_assoc($result);
+        $events = $temp['events'];
+        echo $events;
+
+    }
+
 
 }
 
