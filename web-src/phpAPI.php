@@ -375,7 +375,7 @@ class phpAPI
             while($temp = mysql_fetch_assoc($result)){
                 array_push($bandsAllowed, $temp['band_id']);
                 $test = $temp['band_id'];
-                echo "<li>$test</li>"
+                echo "<li>$test</li>";
 
             }
 
