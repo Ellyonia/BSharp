@@ -387,6 +387,7 @@ class phpAPI
         if(!(array_search($bID, $_SESSION['allowed']))){
             $temp = array_search($bID, $_SESSION['allowed']);
             echo "<p>$temp</p>";
+            echo "<p>fail</p>";
             //header('Location: error.php');
         }
 
