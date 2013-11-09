@@ -93,22 +93,14 @@
   	<div id="management" class="hidden">
       <h2>Manage Band</h2>
       <form id="changeInfo" action = "changeAbout.php" method = "post">
-          <textArea rows="4" cols="50" id="newInfo" name = "newInfo"/>
-            <?
-              $phpInit->getBandInfo();
-            ?>
-          </textarea>
+          <textArea rows="4" cols="50" id="newInfo" name = "newInfo"/><?$phpInit->getBandInfo();?></textarea>
 
           <input type="submit" name="changeAbout" id="changeAbout" value="Submit Changes"/>
 
       </form>
 
       <form id="changeEvents" action = "changeEvents.php" method = "post">
-          <textArea rows="4" cols="50" id="changeEvents" name = "changeEvents"/>
-            <?
-              $phpInit->getEventsForEdit();
-            ?>
-          </textarea>
+          <textArea rows="4" cols="50" id="changeEvents" name = "changeEvents"/><?$phpInit->getEventsForEdit(); ?></textarea>
 
           <input type="submit" name="changeAbout" id="changeAbout" value="Submit Changes"/>
 
