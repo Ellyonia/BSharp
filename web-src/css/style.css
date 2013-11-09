@@ -237,7 +237,7 @@ img {
  }
 
 #management {
-  position: fixed;
+  position: absolute;
   top: 30%;
   left: 16%;
   width: 81%;
