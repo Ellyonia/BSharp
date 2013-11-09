@@ -1,13 +1,11 @@
-<!--
 <?
-/*
-  session_start();
-  if (!$_SESSION['uid'])
-  {
-    header("Location: index.php");
-  }
-  */
-?>-->
+  include 'phpAPI.php';   
+  $phpInit = new phpAPI();
+
+  $phpInit->checkLoggedIn();
+
+
+?>
 
 
 
