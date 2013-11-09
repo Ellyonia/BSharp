@@ -103,6 +103,17 @@
 
       </form>
 
+      <form id="changeEvents" action = "changeEvents.php" method = "post">
+          <textArea rows="4" cols="50" id="changeEvents" name = "changeEvents"/>
+            <?
+              $phpInit->getEvents();
+            ?>
+          </textarea>
+
+          <input type="submit" name="changeAbout" id="changeAbout" value="Submit Changes"/>
+
+      </form>
+
       <form id = "addMembers" action = "addMembers.php" method = "post">
 
         <ul class = "NewMembers">
@@ -830,6 +841,11 @@
 
   	<div id="events" class="hidden">
       <h2>View Upcoming Events</h2>
+      <?
+        echo "<p>";
+        $phpInit->getEvents();
+        echo "</p>";
+      ?>
   	</div>
 
   	<div id="members" class="hidden">

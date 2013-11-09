@@ -396,6 +396,32 @@ class phpAPI
             header('Location: NotLoggedIn.php');
     }
 
+    public function changeEvents(){
+
+        $bID = $_SESSION['bID'];
+        $newEvents = $_POST['newEvents'];
+        $newEvents = mysql_real_escape_string($newEvents);
+
+        mysql_query("UPDATE Band SET events = '$newEvents' where band_id = $bID");
+
+
+        header("Location: band_page.php?id=" . $_SESSION['bID'] );
+
+    }
+
+    public function getEvents(){
+        
+        $bID = $_SESSION['bID'];
+
+
+        $query = "SELECT events from Band where band_id = $bID";
+        $result = mysql_query($query);
+        $temp = mysql_fetch_assoc($result);
+        $events = mysql_real_escape_string($temp['events']);
+        echo $events;
+
+    }
+
 
 }
 
