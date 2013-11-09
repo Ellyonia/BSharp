@@ -399,7 +399,7 @@ class phpAPI
     public function changeEvents(){
 
         $bID = $_SESSION['bID'];
-        $newEvents = $_POST['newEvents'];
+        $newEvents = $_POST['changeEvents'];
         $newEvents = mysql_real_escape_string($newEvents);
 
         mysql_query("UPDATE Band SET events = '$newEvents' where band_id = $bID");
