@@ -384,8 +384,10 @@ class phpAPI
     public function checkAllowed() {
         $bID = $_SESSION['bID'];
 
-        if(array_search($bID, $_SESSION['allowed']) == false)
-            header('Location: error.php');
+        if(array_search($bID, $_SESSION['allowed']) == false){
+            echo "<p>" array_search($bID, $_SESSION['allowed'] "</p>";
+            //header('Location: error.php');
+        }
     }
 
 
