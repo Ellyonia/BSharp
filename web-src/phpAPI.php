@@ -403,7 +403,6 @@ class phpAPI
         $newEvents = mysql_real_escape_string($newEvents);
 
         mysql_query("UPDATE Band SET events = '$newEvents' where band_id = $bID");
-        mysql_query('UPDATE Band SET events = REPLACE(events, "\r\n", "<br />"');
 
 
         header("Location: band_page.php?id=" . $_SESSION['bID'] );
@@ -418,7 +417,7 @@ class phpAPI
         $query = "SELECT events from Band where band_id = $bID";
         $result = mysql_query($query);
         $temp = mysql_fetch_assoc($result);
-        $events = mysql_real_escape_string($temp['events']);
+        $events = $temp['events'];
         echo nl2br($events);
 
     }
