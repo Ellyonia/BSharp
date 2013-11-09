@@ -1,13 +1,11 @@
-<!--
 <?
-/*
-  session_start();
-  if (!$_SESSION['uid'])
-  {
-    header("Location: index.php");
-  }
-  */
-?>-->
+  include 'phpAPI.php';   
+  $phpInit = new phpAPI();
+
+  $phpInit->checkLoggedIn();
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,8 +23,7 @@
   		<ul>
         <li>
             <?php
-                include 'phpAPI.php';   
-                $phpInit = new phpAPI();
+
                 $phpInit->getBands();
             ?>
         </li>

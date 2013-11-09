@@ -390,6 +390,12 @@ class phpAPI
         }
     }
 
+    public function checkLoggedIn() {
+
+        if(!isset($_SESSION['uid']))
+            header('Location: NotLoggedIn.php');
+    }
+
 
 }
 

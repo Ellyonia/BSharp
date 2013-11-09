@@ -1,20 +1,10 @@
-<!--
-<?
-/*
-  session_start();
-  if (!$_SESSION['uid'])
-  {
-    header("Location: index.php");
-  }
-  */
-?>-->
-
-
 <?
   include 'phpAPI.php';
   $phpInit = new phpAPI();
   $phpInit->setBID();
+  $phpInit->checkLoggedIn();
   $phpInit->checkAllowed();
+
 
 /*
   if(isset($_POST['addButton'])){
