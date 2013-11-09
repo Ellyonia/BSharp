@@ -435,6 +435,41 @@ class phpAPI
 
     }
 
+//This pdf may not work i havent been able to test it yet so its probably really buggy
+    public function displayPDF(){
+        $bID = $_SESSION['bID'];
+        $uID = $_SESSION['uid'];
+
+        $query = "SELECT band_name from Band where band_id = $bID";
+        $result = mysql_query($query);
+        $temp = mysql_fetch_assoc($result);
+        $bandName = mysql_real_escape_string($temp['band_name']);
+
+        $query = "SELECT instrument from BandsIn where band_id= $bID AND user_id = $uID";
+        $result = mysql_query($query);
+        $temp = mysql_fetch_assoc($result);
+        $instrument = $temp['instrument'];
+
+        $bandName = str_replace(' ', '%20', $bandName);
+        $piece = $_SESSION['piece'];
+        
+        $query = "SELECT part_id from BandsIn where band_id = $bID AND user_id = $uID";
+        $result = mysql_query($query);
+        $temp = mysql_fetch_assoc($result);
+        $part = $temp['part_id'];
+
+
+        $fileLocation = "../Music/$bandName/$piece/$instrument_$part.pdf";
+
+
+        //$instrument = "Piccolo";
+        //$fileLocation = "../Music/Mustang%20Band/Western%20Peruna/" . $instrument . ".pdf";
+        //$fileLocation = "Piccolo.pdf";
+        echo "<html>";
+        echo "<iframe src=$fileLocation width='100%' height='98%'> ";
+        echo "</html>"
+    }
+
 
 }
 
