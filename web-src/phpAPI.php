@@ -197,7 +197,7 @@ class phpAPI
         $result = mysql_query($query);
         $temp = mysql_fetch_assoc($result);
         $info = mysql_real_escape_string($temp['band_info']);
-        echo $info;
+        echo nl2br($info);
 
     }
 
@@ -418,7 +418,7 @@ class phpAPI
         $result = mysql_query($query);
         $temp = mysql_fetch_assoc($result);
         $events = mysql_real_escape_string($temp['events']);
-        echo $events;
+        echo nl2br($events);
 
     }
 
