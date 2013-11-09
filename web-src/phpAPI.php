@@ -362,6 +362,27 @@ class phpAPI
         	header("Location: error.php");
     }
 
+    public function getBandsAllowed() {
+
+        $uID = $_SESSION['uid'];
+        $bandsAllowed= array();
+
+        $query = "SELECT band_id from BandsIn where user_id = $uID";
+        $result = mysql_query($query);
+
+        if(mysql_num_rows($result) > 0){
+
+            while($temp = mysql_fetch_assoc($result)){
+                array_push($bandsAllowed, $temp['band_id']);
+                $test = $temp['band_id'];
+                echo "<li>$test</li>"
+
+            }
+
+
+        }
+    }
+
 
 }
 

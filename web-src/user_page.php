@@ -37,5 +37,12 @@
           <!--
           <input type="button" id="createBand" name="createBand" value="Create Band"/>-->
   			</li>
+
   		</ul>
+      <ul>
+        <?
+          $phpInit->getBandsAllowed();
+
+        ?>
+      </ul>
   </body>
