@@ -470,6 +470,31 @@ class phpAPI
         echo "</html>"
     }
 
+    public function getMusicList(){
+        $bID = $_SESSION['bID'];
+        $uID = $_SESSION['uid'];
+
+        $query = "SELECT band_name from Band where band_id = $bID";
+        $result = mysql_query($query);
+        $temp = mysql_fetch_assoc($result);
+        $bandName = mysql_real_escape_string($temp['band_name']);
+
+
+
+
+
+        $query = "SELECT piece_name from Pieces where band_id= $bID";
+        $result = mysql_query($query);
+
+        while($temp = mysql_fetch_assoc($result)){
+            $piece = $temp['piece_name'];
+            echo "<li><a href=MusicDisplay.php>$piece</a></li>";
+        }
+
+
+
+    }
+
 
 }
 
