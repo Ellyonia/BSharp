@@ -384,7 +384,7 @@ class phpAPI
     public function checkAllowed() {
         $bID = $_SESSION['bID'];
 
-        if(!(array_search($bID, $_SESSION['allowed']))){
+        if((array_search($bID, $_SESSION['allowed'])) < 0){
             $temp = array_search($bID, $_SESSION['allowed']);
             echo "<p>$temp</p>";
             echo "<p>fail</p>";
