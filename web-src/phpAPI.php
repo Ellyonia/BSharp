@@ -374,13 +374,18 @@ class phpAPI
 
             while($temp = mysql_fetch_assoc($result)){
                 array_push($bandsAllowed, $temp['band_id']);
-                $test = $temp['band_id'];
-                echo "<li>$test</li>";
 
             }
 
-
+            $_SESSION['allowed'] = $bandsAllowed;
         }
+    }
+
+    public function checkAllowed() {
+        $bID = $_SESSION['bID'];
+
+        if(array_search($bID, $_SESSION['allowed']) == false)
+            header('Location: error.php');
     }
 
 

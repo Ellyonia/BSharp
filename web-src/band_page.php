@@ -14,6 +14,7 @@
   include 'phpAPI.php';
   $phpInit = new phpAPI();
   $phpInit->setBID();
+  $phpInit->checkAllowed();
 
 /*
   if(isset($_POST['addButton'])){
