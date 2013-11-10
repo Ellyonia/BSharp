@@ -450,7 +450,9 @@ class phpAPI
 
         $query = "SELECT piece_id from Pieces where band_id = $bID AND piece_name = '$piece'";
         $result = mysql_query($query);
+        echo $result;
         $temp = mysql_fetch_assoc($result);
+        echo $temp;
         $pID = $temp['piece_id'];
         echo $pID;
 
