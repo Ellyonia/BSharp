@@ -445,16 +445,12 @@ class phpAPI
         $piece = $_GET['p'];
         $piece = mysql_real_escape_string($piece);
 
-        echo $piece . '\n';
 
 
         $query = "SELECT piece_id from Pieces where band_id = $bID AND piece_name = '$piece'";
         $result = mysql_query($query);
-        echo $result . '\n';
         $temp = mysql_fetch_assoc($result);
-        echo $temp . '\n';
         $pID = $temp['piece_id'];
-        echo $pID;
 
         $query = "SELECT instrument from BandsIn where band_id= $bID AND user_id = $uID";
         $result = mysql_query($query);
@@ -475,10 +471,10 @@ class phpAPI
         //$instrument = "Piccolo";
         //$fileLocation = "../Music/Mustang%20Band/Western%20Peruna/" . $instrument . ".pdf";
         //$fileLocation = "Piccolo.pdf";
-        /*
+        
         echo "<html>";
         echo "<iframe src=$fileLocation width='100%' height='97%'> ";
-        echo "</html>";*/
+        echo "</html>";
     }
 
     public function getMusicList(){
