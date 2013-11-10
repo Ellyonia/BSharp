@@ -20,5 +20,14 @@ $(document).ready(function(){
 		}
 	});
 
+
+	function otherOpt(val){
+	 var element=document.getElementById('color');
+	 if(val=='other')
+	   element.style.display='block';
+	 else  
+	   element.style.display='none';
+	}
+
 });
 });

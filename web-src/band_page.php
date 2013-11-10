@@ -178,6 +178,8 @@
               
             </select>
 
+            <input type = "text" name="oInstrument" id="oInstrument" style="display:none;" />
+
             <select id="part1" name="part1">
               <option value="1">1</option>
               <option value="2">2</option>
