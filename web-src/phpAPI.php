@@ -443,7 +443,7 @@ class phpAPI
         $bID = $_SESSION['bID'];
         $uID = $_SESSION['uid'];
         $piece = $_GET['p'];
-        $piece = str_replace(' ', '%20', $piece);
+        $piece = mysql_real_escape_string($piece);
 
         echo $piece . '\n';
 
