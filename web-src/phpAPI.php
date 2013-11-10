@@ -507,7 +507,7 @@ class phpAPI
         $result = mysql_query($query);
         $temp = mysql_fetch_assoc($result);
         $bandName = mysql_real_escape_string($temp['band_name']);
-        $bandName = str_replace(' ', '\ ', $bandName);
+        //$bandName = str_replace(' ', '\ ', $bandName);
 
         $count = 0;
         if ($_SERVER['REQUEST_METHOD'] == 'POST'){
