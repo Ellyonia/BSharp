@@ -274,7 +274,10 @@ class phpAPI
                 else
                     array_push($dirFlags, 0);
 
-                array_push($instruments, $_POST['Instrument' . strval($i+1)]);
+                if($_POST['Instrument' . strval($i+1)] != 'Other')
+                    array_push($instruments, $_POST['Instrument' . strval($i+1)]);
+                else
+                    array_push($instruments, $_POST['oInstrument' . strval($i+1)]);
 
                 array_push($parts, $_POST['part' . strval($i+1)]);
             }
