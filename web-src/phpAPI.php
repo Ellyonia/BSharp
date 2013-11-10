@@ -450,6 +450,7 @@ class phpAPI
         $result = mysql_query($query);
         $temp = mysql_fetch_assoc($result);
         $pID = $temp['piece_id'];
+        echo $pID;
 
         $query = "SELECT instrument from BandsIn where band_id= $bID AND user_id = $uID";
         $result = mysql_query($query);
@@ -464,7 +465,7 @@ class phpAPI
         $part = $temp['part_id'];
 
 
-        $fileLocation = "../Music/" . $bID . "/" . $pID . "/" . $instrument . "_" . $part . ".pdf";
+        $fileLocation = "../Music/" . $bID . "/20/" /*. $pID . "/"*/ . $instrument . "_" . $part . ".pdf";
 
 
         //$instrument = "Piccolo";
