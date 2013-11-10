@@ -460,7 +460,7 @@ class phpAPI
         $part = $temp['part_id'];
 
 
-        $fileLocation = "../Music/$bandName/$piece/$instrument_$part.pdf";
+        $fileLocation = "../Music/$bandName/" . $piece . "/" . $instrument . "_" . $part . ".pdf";
 
 
         //$instrument = "Piccolo";
