@@ -25,6 +25,9 @@ $(document).ready(function(){
 
 });
 
+
+});
+
 	function otherOpt(val){
 	 var element=document.getElementById('oInstrument');
 	 if(val=='other')
@@ -32,4 +35,3 @@ $(document).ready(function(){
 	 else  
 	   element.style.display='none';
 	}
-});
