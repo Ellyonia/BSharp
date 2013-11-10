@@ -445,14 +445,14 @@ class phpAPI
         $piece = $_GET['p'];
         $piece = str_replace(' ', '%20', $piece);
 
-        echo $piece;
+        echo $piece . '\n';
 
 
         $query = "SELECT piece_id from Pieces where band_id = $bID AND piece_name = '$piece'";
         $result = mysql_query($query);
-        echo $result;
+        echo $result . '\n';
         $temp = mysql_fetch_assoc($result);
-        echo $temp;
+        echo $temp . '\n';
         $pID = $temp['piece_id'];
         echo $pID;
 
