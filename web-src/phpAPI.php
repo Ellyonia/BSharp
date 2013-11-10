@@ -467,7 +467,7 @@ class phpAPI
         //$fileLocation = "Piccolo.pdf";
         echo "<html>";
         echo "<iframe src=$fileLocation width='100%' height='98%'> ";
-        echo "</html>"
+        echo "</html>";
     }
 
     public function getMusicList(){
