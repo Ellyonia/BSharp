@@ -30,7 +30,7 @@ $(document).ready(function(){
 
 	function otherOpt(val){
 	 var element=document.getElementById('oInstrument');
-	 if(val=='other')
+	 if(val=='Other')
 	   element.style.display='block';
 	 else  
 	   element.style.display='none';
