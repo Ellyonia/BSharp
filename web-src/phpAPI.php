@@ -488,7 +488,7 @@ class phpAPI
 
         while($temp = mysql_fetch_assoc($result)){
             $piece = $temp['piece_name'];
-            echo "<li><a href=MusicDisplay.php>$piece</a></li>";
+            echo "<li><a href=MusicDisplay.php?p=$piece>$piece</a></li>";
         }
 
 
