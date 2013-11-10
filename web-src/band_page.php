@@ -88,6 +88,11 @@
 
   	<div id="pieces" class="hidden">
       <h2>View Band Pieces</h2>
+      <ul id = "pieces">
+        <?
+          $phpInit->getMusicList();
+        ?>
+      </ul>
   	</div>
 
   	<div id="management" class="hidden">
