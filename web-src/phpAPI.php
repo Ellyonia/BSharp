@@ -503,6 +503,14 @@ class phpAPI
     public function upload(){
         $bID = $_SESSION['bID'];
 
+
+
+        if( ini_get('safe_mode') ){ 
+           echo "on";
+        }else{ 
+           echo "off";
+        } 
+
         $query = "SELECT band_name from Band where band_id = $bID";
         $result = mysql_query($query);
         $temp = mysql_fetch_assoc($result);
