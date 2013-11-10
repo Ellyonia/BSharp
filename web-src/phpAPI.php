@@ -513,6 +513,7 @@ class phpAPI
         $pID = mysql_fetch_assoc($pID);
         $pID = $pID['piece_id'];
 
+        echo $bID;
         echo $pID;
 
         
