@@ -445,10 +445,11 @@ class phpAPI
         $piece = $_GET['p'];
         $piece = str_replace(' ', '%20', $piece);
 
-        $query = "SELECT band_name from Band where band_id = $bID";
+
+        $query = "SELECT piece_id from Band where band_id = $bID AND piece_name = '$piece'";
         $result = mysql_query($query);
         $temp = mysql_fetch_assoc($result);
-        $bandName = mysql_real_escape_string($temp['band_name']);
+        $pID = $temp['piece_id'];
 
         $query = "SELECT instrument from BandsIn where band_id= $bID AND user_id = $uID";
         $result = mysql_query($query);
@@ -463,7 +464,7 @@ class phpAPI
         $part = $temp['part_id'];
 
 
-        $fileLocation = "../Music/$bandName/" . $piece . "/" . $instrument . "_" . $part . ".pdf";
+        $fileLocation = "../Music/" . $bID . "/" . $pID . "/" . $instrument . "_" . $part . ".pdf";
 
 
         //$instrument = "Piccolo";
