@@ -440,6 +440,7 @@ class phpAPI
         $bID = $_SESSION['bID'];
         $uID = $_SESSION['uid'];
         $piece = $_GET['p'];
+        echo $piece;
 
         $query = "SELECT band_name from Band where band_id = $bID";
         $result = mysql_query($query);
