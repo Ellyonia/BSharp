@@ -119,7 +119,7 @@
         <ul class = "NewMembers">
           <li>
             <input type='text' name = 'new1' id='new1' placeholder="Enter Email address here" required/>
-            <select id="Instrument1" name="Instrument1" onChange='otherOpt(this.value);'>
+            <select id="Instrument1" name="Instrument1" onchange='otherOpt(this.value);'>
               <option value="">Select an Instrument</option>
               <optgroup label = "Woodwinds">
                 <option value="Piccolo">Piccolo</option>
