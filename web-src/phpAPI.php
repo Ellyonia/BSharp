@@ -505,12 +505,6 @@ class phpAPI
 
 
 
-        if( ini_get('safe_mode') ){ 
-           echo "on";
-        }else{ 
-           echo "off";
-        } 
-
         $query = "SELECT band_name from Band where band_id = $bID";
         $result = mysql_query($query);
         $temp = mysql_fetch_assoc($result);
@@ -521,7 +515,7 @@ class phpAPI
         if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             foreach ($_FILES['files']['name'] as $i => $name) {
                 if (strlen($_FILES['files']['name'][$i]) > 1) {
-                    if (move_uploaded_file($_FILES['files']['tmp_name'][$i], '/var/www/DB-GUI/Music/' . $bandName . '/'.$name)) {
+                    if (move_uploaded_file($_FILES['files']['tmp_name'][$i], '/home/ubuntu/test.txt'/*'/var/www/DB-GUI/Music/' . $bandName . '/'.$name*/)) {
                         $count++;
                     }
                 }
