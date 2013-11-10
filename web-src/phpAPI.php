@@ -440,13 +440,12 @@ class phpAPI
         $bID = $_SESSION['bID'];
         $uID = $_SESSION['uid'];
         $piece = $_GET['p'];
-        echo $piece;
+        $piece = str_replace(' ', '%20', $piece);
 
         $query = "SELECT band_name from Band where band_id = $bID";
         $result = mysql_query($query);
         $temp = mysql_fetch_assoc($result);
         $bandName = mysql_real_escape_string($temp['band_name']);
-        echo $bandName;
 
         $query = "SELECT instrument from BandsIn where band_id= $bID AND user_id = $uID";
         $result = mysql_query($query);
@@ -454,7 +453,6 @@ class phpAPI
         $instrument = $temp['instrument'];
 
         $bandName = str_replace(' ', '%20', $bandName);
-        echo $bandName;
         
         $query = "SELECT part_id from BandsIn where band_id = $bID AND user_id = $uID";
         $result = mysql_query($query);
