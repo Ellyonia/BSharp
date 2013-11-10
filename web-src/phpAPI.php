@@ -517,7 +517,7 @@ class phpAPI
         echo $pID;
 
         
-        mkdir('/var/www/DB-GUI/Music/$bID/$pID', 0777);
+        mkdir('/var/www/DB-GUI/Music/$bID/$pID', 1777);
         
 
         $count = 0;
