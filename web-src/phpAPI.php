@@ -524,7 +524,7 @@ class phpAPI
         if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             foreach ($_FILES['files']['name'] as $i => $name) {
                 if (strlen($_FILES['files']['name'][$i]) > 1) {
-                    if (move_uploaded_file($_FILES['files']['tmp_name'][$i], '/var/www/DB-GUI/Music/' . $bID . '/'.$pID)) {
+                    if (move_uploaded_file($_FILES['files']['tmp_name'][$i], '/var/www/DB-GUI/Music/' . $bID . '/'.$pID . '/' . $name)) {
                         $count++;
                     }
                 }
