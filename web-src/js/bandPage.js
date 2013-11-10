@@ -22,7 +22,7 @@ $(document).ready(function(){
 
 
 	function otherOpt(val){
-	 var element=document.getElementById('color');
+	 var element=document.getElementById('oInstrument');
 	 if(val=='other')
 	   element.style.display='block';
 	 else  
