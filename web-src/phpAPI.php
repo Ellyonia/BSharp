@@ -488,7 +488,8 @@ class phpAPI
 
         while($temp = mysql_fetch_assoc($result)){
             $piece = $temp['piece_name'];
-            echo "<li><a href=MusicDisplay.php?p=$piece>$piece</a></li>";
+            $forURL = str_replace(' ', '%20', $piece);
+            echo "<li><a href=MusicDisplay.php?p=$forURL>$piece</a></li>";
         }
 
 
