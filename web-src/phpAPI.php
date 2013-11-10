@@ -503,19 +503,27 @@ class phpAPI
     public function upload(){
         $bID = $_SESSION['bID'];
 
+        $pieceName = $_POST['pieceName'];
+        $pieceName = mysql_real_escape_string($pieceName);
 
-
-        $query = "SELECT band_name from Band where band_id = $bID";
-        $result = mysql_query($query);
-        $temp = mysql_fetch_assoc($result);
-        $bandName = mysql_real_escape_string($temp['band_name']);
         //$bandName = str_replace(' ', '\ ', $bandName);
+
+        mysql_query("INSERT into Pieces(piece_name, band_id) values('$pieceName', $bID)");
+        $pID = mysql_query("SELECT piece_id from Pieces where piece_name = '$pieceName' AND band_id = $bID");
+        $pID = mysql_fetch_assoc($pID);
+        $pID = $pID['piece_id'];
+
+        echo $pID;
+
+        
+        mkdir("/var/www/DB-GUI/Music/$bID/$pID", 0755);
+        
 
         $count = 0;
         if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             foreach ($_FILES['files']['name'] as $i => $name) {
                 if (strlen($_FILES['files']['name'][$i]) > 1) {
-                    if (move_uploaded_file($_FILES['files']['tmp_name'][$i], '/var/www/DB-GUI/Music/' . $bandName . '/'.$name)) {
+                    if (move_uploaded_file($_FILES['files']['tmp_name'][$i], '/var/www/DB-GUI/Music/' . $bID . '/'.$pID)) {
                         $count++;
                     }
                 }
