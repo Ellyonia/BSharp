@@ -229,11 +229,9 @@ img {
   height: 67%;
   padding-left: 1%;
   font-size: 30px;
-  overflow: auto;
   background-color: #181818;
   box-shadow: 7px 7px 10px 2px #181860;
   border-radius: 5px 5px;
-  list-style: none;
   /*display: none;*/
  }
 
