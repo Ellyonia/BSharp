@@ -529,11 +529,11 @@ class phpAPI
             echo '<ul>';
             foreach ($_FILES['files']['name'] as $i => $name) {
                 if (strlen($_FILES['files']['name'][$i]) > 1) {
-                    if (move_uploaded_file($_FILES['files']['name'][$i], '/var/www/DB-GUI/Music/' . $bID . '/'.$pID . '/' . $name . '.pdf'))
-                        echo "File is valid, and was successfully uploaded.\n";
-                    $count++;
 
-                    array_push($files, '/var/www/DB-GUI/Music/' . $bID . '/'.$pID . '/' . $name . '.pdf');
+                    if (move_uploaded_file($_FILES['files']['tmp_name'][$i], '/var/www/DB-GUI/Music/' . $bID . '/'.$pID . '/' . $name)) {
+                        $count++;
+                    }
+                    array_push($files, '/var/www/DB-GUI/Music/' . $bID . '/'.$pID . '/' . $name);
 
                     echo "<li>";
                     echo "$name";
