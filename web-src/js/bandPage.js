@@ -36,22 +36,10 @@ $(document).ready(function(){
 	   element.style.display='none';
 	}
 
-	function partOther(val){
-		var element = $('*[id*=oInstrumentFile]');
-
-
-		$("*[id*=oInstrumentFile][value='Other']").show();
-		/*
-
-	 //var element=document.getElementById('oInstrumentFile');
-	 if(val=='Other'){
-	 	$('*[id*=oInstrumentFile]').css("display", "block");
-	 	//element.style.display='block';
-	 }
-	   
-	 else{
-	 	$('*[id*=oInstrumentFile]').css("display", "none");
-	 	//element.style.display='none';
-	 }
-	   */
+	function otherOpt(val){
+	 var element=document.getElementById('oInstrumentFile');
+	 if(val=='Other')
+	   element.style.display='block';
+	 else  
+	   element.style.display='none';
 	}
