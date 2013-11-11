@@ -529,9 +529,11 @@ class phpAPI
             echo '<ul>';
             foreach ($_FILES['files']['name'] as $i => $name) {
                 if (strlen($_FILES['files']['name'][$i]) > 1) {
-                    echo $_FILES['files']['name'][$i] . '<br />';
+                    if (move_uploaded_file($_FILES['files']['name'][$i], '/var/www/DB-GUI/Music/' . $bID . '/'.$pID . '/' . $name . '.pdf'))
+                        echo "File is valid, and was successfully uploaded.\n";
+                    $count++;
 
-                    array_push($files, $_FILES['files']['name'][$i]);
+                    array_push($files, '/var/www/DB-GUI/Music/' . $bID . '/'.$pID . '/' . $name . '.pdf');
 
                     echo "<li>";
                     echo "$name";
