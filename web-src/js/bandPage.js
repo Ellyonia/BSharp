@@ -36,8 +36,13 @@ $(document).ready(function(){
 	   element.style.display='none';
 	}
 
-	function otherOpt(val){
+	function partOther(val){
 		var element = $('*[id*=oInstrumentFile]');
+
+
+		$("*[id*=oInstrumentFile][value='Ohter']").show();
+		/*
+
 	 //var element=document.getElementById('oInstrumentFile');
 	 if(val=='Other'){
 	 	$('*[id*=oInstrumentFile]').css("display", "block");
@@ -48,5 +53,5 @@ $(document).ready(function(){
 	 	$('*[id*=oInstrumentFile]').css("display", "none");
 	 	//element.style.display='none';
 	 }
-	   
+	   */
 	}
