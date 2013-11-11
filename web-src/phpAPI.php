@@ -516,12 +516,91 @@ class phpAPI
         $pID = mysql_fetch_assoc($pID);
         $pID = $pID['piece_id'];
 
-        echo $bID;
-        echo $pID;
 
         
         mkdir('/var/www/DB-GUI/Music/' . $bID . '/' . $pID . '/', 0777, true);
         
+        $count = 0;
+        if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+            foreach ($_FILES['files']['name'] as $i => $name) {
+                if (strlen($_FILES['files']['name'][$i]) > 1) {
+                    echo '<select id="Instrument' . $i . '" name="Instrument' . $i . '" onchange="otherOpt(this.value);">
+                              <option value="">Select an Instrument</option>
+                              <optgroup label = "Woodwinds">
+                                <option value="Piccolo">Piccolo</option>
+                                <option value="Flute">Flute</option>
+                                <option value="Oboe">Oboe</option>
+                                <option value="Bassoon">Bassoon</option>
+                                <option value="Clarinet">Clarinet</option>
+                                <option value = "Bass">Bass Clarinet</option>
+                                <option value="Alto Saxophpone">Alto Saxophone</option>
+                                <option value="Tenor Saxophone">Tenor Saxaphone</option>
+                                <option value="Baritone Saxophone">Baritone Saxophone</option>
+                              </optgroup>
+
+                              <optgroup label="Brass">
+                                <option value="Trumpet">Trumpet</option>
+                                <option value="Horns">Horns</option>
+                                <option value="Tenor Trombone">Tenor Trombones</option>
+                                <option value="Bass Trombone">Bass Trombone</option>
+                                <option value="Baritone Horn/Euphonium">Baritone Horn/Euphonium</option>
+                                <option value="Tuba">Tuba</option>
+                              </optgroup>
+
+                              <optgroup label="Percussion">
+                                <option value="Snare Drum">Snare Drum</option>
+                                <option value="Bass Drum">Bass Drum</option>
+                                <option value="Cymbals">Cymbals</option>
+                                <option value="Tam-Tam">Tam-Tam</option>
+                                <option value="Triangle">Triangle</option>
+                                <option value="Tambourine">Tambourine</option>
+                                <option value="Wood Blocks/Temple Blocks">Wood Blocks/Temple Blocks</option>
+                                <option value="Tom-Tom">Tom-Tom</option>
+                                <option value="Bongos">Bongos</option>
+                                <option value="Congas">Congas</option>
+                                <option value="Claves">Claves</option>
+                                <option value="Drum Kit">Drum Kit</option>
+                                <option value="Timpani">Timpani</option>
+                                <option value="Glockenspiel">Glockenspiel</option>
+                                <option value="Xylohpone">Xylophone</option>
+                                <option value="Marimba">Marimba</option>
+                                <option value="Crotales">Crotales</option>
+                                <option value="Vibraphone">Vibraphone</option>
+                                <option value="Chimes">Chimes</option>
+                              </optgroup>
+
+                              <optgroup label = "Keyboards">
+                                <option value="Piano">Piano</option>
+                                <option value="Celesta">Celesta</option>
+                                <option value="Organ">Organ</option>
+                              </optgroup>
+
+                              <optgroup label = "Strings">
+                                <option value="Harp">Harp</option>
+                                <option value="Violencello">Violoncello</option>
+                                <option value="Double Bass">Double Bass</option>
+                              </optgroup>
+                                <option value="Other">other</option>
+                              
+                            </select>
+
+                            <input type = "text" name="oInstrument' . $i . '"  id="Onstrument' . $i . '"  style="display:none;" />
+
+                            <select id="part' . $i . '"  name="part' . $i . '" >
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                            </select>';
+                }
+            }
+        }
+
+        
+    }
+
+    public function renameFiles(){
 
         $count = 0;
         if ($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -533,6 +612,12 @@ class phpAPI
                 }
             }
         }
+
+
+
+
+        
+
     }
 
 
