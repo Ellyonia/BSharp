@@ -524,6 +524,7 @@ class phpAPI
         if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             foreach ($_FILES['files']['name'] as $i => $name) {
                 if (strlen($_FILES['files']['name'][$i]) > 1) {
+                    echo "$name";
                     echo '<select id="Instrument' . $i . '" name="Instrument' . $i . '" onchange="otherOpt(this.value);">
                               <option value="">Select an Instrument</option>
                               <optgroup label = "Woodwinds">
