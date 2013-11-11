@@ -632,7 +632,7 @@ class phpAPI
 
         $count = 0;
             foreach ($files as $i => $name) {
-                if (strlen($files) > 1) {
+                if (strlen($files[$i]) > 1) {
                     if($_POST['fileInstrument' . strval($i+1)] != ""){
                         $instrument = $_POST['fileInstrument' . strval($i+1)];
 
@@ -644,7 +644,7 @@ class phpAPI
                         array_push($parts, $_POST['filePart' . strval($i+1)]);
 
                         $fileName = $instruments[$i] . '_' . $parts[$i];
-                        rename($files, '/var/www/DB-GUI/Music/' . $bID . '/'.$pID . '/' . $fileName . '.pdf');
+                        rename($files[$i], '/var/www/DB-GUI/Music/' . $bID . '/'.$pID . '/' . $fileName . '.pdf');
                         $count++;
                     }
 
