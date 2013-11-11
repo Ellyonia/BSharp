@@ -587,6 +587,7 @@ class phpAPI
 
                             <input type = "text" name="oInstrument' . $i . '"  id="Onstrument' . $i . '"  style="display:none;" />
 
+                            <label for="part ' . $i . '">Choose the Part</label>
                             <select id="part' . $i . '"  name="part' . $i . '" >
                               <option value="1">1</option>
                               <option value="2">2</option>
