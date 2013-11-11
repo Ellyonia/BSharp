@@ -898,7 +898,7 @@
   	</div>
 
   	<div id="members" class="hidden">
-      <h2>View/Edit Band Members</h2>
+      <h2>View Band Members</h2>
 
       <ul>
         <?
