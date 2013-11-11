@@ -522,8 +522,11 @@ class phpAPI
         
         $count = 0;
         if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+            echo '<form id = "Parts" action = "parts.php" method = "post">';
+            echo '<ul>';
             foreach ($_FILES['files']['name'] as $i => $name) {
                 if (strlen($_FILES['files']['name'][$i]) > 1) {
+                    echo "<li>";
                     echo "$name";
                     echo '<select id="Instrument' . $i . '" name="Instrument' . $i . '" onchange="otherOpt(this.value);">
                               <option value="">Select an Instrument</option>
@@ -594,9 +597,12 @@ class phpAPI
                               <option value="3">3</option>
                               <option value="4">4</option>
                               <option value="5">5</option>
-                            </select>';
+                            </select>
+                            </li>';
                 }
             }
+            echo '</ul>';
+            echo '<input type="submit" name="partSet" id="partSet" value="Set Parts and Name Files"/></form>';
         }
 
         
