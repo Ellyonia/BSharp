@@ -637,15 +637,15 @@ class phpAPI
         $count = 0;
             foreach ($files as $i => $name) {
                 if (strlen($files[$i]) > 1) {
-                    if($_POST['fileInstrument' . strval($i+1)] != ""){
-                        $instrument = $_POST['fileInstrument' . strval($i+1)];
+                    if($_POST['fileInstrument' . strval($i)] != ""){
+                        $instrument = $_POST['fileInstrument' . strval($i)];
 
                         if($instrument != 'Other')
                             array_push($instruments, $instrument);
                         else
-                            array_push($instruments, $_POST['oInstrumentFile' . strval($i+1)]);
+                            array_push($instruments, $_POST['oInstrumentFile' . strval($i)]);
 
-                        array_push($parts, $_POST['filePart' . strval($i+1)]);
+                        array_push($parts, $_POST['filePart' . strval($i)]);
 
                         $fileName = $instruments[$i] . '_' . $parts[$i];
                         $fileName = str_replace(' ', '_', $fileName);
