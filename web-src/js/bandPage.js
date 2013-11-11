@@ -40,7 +40,7 @@ $(document).ready(function(){
 		var element = $('*[id*=oInstrumentFile]');
 
 
-		$("*[id*=oInstrumentFile][value='Ohter']").show();
+		$("*[id*=oInstrumentFile][value='Other']").show();
 		/*
 
 	 //var element=document.getElementById('oInstrumentFile');
