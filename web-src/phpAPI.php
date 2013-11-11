@@ -504,6 +504,8 @@ class phpAPI
     }
 
     public function upload(){
+        $files = array();
+
         $bID = $_SESSION['bID'];
 
         $pieceName = $_POST['pieceName'];
@@ -527,6 +529,9 @@ class phpAPI
             echo '<ul>';
             foreach ($_FILES['files']['name'] as $i => $name) {
                 if (strlen($_FILES['files']['name'][$i]) > 1) {
+
+                    array_push($files, $_FILES['files']['name'][$i]);
+
                     echo "<li>";
                     echo "$name";
                     echo '<select id="fileInstrument' . $i . '" name="fileInstrument' . $i . '" onchange="otherOpt(this.value);">
@@ -602,6 +607,7 @@ class phpAPI
                             </li>';
                 }
             }
+            $_SESSION['files'] = $files;
             echo '</ul>';
             echo '<input type="submit" name="partSet" id="partSet" value="Set Parts and Name Files"/></form>';
         }
@@ -613,6 +619,8 @@ class phpAPI
         $bID = $_SESSION['bID'];
         $pieceName = $_SESSION['pieceName'];
 
+        $files = $_SESSION['files'];
+
         $instruments = array();
         $parts = array();
 
@@ -623,9 +631,8 @@ class phpAPI
 
 
         $count = 0;
-        if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-            foreach ($_FILES['files']['name'] as $i => $name) {
-                if (strlen($_FILES['files']['name'][$i]) > 1) {
+            foreach ($files as $i => $name) {
+                if (strlen($files) > 1) {
                     if($_POST['fileInstrument' . strval($i+1)] != ""){
                         $instrument = $_POST['fileInstrument' . strval($i+1)];
 
@@ -637,14 +644,14 @@ class phpAPI
                         array_push($parts, $_POST['filePart' . strval($i+1)]);
 
                         $fileName = $instruments[$i] . '_' . $parts[$i];
-                        rename($_FILES['files']['tmp_name'][$i], '/var/www/DB-GUI/Music/' . $bID . '/'.$pID . '/' . $fileName . '.pdf');
+                        rename($files, '/var/www/DB-GUI/Music/' . $bID . '/'.$pID . '/' . $fileName . '.pdf');
                         $count++;
                     }
 
 
                 }
             }
-        }
+        
 
 
 
