@@ -635,37 +635,27 @@ class phpAPI
 
 
         $count = 0;
-            foreach ($files as $i => $name) {
-                if (strlen($files[$i]) > 1) {
-                    if($_POST['fileInstrument' . strval($i)] != ""){
-                        $instrument = $_POST['fileInstrument' . strval($i)];
+        foreach ($files as $i => $name) {
+            if (strlen($files[$i]) > 1) {
+                if($_POST['fileInstrument' . strval($i)] != ""){
+                    $instrument = $_POST['fileInstrument' . strval($i)];
 
-                        if($instrument != 'Other')
-                            array_push($instruments, $instrument);
-                        else
-                            array_push($instruments, $_POST['oInstrumentFile' . strval($i)]);
+                    if($instrument != 'Other')
+                        array_push($instruments, $instrument);
+                    else
+                        array_push($instruments, $_POST['oInstrumentFile' . strval($i)]);
 
-                        array_push($parts, $_POST['filePart' . strval($i)]);
+                    array_push($parts, $_POST['filePart' . strval($i)]);
 
-                        $fileName = $instruments[$i] . '_' . $parts[$i];
-                        $fileName = str_replace(' ', '_', $fileName);
-                        rename($files[$i], '/var/www/DB-GUI/Music/' . $bID . '/'.$pID . '/' . $fileName . '.pdf');
-                        $count++;
-                    }
-
-
+                    $fileName = $instruments[$i] . '_' . $parts[$i];
+                    $fileName = str_replace(' ', '_', $fileName);
+                    rename($files[$i], '/var/www/DB-GUI/Music/' . $bID . '/'.$pID . '/' . $fileName . '.pdf');
+                    $count++;
                 }
             }
-        
-
-
-
-
-        
-
+        }
+        header("Location: band_page.php?id=" . $_SESSION['bID'] );
     }
-
-
 }
 
 
