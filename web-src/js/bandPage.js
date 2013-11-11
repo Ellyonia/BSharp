@@ -35,3 +35,11 @@ $(document).ready(function(){
 	 else  
 	   element.style.display='none';
 	}
+
+	function otherOpt(val){
+	 var element=document.getElementById('oInstrumentFile');
+	 if(val=='Other')
+	   element.style.display='block';
+	 else  
+	   element.style.display='none';
+	}
