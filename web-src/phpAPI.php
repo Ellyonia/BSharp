@@ -529,6 +529,7 @@ class phpAPI
             echo '<ul>';
             foreach ($_FILES['files']['name'] as $i => $name) {
                 if (strlen($_FILES['files']['name'][$i]) > 1) {
+                    echo $_FILES['files']['name'][$i] . '<br />';
 
                     array_push($files, $_FILES['files']['name'][$i]);
 
@@ -608,6 +609,7 @@ class phpAPI
                 }
             }
             $_SESSION['files'] = $files;
+
             echo '</ul>';
             echo '<input type="submit" name="partSet" id="partSet" value="Set Parts and Name Files"/></form>';
         }
