@@ -597,7 +597,7 @@ class phpAPI
                               
                             </select>
 
-                            <input type = "text" name="oInstrumentFile' . $i . '"  id="oInstrumentFile"  style="display:none;" />
+                            <input type = "text" name="oInstrumentFile' . $i . '"  id="oInstrumentFile' . $i . '"  style="display:none;" />
 
                             <label for="filePart ' . $i . '">Choose the Part</label>
                             <select id="filePart' . $i . '"  name="filePart' . $i . '" >

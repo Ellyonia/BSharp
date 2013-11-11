@@ -37,7 +37,8 @@ $(document).ready(function(){
 	}
 
 	function otherOpt(val){
-	 var element=document.getElementById('oInstrumentFile');
+		var element = $('*[id*=oinstrumentFile]');
+	 //var element=document.getElementById('oInstrumentFile');
 	 if(val=='Other')
 	   element.style.display='block';
 	 else  
