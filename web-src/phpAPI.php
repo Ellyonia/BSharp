@@ -438,7 +438,6 @@ class phpAPI
 
     }
 
-//This pdf may not work i havent been able to test it yet so its probably really buggy
     public function displayPDF(){
         $bID = $_SESSION['bID'];
         $uID = $_SESSION['uid'];
@@ -463,6 +462,11 @@ class phpAPI
         $result = mysql_query($query);
         $temp = mysql_fetch_assoc($result);
         $part = $temp['part_id'];
+
+        $query = "SELECT directorFlag from BandsIn where band_id = $bID AND user_id = $uID";
+        $result = mysql_query($query);
+        $temp = mysql_fetch_assoc($result);
+        $isDir = $temp['directorFlag'];
 
 
         $fileLocation = "../Music/" . $bID . "/" . $pID . "/" . strtolower($instrument) . "_" . $part . ".pdf";
