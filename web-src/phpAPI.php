@@ -465,7 +465,7 @@ class phpAPI
         $part = $temp['part_id'];
 
 
-        $fileLocation = "../Music/" . $bID . "/" . $pID . "/" . $instrument . "_" . $part . ".pdf";
+        $fileLocation = "../Music/" . $bID . "/" . $pID . "/" . strtolower($instrument) . "_" . $part . ".pdf";
 
 
         //$instrument = "Piccolo";
@@ -649,7 +649,7 @@ class phpAPI
 
                     $fileName = $instruments[$i] . '_' . $parts[$i];
                     $fileName = str_replace(' ', '_', $fileName);
-                    rename($files[$i], '/var/www/DB-GUI/Music/' . $bID . '/'.$pID . '/' . $fileName . '.pdf');
+                    rename($files[$i], '/var/www/DB-GUI/Music/' . $bID . '/'.$pID . '/' . strtolower($fileName) . '.pdf');
                     $count++;
                 }
             }
