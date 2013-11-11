@@ -508,6 +508,7 @@ class phpAPI
 
         $pieceName = $_POST['pieceName'];
         $pieceName = mysql_real_escape_string($pieceName);
+        $_SESSION['pieceName'] = $pieceName;
 
         //$bandName = str_replace(' ', '\ ', $bandName);
 
@@ -528,7 +529,7 @@ class phpAPI
                 if (strlen($_FILES['files']['name'][$i]) > 1) {
                     echo "<li>";
                     echo "$name";
-                    echo '<select id="Instrument' . $i . '" name="Instrument' . $i . '" onchange="otherOpt(this.value);">
+                    echo '<select id="fileInstrument' . $i . '" name="fileInstrument' . $i . '" onchange="otherOpt(this.value);">
                               <option value="">Select an Instrument</option>
                               <optgroup label = "Woodwinds">
                                 <option value="Piccolo">Piccolo</option>
@@ -588,10 +589,10 @@ class phpAPI
                               
                             </select>
 
-                            <input type = "text" name="oInstrument' . $i . '"  id="Onstrument' . $i . '"  style="display:none;" />
+                            <input type = "text" name="oInstrumentFile' . $i . '"  id="oInstrumentFile' . $i . '"  style="display:none;" />
 
-                            <label for="part ' . $i . '">Choose the Part</label>
-                            <select id="part' . $i . '"  name="part' . $i . '" >
+                            <label for="filePart ' . $i . '">Choose the Part</label>
+                            <select id="filePart' . $i . '"  name="filePart' . $i . '" >
                               <option value="1">1</option>
                               <option value="2">2</option>
                               <option value="3">3</option>
@@ -609,14 +610,38 @@ class phpAPI
     }
 
     public function renameFiles(){
+        $bID = $_SESSION['bID'];
+        $pieceName = $_SESSION['pieceName'];
+
+        $instruments = array();
+        $parts = array();
+
+        $pID = mysql_query("SELECT piece_id from Pieces where piece_name = '$pieceName' AND band_id = $bID");
+        $pID = mysql_fetch_assoc($pID);
+        $pID = $pID['piece_id'];
+
+
 
         $count = 0;
         if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             foreach ($_FILES['files']['name'] as $i => $name) {
                 if (strlen($_FILES['files']['name'][$i]) > 1) {
-                    if (move_uploaded_file($_FILES['files']['tmp_name'][$i], '/var/www/DB-GUI/Music/' . $bID . '/'.$pID . '/' . $name)) {
+                    if($_POST['fileInstrument' . strval($i+1)] != ""){
+                        $instrument = $_POST['fileInstrument' . strval($i+1)];
+
+                        if($instrument != 'Other')
+                            array_push($instruments, $instrument);
+                        else
+                            array_push($instruments, $_POST['oInstrumentFile' . strval($i+1)]);
+
+                        array_push($parts, $_POST['filePart' . strval($i+1)]);
+
+                        $fileName = $instruments[$i] . '_' . $parts[$i];
+                        rename($_FILES['files']['tmp_name'][$i], '/var/www/DB-GUI/Music/' . $bID . '/'.$pID . '/' . $fileName . '.pdf');
                         $count++;
                     }
+
+
                 }
             }
         }
