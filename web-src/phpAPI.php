@@ -644,6 +644,7 @@ class phpAPI
                         array_push($parts, $_POST['filePart' . strval($i+1)]);
 
                         $fileName = $instruments[$i] . '_' . $parts[$i];
+                        $fileName = str_replace(' ', '_', $fileName);
                         rename($files[$i], '/var/www/DB-GUI/Music/' . $bID . '/'.$pID . '/' . $fileName . '.pdf');
                         $count++;
                     }
