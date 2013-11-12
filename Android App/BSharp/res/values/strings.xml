@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">B Sharp</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello wolrd</string>
+    <string name="title_activity_band_page">BandPage</string>
+    <string name="title_activity_song_page">SongPage</string>
+    <string name="username_field">Username</string>
+    <string name="password_field">Password</string>
+    <string name="login">Login</string>
+    <string name="welcome">Welcome to B Sharp</string>
+    
+     <string-array name="BandList">
+        <item>Mustang Band</item>
+        <item>Mustang String</item>
+        <item>Mustang Players</item>
+        <item>Mustang Rap Stars</item>
+        <item>Metal Mustangs</item>
+        <item>Super Awesome Band</item>
+        <item>Greatest and best Band Ever</item>
+        <item>Another Test Band</item>
+        <item>White</item>
+        <item>Grey</item>
+        <item>Aqua</item>
+        <item>Armadillo Yellow</item>
+        <item>Gold</item>
+        <item>Copper</item>
+        <item>Canary Yellow</item>
+        <item>Orange Red</item>
+        <item>Seafoam Green</item>
+        <item>Wildfire Red</item>
+        <item>Orange Julius</item>
+        <item>Eggshell White</item>
+        <item>Jungle Green</item>
+        <item>Smokey Black</item>
+        <item>Turtle Green</item>
+        <item>Olive Green</item>
+        <item>Fierce Purple</item>
+        <item>Cleveland Brown</item>
+        <item>Blue Green</item>
+    </string-array>
+    
+      <string-array name="SongList">
+        <item>GO Fight Win</item>
+        <item>The excelant song</item>
+        <item>Twinkle Twinkle Little Star</item>
+        <item>Wheels on the Bus</item>
+        <item>Mustang Ama Mater</item>
+        <item>Rocky Theme Song</item>
+        <item>Bird Music</item>
+        <item>Bagpipin music</item>
+        <item>Colt 45</item>
+        <item>Happy Birthday</item>
+        <item>Merry Christmas</item>
+        <item>THe Most Obnoxiously long song title that never seems to end. THis is to test something about listview</item>
+    </string-array>
+
+</resources>
