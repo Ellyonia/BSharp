@@ -4,7 +4,7 @@ Use BSharp;
 -- Inserting Dummy Users into Database
 -- -----------------------------------------------------
 
-INSERT INTO Users VALUES ("Kriss", "Linstromberg", 1, "cskulosson@gmail.com", "testpassword");
+INSERT INTO Users VALUES ("Kryss", "Linstromberg", 1, "csulosson@gmail.com", "testpassword");
 INSERT INTO Users VALUES ("Nick", "Morris", 2, "nmorris@smu.edu", "Herpderp");
 INSERT INTO Users VALUES ("Scooby", "Doo", 3, "ruhroh@hotmail.com", "RAAGYROHSTS");
 INSERT INTO Users VALUES ("Lara", "Croft", 4, "lcroft@gmail.eu", "archaeology");
