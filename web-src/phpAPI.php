@@ -144,7 +144,8 @@ class phpAPI
 		
 		if(!mysql_query($query))
 		{
-			header('Location: error.php');
+            echo "test";
+			//header('Location: error.php');
 		}
 		else
 		{
@@ -176,7 +177,7 @@ class phpAPI
 
         
 
-        
+
         while ($temp = mysql_fetch_assoc($query)) {
 
             $bName = $temp['band_name'];
