@@ -177,9 +177,19 @@ class phpAPI
 
 
         while ($temp = mysql_fetch_assoc($query)) {
+
             $bName = $temp['band_name'];
             $bName = mysql_real_escape_string($bName);
-            echo "<li><a href='band_page.php?id=" . $temp['band_id'] . "'>$bName</a></li>";
+
+            //checking
+            $isDir = isDir($temp['band_id'], $uid);
+
+            if($isDir == 0) {
+                echo "<li><img src='http://icons.iconarchive.com/icons/gakuseisean/radium/256/User-icon.png' class='isDirector'><a href='band_page.php?id=" . $temp['band_id'] . "'>$bName</a></li>";
+            }   
+            else {
+                echo "<li><img src='https://cdn1.iconfinder.com/data/icons/customicondesign-office6-shadow/256/wizard.png' class='isDirector'><a href='band_page.php?id=" . $temp['band_id'] . "'>$bName</a></li>";
+            }
 
         }
 
