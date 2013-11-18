@@ -241,8 +241,8 @@ img {
   /*display: none;*/
  }
 
- #pieces li {
-  display: block;
+ #pieces ul {
+  list-style-type: none;
  }
 
  #pieces li a {
