@@ -378,8 +378,7 @@ class phpAPI
         mysql_query($query);
         
         if(mysql_num_rows($result) == 0)
-            echo "test";
-        	//header("Location: error.php");
+        	header("Location: error.php");
     }
 
     public function getBandsAllowed() {
@@ -406,7 +405,8 @@ class phpAPI
         $bID = $_SESSION['bID'];
 
         if((array_search($bID, $_SESSION['allowed'])) < 1 || (array_search($bID, $_SESSION['allowed'])) == FALSE){
-            header('Location: error.php');
+            echo "test";
+            //header('Location: error.php');
         }
     }
 
