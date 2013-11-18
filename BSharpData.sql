@@ -21,7 +21,6 @@ INSERT INTO Users VALUES ("Guy","Cockrum", 9, "gcockrum@smu.edu", "cockrum");
 
 INSERT INTO Band VALUES (1, "Bagpipes Galore", "123-456-7890", "You must blow and squeeze the sack, and finger the chanter", " ");
 INSERT INTO Band VALUES (2, "Mustang Band", "456-798-5198", "NOTHING STOPS THE MUSTANG BAND", " ");
-INSERT INTO Band VALUES (3, "Mustang Strings", "789-785-5649", "hip hip Cheery HO", " ");
 
 
 -- -----------------------------------------------------
@@ -30,23 +29,14 @@ INSERT INTO Band VALUES (3, "Mustang Strings", "789-785-5649", "hip hip Cheery H
 
 INSERT INTO BandsIn VALUES (2, 8, "Tenor Sax", 2, 0);
 INSERT INTO BandsIn VALUES (2, 2, "Trombone", 2, 1);
-INSERT INTO BandsIn VALUES (3, 1, "Cello", 1, 0);
 INSERT INTO BandsIn VALUES (1, 2, "Bagpipe", 1, 0);
-INSERT INTO BandsIn VALUES (3, 2, "Violin", 1, 0);
 INSERT INTO BandsIn VALUES (1, 3, "Bagpipe", 1, 0);
-INSERT INTO BandsIn VALUES (3, 3, "Triangle", 1, 0);
 INSERT INTO BandsIn VALUES (1, 4, "Bagpipe", 1, 0);
-INSERT INTO BandsIn VALUES (3, 4, "Piccolo", 2, 0);
 INSERT INTO BandsIn VALUES (1, 5, "Bagpipe", 1, 0);
-INSERT INTO BandsIn VALUES (3, 5, "Flute", 1, 0);
 INSERT INTO BandsIn VALUES (1, 6, "Bagpipe", 1, 0);
-INSERT INTO BandsIn VALUES (3, 6, "Clarinet", 2, 0);
 INSERT INTO BandsIn VALUES (1, 7, "Bagpipe", 1, 0);
-INSERT INTO BandsIn VALUES (3, 7, "Timpani", 2, 1);
 INSERT INTO BandsIn VALUES (1, 8, "Bagpipe", 1, 1);
-INSERT INTO BandsIn VALUES (3, 8, "Snare Drum", 1, 0);
 INSERT INTO BandsIn VALUES (1, 9, "Snare Drum", 1, 0);
-INSERT INTO BandsIn VALUES (3, 9, "Claves", 3, 0);
 
 
 -- -----------------------------------------------------
@@ -59,7 +49,6 @@ INSERT INTO Pieces VALUES (3,"National Anthem(Armed Forces Edition)", 2);
 INSERT INTO Pieces VALUES (4,"Quickie Sheet(2010 Edition)", 2);
 INSERT INTO Pieces VALUES (5,"Shanty Town", 2);
 INSERT INTO Pieces VALUES (6, "Scotland the Brave", 1);
-INSERT INTO Pieces VALUES (7, "Devil Went Down to Georgia", 3);
 
 
 -- -----------------------------------------------------
