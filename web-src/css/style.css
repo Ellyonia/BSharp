@@ -241,6 +241,10 @@ img {
   /*display: none;*/
  }
 
+ #pieces {
+  float: left;
+ }
+
 #management {
   position: fixed;
   top: 30%;
