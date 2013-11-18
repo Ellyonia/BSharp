@@ -243,6 +243,7 @@ img {
 
  #pieces li {
   float: left;
+  display: block;
  }
 
 #management {
