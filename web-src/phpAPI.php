@@ -193,10 +193,10 @@ class phpAPI
             $dir = $newTemp['directorFlag'];
 
             if($dir == 0) {
-                echo "<li><img src='http://icons.iconarchive.com/icons/gakuseisean/radium/48/User-icon.png' class='isDirector'><a href='band_page.php?id=" . $temp['band_id'] . "'>$bName</a></li>";
+                echo "<li><img src='img/User-Icon.png' class='isDirector'><a href='band_page.php?id=" . $temp['band_id'] . "'>$bName</a></li>";
             }   
             else {
-                echo "<li><img src='https://cdn1.iconfinder.com/data/icons/customicondesign-office6-shadow/256/wizard.png' class='isDirector'><a href='band_page.php?id=" . $temp['band_id'] . "'>$bName</a></li>";
+                echo "<li><img src='img/wizard.png' class='isDirector'><a href='band_page.php?id=" . $temp['band_id'] . "'>$bName</a></li>";
             }
 
         }
