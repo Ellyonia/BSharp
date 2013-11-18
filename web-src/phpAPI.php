@@ -176,17 +176,15 @@ class phpAPI
 
         
 
-
+        
         while ($temp = mysql_fetch_assoc($query)) {
 
             $bName = $temp['band_name'];
             $bName = mysql_real_escape_string($bName);
 
             //checking
-            echo $temp['band_id'] . ' ' . $uid;
             $bid = $temp['band_id'];
 
-            echo "test";
             $newQ = "SELECT directorFlag from BandsIn where band_id = $bID AND user_id = $uID";
             $newResult = mysql_query($query);
             $newTemp = mysql_fetch_assoc($result);
