@@ -241,9 +241,12 @@ img {
   /*display: none;*/
  }
 
- #pieces ul {
-  float: left;
+ #pieces li {
   display: block;
+ }
+
+ #pieces li a {
+    float: left;
  }
 
 #management {
