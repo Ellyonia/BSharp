@@ -154,6 +154,7 @@ class phpAPI
             $bandIn = "INSERT Into BandsIn(band_id, user_id, directorFlag) values ($id, $uid, 1)";
 
             mysql_query($bandIn);
+            getBandsAllowed();
 			header("Location: band_page.php?id=" . $_SESSION['bID'] );
 		}
 		
@@ -187,7 +188,7 @@ class phpAPI
 
             $newQ = "SELECT directorFlag from BandsIn where band_id = $bID AND user_id = $uID";
             $newResult = mysql_query($query);
-            $newTemp = mysql_fetch_assoc($result);
+            $newTemp = mysql_fetch_assoc($newResult);
             $dir = $newTemp['directorFlag'];
 
             if($dir == 0) {
