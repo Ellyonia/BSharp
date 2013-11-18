@@ -144,8 +144,7 @@ class phpAPI
 		
 		if(!mysql_query($query))
 		{
-            echo "test";
-			//header('Location: error.php');
+			header('Location: error.php');
 		}
 		else
 		{
@@ -379,7 +378,8 @@ class phpAPI
         mysql_query($query);
         
         if(mysql_num_rows($result) == 0)
-        	header("Location: error.php");
+            echo "test";
+        	//header("Location: error.php");
     }
 
     public function getBandsAllowed() {
