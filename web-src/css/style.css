@@ -242,11 +242,12 @@ img {
  }
 
  #pieces ul {
-  list-style-type: none;
+  /*list-style-type: none;*/
  }
 
  #pieces li a {
     float: left;
+    display: block;
  }
 
 #management {
