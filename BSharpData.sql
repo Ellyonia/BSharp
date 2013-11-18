@@ -56,13 +56,13 @@ INSERT INTO Pieces VALUES (6, "Scotland the Brave", 1);
 -- -----------------------------------------------------
 
 INSERT INTO Part VALUES (1, "BSharp/Music/1/6/Scotland\ The\ Brave", 6, "Bagpipe");
-INSERT INTO Part VALUES (1, "BSharp/1/6/Music/Scotland\ The\ Brave", 6, "Snare Drum");
-INSERT INTO Part VALUES (2, "BSharp/2/1/Music/Varisty(2008\ Stuckey)", 1, "Tenor Sax");
-INSERT INTO Part VALUES (2, "BSharp/2/2/Music/Western\ Peruna", 2, "Tenor Sax");
-INSERT INTO Part VALUES (2, "BSharp/2/3/Music/National\ Anthem(Armed\ Forces\ Edition)", 3, "Tenor Sax");
-INSERT INTO Part VALUES (2, "BSharp/2/4/Music/Quickie\ Sheet(2010\ Edition)", 4, "Tenor Sax");
-INSERT INTO Part VALUES (2, "BSharp/2/5/Music/Shanty\ Town", 5, "Tenor Sax");
-INSERT INTO Part VALUES (2, "BSharp/2/1/Music/Varisty(2008\ Stuckey)", 1, "Trombone");
+INSERT INTO Part VALUES (1, "BSharp/Music/1/6/Scotland\ The\ Brave", 6, "Snare Drum");
+INSERT INTO Part VALUES (2, "BSharp/Music/2/1/Varisty(2008\ Stuckey)", 1, "Tenor Sax");
+INSERT INTO Part VALUES (2, "BSharp/Music/2/2/Western\ Peruna", 2, "Tenor Sax");
+INSERT INTO Part VALUES (2, "BSharp/Music/2/3/National\ Anthem(Armed\ Forces\ Edition)", 3, "Tenor Sax");
+INSERT INTO Part VALUES (2, "BSharp/Music/2/4/Quickie\ Sheet(2010\ Edition)", 4, "Tenor Sax");
+INSERT INTO Part VALUES (2, "BSharp/Music/2/5/Shanty\ Town", 5, "Tenor Sax");
+INSERT INTO Part VALUES (2, "BSharp/Music/2/1/Varisty(2008\ Stuckey)", 1, "Trombone");
 INSERT INTO Part VALUES (2, "BSharp/Music/2/2/Western\ Peruna", 2, "Trombone");
 INSERT INTO Part VALUES (2, "BSharp/Music/2/3/National\ Anthem(Armed\ Forces\ Edition)", 3, "Trombone");
 INSERT INTO Part VALUES (2, "BSharp/Music/2/4/Quickie\ Sheet(2010\ Edition)", 4, "Trombone");
