@@ -17,6 +17,7 @@ class phpAPI
     }
 
     public function isDir($bID, $uID){
+        echo "test";
         $query = "SELECT directorFlag from BandsIn where band_id = $bID AND user_id = $uID";
         $result = mysql_query($query);
         $temp = mysql_fetch_assoc($result);
@@ -192,8 +193,9 @@ class phpAPI
             $bName = mysql_real_escape_string($bName);
 
             //checking
-            echo $temp['band_id'] . ' ' . $uid  . '\n';
-            $dir = isDir($temp['band_id'], $uid);
+            echo $temp['band_id'] . ' ' . $uid;
+            $bid = $temp['band_id'];
+            $dir = isDir($bid, $uid);
 
             if($dir == 0) {
                 echo "<li><img src='http://icons.iconarchive.com/icons/gakuseisean/radium/48/User-icon.png' class='isDirector'><a href='band_page.php?id=" . $temp['band_id'] . "'>$bName</a></li>";
