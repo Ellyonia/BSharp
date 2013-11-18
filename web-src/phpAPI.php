@@ -193,7 +193,7 @@ class phpAPI
             //echo $dir;
 
             if($dir == 0) {
-                echo "<li><img src='img/User-icon.png' class='isDirector'><a href='band_page.php?id=" . $temp['band_id'] . "'>$bName</a></li>";
+                echo "<li><img src='img/User-icon.png' class='isDirector'><a href='band_page.php?id=" . $temp['band_id'] . "'>$dir, $bName</a></li>";
             }   
             else {
                 echo "<li><img src='img/wizard.png' class='isDirector'><a href='band_page.php?id=" . $temp['band_id'] .  "'>$dir, $bName</a></li>";
