@@ -16,6 +16,16 @@ class phpAPI
         or die("Unable to select database: " . mysql_error());
     }
 
+    public function isDir(int $bID, int $uID){
+        $query = "SELECT directorFlag from BandsIn where band_id = $bID AND user_id = $uID";
+        $result = mysql_query($query);
+        $temp = mysql_fetch_assoc($result);
+        $isDir = $temp['directorFlag'];
+        return $isDir;
+
+
+    }
+
 
     public function addUser()
     {   
@@ -671,15 +681,7 @@ class phpAPI
         header("Location: band_page.php?id=" . $_SESSION['bID'] );
     }
 
-    public function isDir(int $bID, int $uID){
-        $query = "SELECT directorFlag from BandsIn where band_id = $bID AND user_id = $uID";
-        $result = mysql_query($query);
-        $temp = mysql_fetch_assoc($result);
-        $isDir = $temp['directorFlag'];
-        return $isDir;
 
-
-    }
 
 
 }
