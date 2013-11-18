@@ -192,9 +192,9 @@ class phpAPI
             $bName = mysql_real_escape_string($bName);
 
             //checking
-            $isDir = isDir($temp['band_id'], $uid);
+            $dir = isDir($temp['band_id'], $uid);
 
-            if($isDir == 0) {
+            if($dir == 0) {
                 echo "<li><img src='http://icons.iconarchive.com/icons/gakuseisean/radium/48/User-icon.png' class='isDirector'><a href='band_page.php?id=" . $temp['band_id'] . "'>$bName</a></li>";
             }   
             else {
