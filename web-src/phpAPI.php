@@ -21,8 +21,8 @@ class phpAPI
         $query = "SELECT directorFlag from BandsIn where band_id = $bID AND user_id = $uID";
         $result = mysql_query($query);
         $temp = mysql_fetch_assoc($result);
-        $isDir = $temp['directorFlag'];
-        return $isDir;
+        $dir = $temp['directorFlag'];
+        return $dir;
 
 
     }
@@ -195,7 +195,7 @@ class phpAPI
             //checking
             echo $temp['band_id'] . ' ' . $uid;
             $bid = $temp['band_id'];
-            $dir = isDir($bid, $uid);
+            $dir = this->isDir($bid, $uid);
 
             if($dir == 0) {
                 echo "<li><img src='http://icons.iconarchive.com/icons/gakuseisean/radium/48/User-icon.png' class='isDirector'><a href='band_page.php?id=" . $temp['band_id'] . "'>$bName</a></li>";
