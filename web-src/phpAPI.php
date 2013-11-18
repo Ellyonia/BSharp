@@ -192,7 +192,7 @@ class phpAPI
             $bName = mysql_real_escape_string($bName);
 
             //checking
-            echo $temp['band_id'] . ' $uid' . '\n';
+            echo $temp['band_id'] . ' ' . $uid  . '\n';
             $dir = isDir($temp['band_id'], $uid);
 
             if($dir == 0) {
