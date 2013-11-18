@@ -154,7 +154,7 @@ class phpAPI
             $bandIn = "INSERT Into BandsIn(band_id, user_id, directorFlag) values ($id, $uid, 1)";
 
             mysql_query($bandIn);
-            getBandsAllowed();
+            $this->getBandsAllowed();
 			header("Location: band_page.php?id=" . $_SESSION['bID'] );
 		}
 		
