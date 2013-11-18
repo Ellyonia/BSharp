@@ -241,7 +241,7 @@ img {
   /*display: none;*/
  }
 
- #pieces {
+ #pieces li {
   float: left;
  }
 
