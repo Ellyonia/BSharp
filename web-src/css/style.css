@@ -1,3 +1,8 @@
+html {
+  background-image:url('http://ec2-54-200-98-78.us-west-2.compute.amazonaws.com/DB-GUI/web-src/img/gwbi.jpg');
+}
+
+
 /**********************************************
 CSS FOR index.php
 **********************************************/
@@ -234,6 +239,15 @@ img {
   box-shadow: 7px 7px 10px 2px #181860;
   border-radius: 5px 5px;
   /*display: none;*/
+ }
+
+ #pieces ul {
+  /*list-style-type: none;*/
+ }
+
+ #pieces li a {
+    float: left;
+    display: block;
  }
 
 #management {

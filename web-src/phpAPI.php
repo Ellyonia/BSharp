@@ -1,4 +1,4 @@
-<?
+<?php
 
 class phpAPI
 {
@@ -15,6 +15,7 @@ class phpAPI
         mysql_select_db("BSharp", $con)
         or die("Unable to select database: " . mysql_error());
     }
+
 
 
     public function addUser()
@@ -153,6 +154,7 @@ class phpAPI
             $bandIn = "INSERT Into BandsIn(band_id, user_id, directorFlag) values ($id, $uid, 1)";
 
             mysql_query($bandIn);
+            $this->getBandsAllowed();
 			header("Location: band_page.php?id=" . $_SESSION['bID'] );
 		}
 		
@@ -177,9 +179,25 @@ class phpAPI
 
 
         while ($temp = mysql_fetch_assoc($query)) {
+
             $bName = $temp['band_name'];
             $bName = mysql_real_escape_string($bName);
-            echo "<li><a href='band_page.php?id=" . $temp['band_id'] . "'>$bName</a></li>";
+
+            //checking
+            $bid = $temp['band_id'];
+
+            $newQ = "SELECT directorFlag from BandsIn where band_id = $bID AND user_id = $uID";
+            $newResult = mysql_query($newQ);
+            $newTemp = mysql_fetch_assoc($newResult);
+            $dir = $newTemp['directorFlag'];
+            //echo $dir;
+
+            if($dir == 0) {
+                echo "<li><img src='img/User-icon.png' class='isDirector'><a href='band_page.php?id=" . $temp['band_id'] . "'>$dir, $bName</a></li>";
+            }   
+            else {
+                echo "<li><img src='img/wizard.png' class='isDirector'><a href='band_page.php?id=" . $temp['band_id'] .  "'>$dir, $bName</a></li>";
+            }
 
         }
 
@@ -389,6 +407,7 @@ class phpAPI
         $bID = $_SESSION['bID'];
 
         if((array_search($bID, $_SESSION['allowed'])) < 1 || (array_search($bID, $_SESSION['allowed'])) == FALSE){
+            
             header('Location: error.php');
         }
     }
@@ -660,6 +679,10 @@ class phpAPI
         }
         header("Location: band_page.php?id=" . $_SESSION['bID'] );
     }
+
+
+
+
 }
 
 
