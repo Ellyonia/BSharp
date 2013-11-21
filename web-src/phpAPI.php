@@ -187,9 +187,10 @@ class phpAPI
             $bid = $temp['band_id'];
 
 
-            $newQ = "SELECT directorFlag from BandsIn where band_id = $bID AND user_id = $uID";
+            $newQ = "SELECT BandsIn.directorFlag from BandsIn where band_id = $bID AND user_id = $uID";
             $newResult = mysql_query($newQ);
             $newTemp = mysql_fetch_assoc($newResult);
+
             $dir = $newTemp['directorFlag'];
             echo $dir;
 
