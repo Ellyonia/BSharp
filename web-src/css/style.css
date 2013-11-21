@@ -101,6 +101,12 @@ CSS FOR user_page.php
   float: right;
 }
 
+img.isDirector {
+  float: left;
+  height: 15px;
+  width: auto;
+}
+
 /**********************************************
 CSS FOR band_page.php
 **********************************************/
