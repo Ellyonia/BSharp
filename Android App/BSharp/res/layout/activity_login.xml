@@ -15,18 +15,19 @@
         android:text="@string/welcome" />
 
     <EditText
-        android:id="@+id/username_field"
+        android:id="@+id/email_field"
         android:layout_width="match_parent"
         android:layout_height="42dp"
         android:layout_below="@id/welcome"
         android:ems="10"
-        android:hint="@string/username_field" />
+        android:hint="@string/username_field"
+        android:inputType="textEmailAddress" />"
 
     <EditText
         android:id="@+id/password_field"
         android:layout_width="match_parent"
         android:layout_height="42dp"
-        android:layout_below="@id/username_field"
+        android:layout_below="@id/email_field"
         android:ems="10"
         android:hint="@string/password_field"
         android:inputType="textPassword" />
