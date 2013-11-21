@@ -687,7 +687,6 @@ class phpAPI
         $isDir = $temp['directorFlag'];
 
 
-        echo "$isDir";
         if($isDir == 1)
             echo "<li><a href='#management' class='notselected'>Band Management</a></li>";
         else
