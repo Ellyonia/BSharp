@@ -173,7 +173,7 @@ class phpAPI
     public function getBands()
     {
         $uid = $_SESSION['uid'];
-        $query = mysql_query("SELECT Band.band_name, Band.band_id from BandsIn INNER JOIN Band ON BandsIn.band_id=Band.band_id where BandsIn.user_id = " . $_SESSION['uid']);
+        $query = mysql_query("SELECT Band.band_name, Band.band_id, BandsIn.directorFlag from BandsIn INNER JOIN Band ON BandsIn.band_id=Band.band_id where BandsIn.user_id = " . $_SESSION['uid']);
 
         
 
@@ -186,13 +186,15 @@ class phpAPI
             //checking
             $bid = $temp['band_id'];
 
+            $dir = $temp['directorFlag'];
 
+/*
             $newQ = "SELECT BandsIn.directorFlag from BandsIn where band_id = $bID AND user_id = $uID";
             $newResult = mysql_query($newQ);
             $newTemp = mysql_fetch_assoc($newResult);
 
             $dir = $newTemp['directorFlag'];
-            echo $dir;
+            echo $dir;*/
 
             if($dir == 0) {
                 echo "<li><img src='img/User-icon.png' class='isDirector'><a href='band_page.php?id=" . $temp['band_id'] . "'>$bid, $dir, $bName</a></li>";
