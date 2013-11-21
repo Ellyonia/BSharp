@@ -48,9 +48,14 @@
   			<li>
   				<a href="#pieces" class="notselected">Pieces</a>
   			</li>
-  			<li>
+  			
+          <?
+          $phpInit->ifDirGetManagement();
+          ?>
+          <!--
+        <li>
   				<a href="#management" class="notselected">Band Management</a>
-  			</li>
+  			</li> -->
   			<li>
   				<a href="#events" class="notselected">Upcoming Events</a>
   			</li>
@@ -115,11 +120,11 @@
 
 
 
-    <form method="post" action = "upload_file.php" name="upload" id="upload" enctype="multipart/form-data">
-        <input type="text" name = "pieceName" id="pieceName" placeholder = "Enter the Name of The Piece/Song" required/>
-        <input type="file" name="files[]" id="files" multiple="" directory="" webkitdirectory="" mozdirectory="">
-        <input class="button" type="submit" value="Upload" />
-    </form>
+      <form method="post" action = "upload_file.php" name="upload" id="upload" enctype="multipart/form-data">
+          <input type="text" name = "pieceName" id="pieceName" placeholder = "Enter the Name of The Piece/Song" required/>
+          <input type="file" name="files[]" id="files" multiple="" directory="" webkitdirectory="" mozdirectory="">
+          <input class="button" type="submit" value="Upload" />
+      </form>
 
 
       <form id = "addMembers" action = "addMembers.php" method = "post">

@@ -679,6 +679,22 @@ class phpAPI
     }
 
 
+    public function ifDirGetManagement() {
+        $bID = $_SESSION['bID'];
+
+        $query = mysql_query("SELECT directorFlag from BandsIn where band_id = $bID");
+        $temp = mysql_fetch_assoc($query);
+        $isDir = $temp['directorFlag'];
+
+
+        echo "$isDir";
+        if($isDir == 1)
+            echo "<li><a href='#management' class='notselected'>Band Management</a></li>";
+        else
+            return;
+    }
+
+
 
 
 }
