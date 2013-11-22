@@ -507,18 +507,57 @@ class phpAPI
         $temp = mysql_fetch_assoc($result);
         $bandName = mysql_real_escape_string($temp['band_name']);
 
+        $query2 = mysql_query("SELECT directorFlag from BandsIn where band_id = $bID");
+        $temp2 = mysql_fetch_assoc($query2);
+        $isDir = $temp2['directorFlag'];
 
 
 
 
-        $query = "SELECT piece_name from Pieces where band_id= $bID";
+
+        $query = "SELECT piece_name, piece_id from Pieces where band_id= $bID";
         $result = mysql_query($query);
 
         while($temp = mysql_fetch_assoc($result)){
             $piece = $temp['piece_name'];
+            $pieceID = $temp['piece_id'];
             $forURL = str_replace(' ', '%20', $piece);
-            echo "<li><a href=MusicDisplay.php?p=$forURL target='_blank'>$piece</a></li>";
+            if(!$isDir)
+                echo "<li><a href=MusicDisplay.php?p=$forURL target='_blank'>$piece</a></li>";
+            else
+                echo "<li><a href=../Music/$bID/$pieceID/>$piece</a></li>";
+                //echo "<li><a href=DirectorChoosePart.php?p=$piece target='_blank'>$piece</a></li>";
         }
+
+
+
+    }
+
+        public function showParts(){
+        $bID = $_SESSION['bID'];
+        $uID = $_SESSION['uid'];
+        $pID = $_GET['p'];
+
+        $query = "SELECT band_name from Band where band_id = $bID";
+        $result = mysql_query($query);
+        $temp = mysql_fetch_assoc($result);
+        $bandName = mysql_real_escape_string($temp['band_name']);
+
+
+
+
+
+
+
+        // $query = "SELECT part_name from Pieces where band_id= $bID";
+        // $result = mysql_query($query);
+
+        // while($temp = mysql_fetch_assoc($result)){
+        //     $piece = $temp['piece_name'];
+        //     $forURL = str_replace(' ', '%20', $piece);
+            
+        //     echo "<li><a href=MusicDisplay.php?p=$forURL target='_blank'>$piece</a></li>";
+        // }
 
 
 
