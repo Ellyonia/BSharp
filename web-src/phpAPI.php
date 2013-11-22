@@ -543,24 +543,6 @@ class phpAPI
         $temp = mysql_fetch_assoc($result);
         $bandName = mysql_real_escape_string($temp['band_name']);
 
-
-
-
-
-
-
-        // $query = "SELECT part_name from Pieces where band_id= $bID";
-        // $result = mysql_query($query);
-
-        // while($temp = mysql_fetch_assoc($result)){
-        //     $piece = $temp['piece_name'];
-        //     $forURL = str_replace(' ', '%20', $piece);
-            
-        //     echo "<li><a href=MusicDisplay.php?p=$forURL target='_blank'>$piece</a></li>";
-        // }
-
-
-
     }
 
     public function upload(){
@@ -730,6 +712,10 @@ class phpAPI
             echo "<li><a href='#management' class='notselected'>Band Management</a></li>";
         else
             return;
+    }
+
+    public function checkFacebook() {
+        
     }
 
 
