@@ -31,7 +31,8 @@ $(document).ready(function(){
   //Called when the user has authenticated with FB
   function testAPI() {
     FB.api('/me', function(response) {
-      var name = response.name;
+      var fname = response.first_name;
+      var lname = response.last_name;
       var email = response.email;
     });
   }
