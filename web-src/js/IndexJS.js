@@ -1,6 +1,40 @@
 $(document).ready(function(){
 	$('#signUp2').click(checkPass);
+	window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '501087379989764',  // Development
+//  appId      : '551756141566063',  // Production
+    status     : true,
+    cookie     : true, 
+    xfbml      : true  
+  });
+ 
+  FB.Event.subscribe('auth.authResponseChange', function(response) {
+    if (response.status === 'connected') {
+      testAPI();
+    } else if (response.status === 'not_authorized') {
+      FB.login();
+    } else {
+      FB.login();
+    }
+  });
+  };
 
+  (function(d){
+   var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+   if (d.getElementById(id)) {return;}
+   js = d.createElement('script'); js.id = id; js.async = true;
+   js.src = "//connect.facebook.net/en_US/all.js";
+   ref.parentNode.insertBefore(js, ref);
+  }(document));
+
+  //Called when the user has authenticated with FB
+  function testAPI() {
+    FB.api('/me', function(response) {
+      var name = response.name;
+      var email = response.email;
+    });
+  }
 
 });
 
