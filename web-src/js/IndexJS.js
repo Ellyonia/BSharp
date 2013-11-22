@@ -11,7 +11,13 @@ $(document).ready(function(){
  
   FB.Event.subscribe('auth.authResponseChange', function(response) {
     if (response.status === 'connected') {
-      testAPI();
+      FB.api('/me', function(response) {
+        $.ajax({
+        type: "POST",
+        url: "checkFacebook.php",
+        data: { "email":response.email, "fname":response.first_name, "lname":response.last_name },
+        });
+      });
     } else if (response.status === 'not_authorized') {
       FB.login();
     } else {
@@ -28,16 +34,8 @@ $(document).ready(function(){
    ref.parentNode.insertBefore(js, ref);
   }(document));
 
-  //Called when the user has authenticated with FB
-  function testAPI() {
-    FB.api('/me', function(response) {
-      var fname = response.first_name;
-      var lname = response.last_name;
-      var email = response.email;
-    });
-  }
-
-});
+  
+  });
 
 
 
