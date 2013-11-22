@@ -1,7 +1,7 @@
 BSharp
 ======
 
-Live Website at: 54.200.188.125
+Live Website at: www.bsharp.tk
 
 Cameron Keith - Ellyonia       		(Database)
 
