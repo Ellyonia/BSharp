@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('#signUp2').click(checkPass);
+	
 	window.fbAsyncInit = function() {
   FB.init({
     appId      : '501087379989764',  // Development
@@ -33,7 +33,7 @@ $(document).ready(function(){
    js.src = "//connect.facebook.net/en_US/all.js";
    ref.parentNode.insertBefore(js, ref);
   }(document));
-
+  $('#signUp2').click(checkPass);
   
   });
 
