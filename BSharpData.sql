@@ -9,7 +9,7 @@ INSERT INTO Users VALUES ("Nick", "Morris", 2, "nmorris@smu.edu", "Herpderp");
 INSERT INTO Users VALUES ("Scooby", "Doo", 3, "ruhroh@hotmail.com", "RAAGYROHSTS");
 INSERT INTO Users VALUES ("Lara", "Croft", 4, "lcroft@gmail.eu", "archaeology");
 INSERT INTO Users VALUES ("John", "Doe", 5, "anon@anon.anon", "WhoamI?");
-INSERT INTO Users VALUES ("Robert", "Stweart", 6, "rcstweart@smu.edu", "H3llyeah");
+INSERT INTO Users VALUES ("Robert", "Stewart", 6, "rcstewart@smu.edu", "H3llyeah");
 INSERT INTO Users VALUES ("Ryan", "Tanner", 7, "mithranor@gmail.com", "password");
 INSERT INTO Users VALUES ("Cameron", "Keith", 8, "ckeith@smu.edu", "hpcrew09");
 INSERT INTO Users VALUES ("Guy","Cockrum", 9, "gcockrum@smu.edu", "cockrum");
