@@ -60,7 +60,7 @@ Chris Linstromberg
     </form>
 
     <div class='info'>
-      <p>Some info about the site: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>We are a start up whose focus is to create a way for performing ensembles to digitially store their sheet music for ease of performers to access any sheet music they have lost.</p>
     </div>
 
     <div class="page">
