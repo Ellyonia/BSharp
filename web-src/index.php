@@ -46,7 +46,6 @@ Chris Linstromberg
   </head>
 
   <body>
-    <div id="fb-root"></div>
     <img src="img/logo.png" id = "ilogo" alt = "B Sharp Logo">
     <fb: login-button show-faces="true" width="200" max-rows="1"></fb: login-button>
     <form id="login" action = "validateUserLogin.php" method = "post">
