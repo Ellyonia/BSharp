@@ -46,7 +46,7 @@ Chris Linstromberg
   </head>
 
   <body>
-    <script type="text/javascript">
+    <script>
       window.fbAsyncInit = function() {
   FB.init({
     appId      : '501087379989764',  // Development
