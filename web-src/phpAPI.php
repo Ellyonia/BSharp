@@ -715,7 +715,12 @@ class phpAPI
     }
 
     public function checkFacebook() {
-        
+
+    }
+
+    public function testAndroid() {
+        echo "test";
+
     }
 
 
