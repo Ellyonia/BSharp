@@ -10,9 +10,18 @@ CSS FOR index.php
 #fbLogin {
 background: url('../images/facebooklogin.png');
 background-repeat: no-repeat;
+float: left;
 width: 87px;
 height: 21px;
 }
+
+#loginContainer {
+  float: right;
+  padding-top:.5%;
+  width: 50%;
+}
+
+
 
 #ilogo {
   position: absolute;

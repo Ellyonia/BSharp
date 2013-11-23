@@ -49,23 +49,26 @@ Chris Linstromberg
     <img src="img/logo.png" id = "ilogo" alt = "B Sharp Logo">
     
     <!-- Testing Facebook -->
-    <div id="fbbuttoncontainer">
-      <form action="user_page.php" method="POST">
-        <input type="submit" name="fb" id="fbLogin" value>
+    <div id="loginContainer">
+      <div id="fbbuttoncontainer">
+        <form action="user_page.php" method="POST">
+          <input type="submit" name="fb" id="fbLogin" value>
+        </form>
+      </div>
+
+      <!--<fb: login-button show-faces="true" width="200" max-rows="1"></fb: login-button>-->
+      <form id="login" action = "validateUserLogin.php" method = "post">
+          <div class="logEmail">
+              <label>Email: </label>
+              <input type="email" name = "email" id="email" required maxlength="45" placeholder="email@example.com" oninvalid="setCustomValidity('Please enter a valid email address')" onchange="try{setCustomValidity('')}catch(e){}"/>
+          </div>
+          <div class="logPass"> 
+              <label>Password:</label>
+              <input type="password" id="logPass" name = "password" maxlength="45" pattern = "[a-zA-Z0-9:.,?!@]{8,}" placeholder = "Password" oninvalid="setCustomValidity('Password must be greater than 8 characters')" onchange="try{setCustomValidity('')}catch(e){}" required/>
+              <input type="submit" value="Login" name="signIn" id="signIn" /> 
+          </div>
       </form>
     </div>
-    <fb: login-button show-faces="true" width="200" max-rows="1"></fb: login-button>
-    <form id="login" action = "validateUserLogin.php" method = "post">
-        <div class="logEmail">
-            <label>Email: </label>
-            <input type="email" name = "email" id="email" required maxlength="45" placeholder="email@example.com" oninvalid="setCustomValidity('Please enter a valid email address')" onchange="try{setCustomValidity('')}catch(e){}"/>
-        </div>
-        <div class="logPass"> 
-            <label>Password:</label>
-            <input type="password" id="logPass" name = "password" maxlength="45" pattern = "[a-zA-Z0-9:.,?!@]{8,}" placeholder = "Password" oninvalid="setCustomValidity('Password must be greater than 8 characters')" onchange="try{setCustomValidity('')}catch(e){}" required/>
-            <input type="submit" value="Login" name="signIn" id="signIn" /> 
-        </div>
-    </form>
 
     <div class='info'>
       <p>We are a start up whose focus is to create a way for performing ensembles to digitially store their sheet music for ease of performers to access any sheet music they have lost.</p>
