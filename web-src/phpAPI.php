@@ -720,7 +720,9 @@ class phpAPI
 
     public function testAndroid() {
         echo "test";
-        error_log("Some android stuff testing", 0);
+        error_log("A custom error has been triggered",
+            1,"mithranor@gmail.com","From: mithranor@gmail.com");
+            
 
     }
 
