@@ -47,6 +47,13 @@ Chris Linstromberg
 
   <body>
     <img src="img/logo.png" id = "ilogo" alt = "B Sharp Logo">
+    
+    <!-- Testing Facebook -->
+    <div id="fbbuttoncontainer">
+      <form action="user_page.php" method="POST">
+        <input type="submit" name="fb" id="fbLogin" value>
+      </form>
+    </div>
     <fb: login-button show-faces="true" width="200" max-rows="1"></fb: login-button>
     <form id="login" action = "validateUserLogin.php" method = "post">
         <div class="logEmail">

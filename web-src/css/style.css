@@ -6,6 +6,13 @@ html {
 /**********************************************
 CSS FOR index.php
 **********************************************/
+/*Testing Facebook*/
+#fbLogin {
+background: url('../images/facebooklogin.png');
+background-repeat: no-repeat;
+width: 87px;
+height: 21px;
+}
 
 #ilogo {
   position: absolute;
