@@ -718,25 +718,12 @@ class phpAPI
 
     }
 
-    public function testAndroid() {
+    public function androidLogin() {
         $user = $_POST['userName'];
         $pass = $_POST['password'];
-        //echo "$test";
+
         error_log("$user", 0);
         error_log("$pass", 0);
-
-
-
-
-
-        // String $testJson = '{"widget": {
-        //     "valid": "1",
-        //     "bands": [
-        //         { "id":"1"}, 
-        //         { "id":"3"}, 
-        //         { "id":"8"}
-        //     ]
-        //     }}';
 
 
         $email = mysql_real_escape_string($user);
@@ -763,12 +750,41 @@ class phpAPI
 
 
 
+        $return = array(
+            "valid" => $valid,
+            );
+        $bands['bands'] = array();
+
+
+
+        $uid = $valid;
+        if($uid != -1) {
+            $query = mysql_query("SELECT Band.band_name, Band.band_id, BandsIn.directorFlag from BandsIn INNER JOIN Band ON BandsIn.band_id=Band.band_id where BandsIn.user_id = " . $_SESSION['uid']);
+
         
 
 
-        $testing = array(
-            "valid" => $valid,
-            );
+            while ($temp = mysql_fetch_assoc($query)) {
+
+                $bName = $temp['band_name'];
+                $bName = mysql_real_escape_string($bName);
+
+                //checking
+                $bid = $temp['band_id'];
+
+                $temparr['id'] = $bid;
+                $temparr['name'] = $bName;
+
+                array_push($bands['bands'], $temparr);
+
+
+
+
+            }
+
+        }
+        $return = array_merge($return, $bands['bands']);
+
 
         // array(
         //         "band_id" => 1,
@@ -779,7 +795,7 @@ class phpAPI
         //                     'id': 1,
         //                     'bands': {
         //                         'bandIDs': [
-        //                             {'bid': 1},
+        //                             {'bid': 1, 'bandName': 'name'},
         //                             {'bid': 3}
         //                         ]
         //                     }
@@ -805,7 +821,7 @@ class phpAPI
         //     "projects" => "some other value"
         // );
 
-        echo json_encode($testing);
+        echo json_encode($return);
 
         return;
 
