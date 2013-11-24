@@ -714,8 +714,8 @@ class phpAPI
             return;
     }
 
-    public function checkFacebook() {
-
+    public function checkFacebook($email,$fname,$lname) {
+	echo "Working";
     }
 
     public function androidLogin() {
