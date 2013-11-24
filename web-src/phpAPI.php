@@ -719,8 +719,9 @@ class phpAPI
     }
 
     public function testAndroid() {
-        echo "test";
-        error_log("Some android stuff testing", 0);
+        $test = $_POST['userName'];
+        echo "$test";
+        error_log("$test", 0);
         return;
 
     }
