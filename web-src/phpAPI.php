@@ -758,32 +758,32 @@ class phpAPI
 
 
         $uid = $valid;
-        if($uid != -1) {
-            $query = mysql_query("SELECT Band.band_name, Band.band_id, BandsIn.directorFlag from BandsIn INNER JOIN Band ON BandsIn.band_id=Band.band_id where BandsIn.user_id = " . $uid);
+        // if($uid != -1) {
+        //     $query = mysql_query("SELECT Band.band_name, Band.band_id, BandsIn.directorFlag from BandsIn INNER JOIN Band ON BandsIn.band_id=Band.band_id where BandsIn.user_id = " . $uid);
 
         
 
 
-            while ($temp = mysql_fetch_assoc($query)) {
+        //     while ($temp = mysql_fetch_assoc($query)) {
 
-                $bName = $temp['band_name'];
-                $bName = mysql_real_escape_string($bName);
+        //         $bName = $temp['band_name'];
+        //         $bName = mysql_real_escape_string($bName);
 
-                //checking
-                $bid = $temp['band_id'];
+        //         //checking
+        //         $bid = $temp['band_id'];
 
-                $temparr['id'] = $bid;
-                $temparr['name'] = $bName;
+        //         $temparr['id'] = $bid;
+        //         $temparr['name'] = $bName;
 
-                array_push($bands['bands'], $temparr);
-
-
+        //         array_push($bands['bands'], $temparr);
 
 
-            }
 
-        }
-        $return = array_merge($return, $bands['bands']);
+
+        //     }
+
+        // }
+        // $return = array_merge($return, $bands['bands']);
 
 
         // array(
