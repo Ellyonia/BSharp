@@ -1,6 +1,13 @@
 <?
   include 'phpAPI.php';   
   $phpInit = new phpAPI();
+
+  try{
+    include_once "./facebook-php-sdk/src/facebook.php";
+  }
+  catch(Exception $o){
+      
+  }
   if (isset($_POST['fb'])) {
     // Get information from fb
     // Check database with fb information
