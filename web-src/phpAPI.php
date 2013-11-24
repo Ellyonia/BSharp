@@ -750,9 +750,6 @@ class phpAPI
 
 
 
-        
-
-
         $return = array(
             "valid" => $valid,
             );
