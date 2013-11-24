@@ -3,7 +3,7 @@
   $phpInit = new phpAPI();
 
   try{
-    include_once "./facebook-php-sdk/src/facebook.php";
+    require_once("./facebook-php-sdk/src/facebook.php");
   }
   catch(Exception $o){
       
