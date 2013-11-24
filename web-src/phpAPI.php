@@ -729,26 +729,25 @@ class phpAPI
 	validateFacebookUser($email);
     }
     
-    private function addFacebookUser($email,$fname,$lname) {
+    public function addFacebookUser($email,$fname,$lname) {
     	$query = "INSERT INTO Users(fname,lname,username,password) VALUES ('$fname','$lname','$email','narwhal')";
     	mysql_query($query);
     	return;
     }
     
-    private function validateFacebookUser($email) {
-        $password = 'narwhal';
+    public function validateFacebookUser($email) {
         
         $valid = 0;
 
        // $sql = "SELECT password, user_id FROM Users WHERE username = '$email'";
-        $sql = "SELECT * FROM Users where username = '$email' and password = '$password'";
+        $sql = "SELECT * FROM Users WHERE username = '$email'";
 
         $result = mysql_query($sql); /* or die(mysql_error());*/
 
         if(mysql_num_rows($result) > 0){
             
 
-            $getID = mysql_query("SELECT user_id from Users where username = '$email' and password = '$password'");
+            $getID = mysql_query("SELECT user_id FROM Users WHERE username = '$email'");
 
             $temp = mysql_fetch_assoc($getID);
             $_SESSION['uid'] = $temp['user_id'];
