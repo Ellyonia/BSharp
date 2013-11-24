@@ -719,11 +719,13 @@ class phpAPI
     }
 
     public function testAndroid() {
-        $test = $_POST['userName'];
-        $test2 = $_POST['password'];
+        $user = $_POST['userName'];
+        $pass = $_POST['password'];
         //echo "$test";
         error_log("$test", 0);
         error_log("$test2", 0);
+
+
 
 
 
@@ -736,44 +738,72 @@ class phpAPI
         //     ]
         //     }}';
 
+
+        $email = mysql_real_escape_string($user);
+        $password = mysql_real_escape_string($pass);
+        
+        $valid = 0;
+
+       // $sql = "SELECT password, user_id FROM Users WHERE username = '$email'";
+        $sql = "SELECT * FROM Users where username = '$email' and password = '$password'";
+
+        $result = mysql_query($sql); /* or die(mysql_error());*/
+
+        if(mysql_num_rows($result) > 0){
+            
+
+            $getID = mysql_query("SELECT user_id from Users where username = '$email' and password = '$password'");
+
+            $temp = mysql_fetch_assoc($getID);
+            $valid = $temp['user_id'];
+        }
+        else
+            $valid = -1;
+
+
+
+
+        
+
+
         $testing = array(
-            "valid" => 1,
+            "valid" => $valid,
             );
 
         // array(
         //         "band_id" => 1,
         //         "band_id" => 3)
 
-        $testJson = "{
-                        'user': {
-                            'id': 1,
-                            'bands': {
-                                'bandIDs': [
-                                    {'bid': 1},
-                                    {'bid': 3}
-                                ]
-                            }
-                        }
-                    }";
+        // $testJson = "{
+        //                 'user': {
+        //                     'id': 1,
+        //                     'bands': {
+        //                         'bandIDs': [
+        //                             {'bid': 1},
+        //                             {'bid': 3}
+        //                         ]
+        //                     }
+        //                 }
+        //             }";
 
-        $diffTest = '{"menu": {
-                          "id": "file",
-                          "value": "File",
-                          "popup": {
-                            "menuitem": [
-                              {"value": "New", "onclick": "CreateNewDoc()"},
-                              {"value": "Open", "onclick": "OpenDoc()"},
-                              {"value": "Close", "onclick": "CloseDoc()"}
-                            ]
-                          }
-                        }}';
+        // $diffTest = '{"menu": {
+        //                   "id": "file",
+        //                   "value": "File",
+        //                   "popup": {
+        //                     "menuitem": [
+        //                       {"value": "New", "onclick": "CreateNewDoc()"},
+        //                       {"value": "Open", "onclick": "OpenDoc()"},
+        //                       {"value": "Close", "onclick": "CloseDoc()"}
+        //                     ]
+        //                   }
+        //                 }}';
 
 
-        $results = array(
-            "result"   => "success",
-            "username" => "some username",
-            "projects" => "some other value"
-        );
+        // $results = array(
+        //     "result"   => "success",
+        //     "username" => "some username",
+        //     "projects" => "some other value"
+        // );
 
         echo json_encode($testing);
 
