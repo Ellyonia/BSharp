@@ -742,7 +742,7 @@ class phpAPI
         //         "band_id" => "1",
         //         "band_id" => "3");
 
-        $testJson = "{
+        $testJson = {
                         'user': {
                             'id': 1,
                             'bands': {
@@ -752,7 +752,7 @@ class phpAPI
                                 ]
                             }
                         }
-                    }";
+                    };
 
 
         $results = array(
