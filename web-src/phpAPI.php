@@ -720,8 +720,10 @@ class phpAPI
 
     public function testAndroid() {
         $test = $_POST['userName'];
+        $test2 = $_POST['password'];
         echo "$test";
         error_log("$test", 0);
+        error_log("$test2", 0);
         return;
 
     }
