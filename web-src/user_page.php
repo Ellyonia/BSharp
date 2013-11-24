@@ -19,7 +19,7 @@
     // initialize facebook
  $facebook = new Facebook(array(
         'appId' => 501087379989764,
-        'secret' => 90553cdeebdd0ca0027de916b6adcb86));
+        'secret' => '90553cdeebdd0ca0027de916b6adcb86'));
 
  $session = $facebook->getSession();
  if ($session) {
