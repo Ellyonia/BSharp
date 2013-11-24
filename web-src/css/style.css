@@ -11,7 +11,7 @@ CSS FOR index.php
 background: url('../images/facebooklogin.png');
 background-repeat: no-repeat;
 float: left;
-width: 10%;
+width: 12%;
 height: 21px;
 }
 
@@ -33,7 +33,7 @@ height: 21px;
 #login {
   float: right;
   font-size: 100%;
-  width: 90%;
+  width: 75%;
   padding-top: 0%;
 }
 
