@@ -7,6 +7,53 @@
     // If exists, set session.
     // else, add to database
     // then set session
+    APP_ID = "501087379989764"
+    APP_SECRET = "90553cdeebdd0ca0027de916b6adcb86"
+    // initialize facebook
+ $facebook = new Facebook(array(
+        'appId' => APP_ID,
+        'secret' => APP_SECRET));
+
+ $session = $facebook->getSession();
+ if ($session) {
+ try {
+    $fbme = $facebook->api('/me');
+  } catch (FacebookApiException $e) {
+    error_log($e);
+  }
+}
+else
+{
+  echo "You are NOT Logged in";
+}
+
+//getting the login page if not signned in
+if (!$fbme) {
+  $loginUrl = $facebook->getLoginUrl(array('canvas' => 1,
+                                      'fbconnect' => 0,
+                                      'req_perms' =>                   'email,user_birthday,publish_stream',
+                                      'next' => CANVAS_PAGE,
+                                      'cancel_url' => CANVAS_PAGE ));
+ echo '<fb:redirect url="' . $loginUrl . '" />';
+ } else {
+
+      // $fbme is valid i.e. user can access our app
+     echo "You can use this App";
+ }
+
+ // getting the profile data
+ $user_id = $fbme[id];
+ $name=$fbme['name'];
+ $first_name=$fbme['first_name'];
+ $last_name=$fbme['last_name'];
+ $facebook_url=$fbme['link'];
+ $location=$fbme['location']['name'];
+ $bio_info=$fbme['bio'];
+ $work_array=$fbme['work'];
+ $education_array=$fbme["education"];
+ $email=$fbme['email'];
+ $date_of_birth=$fbme['birthday'];
+ $_SESSION['uid'] = 2;
   }
   $phpInit->checkLoggedIn();
 
