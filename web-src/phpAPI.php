@@ -730,7 +730,7 @@ class phpAPI
     }
     
     private function addFacebookUser($email,$fname,$lname) {
-    	$query = "INSERT INTO Users(fname,lname,username,password) VALUES ('$fname','$lname','$email')";
+    	$query = "INSERT INTO Users(fname,lname,username,password) VALUES ('$fname','$lname','$email','narwhal')";
     	mysql_query($query);
     	return;
     }
