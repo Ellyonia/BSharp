@@ -51,7 +51,7 @@ Chris Linstromberg
     <!-- Testing Facebook -->
     <div id="loginContainer">
       <div id="fbbuttoncontainer">
-        <form action="user_page.php" method="POST">
+        <form action="checkFacebook.php" method="POST">
           <input type="submit" name="fb" id="fbLogin" value>
         </form>
       </div>
