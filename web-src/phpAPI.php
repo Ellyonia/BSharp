@@ -722,8 +722,8 @@ class phpAPI
         $user = $_POST['userName'];
         $pass = $_POST['password'];
         //echo "$test";
-        error_log("$test", 0);
-        error_log("$test2", 0);
+        error_log("$user", 0);
+        error_log("$pass", 0);
 
 
 
