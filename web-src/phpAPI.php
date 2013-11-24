@@ -533,15 +533,15 @@ class phpAPI
 
     }
 
-        public function showParts(){
-        $bID = $_SESSION['bID'];
-        $uID = $_SESSION['uid'];
-        $pID = $_GET['p'];
+    public function showParts(){
+    $bID = $_SESSION['bID'];
+    $uID = $_SESSION['uid'];
+    $pID = $_GET['p'];
 
-        $query = "SELECT band_name from Band where band_id = $bID";
-        $result = mysql_query($query);
-        $temp = mysql_fetch_assoc($result);
-        $bandName = mysql_real_escape_string($temp['band_name']);
+    $query = "SELECT band_name from Band where band_id = $bID";
+    $result = mysql_query($query);
+    $temp = mysql_fetch_assoc($result);
+    $bandName = mysql_real_escape_string($temp['band_name']);
 
     }
 
@@ -731,7 +731,6 @@ class phpAPI
         
         $valid = 0;
 
-       // $sql = "SELECT password, user_id FROM Users WHERE username = '$email'";
         $sql = "SELECT * FROM Users where username = '$email' and password = '$password'";
 
         $result = mysql_query($sql); /* or die(mysql_error());*/
@@ -786,45 +785,43 @@ class phpAPI
         $return = array_merge($return, $bands['bands']);
 
 
-        // array(
-        //         "band_id" => 1,
-        //         "band_id" => 3)
-
-        // $testJson = "{
-        //                 'user': {
-        //                     'id': 1,
-        //                     'bands': {
-        //                         'bandIDs': [
-        //                             {'bid': 1, 'bandName': 'name'},
-        //                             {'bid': 3}
-        //                         ]
-        //                     }
-        //                 }
-        //             }";
-
-        // $diffTest = '{"menu": {
-        //                   "id": "file",
-        //                   "value": "File",
-        //                   "popup": {
-        //                     "menuitem": [
-        //                       {"value": "New", "onclick": "CreateNewDoc()"},
-        //                       {"value": "Open", "onclick": "OpenDoc()"},
-        //                       {"value": "Close", "onclick": "CloseDoc()"}
-        //                     ]
-        //                   }
-        //                 }}';
-
-
-        // $results = array(
-        //     "result"   => "success",
-        //     "username" => "some username",
-        //     "projects" => "some other value"
-        // );
         error_log(json_encode($return), 0);
         echo json_encode($return);
 
         return;
 
+    }
+
+    public function androidParts(){
+        $uID = $_POST['user_id'];
+        $bID = $_POST['band_id'];
+
+        $pieces['pieces'] = array();
+
+
+        $query = "SELECT band_name from Band where band_id = $bID";
+        $result = mysql_query($query);
+        $temp = mysql_fetch_assoc($result);
+        $bandName = mysql_real_escape_string($temp['band_name']);
+
+
+
+        $query = "SELECT piece_name, piece_id from Pieces where band_id= $bID";
+        $result = mysql_query($query);
+
+        while($temp = mysql_fetch_assoc($result)){
+            $piece = $temp['piece_name'];
+            $pieceID = $temp['piece_id'];
+            $forURL = str_replace(' ', '%20', $piece);
+
+            $temparr['pieceName'] = $piece;
+            $temparr['pieceID'] = $pieceID;
+            $temparr['forURL'] = $forURL;
+
+            array_push($pieces['pieces'], $temparr);
+        }
+        error_log(json_encode($pieces), 0);
+        echo json_encode($pieces);
     }
 
 
