@@ -901,10 +901,7 @@ class phpAPI
 
         $fileLocation = "../Music/" . $bID . "/" . $pID . "/" . strtolower($instrument) . "_" . $part . ".pdf";
         
-        echo "$fileLocation";
-    
-
-
+        echo $fileLocation;
 
     }
 
