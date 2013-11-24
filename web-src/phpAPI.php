@@ -870,6 +870,44 @@ class phpAPI
     }
 
 
+    public function androidGetPDF() {
+
+        $uID = $_POST['userID'];
+        $bID = $_POST['bandID'];
+        $sID = $_POST['songID'];
+
+        error_log("$uID", 0);
+        error_log("$bID", 0);
+        error_log("$sID", 0);
+
+        $uID = (int)$uID;
+        $bID = (int)$bID;
+        $pID = (int)$sID;
+
+
+        $query = "SELECT instrument from BandsIn where band_id= $bID AND user_id = $uID";
+        $result = mysql_query($query);
+        $temp = mysql_fetch_assoc($result);
+        $instrument = $temp['instrument'];
+
+        $bandName = str_replace(' ', '%20', $bandName);
+        
+        $query = "SELECT part_id from BandsIn where band_id = $bID AND user_id = $uID";
+        $result = mysql_query($query);
+        $temp = mysql_fetch_assoc($result);
+        $part = $temp['part_id'];
+
+
+
+        $fileLocation = "../Music/" . $bID . "/" . $pID . "/" . strtolower($instrument) . "_" . $part . ".pdf";
+        
+        echo "$fileLocation";
+    }
+
+
+
+    }
+
 
 
 }
