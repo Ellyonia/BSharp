@@ -724,6 +724,33 @@ class phpAPI
         echo "$test";
         error_log("$test", 0);
         error_log("$test2", 0);
+
+
+
+        String $testJson = '{"widget": {
+            "valid": "1",
+            "bands": [
+                { "id":"1"}, 
+                { "id":"3"}, 
+                { "id":"8"}
+            ]
+            }}';
+
+        $testing = array(
+            "valid" => "1",
+            array(
+                "band_id" => "1",
+                "band_id" => "3"));
+
+
+        $results = array(
+            "result"   => "success",
+            "username" => "some username",
+            "projects" => "some other value"
+        );
+
+        echo json_encode($testing);
+
         return;
 
     }
