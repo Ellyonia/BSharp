@@ -719,7 +719,7 @@ class phpAPI
     }
 
     public function testAndroid() {
-        $test = $_POST['username'];
+        $test = $_POST['userName'];
         echo "$test";
         error_log("$test", 0);
         return;
