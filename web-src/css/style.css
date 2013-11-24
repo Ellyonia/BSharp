@@ -32,9 +32,11 @@ height: 21px;
 
 #login {
   float: right;
-  font-size: 85%;
-  width: 75%;
+  font-size: 84%;
+  width: 80%;
   padding-top: 0%;
+  padding-right: 1%;
+
 }
 
 .logEmail {
