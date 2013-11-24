@@ -1,3 +1,12 @@
+<?
+  include 'phpAPI.php';   
+  $phpInit = new phpAPI();
+
+  $phpInit->checkLoggedIn();
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
