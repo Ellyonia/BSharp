@@ -713,21 +713,6 @@ class phpAPI
         else
             return;
     }
-
-    public function checkFacebook($email,$fname,$lname) {
-	$email = mysql_real_escape_string($email);
-	$fname = mysql_real_escape_string($fname);
-	$lname = mysql_real_escape_string($lname);
-	
-	$query = "SELECT * FROM Users WHERE username='$email'";
-	
-	$result = mysql_query($query);
-	
-	if(mysql_num_rows($result) == 0)
-		addFacebookUser($email,$fname,$lname);
-	
-	validateFacebookUser($email);
-    }
     
     public function addFacebookUser($email,$fname,$lname) {
     	$query = "INSERT INTO Users(fname,lname,username,password) VALUES ('$fname','$lname','$email','narwhal')";
@@ -755,6 +740,21 @@ class phpAPI
 
             header('Location: user_page.php');
         }
+    }
+
+    public function checkFacebook($email,$fname,$lname) {
+	$email = mysql_real_escape_string($email);
+	$fname = mysql_real_escape_string($fname);
+	$lname = mysql_real_escape_string($lname);
+	
+	$query = "SELECT * FROM Users WHERE username='$email'";
+	
+	$result = mysql_query($query);
+	
+	if(mysql_num_rows($result) == 0)
+		addFacebookUser($email,$fname,$lname);
+	
+	validateFacebookUser($email);
     }
 
     public function androidLogin() {
