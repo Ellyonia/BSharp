@@ -1,5 +1,6 @@
 <?php
 	include 'phpAPI.php';
+	echo "Hello0";
 	include 'facebook.php';
 	echo "Hello1";
 	$phpInit = new phpAPI();
@@ -23,7 +24,7 @@
   		access_token => ''. getAccessToken() .'',
   		);
   		$logoutUrl = $facebook->getLogoutUrl($params);
-  		phpAPI->checkFacebook($user_profile['email'],$user_profile['first_name'],$user_profile['last_name']);
+  		phpInit->checkFacebook($user_profile['email'],$user_profile['first_name'],$user_profile['last_name']);
 	} else {  // User is not logged in
 		$params = array(
   		scope => 'email',
