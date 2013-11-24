@@ -24,7 +24,7 @@
   		access_token => ''. getAccessToken() .'',
   		);
   		$logoutUrl = $facebook->getLogoutUrl($params);
-  		$phpInit->checkFacebook($user_profile['email'],$user_profile['first_name'],$user_profile['last_name']);
+  		echo $phpInit->checkFacebook($user_profile['email'],$user_profile['first_name'],$user_profile['last_name']);
 	} else {  // User is not logged in
 		$params = array(
   		'scope' => 'email',
