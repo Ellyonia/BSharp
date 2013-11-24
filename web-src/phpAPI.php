@@ -744,11 +744,11 @@ class phpAPI
 
         $testJson = "{
                         'user': {
-                            'id': '1',
+                            'id': 1,
                             'bands': {
                                 'bandIDs': [
-                                    {'bid': '1'},
-                                    {'bid': '3'}
+                                    {'bid': 1},
+                                    {'bid': 3}
                                 ]
                             }
                         }
