@@ -759,7 +759,7 @@ class phpAPI
 
         $uid = $valid;
         if($uid != -1) {
-            $query = mysql_query("SELECT Band.band_name, Band.band_id, BandsIn.directorFlag from BandsIn INNER JOIN Band ON BandsIn.band_id=Band.band_id where BandsIn.user_id = " . $_SESSION['uid']);
+            $query = mysql_query("SELECT Band.band_name, Band.band_id, BandsIn.directorFlag from BandsIn INNER JOIN Band ON BandsIn.band_id=Band.band_id where BandsIn.user_id = " . $uid);
 
         
 
