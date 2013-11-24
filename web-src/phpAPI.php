@@ -890,7 +890,6 @@ class phpAPI
         $temp = mysql_fetch_assoc($result);
         $instrument = $temp['instrument'];
 
-        $bandName = str_replace(' ', '%20', $bandName);
         
         $query = "SELECT part_id from BandsIn where band_id = $bID AND user_id = $uID";
         $result = mysql_query($query);
