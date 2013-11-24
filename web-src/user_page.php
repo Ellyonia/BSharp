@@ -37,11 +37,14 @@ else
 
 //getting the login page if not signned in
 if (!$fbme) {
+  /*
   $loginUrl = $facebook->getLoginUrl(array('canvas' => 1,
                                       'fbconnect' => 0,
                                       'req_perms' =>                   'email,user_birthday,publish_stream',
                                       'next' => CANVAS_PAGE,
                                       'cancel_url' => CANVAS_PAGE ));
+                                      */
+  $loginUrl = $facebook->getLoginUrl(array(scope => 'email'));
  echo '<fb:redirect url="' . $loginUrl . '" />';
  } else {
 
