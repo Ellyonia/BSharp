@@ -752,9 +752,9 @@ class phpAPI
 	$result = mysql_query($query);
 	
 	if(mysql_num_rows($result) == 0)
-		addFacebookUser($email,$fname,$lname);
+		$this->addFacebookUser($email,$fname,$lname);
 	
-	validateFacebookUser($email);
+	$this->validateFacebookUser($email);
     }
 
     public function androidLogin() {
