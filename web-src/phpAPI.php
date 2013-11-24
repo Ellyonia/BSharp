@@ -736,11 +736,11 @@ class phpAPI
         //     ]
         //     }}';
 
-        $testing = 
-            "valid" => "1",
-            array(
-                "band_id" => "1",
-                "band_id" => "3");
+        // $testing = 
+        //     "valid" => "1",
+        //     array(
+        //         "band_id" => "1",
+        //         "band_id" => "3");
 
         $testJson = "{
                         'user': {
