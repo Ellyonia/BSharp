@@ -838,6 +838,9 @@ class phpAPI
         error_log("$uID", 0);
         error_log("$bID", 0);
 
+        $uID = (int)$uID;
+        $bID = (int)$bID;
+
         $pieces['pieces'] = array();
 
 
