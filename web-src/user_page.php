@@ -3,6 +3,9 @@
   $phpInit = new phpAPI();
 
   $phpInit->checkLoggedIn();
+  if (isset($_POST['fb'])) {
+    echo << "LESTSDKLFJL:DKJ F:LKDJF:LJERF:OIJEFK:LJSDKLFJSD:LKJFK:LSDJF";
+  }
 
 
 ?>
