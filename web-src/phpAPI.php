@@ -743,7 +743,7 @@ class phpAPI
         //         "band_id" => "3");
 
         $testJson = "{
-                        'user': [{
+                        'user': {
                             'id': 1,
                             'bands': {
                                 'bandIDs': [
@@ -751,7 +751,7 @@ class phpAPI
                                     {'bid': 3}
                                 ]
                             }
-                        }]
+                        }
                     }";
 
         $diffTest = '{"menu": {
