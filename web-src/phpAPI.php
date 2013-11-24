@@ -832,8 +832,8 @@ class phpAPI
     }
 
     public function androidParts(){
-        $uID = $_POST['user_id'];
-        $bID = $_POST['band_id'];
+        $uID = $_POST['userID'];
+        $bID = $_POST['bandID'];
 
         error_log("$uID", 0);
         error_log("$bID", 0);
