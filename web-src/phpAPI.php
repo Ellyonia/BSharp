@@ -898,8 +898,9 @@ class phpAPI
 
 
 
-        $fileLocation = "../Music/" . $bID . "/" . $pID . "/" . strtolower($instrument) . "_" . $part . ".pdf";
+        $fileLocation = "http://ec2-54-200-98-78.us-west-2.compute.amazonaws.com/DB-GUI/Music/" . $bID . "/" . $pID . "/" . strtolower($instrument) . "_" . $part . ".pdf";
         
+        error_log("$fileLocation", 0);
         echo $fileLocation;
 
     }
