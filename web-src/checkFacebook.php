@@ -22,7 +22,7 @@
     	if ($user) { // User is logged in successfully
     		echo "Hello6a";
 		$params = array (
-  		'access_token' => ''. $access_token .'',
+  		'access_token' => ''. $facebook->getAccessToken() .'',
   		);
   		$logoutUrl = $facebook->getLogoutUrl($params);
   		$phpInit->checkFacebook($user_profile['email'],$user_profile['first_name'],$user_profile['last_name']);
