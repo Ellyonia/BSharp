@@ -820,7 +820,7 @@ class phpAPI
         //     "username" => "some username",
         //     "projects" => "some other value"
         // );
-
+        error_log(json_encode($return), 0);
         echo json_encode($return);
 
         return;
