@@ -1,5 +1,6 @@
 <?php
 	include 'phpAPI.php';
+	echo "Hello0";
 	include 'facebook.php';
 	echo "Hello1";
 	$phpInit = new phpAPI();
