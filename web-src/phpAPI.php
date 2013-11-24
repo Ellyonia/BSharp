@@ -738,9 +738,11 @@ class phpAPI
 
         $testing = array(
             "valid" => 1,
-            array(
-                "band_id" => 1,
-                "band_id" => 3));
+            );
+
+        // array(
+        //         "band_id" => 1,
+        //         "band_id" => 3)
 
         $testJson = "{
                         'user': {
