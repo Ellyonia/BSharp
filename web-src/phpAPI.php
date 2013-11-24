@@ -773,7 +773,7 @@ class phpAPI
             "projects" => "some other value"
         );
 
-        echo json_decode($diffTest);
+        echo ($diffTest);
 
         return;
 
