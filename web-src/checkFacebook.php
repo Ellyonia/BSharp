@@ -20,12 +20,14 @@
     	}
     	echo "Hello5";
     	if ($user) { // User is logged in successfully
+    		echo "Hello6a";
 		$params = array (
   		access_token => ''. getAccessToken() .'',
   		);
   		$logoutUrl = $facebook->getLogoutUrl($params);
   		$phpInit->checkFacebook($user_profile['email'],$user_profile['first_name'],$user_profile['last_name']);
 	} else {  // User is not logged in
+		echo "Hello6b";
 		$params = array(
   		'scope' => 'email',
   		//redirect_uri => $url
