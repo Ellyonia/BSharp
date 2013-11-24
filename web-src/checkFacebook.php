@@ -30,7 +30,7 @@
 		echo "Hello6b";
 		$params = array(
   			'scope' => 'email',
-  			'redirect_uri' => "http://ec2-54-200-98-78.us-west-2.compute.amazonaws.com/DB-GUI/web-src/checkFacebook.php"
+  			//'redirect_uri' => "http://ec2-54-200-98-78.us-west-2.compute.amazonaws.com/DB-GUI/web-src/checkFacebook.php"
   			//'redirect_uri' => "http://www.bsharp.tk/DB-GUI/web_src/checkFacebook.php"
   			);
   		header('Location:'.$facebook->getLoginUrl($params));
