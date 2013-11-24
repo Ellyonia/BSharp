@@ -1,8 +1,6 @@
 <?
   include 'phpAPI.php';   
   $phpInit = new phpAPI();
-
-  $phpInit->checkLoggedIn();
   if (isset($_POST['fb'])) {
     // Get information from fb
     // Check database with fb information
@@ -10,6 +8,8 @@
     // else, add to database
     // then set session
   }
+  $phpInit->checkLoggedIn();
+
 
 
 ?>
