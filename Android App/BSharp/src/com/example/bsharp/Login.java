@@ -1,18 +1,27 @@
 package com.example.bsharp;
 
 import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.util.EntityUtils;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import android.app.Activity;
-import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -24,14 +33,7 @@ public class Login extends Activity {
 	EditText inputEmail;
 	EditText inputPassword;
 	Button login;
-
-	private static String KEY_SUCCESS = "success";
-	private static String KEY_UID = "uid";
-	private static String KEY_USERNAME = "uname";
-	private static String KEY_FIRSTNAME = "fname";
-	private static String KEY_LASTNAME = "lname";
-	private static String KEY_EMAIL = "email";
-	private static String KEY_CREATED_AT = "created_at";
+	String url = "http://ec2-54-200-98-78.us-west-2.compute.amazonaws.com/DB-GUI/web-src/AndroidLogin.php";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -52,8 +54,16 @@ public class Login extends Activity {
 
 				if ((!inputEmail.getText().toString().equals(""))
 						&& (!inputPassword.getText().toString().equals(""))) {
-					Intent i = new Intent(Login.this, BandPage.class);
-					 startActivity(i);
+					List<NameValuePair> pairs = new ArrayList<NameValuePair>(2);
+					ArrayList<String> p = new ArrayList<String>();
+					p.add(inputEmail.getText().toString());
+					p.add(inputPassword.getText().toString());
+					
+					pairs.add(new BasicNameValuePair("userName", inputEmail
+							.getText().toString()));
+					pairs.add(new BasicNameValuePair("password", inputPassword
+							.getText().toString()));
+					new UserCheck().execute(p);
 				} else if ((!inputEmail.getText().toString().equals(""))) {
 					Toast.makeText(getApplicationContext(),
 							"Password field empty", Toast.LENGTH_SHORT).show();
@@ -63,20 +73,11 @@ public class Login extends Activity {
 				} else {
 					Toast.makeText(getApplicationContext(),
 							"Email and Password field are empty",
-						 	Toast.LENGTH_SHORT).show();
+							Toast.LENGTH_SHORT).show();
 				}
 			}
 		});
 
-		/*
-		 * //Testing BandPage.java 
-		 * Intent i = new Intent(this, BandPage.class);
-		 * startActivity(i);
-		 */
-
-		// Testing SongPage.java
-		// Intent i = new Intent(this, SongPage.class);
-		// startActivity(i);
 	}
 
 	@Override
@@ -86,106 +87,105 @@ public class Login extends Activity {
 		return true;
 	}
 
-	private class NetCheck extends AsyncTask<String, Void, Boolean> {
-		private ProgressDialog nDialog;
+	private class UserCheck extends AsyncTask<ArrayList<String>, Void, String> {
 
-		@Override
-		protected void onPreExecute() {
-			super.onPreExecute();
-			nDialog = new ProgressDialog(Login.this);
-			nDialog.setTitle("Checking Network");
-			nDialog.setMessage("Loading..");
-			nDialog.setIndeterminate(false);
-			nDialog.setCancelable(true);
-			nDialog.show();
+		public UserCheck() {
+			// TODO Auto-generated constructor stub
 		}
 
 		@Override
-		protected Boolean doInBackground(String... args) {
+		protected String doInBackground(ArrayList<String>... credentials) {
 
-			/**
-			 * Gets current device state and checks for working internet
-			 * connection by trying Google.
-			 **/
-			ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-			NetworkInfo netInfo = cm.getActiveNetworkInfo();
-			if (netInfo != null && netInfo.isConnected()) {
-				try {
-					URL url = new URL("http://ec2-54-200-98-78.us-west-2.compute.amazonaws.com/DB-GUI/web-src/index.php");
-					HttpURLConnection urlc = (HttpURLConnection) url
-							.openConnection();
-					urlc.setConnectTimeout(3000);
-					urlc.connect();
-					if (urlc.getResponseCode() == 200) {
-						return true;
+			String result = "";
+			String[] bandName;
+			int[] bandID;
+
+			HttpClient httpclient = new DefaultHttpClient();
+			HttpPost httpPost = new HttpPost(url);
+
+			try {
+
+				String test = Integer.toString(credentials.length);
+				List<NameValuePair> pairs = new ArrayList<NameValuePair>(2);
+				Log.w("warning", test);
+				pairs.add(new BasicNameValuePair("userName", credentials[0]
+						.get(0)));
+				pairs.add(new BasicNameValuePair("password", credentials[0]
+						.get(1)));
+
+				httpPost.setEntity(new UrlEncodedFormEntity(pairs));
+
+				HttpResponse response = httpclient.execute(httpPost);
+				HttpEntity entity = response.getEntity();
+				if (null != entity) {
+					String json = EntityUtils.toString(response.getEntity());
+					JSONObject user = new JSONObject(json);
+					int valid = user.getInt("valid");
+
+					if (valid != -1) {
+
+						bandName = new String[user.length()];
+						bandID = new int[user.length()];
+
+						for (int i = 0; i < user.length() - 1; i++) {
+							JSONObject bandinfo = user.getJSONObject(Integer
+									.toString(i));
+							String bName = bandinfo.getString("name");
+							int bID = bandinfo.getInt("id");
+
+							// band = new Band(valid, bID, bName);
+							bandName[i] = bName;
+							bandID[i] = bID;
+
+							// Log.d("test", bName);
+
+						}
+
+						Intent i = new Intent(Login.this, BandPage.class);
+						Bundle b = new Bundle();
+
+						b.putStringArray("bName", bandName);
+						b.putIntArray("bID", bandID);
+						b.putInt("userID", valid);
+						i.putExtras(b);
+						startActivity(i);
 					}
-				} catch (MalformedURLException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+
+					else {
+						// onPostExecute();
+
+					}
+
+				} else {
+					Log.d("test", "no entity");
 				}
+
+			} catch (ClientProtocolException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
-			return false;
 
+			return result;
 		}
+		/*
+		 * protected void onPostExecute() {
+		 * Toast.makeText(getApplicationContext(),"Incorrect info",
+		 * Toast.LENGTH_SHORT).show(); Log.d("blah", "is this working"); }
+		 */
 
-//		@Override
-//		protected void onPostExecute(Boolean th) {
-//
-//			if (th == true) {
-//				nDialog.dismiss();
-//				new ProcessLogin().execute();
-//			} else {
-//				nDialog.dismiss();
-//				//loginErrorMsg.setText("Error in Network Connection");
-//			}
-//		}
+		/*
+		 * protected void onProgressUpdate(Integer... values) {
+		 * Toast.makeText(getApplicationContext(),"Incorrect info",
+		 * Toast.LENGTH_SHORT).show(); //super.onProgressUpdate(values);
+		 */
+		// }
+
 	}
-
-//	private class ProcessLogin extends AsyncTask<String, Void, JSONObject> {
-//
-//		private ProgressDialog pDialog;
-//
-//		String email, password;
-//
-//		@Override
-//		protected void onPreExecute() {
-//			super.onPreExecute();
-//
-//			inputEmail = (EditText) findViewById(R.id.email_field);
-//			inputPassword = (EditText) findViewById(R.id.email_field);
-//			email = inputEmail.getText().toString();
-//			password = inputPassword.getText().toString();
-//			pDialog = new ProgressDialog(Login.this);
-//			pDialog.setTitle("Contacting Servers");
-//			pDialog.setMessage("Logging in ...");
-//			pDialog.setIndeterminate(false);
-//			pDialog.setCancelable(true);
-//			pDialog.show();
-//		}
-//
-//		@Override
-//		protected JSONObject doInBackground(String... args) {
-////			return loadJSONFromNetwork(args[0]);
-////			//UserFunctions userFunction = new UserFunctions();
-////			JSONObject json = userFunction.loginUser(email, password);
-////			return json;
-//		}
-////
-////		@Override
-////		protected void onPostExecute(JSONObject json) {
-////			try {
-////				
-////			} catch (JSONException e) {
-////				e.printStackTrace();
-////			}
-////		}
-//	}
-//
-//	public void NetAsync(View view) {
-//		new NetCheck().execute();
-//	}
 
 }

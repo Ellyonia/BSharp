@@ -3,6 +3,8 @@
     package="com.example.bsharp"
     android:versionCode="1"
     android:versionName="1.0" >
+    
+    <uses-permission android:name="android.permission.INTERNET" /> 
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -30,6 +32,11 @@
             android:name="com.example.bsharp.SongPage"
             android:label="@string/title_activity_song_page" >
         </activity>
+        
+        
+        
     </application>
+    
+    
 
 </manifest>
