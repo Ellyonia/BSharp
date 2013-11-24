@@ -727,14 +727,14 @@ class phpAPI
 
 
 
-        String $testJson = '{"widget": {
-            "valid": "1",
-            "bands": [
-                { "id":"1"}, 
-                { "id":"3"}, 
-                { "id":"8"}
-            ]
-            }}';
+        // String $testJson = '{"widget": {
+        //     "valid": "1",
+        //     "bands": [
+        //         { "id":"1"}, 
+        //         { "id":"3"}, 
+        //         { "id":"8"}
+        //     ]
+        //     }}';
 
         $testing = array(
             "valid" => "1",
