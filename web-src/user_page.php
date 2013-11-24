@@ -4,7 +4,11 @@
 
   $phpInit->checkLoggedIn();
   if (isset($_POST['fb'])) {
-    
+    // Get information from fb
+    // Check database with fb information
+    // If exists, set session.
+    // else, add to database
+    // then set session
   }
 
 
