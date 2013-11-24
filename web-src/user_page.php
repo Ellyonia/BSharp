@@ -66,7 +66,9 @@ if (!$fbme) {
  $date_of_birth=$fbme['birthday'];
  $_SESSION['uid'] = 2;
   }
+  else {
   $phpInit->checkLoggedIn();
+  }
 
 
 
