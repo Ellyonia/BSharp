@@ -7,12 +7,12 @@
     // If exists, set session.
     // else, add to database
     // then set session
-    APP_ID = "501087379989764"
-    APP_SECRET = "90553cdeebdd0ca0027de916b6adcb86"
+    //APP_ID = "501087379989764"
+    //APP_SECRET = "90553cdeebdd0ca0027de916b6adcb86"
     // initialize facebook
  $facebook = new Facebook(array(
-        'appId' => APP_ID,
-        'secret' => APP_SECRET));
+        'appId' => "501087379989764",
+        'secret' => "90553cdeebdd0ca0027de916b6adcb86"));
 
  $session = $facebook->getSession();
  if ($session) {
