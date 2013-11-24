@@ -736,11 +736,23 @@ class phpAPI
         //     ]
         //     }}';
 
-        $testing = array(
+        $testing = 
             "valid" => "1",
             array(
                 "band_id" => "1",
-                "band_id" => "3"));
+                "band_id" => "3");
+
+        $testJson = "{
+                        'user': {
+                            'id': '1',
+                            'bands': {
+                                'bandIDs': [
+                                    {'bid': '1'},
+                                    {'bid': '3'}
+                                ]
+                            }
+                        }
+                    }";
 
 
         $results = array(
@@ -749,7 +761,7 @@ class phpAPI
             "projects" => "some other value"
         );
 
-        echo json_encode($testing);
+        echo ($testJson);
 
         return;
 
