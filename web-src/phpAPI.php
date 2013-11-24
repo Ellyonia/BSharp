@@ -835,6 +835,9 @@ class phpAPI
         $uID = $_POST['user_id'];
         $bID = $_POST['band_id'];
 
+        error_log("$uID", 0);
+        error_log("$bID", 0);
+
         $pieces['pieces'] = array();
 
 
