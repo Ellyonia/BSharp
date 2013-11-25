@@ -91,10 +91,10 @@ Chris Linstromberg
             </li>
 
             <li>
-                <input type="password" maxlength="45" id="newPassword" name = "newPassword" pattern = "[a-zA-Z0-9:.,?!@]{8,}" placeholder = "Password" oninvalid="setCustomValidity('Password must be greater than 8 characters')" onchange="try{setCustomValidity('')}catch(e){}" required/>
+                <input type="password" maxlength="45" id="newPassword" name = "newPassword" pattern = "{8,}" placeholder = "Password" oninvalid="setCustomValidity('Password must be greater than 8 characters')" onchange="try{setCustomValidity('')}catch(e){}" required/>
             </li>
             <li>
-                <input type="password" maxlength="45" id="reTypePass" name = "reTypePass" pattern = "[a-zA-Z0-9:.,?!@]{8,}" placeholder = "Re-Type Password" oninvalid="setCustomValidity('Password must be the same as above and be greater than 8 characters')" onchange="try{setCustomValidity('')}catch(e){}" required/>
+                <input type="password" maxlength="45" id="reTypePass" name = "reTypePass" pattern = "{8,}" placeholder = "Re-Type Password" oninvalid="setCustomValidity('Password must be the same as above and be greater than 8 characters')" onchange="try{setCustomValidity('')}catch(e){}" required/>
             </li>
         </ul>
                 <input type="submit" value="Sign Up" id="signUp" name = "signUp" />
