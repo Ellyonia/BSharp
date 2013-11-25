@@ -64,7 +64,7 @@ Chris Linstromberg
           </div>
           <div class="logPass"> 
               <label>Password:</label>
-              <input type="password" id="logPass" name = "password" maxlength="45" pattern = "[a-zA-Z0-9:.,?!@]{8,}" placeholder = "Password" oninvalid="setCustomValidity('Password must be greater than 8 characters')" onchange="try{setCustomValidity('')}catch(e){}" required/>
+              <input type="password" id="logPass" name = "password" maxlength="45" pattern = "{8,}" placeholder = "Password" oninvalid="setCustomValidity('Password must be greater than 8 characters')" onchange="try{setCustomValidity('')}catch(e){}" required/>
               <input type="submit" value="Login" name="signIn" id="signIn" /> 
           </div>
       </form>
