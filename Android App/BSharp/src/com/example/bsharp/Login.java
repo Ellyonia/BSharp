@@ -33,7 +33,7 @@ public class Login extends Activity {
 	EditText inputEmail;
 	EditText inputPassword;
 	Button login;
-	String url = "http://ec2-54-200-98-78.us-west-2.compute.amazonaws.com/DB-GUI/web-src/AndroidLogin.php";
+	String url = "www.bsharp.tk/BSharp/web-src/AndroidLogin.php";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

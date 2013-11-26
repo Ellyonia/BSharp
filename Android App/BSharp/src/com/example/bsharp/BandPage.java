@@ -31,8 +31,8 @@ import android.widget.ListView;
 
 public class BandPage extends ListActivity {
 
-	String url = "http://ec2-54-200-98-78.us-west-2.compute.amazonaws.com/DB-GUI/web-src/getAndroidParts.php";
-
+	//String url = "http://ec2-54-200-98-78.us-west-2.compute.amazonaws.com/DB-GUI/web-src/getAndroidParts.php";
+	String url = "www.bsharp.tk/BSharp/web-src/getAndroidParts.php";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
