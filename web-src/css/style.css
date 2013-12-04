@@ -388,22 +388,22 @@ img {
   padding-bottom: 20px;
 }
 
-.changeInfo {
+#changeInfo {
   display: block;
 margin-top: 0em;
-display: none;
-}
-
-.changeEvents {
 
 }
 
-.addMembers {
-
+#changeEvents {
+/*visibility: hidden;*/
 }
 
-.editPhone {
+#addMembers {
+/*visibility: hidden;*/
+}
 
+#editPhone {
+/*visibility: hidden;*/
 }
 
 /**********************************************

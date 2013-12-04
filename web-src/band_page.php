@@ -104,21 +104,21 @@
       <span id="navbar2">
       <ul>
         <li class="selected">
-          <a href="" class="selected notselected">Edit the About Band Information</a>
+          <a href="#changeInfo" class="selected notselected">Edit the About Band Information</a>
         </li>
         <li>
-          <a href="" class="notselected">Edit Upcoming Events</a>
+          <a href="#changeEvents" class="notselected">Edit Upcoming Events</a>
         </li>
         <li>
-          <a href="#events" class="notselected">Add Band Members</a>
+          <a href="#addMembers" class="notselected">Add Band Members</a>
         </li>
         <li>
-          <a href="#members" class="notselected">Edit Band Phone Number</a>
+          <a href="#editPhone" class="notselected">Edit Band Phone Number</a>
         </li>
       </ul>
     </span>
       <h2>Manage Band</h2>
-      <form id="changeInfo" action = "changeAbout.php" method = "post">
+      <form id="changeInfo" action = "changeAbout.php" method = "post" class ="visible2">
         <h3>Edit the About Band Information</h3>
           <textArea rows="4" cols="50" id="newInfo" name = "newInfo"/><?$phpInit->getBandInfo();?></textarea>
 
@@ -126,7 +126,7 @@
 
       </form>
 
-      <form id="changeEvents" action = "changeEvents.php" method = "post">
+      <form id="changeEvents" action = "changeEvents.php" method = "post" class ="hidden2">
         <h3>Edit the Upcoming Events</h3>
           <textArea rows="4" cols="50" id="changeEvents" name = "changeEvents"/><?$phpInit->getEventsForEdit(); ?></textarea>
 
@@ -143,7 +143,7 @@
       </form>
 
 
-      <form id = "addMembers" action = "addMembers.php" method = "post">
+      <form id = "addMembers" action = "addMembers.php" method = "post" class ="hidden2">
         <h3>Add Band Members by Entering their Email Addresses</h3>
 
         <ul class = "NewMembers">
@@ -902,7 +902,7 @@
         <input type="submit" name="addButton" id="addButton" value="Add Members"/>
       </form>
 
-      <form id = "editPhone" name = "editPhone" action = "changePhone.php" method = "post">
+      <form id = "editPhone" name = "editPhone" action = "changePhone.php" method = "post" class ="hidden2">
         <h3>Edit the Band's Phone Number</h3>
         <input type="text" placeholder="Telephone Number" id="changePhone" name = "changePhone" pattern = "[0-9]{10}" oninvalid="setCustomValidity('Phone number must be 10 characters, only numbers')" onchange="try{setCustomValidity('')}catch(e){}" required/>
         <input type="submit" name="submitPhone" id="submitPhone" value="Change Phone Number"/>
