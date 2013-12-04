@@ -20,11 +20,29 @@ $(document).ready(function(){
 		}
 	});
 
-
-
+});
+	$('#navbar2 li').click(function(e){
+		//console.log(e.target);
+		//e.prevenDefault();
+		var makeVis = $(e.target).first().attr('href');
+		if(typeof makeVis === 'undefined'){
+			makeVis = $(e.target).children().first().attr('href');
+		}
+		$('.visible2').addClass('hidden2');
+		$('.visible2').removeClass('visible2');
+		//$('.selected').css({"background-color": "#181818"});
+		$.when($('.selected').removeClass('selected')).done(function(){
+		$(makeVis).addClass('visible2');
+		$(e.target).addClass('selected');
+		if ($(e.target).children().length > 0 ) {
+			$(e.target).children().addClass('selected');
+		}
+		else {
+			$(e.target).parent().addClass('selected');
+		}
+	});
 
 });
-
 
 });
 
