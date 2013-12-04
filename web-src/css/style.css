@@ -99,7 +99,7 @@ CSS FOR user_page.php
 
 .bands h2 {
   padding-left: 3%;
-  padding-top: 2%;
+  
 }
 
 .bands a {
@@ -177,11 +177,11 @@ h1 {
 }
 
 #navbar2 {
- position: fixed;
+ position: absolute;
 width: 96%;
-left: 15%;
+left: -1.5%;
 margin-left: 1%;
-top: 30%;
+top: 17%;
 border-radius: 5px 5px;
 }
 
