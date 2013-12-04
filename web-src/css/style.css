@@ -86,7 +86,7 @@ CSS FOR user_page.php
 .bands {
   position: absolute;
   color: #b78727;
-  background-color: #181818;
+  background-color: #484848;
   width: 600px;
   height: 70%;
   top: 20%;
@@ -99,7 +99,7 @@ CSS FOR user_page.php
 
 .bands h2 {
   padding-left: 3%;
-  padding-top: 2%;
+  
 }
 
 .bands a {
@@ -157,27 +157,13 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   height: 10%;
-  background: #181818;
-  box-shadow: 7px 7px 10px 2px #181860;
-  border-radius: 5px 5px;
-}
-
-#navbar2 {
-  position: fixed;
-  width: 96%;
-  left: 2%;
-  right: 2%;
-  top: 15%;
-  margin-left: auto;
-  margin-right: auto;
-  height: 10%;
-  background: #181818;
+  background: #484848;
   box-shadow: 7px 7px 10px 2px #181860;
   border-radius: 5px 5px;
 }
 
 #navbar ul {
-  color: #181818;
+  color: #484848;
   list-style: none;
   margin: 0px;
   padding: 1em;
@@ -190,12 +176,37 @@ h1 {
   height: 35px;
 }
 
+#navbar2 {
+ position: absolute;
+width: 96%;
+left: -1.5%;
+margin-left: 1%;
+top: 17%;
+border-radius: 5px 5px;
+}
+
+#navbar2 ul {
+  color: #484848;
+  list-style: none;
+  margin: 0px;
+  padding: 1em;
+  font-size: 20px;
+}
+
+#navbar2 li {
+  float: left;
+  margin-right: 52px;
+  height: 35px;
+}
+
+
+
 /*#navbar li a {
   color: pink;
 }*/
 
 #navbar li a:link {
-  background-color: #181818;
+  background-color: #484848;
   color: #b78727;
   text-decoration: none;
   margin-top: -5px;
@@ -221,7 +232,7 @@ img {
   position: fixed;
   left: 2%;
   color: #b78727;
-  background-color: #181818;
+  background-color: #484848;
   top: 30%;
   width: 160px;
   padding-left: 1%;
@@ -258,7 +269,7 @@ img {
   padding-left: 1%;
   font-size: 30px;
   overflow: auto;
-  background-color: #181818;
+  background-color: #484848;
   box-shadow: 7px 7px 10px 2px #181860;
   border-radius: 5px 5px;
   /*display: none;*/
@@ -273,7 +284,7 @@ img {
   padding-left: 1%;
   font-size: 30px;
   overflow: auto;
-  background-color: #181818;
+  background-color: #484848;
   box-shadow: 7px 7px 10px 2px #181860;
   border-radius: 5px 5px;
   /*display: none;*/
@@ -297,7 +308,7 @@ img {
   padding-left: 1%;
   font-size: 30px;
   overflow: auto;
-  background-color: #181818;
+  background-color: #484848;
   box-shadow: 7px 7px 10px 2px #181860;
   border-radius: 5px 5px;
   /*display: none;*/
@@ -312,7 +323,7 @@ img {
   padding-left: 1%;
   font-size: 30px;
   overflow: auto;
-  background-color: #181818;
+  background-color: #484848;
   box-shadow: 7px 7px 10px 2px #181860;
   border-radius: 5px 5px;
   /*display: none;*/
@@ -327,7 +338,7 @@ img {
   padding-left: 1%;
   font-size: 30px;
   overflow: auto;
-  background-color: #181818;
+  background-color: #484848;
   box-shadow: 7px 7px 10px 2px #181860;
   border-radius: 5px 5px;
   /*display: none;*/
@@ -342,7 +353,7 @@ img {
   padding-left: 1%;
   font-size: 30px;
   overflow: auto;
-  background-color: #181818;
+  background-color: #484848;
   box-shadow: 7px 7px 10px 2px #181860;
   border-radius: 5px 5px;
   /*display: none;*/
@@ -356,17 +367,41 @@ img {
   display: block !important;
 }
 
+.hidden2 {
+  display: none !important;
+}
+
+.visible2 {
+  display: block !important;
+}
+
 .selected {
   background-color: #181860 !important;
   height: 10% !important;
 }
 
 .notselected{
-  background-color: #181818;
+  background-color: #484848;
 }
 
 #editPhone {
   padding-bottom: 20px;
+}
+
+.changeInfo {
+
+}
+
+.changeEvents {
+
+}
+
+.addMembers {
+
+}
+
+.editPhone {
+
 }
 
 /**********************************************
