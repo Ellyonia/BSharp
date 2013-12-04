@@ -389,7 +389,9 @@ img {
 }
 
 .changeInfo {
-
+  display: block;
+margin-top: 0em;
+display: none;
 }
 
 .changeEvents {
