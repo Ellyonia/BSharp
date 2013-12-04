@@ -6,6 +6,7 @@
 	    <script type="text/javascript" src='js/IndexJS.js'></script>
   	</head>
 <body>
+	<a href='index.php'>Home</a>
 <h2>
 Your passwords didn't match each other...
 </h2>
