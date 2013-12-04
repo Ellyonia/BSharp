@@ -529,8 +529,6 @@ class phpAPI
                 //echo "<li><a href=DirectorChoosePart.php?p=$piece target='_blank'>$piece</a></li>";
         }
 
-
-
     }
 
     public function showParts(){
@@ -707,6 +705,7 @@ class phpAPI
         $temp = mysql_fetch_assoc($query);
         $isDir = $temp['directorFlag'];
 
+        echo $isDir;
 
         if($isDir == 1)
             echo "<li><a href='#management' class='notselected'>Band Management</a></li>";
