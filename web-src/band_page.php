@@ -40,7 +40,7 @@
       ?></h1>
     <img src="img/logo.png" id = "logo" alt = "B Sharp Logo" title="test">
     <a href="logout.php">Log Out</a>
-  	<span id="navbar">
+  	<span class="navbar">
   		<ul>
   			<li class="selected">
   				<a href="#about" class="selected notselected">About Band</a>
@@ -101,7 +101,7 @@
   	</div>
 
   	<div id="management" class="hidden">
-      <span id="navbar2">
+      <span class="navbar">
       <ul>
         <li class="selected">
           <a href="" class="selected notselected">Edit the About Band Information</a>
