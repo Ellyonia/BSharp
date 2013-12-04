@@ -177,17 +177,12 @@ h1 {
 }
 
 #navbar2 {
-  position: fixed;
-  width: 96%;
-  left: 2%;
-  right: 2%;
-  top: 15%;
-  margin-left: auto;
-  margin-right: auto;
-  height: 10%;
-  background: #484848;
-  box-shadow: 7px 7px 10px 2px #181860;
-  border-radius: 5px 5px;
+ position: fixed;
+width: 96%;
+left: 15%;
+margin-left: 1%;
+top: 30%;
+border-radius: 5px 5px;
 }
 
 #navbar2 ul {
