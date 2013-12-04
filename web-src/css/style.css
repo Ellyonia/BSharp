@@ -367,6 +367,14 @@ img {
   display: block !important;
 }
 
+.hidden2 {
+  display: none !important;
+}
+
+.visible2 {
+  display: block !important;
+}
+
 .selected {
   background-color: #181860 !important;
   height: 10% !important;
@@ -378,6 +386,22 @@ img {
 
 #editPhone {
   padding-bottom: 20px;
+}
+
+.changeInfo {
+
+}
+
+.changeEvents {
+
+}
+
+.addMembers {
+
+}
+
+.editPhone {
+
 }
 
 /**********************************************
