@@ -112,6 +112,9 @@
         <li>
           <a href="#addMembers" class="notselected">Add Band Members</a>
         </li>
+         <li>
+          <a href="#upload" class="notselected">Add Pieces</a>
+        </li>
         <li>
           <a href="#editPhone" class="notselected">Edit Band Phone Number</a>
         </li>
@@ -136,7 +139,7 @@
 
 
 
-      <form method="post" action = "upload_file.php" name="upload" id="upload" enctype="multipart/form-data">
+      <form method="post" action = "upload_file.php" name="upload" id="upload" enctype="multipart/form-data" class="hidden2">
           <input type="text" name = "pieceName" id="pieceName" placeholder = "Enter the Name of The Piece/Song" required/>
           <input type="file" name="files[]" id="files" multiple="" directory="" webkitdirectory="" mozdirectory="">
           <input class="button" type="submit" value="Upload" />
