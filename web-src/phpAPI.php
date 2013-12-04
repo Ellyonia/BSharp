@@ -707,9 +707,9 @@ class phpAPI
 
         //echo $isDir;
 
-        if($isDir == 1)
+        //if($isDir == 1)
             echo "<li><a href='#management' class='notselected'>$isDir Band Management</a></li>";
-        else
+        //else
             return;
     }
     
