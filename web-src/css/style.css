@@ -86,7 +86,7 @@ CSS FOR user_page.php
 .bands {
   position: absolute;
   color: #b78727;
-  background-color: #181818;
+  background-color: #484848;
   width: 600px;
   height: 70%;
   top: 20%;
@@ -148,7 +148,7 @@ h1 {
   font-size: 32px;
 }
 
-.navbar {
+#navbar {
   position: fixed;
   width: 96%;
   left: 2%;
@@ -157,9 +157,23 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   height: 10%;
-  background: #181818;
+  background: #484848;
   box-shadow: 7px 7px 10px 2px #181860;
   border-radius: 5px 5px;
+}
+
+#navbar ul {
+  color: #484848;
+  list-style: none;
+  margin: 0px;
+  padding: 1em;
+  font-size: 20px;
+}
+
+#navbar li {
+  float: left;
+  margin-right: 52px;
+  height: 35px;
 }
 
 #navbar2 {
@@ -171,31 +185,33 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   height: 10%;
-  background: #181818;
+  background: #484848;
   box-shadow: 7px 7px 10px 2px #181860;
   border-radius: 5px 5px;
 }
 
-.navbar ul {
-  color: #181818;
+#navbar2 ul {
+  color: #484848;
   list-style: none;
   margin: 0px;
   padding: 1em;
   font-size: 20px;
 }
 
-.navbar li {
+#navbar2 li {
   float: left;
   margin-right: 52px;
   height: 35px;
 }
+
+
 
 /*#navbar li a {
   color: pink;
 }*/
 
 #navbar li a:link {
-  background-color: #181818;
+  background-color: #484848;
   color: #b78727;
   text-decoration: none;
   margin-top: -5px;
@@ -221,7 +237,7 @@ img {
   position: fixed;
   left: 2%;
   color: #b78727;
-  background-color: #181818;
+  background-color: #484848;
   top: 30%;
   width: 160px;
   padding-left: 1%;
@@ -258,7 +274,7 @@ img {
   padding-left: 1%;
   font-size: 30px;
   overflow: auto;
-  background-color: #181818;
+  background-color: #484848;
   box-shadow: 7px 7px 10px 2px #181860;
   border-radius: 5px 5px;
   /*display: none;*/
@@ -273,7 +289,7 @@ img {
   padding-left: 1%;
   font-size: 30px;
   overflow: auto;
-  background-color: #181818;
+  background-color: #484848;
   box-shadow: 7px 7px 10px 2px #181860;
   border-radius: 5px 5px;
   /*display: none;*/
@@ -297,7 +313,7 @@ img {
   padding-left: 1%;
   font-size: 30px;
   overflow: auto;
-  background-color: #181818;
+  background-color: #484848;
   box-shadow: 7px 7px 10px 2px #181860;
   border-radius: 5px 5px;
   /*display: none;*/
@@ -312,7 +328,7 @@ img {
   padding-left: 1%;
   font-size: 30px;
   overflow: auto;
-  background-color: #181818;
+  background-color: #484848;
   box-shadow: 7px 7px 10px 2px #181860;
   border-radius: 5px 5px;
   /*display: none;*/
@@ -327,7 +343,7 @@ img {
   padding-left: 1%;
   font-size: 30px;
   overflow: auto;
-  background-color: #181818;
+  background-color: #484848;
   box-shadow: 7px 7px 10px 2px #181860;
   border-radius: 5px 5px;
   /*display: none;*/
@@ -342,7 +358,7 @@ img {
   padding-left: 1%;
   font-size: 30px;
   overflow: auto;
-  background-color: #181818;
+  background-color: #484848;
   box-shadow: 7px 7px 10px 2px #181860;
   border-radius: 5px 5px;
   /*display: none;*/
@@ -362,7 +378,7 @@ img {
 }
 
 .notselected{
-  background-color: #181818;
+  background-color: #484848;
 }
 
 #editPhone {
