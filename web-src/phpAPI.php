@@ -529,8 +529,6 @@ class phpAPI
                 //echo "<li><a href=DirectorChoosePart.php?p=$piece target='_blank'>$piece</a></li>";
         }
 
-
-
     }
 
     public function showParts(){
@@ -702,15 +700,19 @@ class phpAPI
 
     public function ifDirGetManagement() {
         $bID = $_SESSION['bID'];
+        $uID = $_SESSION['uid'];
 
-        $query = mysql_query("SELECT directorFlag from BandsIn where band_id = $bID");
+        echo "<li>$bID</li>";
+
+        $query = mysql_query("SELECT directorFlag from BandsIn where band_id = $bID AND user_id = $uID");
         $temp = mysql_fetch_assoc($query);
         $isDir = $temp['directorFlag'];
 
+        //echo $isDir;
 
-        if($isDir == 1)
-            echo "<li><a href='#management' class='notselected'>Band Management</a></li>";
-        else
+        //if($isDir == 1)
+            echo "<li><a href='#management' class='notselected'>$isDir Band Management</a></li>";
+        //else
             return;
     }
     
