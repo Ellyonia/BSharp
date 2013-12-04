@@ -162,6 +162,20 @@ h1 {
   border-radius: 5px 5px;
 }
 
+#navbar2 {
+  position: fixed;
+  width: 96%;
+  left: 2%;
+  right: 2%;
+  top: 15%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 10%;
+  background: #181818;
+  box-shadow: 7px 7px 10px 2px #181860;
+  border-radius: 5px 5px;
+}
+
 #navbar ul {
   color: #181818;
   list-style: none;

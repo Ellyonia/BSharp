@@ -101,6 +101,22 @@
   	</div>
 
   	<div id="management" class="hidden">
+      <span id="navbar2">
+      <ul>
+        <li class="selected">
+          <a href="" class="selected notselected">Edit the About Band Information</a>
+        </li>
+        <li>
+          <a href="" class="notselected">Edit Upcoming Events</a>
+        </li>
+        <li>
+          <a href="#events" class="notselected">Add Band Members</a>
+        </li>
+        <li>
+          <a href="#members" class="notselected">Edit Band Phone Number</a>
+        </li>
+      </ul>
+    </span>
       <h2>Manage Band</h2>
       <form id="changeInfo" action = "changeAbout.php" method = "post">
         <h3>Edit the About Band Information</h3>
