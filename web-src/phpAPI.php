@@ -84,7 +84,7 @@ class phpAPI
             }
         }
         else
-            header('Location: error.php');
+            header('Location: nomatch.php');
         
         //mysql_close($con);
     
