@@ -700,10 +700,11 @@ class phpAPI
 
     public function ifDirGetManagement() {
         $bID = $_SESSION['bID'];
+        $uID = $_SESSION['uid'];
 
         echo "<li>$bID</li>";
 
-        $query = mysql_query("SELECT directorFlag from BandsIn where band_id = $bID");
+        $query = mysql_query("SELECT directorFlag from BandsIn where band_id = $bID AND user_id = $uID");
         $temp = mysql_fetch_assoc($query);
         $isDir = $temp['directorFlag'];
 
