@@ -187,6 +187,10 @@ body a {
   margin-top: 20px;
 }
 
+#upload {
+  display:inline-block;
+}
+
 #navbar {
   position: fixed;
   width: 96%;
