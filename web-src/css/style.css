@@ -112,8 +112,9 @@ CSS FOR user_page.php
 }
 
 .bands h2 {
+  position: absolute;
+  top: -25px;
   padding-left: 3%;
-  
 }
 
 h1 {
