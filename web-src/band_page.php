@@ -39,7 +39,7 @@
     
       ?></h1>
     <img src="img/logo.png" id = "logo" alt = "B Sharp Logo" title="test">
-    <a href="logout.php" class="logout">Log Out</a>
+    <a href="logout.php" class="bandPage_logout">Log Out</a>
   	<span id="navbar">
   		<ul>
   			<li class="selected">
