@@ -388,8 +388,9 @@ img {
 }
 
 .selected {
-  background-color: #181860 !important;
+  background-color: #292E37 !important;
   height: 10% !important;
+  border-radius:5px;
 }
 
 .notselected{
