@@ -10,20 +10,25 @@ CSS FOR index.php
 #fbLogin {
 background: url('../images/facebooklogin.png');
 background-repeat: no-repeat;
-float: left;
+float: right;
 width: 12%;
-height: 21px;
+margin-left: -60px;
 }
 
 #loginContainer {
-  float: right;
-  padding-top:.5%;
-  width: 50%;
-}
+  position: absolute;
+float: right;
+padding-top: .5%;
+width: 50%;
+left: 50%;
 
 #index_body {
   background-color: #484848;
   height: 40px;
+  width: 110%;
+  margin-left: -20px;
+  margin-top: -1px;
+  overflow: hidden; 
 }
 
 
