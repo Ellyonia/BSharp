@@ -358,8 +358,10 @@ img {
   /*display: none;*/
  }
 
- #pieces li {
-  list-style-type: none;
+ #pieces li:before {
+  content: "• ";
+  color: #484848;
+  /*list-style-type: none;*/
  }
 
  #pieces li a {
