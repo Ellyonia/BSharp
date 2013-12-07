@@ -101,6 +101,7 @@
   	</div>
 
   	<div id="management" class="hidden">
+      <h2>Manage Band</h2>
       <span id="navbar2">
       <ul>
         <li class="selected">
@@ -120,8 +121,7 @@
         </li>
       </ul>
     </span>
-      <h2>Manage Band</h2>
-      <form id="changeInfo" action = "changeAbout.php" method = "post" class ="visible2">
+            <form id="changeInfo" action = "changeAbout.php" method = "post" class ="visible2">
         <h3>Edit the About Band Information</h3>
           <textArea rows="4" cols="50" id="newInfo" name = "newInfo"/><?$phpInit->getBandInfo();?></textarea>
 

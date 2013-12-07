@@ -112,8 +112,9 @@ CSS FOR user_page.php
 }
 
 .bands h2 {
+  position: absolute;
+  top: -25px;
   padding-left: 3%;
-  
 }
 
 h1 {
@@ -245,7 +246,7 @@ body a {
 
 
 #navbar2 {
- position: absolute;
+ position: relative;
 width: 96%;
 left: -1.5%;
 margin-left: 1%;
