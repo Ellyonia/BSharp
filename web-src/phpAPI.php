@@ -757,7 +757,7 @@ class phpAPI
 
     public function getfname() {
     
-    $uid = $_SESSSION['uid'];
+    $uid = $_SESSION['uid'];
     
     $query = "SELECT fname FROM Users WHERE user_id='$uid'";
     
