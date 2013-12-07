@@ -93,7 +93,7 @@
 
   	<div id="pieces" class="hidden">
       <h2>View Band Pieces</h2>
-      <ul id = "pieces">
+      <ul>
         <?
           $phpInit->getMusicList();
         ?>

@@ -115,6 +115,7 @@ CSS FOR user_page.php
   position: absolute;
   top: -25px;
   padding-left: 3%;
+  padding-bottom: -2%;
 }
 
 h1 {
@@ -123,6 +124,10 @@ h1 {
   margin-top: 13px;
   margin-left: 2%;
   font-size: 32px;
+}
+
+h3 {
+  margin-top: -2%;
 }
 
 .bands a {
