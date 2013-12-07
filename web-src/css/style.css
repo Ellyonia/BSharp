@@ -129,14 +129,16 @@ CSS FOR user_page.php
 
 #top_bar {
   background-color: #484848;
-  height: 40px;
+  height: 50px;
   width: 110%;
   margin-left: -20px;
-  margin-top: -1px;
+  margin-top: -10px;
 }
 
-#logout {
-  float: right;
+.logout {
+  position: relative;
+  left: -8%;
+  margin-top: 12px;
 }
 
 #userCreateBand {
@@ -166,7 +168,7 @@ body a {
 
 h1 {
   position: fixed;
-  top: 5px;
+  top: -7px;
   margin-top: 13px;
   margin-left: 2%;
   font-size: 32px;
@@ -450,6 +452,10 @@ CSS FOR BandCreation.php
 **********************************************/
 body a {
   position: relative;
+}
+
+#creation_body {
+
 }
 
 #makeBand ol{

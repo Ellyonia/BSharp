@@ -19,7 +19,7 @@
     <script type="text/javascript" src='js/BandCreation.js'></script>
   </head>
 
-  <body>
+  <body id="creation_body">
   	<form id="makeBand" action = "makeBand.php" method = "post">
   		<ol>
         <li>
