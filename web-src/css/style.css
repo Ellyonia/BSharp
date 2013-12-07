@@ -466,8 +466,24 @@ body a {
   position: relative;
 }
 
-#makeBand {
+#creation_bar {
+  background-color: #484848;
+  height: 50px;
+  width: 102%;
+  margin-left: -20px;
+  margin-top: -10px;
+}
 
+#makeBand {
+  position: absolute;
+  width: 700px;
+  height: 40%;
+  top: 25%;
+  left: 25%;
+  background-color: #484848;
+  margin-left: 1%;
+  box-shadow: 5px 5px 10px #000000;
+  border-radius: 5px 5px;
 }
 
 #makeBand ol{

@@ -20,6 +20,9 @@
   </head>
 
   <body id="creation_body">
+    <div id="creation_bar">
+      <h1>Create a New Band</h1>
+    </div>
   	<form id="makeBand" action = "makeBand.php" method = "post">
   		<ol>
         <li>
