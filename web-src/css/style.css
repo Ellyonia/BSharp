@@ -188,6 +188,26 @@ h1 {
   height: 35px;
 }
 
+
+
+#navbar li a:link {
+  background-color: #484848;
+  color: #b78727;
+  text-decoration: none;
+  margin-top: -5px;
+  padding: .15em;
+  font-size: 22px;
+  
+}
+
+#navbar li a:hover {
+  background-color: #303030;
+  color: white;
+  text-decoration: none;
+  /*padding: 1%;*/
+}
+
+
 #navbar2 {
  position: absolute;
 width: 96%;
@@ -211,13 +231,7 @@ border-radius: 5px 5px;
   height: 35px;
 }
 
-
-
-/*#navbar li a {
-  color: pink;
-}*/
-
-#navbar li a:link {
+#navbar2 li a:link {
   background-color: #484848;
   color: #b78727;
   text-decoration: none;
@@ -227,7 +241,7 @@ border-radius: 5px 5px;
   
 }
 
-#navbar li a:hover {
+#navbar2 li a:hover {
   background-color: #303030;
   color: white;
   text-decoration: none;
