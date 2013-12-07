@@ -114,6 +114,14 @@ CSS FOR user_page.php
   
 }
 
+h1 {
+  position: fixed;
+  top: -7px;
+  margin-top: 13px;
+  margin-left: 2%;
+  font-size: 32px;
+}
+
 .bands a {
   color: white;
   float: left;
@@ -166,12 +174,10 @@ body a {
   color: #b78727;
 }
 
-h1 {
-  position: fixed;
-  top: -7px;
-  margin-top: 13px;
-  margin-left: 2%;
-  font-size: 32px;
+
+
+#band_header {
+
 }
 
 #navbar {

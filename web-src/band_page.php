@@ -33,7 +33,7 @@
   </head>
 
   <body>
-  	<h1><?
+  	<h1 id="band_header"><?
         
         $phpInit->getBandName();
     
