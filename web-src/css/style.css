@@ -188,7 +188,12 @@ body a {
 }
 
 #upload {
-  display:inline-block;
+  padding: 1%;
+  display: inline-block;
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: auto;
+  width: 75%;
 }
 
 #navbar {
