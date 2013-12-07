@@ -16,8 +16,6 @@ class phpAPI
         or die("Unable to select database: " . mysql_error());
     }
 
-
-
     public function addUser()
     {   
         //add a user to the system
@@ -756,6 +754,21 @@ class phpAPI
 	
 	$this->validateFacebookUser($email);
     }
+
+    public function getfname() {
+    
+    $uid = $_SESSSION['uid'];
+    
+    $query = "SELECT fname FROM Users WHERE user_id='$uid'";
+    
+    $result = $mysql_query($query);
+    
+    $fname = mysql_fetch_assoc($result)['fname'];
+    
+    echo $fname;
+    
+    }
+
 
     public function androidLogin() {
         $user = $_POST['userName'];
