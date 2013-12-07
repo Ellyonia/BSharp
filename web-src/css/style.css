@@ -241,7 +241,7 @@ body a {
 
 
 #navbar2 {
- position: absolute;
+ position: relative;
 width: 96%;
 left: -1.5%;
 margin-left: 1%;
