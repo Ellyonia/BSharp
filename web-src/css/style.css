@@ -196,7 +196,7 @@ body a {
 #upload {
   padding: 1%;
   display: inline-block;
-  top: 20%;
+  margin-top: 5%;
   margin-left: 10%;
   margin-right: auto;
   width: 75%;
