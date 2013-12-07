@@ -16,8 +16,15 @@
     <script type="text/javascript" src='js/Users.js'></script>
   </head>
   <body>
+<<<<<<< HEAD
   	<h1>Welcome <? $phpInit-getfname() ?>!</h1>
     <a href="logout.php">Log Out</a>
+=======
+    <div id="top_bar">
+  	  <h1>Welcome User!</h1>
+      <a href="logout.php">Log Out</a>
+    </div>
+>>>>>>> 1059d6bcc254c7d124158dabbb2bfd413009f364
   	<div class="bands">
   		<h2>My Bands</h2>
   		<ul>
