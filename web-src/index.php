@@ -45,7 +45,7 @@ Chris Linstromberg
     <script type="text/javascript" src='js/IndexJS.js'></script>
   </head>
 
-  <body>
+  <body id ="index_body">
     <img src="img/logo.png" id = "ilogo" alt = "B Sharp Logo">
     
     <!-- Testing Facebook -->
