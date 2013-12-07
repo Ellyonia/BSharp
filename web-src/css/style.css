@@ -13,6 +13,7 @@ background-repeat: no-repeat;
 float: right;
 width: 12%;
 margin-left: -60px;
+margin-right: 10px;
 }
 
 #loginContainer {
@@ -104,7 +105,7 @@ CSS FOR user_page.php
   left: 25%;
   margin-left: 1%;
   overflow: auto;
-  box-shadow: 7px 7px 10px 2px #181860;
+  box-shadow: 5px 5px 10px #000000;
   border-radius: 5px 5px;
 }
 
@@ -169,7 +170,7 @@ h1 {
   margin-right: auto;
   height: 10%;
   background: #484848;
-  box-shadow: 7px 7px 10px 2px #181860;
+  box-shadow: 5px 5px 10px #000000;
   border-radius: 5px 5px;
 }
 
@@ -250,7 +251,7 @@ img {
   height: 300px;
   height: 67%;
   overflow: auto;
-  box-shadow: 7px 7px 10px 2px #181860;
+  box-shadow: 5px 5px 10px #000000;
   border-radius: 5px 5px;
 }
 
@@ -281,7 +282,7 @@ img {
   font-size: 30px;
   overflow: auto;
   background-color: #484848;
-  box-shadow: 7px 7px 10px 2px #181860;
+  box-shadow: 5px 5px 10px #000000;
   border-radius: 5px 5px;
   /*display: none;*/
 }
@@ -296,7 +297,7 @@ img {
   font-size: 30px;
   overflow: auto;
   background-color: #484848;
-  box-shadow: 7px 7px 10px 2px #181860;
+  box-shadow: 5px 5px 10px #000000;
   border-radius: 5px 5px;
   /*display: none;*/
  }
@@ -320,7 +321,7 @@ img {
   font-size: 30px;
   overflow: auto;
   background-color: #484848;
-  box-shadow: 7px 7px 10px 2px #181860;
+  box-shadow: 5px 5px 10px #000000;
   border-radius: 5px 5px;
   /*display: none;*/
 }
@@ -335,7 +336,7 @@ img {
   font-size: 30px;
   overflow: auto;
   background-color: #484848;
-  box-shadow: 7px 7px 10px 2px #181860;
+  box-shadow: 5px 5px 10px #000000;
   border-radius: 5px 5px;
   /*display: none;*/
 }
@@ -350,7 +351,7 @@ img {
   font-size: 30px;
   overflow: auto;
   background-color: #484848;
-  box-shadow: 7px 7px 10px 2px #181860;
+  box-shadow: 5px 5px 10px #000000;
   border-radius: 5px 5px;
   /*display: none;*/
 }
@@ -365,7 +366,7 @@ img {
   font-size: 30px;
   overflow: auto;
   background-color: #484848;
-  box-shadow: 7px 7px 10px 2px #181860;
+  box-shadow: 5px 5px 10px #000000;
   border-radius: 5px 5px;
   /*display: none;*/
 }
