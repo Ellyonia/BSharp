@@ -6,9 +6,6 @@
     <script type="text/javascript" src='js/bandPage.js'></script> 
   </head>
   <body id="upload">
-  	<div id="top_bar">
-      <a href="logout.php" class="logout">Log Out</a>
-    </div>
   </body>
 </html>
 <? 
