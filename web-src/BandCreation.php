@@ -22,6 +22,7 @@
   <body id="creation_body">
     <div id="creation_bar">
       <h1>Create a New Band</h1>
+      <a href="logout.php" class="logout">Log Out</a>
     </div>
   	<form id="makeBand" action = "makeBand.php" method = "post">
   		<ol>
