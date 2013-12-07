@@ -49,24 +49,6 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `BSharp`.`Part`
--- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `BSharp`.`Part` (
-  `part_id` INT NOT NULL,
-  `location` VARCHAR(80) NOT NULL ,
-  `piece_id` INT NOT NULL ,
-  `instrument` VARCHAR(45) NOT NULL ,
-  PRIMARY KEY (`part_id`, `piece_id`, `instrument`) ,
-  INDEX `piece_id` (`piece_id` ASC) ,
-  CONSTRAINT `piece_id`
-    FOREIGN KEY (`piece_id` )
-    REFERENCES `BSharp`.`Pieces` (`piece_id` )
-    ON DELETE CASCADE
-    ON UPDATE CASCADE )
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
 -- Table `BSharp`.`BandsIn`
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `BSharp`.`BandsIn` (

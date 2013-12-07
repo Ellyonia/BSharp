@@ -51,28 +51,3 @@ INSERT INTO Pieces VALUES (5,"Shanty Town", 2);
 INSERT INTO Pieces VALUES (6, "Scotland the Brave", 1);
 
 
--- -----------------------------------------------------
--- Inserting Dummy Sheet Music into the Pieces Table
--- -----------------------------------------------------
-
-INSERT INTO Part VALUES (1, "BSharp/Music/1/6/Scotland\ The\ Brave", 6, "Bagpipe");
-INSERT INTO Part VALUES (1, "BSharp/Music/1/6/Scotland\ The\ Brave", 6, "Snare Drum");
-INSERT INTO Part VALUES (2, "BSharp/Music/2/1/Varisty(2008\ Stuckey)", 1, "Tenor Sax");
-INSERT INTO Part VALUES (2, "BSharp/Music/2/2/Western\ Peruna", 2, "Tenor Sax");
-INSERT INTO Part VALUES (2, "BSharp/Music/2/3/National\ Anthem(Armed\ Forces\ Edition)", 3, "Tenor Sax");
-INSERT INTO Part VALUES (2, "BSharp/Music/2/4/Quickie\ Sheet(2010\ Edition)", 4, "Tenor Sax");
-INSERT INTO Part VALUES (2, "BSharp/Music/2/5/Shanty\ Town", 5, "Tenor Sax");
-INSERT INTO Part VALUES (2, "BSharp/Music/2/1/Varisty(2008\ Stuckey)", 1, "Trombone");
-INSERT INTO Part VALUES (2, "BSharp/Music/2/2/Western\ Peruna", 2, "Trombone");
-INSERT INTO Part VALUES (2, "BSharp/Music/2/3/National\ Anthem(Armed\ Forces\ Edition)", 3, "Trombone");
-INSERT INTO Part VALUES (2, "BSharp/Music/2/4/Quickie\ Sheet(2010\ Edition)", 4, "Trombone");
-INSERT INTO Part VALUES (2, "BSharp/Music/2/5/Shanty\ Town", 5, "Trombone");
-INSERT INTO Part VALUES (1, "BSharp/Music/2/1/Varisty(2008\ Stuckey)", 1, "Alto Sax");
-INSERT INTO Part VALUES (1, "BSharp/Music/2/2/Western\ Peruna", 2, "Alto Sax");
-INSERT INTO Part VALUES (1, "BSharp/Music/2/3/National\ Anthem(Armed\ Forces\ Edition)", 3, "Alto Sax");
-INSERT INTO Part VALUES (1, "BSharp/Music/2/4/Quickie\ Sheet(2010\ Edition)", 4, "Alto Sax");
-INSERT INTO Part VALUES (1, "BSharp/Music/2/5/Shanty\ Town", 5, "Alto Sax");
-INSERT INTO Part VALUES (1, "BSharp/Music/2/1/Varisty(2008\ Stuckey)", 1, "Tenor Sax");
-INSERT INTO Part VALUES (1, "BSharp/Music/2/1/Varisty(2008\ Stuckey)", 1, "Trombone");
-INSERT INTO Part VALUES (1, "BSharp/Music/2/1/Varisty(2008\ Stuckey)", 1, "Trumpet");
-INSERT INTO Part VALUES (1, "BSharp/Music/2/1/Varisty(2008\ Stuckey)", 1, "Tuba");
