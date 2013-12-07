@@ -34,9 +34,9 @@
 
   <body>
   	<h1><?
-        echo "<p>";
+        
         $phpInit->getBandName();
-        echo "</p>";
+    
       ?></h1>
     <img src="img/logo.png" id = "logo" alt = "B Sharp Logo" title="test">
     <a href="logout.php" class="logout">Log Out</a>
