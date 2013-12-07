@@ -17,7 +17,7 @@
   </head>
   <body>
     <div id="top_bar">
-  	  <h1>Welcome <? $phpInit-getfname() ?>!</h1>
+  	  <h1>Welcome <? $phpInit->getfname() ?>!</h1>
       <a href="logout.php" id="logout">Log Out</a>
     </div>
   	<div class="bands">
