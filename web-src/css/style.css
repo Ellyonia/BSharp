@@ -38,7 +38,7 @@ left: 50%;
 #ilogo {
   position: absolute;
   display: inline-block;
-  top: 110px;
+  top: 70px;
   width: 150px;
 }
 
@@ -69,6 +69,7 @@ left: 50%;
   position: relative;
   font-size: 18px;
   top: 185px;
+  left: 40px;
 }
 
 .page {
@@ -138,7 +139,7 @@ h1 {
 #top_bar {
   background-color: #484848;
   height: 50px;
-  width: 110%;
+  width: 102%;
   margin-left: -20px;
   margin-top: -10px;
 }
@@ -465,7 +466,7 @@ body a {
   position: relative;
 }
 
-#creation_body {
+#makeBand {
 
 }
 
