@@ -761,7 +761,7 @@ class phpAPI
     
     $query = "SELECT fname FROM Users WHERE user_id='$uid'";
     
-    $result = $mysql_query($query);
+    $result = mysql_query($query);
     
     $fname = mysql_fetch_assoc($result)['fname'];
     
