@@ -302,8 +302,8 @@ img {
   /*display: none;*/
  }
 
- #pieces ul {
-  /*list-style-type: none;*/
+ #pieces li {
+  list-style-type: none;
  }
 
  #pieces li a {
