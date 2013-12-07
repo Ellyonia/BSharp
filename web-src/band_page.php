@@ -140,7 +140,7 @@
 
 
       <form method="post" action = "upload_file.php" name="upload" id="upload" enctype="multipart/form-data" class="hidden2">
-          <a>Browse your computer to select the folder containing all the pdf's you wish to upload</a>
+          <a class="instructions">Browse your computer to select the folder containing all the pdf's you wish to upload</a>
           <input type="text" name = "pieceName" id="pieceName" placeholder = "Enter the Name of The Piece/Song" required/>
           <input type="file" name="files[]" id="files" multiple="" directory="" webkitdirectory="" mozdirectory="">
           <input class="button" type="submit" value="Upload" />

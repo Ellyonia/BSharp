@@ -367,6 +367,13 @@ img {
   /*display: none;*/
 }
 
+.instructions {
+  color: white;
+  width: 100%;
+  float: left;
+  font-size: 20px;
+}
+
 #events {
   position: fixed;
   top: 30%;
