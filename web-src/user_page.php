@@ -16,8 +16,10 @@
     <script type="text/javascript" src='js/Users.js'></script>
   </head>
   <body>
-  	<h1>Welcome User!</h1>
-    <a href="logout.php">Log Out</a>
+    <div id="top_bar">
+  	  <h1>Welcome User!</h1>
+      <a href="logout.php">Log Out</a>
+    </div>
   	<div class="bands">
   		<h2>My Bands</h2>
   		<ul>

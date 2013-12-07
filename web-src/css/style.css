@@ -127,6 +127,14 @@ CSS FOR user_page.php
   list-style: none;
 }
 
+#top_bar {
+  background-color: #484848;
+  height: 40px;
+  width: 110%;
+  margin-left: -20px;
+  margin-top: -1px;
+}
+
 #userCreateBand {
   float: right;
 }
@@ -220,7 +228,7 @@ border-radius: 5px 5px;
 #navbar2 ul {
   color: #484848;
   list-style: none;
-  margin: 0px;
+  margin-top: 5px;
   padding: 1em;
   font-size: 20px;
 }
