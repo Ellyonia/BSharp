@@ -18,7 +18,7 @@
   <body>
     <div id="top_bar">
   	  <h1>Welcome User!</h1>
-      <a href="logout.php">Log Out</a>
+      <a href="logout.php" id="logout">Log Out</a>
     </div>
   	<div class="bands">
   		<h2>My Bands</h2>

@@ -135,6 +135,10 @@ CSS FOR user_page.php
   margin-top: -1px;
 }
 
+#logout {
+  float: right;
+}
+
 #userCreateBand {
   float: right;
 }
@@ -162,9 +166,9 @@ body a {
 
 h1 {
   position: fixed;
-  left: 12%;
   top: 5px;
   margin-top: 13px;
+  margin-left: 2%;
   font-size: 32px;
 }
 
