@@ -12,7 +12,9 @@ INSERT INTO Users VALUES ("John", "Doe", 5, "anon@anon.anon", "WhoamI?");
 INSERT INTO Users VALUES ("Robert", "Stewart", 6, "rcstewart@smu.edu", "H3llyeah");
 INSERT INTO Users VALUES ("Ryan", "Tanner", 7, "mithranor@gmail.com", "password");
 INSERT INTO Users VALUES ("Cameron", "Keith", 8, "ckeith@smu.edu", "hpcrew09");
-INSERT INTO Users VALUES ("Guy","Cockrum", 9, "gcockrum@smu.edu", "cockrum");
+INSERT INTO Users VALUES ("Guy", "Cockrum", 9, "gcockrum@smu.edu", "cockrum");
+INSERT INTO Users VALUES ("Professor", "Fontenot", 10, "professor@fontenot.com", "12345Test");
+INSERT INTO Users VALUES ("Professor", "Raley", 11, "professor@raley.com", "Test12345");
 
 
 -- -----------------------------------------------------
