@@ -193,11 +193,11 @@ body a {
   margin-top: 20px;
 }
 
-#upload {
+#upload_page {
   padding: 1%;
   display: inline-block;
- /* margin-top: 5%;
-  margin-left: 10%;*/
+  margin-top: 5%;
+  margin-left: 10%;
   margin-right: auto;
   width: 75%;
 }
