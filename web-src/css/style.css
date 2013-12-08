@@ -255,7 +255,7 @@ body a {
 width: 96%;
 left: -1.5%;
 margin-left: 1%;
-margin-top: -70px; 
+
 top: 17%;
 border-radius: 5px 5px;
 }
@@ -263,7 +263,8 @@ border-radius: 5px 5px;
 #navbar2 ul {
   color: #484848;
   list-style: none;
-  margin-top: 5px;
+  /*margin-top: 5px;*/
+  margin-top: -70px; 
   padding: 1em;
   font-size: 20px;
 }
