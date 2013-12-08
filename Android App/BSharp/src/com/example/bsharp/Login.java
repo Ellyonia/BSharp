@@ -33,8 +33,7 @@ public class Login extends Activity {
 	EditText inputEmail;
 	EditText inputPassword;
 	Button login;
-	String url = "http://54.200.188.125/BSharp/web-src/AndroidLogin.php";
-	//String url = "http://ec2-54-200-98-78.us-west-2.compute.amazonaws.com/DB-GUI/web-src/AndroidLogin.php";
+	String url = "http://ec2-54-200-98-78.us-west-2.compute.amazonaws.com/DB-GUI/web-src/AndroidLogin.php";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -59,12 +58,13 @@ public class Login extends Activity {
 					ArrayList<String> p = new ArrayList<String>();
 					p.add(inputEmail.getText().toString());
 					p.add(inputPassword.getText().toString());
-					
-					pairs.add(new BasicNameValuePair("userName", inputEmail
+
+					pairs.add(new BasicNameValuePair("email", inputEmail
 							.getText().toString()));
 					pairs.add(new BasicNameValuePair("password", inputPassword
 							.getText().toString()));
 					new UserCheck().execute(p);
+
 				} else if ((!inputEmail.getText().toString().equals(""))) {
 					Toast.makeText(getApplicationContext(),
 							"Password field empty", Toast.LENGTH_SHORT).show();
@@ -174,11 +174,12 @@ public class Login extends Activity {
 
 			return result;
 		}
-		/*
-		 * protected void onPostExecute() {
-		 * Toast.makeText(getApplicationContext(),"Incorrect info",
-		 * Toast.LENGTH_SHORT).show(); Log.d("blah", "is this working"); }
-		 */
+
+		protected void onPostExecute(String result) {
+			Toast.makeText(getApplicationContext(),
+					"Incorrect Email and Password Combination",
+					Toast.LENGTH_LONG).show();
+		}
 
 		/*
 		 * protected void onProgressUpdate(Integer... values) {
