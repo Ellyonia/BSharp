@@ -5,7 +5,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" src='js/bandPage.js'></script> 
   </head>
-  <body id="upload">
+  <body id="upload_page">
   	<h1>Please Select the instrument and part for each file you are uploading</h1>
   </body>
 </html>
