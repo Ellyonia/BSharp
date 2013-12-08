@@ -6,6 +6,7 @@
     <script type="text/javascript" src='js/bandPage.js'></script> 
   </head>
   <body id="upload">
+  	<h1>Please Select the instrument and part for each file you are uploading</h1>
   </body>
 </html>
 <? 
