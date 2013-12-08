@@ -141,7 +141,7 @@
 
       <form method="post" action = "upload_file.php" name="upload" id="upload" enctype="multipart/form-data" class="hidden2">
           <h3>Add Pieces</h3>
-          <a class="instructions">Browse your computer to select the folder containing all the pdf's for a particular song</a>
+          <a class="instructions">Browse your computer to select the folder containing all the PDF's for a particular song</a>
           <input type="text" name = "pieceName" id="pieceName" placeholder = "Enter the Name of The Piece/Song" required/>
           <input type="file" name="files[]" id="files" multiple="" directory="" webkitdirectory="" mozdirectory="">
           <input class="button" type="submit" value="Upload" />
