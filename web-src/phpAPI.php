@@ -763,7 +763,8 @@ class phpAPI
     
     $result = mysql_query($query);
     
-    $fname = mysql_fetch_assoc($result)['fname'];
+    $fname = mysql_fetch_assoc($result);
+    $fname = $fname['fname'];
     
     echo $fname;
     
