@@ -29,7 +29,7 @@ INSERT INTO Band VALUES (2, "Mustang Band", "456-798-5198", "NOTHING STOPS THE M
 -- Inserting Dummy Bands into Band Table
 -- -----------------------------------------------------
 
-INSERT INTO BandsIn VALUES (2, 8, "Tenor Sax", 2, 0);
+INSERT INTO BandsIn VALUES (2, 8, "Tenor\ Sax", 2, 0);
 INSERT INTO BandsIn VALUES (2, 2, "Trombone", 2, 1);
 INSERT INTO BandsIn VALUES (1, 2, "Bagpipe", 1, 0);
 INSERT INTO BandsIn VALUES (1, 3, "Bagpipe", 1, 0);
@@ -38,7 +38,7 @@ INSERT INTO BandsIn VALUES (1, 5, "Bagpipe", 1, 0);
 INSERT INTO BandsIn VALUES (1, 6, "Bagpipe", 1, 0);
 INSERT INTO BandsIn VALUES (1, 7, "Bagpipe", 1, 0);
 INSERT INTO BandsIn VALUES (1, 8, "Bagpipe", 1, 1);
-INSERT INTO BandsIn VALUES (1, 9, "Snare Drum", 1, 0);
+INSERT INTO BandsIn VALUES (1, 9, "Snare\ Drum", 1, 0);
 
 
 -- -----------------------------------------------------
