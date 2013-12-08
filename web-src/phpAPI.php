@@ -505,7 +505,7 @@ class phpAPI
         $temp = mysql_fetch_assoc($result);
         $bandName = mysql_real_escape_string($temp['band_name']);
 
-        $query2 = mysql_query("SELECT directorFlag from BandsIn where band_id = $bID AND user_id = $uid");
+        $query2 = mysql_query("SELECT directorFlag from BandsIn where band_id = $bID AND user_id = $uID");
         $temp2 = mysql_fetch_assoc($query2);
         $isDir = $temp2['directorFlag'];
 
