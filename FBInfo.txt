@@ -1,6 +1,0 @@
-BSharp (development site)
-AppID: 501087379989764
-
-BSharp (production site)
-AppID: 551756141566063
-
